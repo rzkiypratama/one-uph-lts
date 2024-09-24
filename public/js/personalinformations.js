@@ -41,7 +41,7 @@ backButton.addEventListener('click', function () {
         updateButtons();
     } else {
         // Jika di tab pertama, kembali ke halaman sebelumnya
-        window.location.href = '/dashboard/intakeyear.html';
+        window.location.href = '/dashboard/intakeyear';
     }
 });
 
@@ -58,7 +58,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
         // jika perlu alert bisa digunakan
         // alert('Form submitted!');
         // Logika submit form
-        window.location.href = '/dashboard/familybackground.html';
+        window.location.href = '/dashboard/familybackground';
     }
 });
 

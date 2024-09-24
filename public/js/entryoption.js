@@ -38,7 +38,7 @@
            form.reset();
 
            // Redirect to the next page
-           window.location.href = '/dashboard/reviewpayment.html';
+           window.location.href = '/dashboard/reviewpayment';
        });
 
        const checkbox = document.getElementById('agreeCheckbox');
