@@ -171,7 +171,7 @@
                             <h5 class="review-modal-title">I don’t have an E-code</h5>
                             <p class="m-0 review-modal-subtitle">Proceed with your admission process</p>
                         </div>
-                        <a href="/dashboard/intakeyear.html">
+                        <a href="/dashboard/intakeyear">
                             <button type="button" class="btn btn-primary mt-3 w-100 rounded-0 float-end">Proceed without
                                 E-code</button>
                         </a>
@@ -352,7 +352,7 @@
                     <p class="review-modal-subtitle mb-3">Congratulation! You have finished the payment.
                         Proceed to the next step to complete your application.</p>
                     <button type="button" id="nextStepPayment"
-                        class="btn btn-danger px-5 rounded-0 w-100 border-0 danger-button" onclick="window.location.href='/dashboard/intakeyear.html'">Next
+                        class="btn btn-danger px-5 rounded-0 w-100 border-0 danger-button" onclick="window.location.href='/dashboard/intakeyear'">Next
                         Step</button>
                 </div>
             </div>
