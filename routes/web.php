@@ -48,6 +48,10 @@ Route::get('/review', function () {
 
 // dashboard
 
-Route::get('/dashboard/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('dashboard/dashboard');
+});
+
+Route::get('/dashboard/intakeyear', function () {
+    return view('dashboard/intakeyear');
 });
