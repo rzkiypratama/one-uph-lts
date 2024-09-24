@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<x-head title="Campus" />
+<x-head title="Field Study" />
 
 <body class="container">
     <!-- header -->
