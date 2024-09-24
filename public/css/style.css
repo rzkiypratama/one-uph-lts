@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url("/img/bg-hero.webp");
+  background-image: url("/assets/bg-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Montserrat", sans-serif;
