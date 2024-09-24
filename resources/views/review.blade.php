@@ -100,7 +100,7 @@
                     <img src="/assets/success.png" class="img-fluid mb-3" alt="Success Image"> <!-- Replace with your image path -->
                     <p class="fs-4 mb-2 review-modal-title">Registration Success</p>
                     <p class="mb-4 review-modal-subtitle d-flex flex-column align-items-center">Your account has been created. <span>Please continue to fill Application Form.</span></p>
-                    <a href="/login">
+                    <a href="/signin">
                         <button type="button" class="btn btn-primary w-50 rounded-0">Sign In</button>
                     </a>
                 </div>

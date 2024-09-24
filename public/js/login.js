@@ -24,7 +24,7 @@ loginForm.addEventListener('submit', function(e) {
     if (email === validUsername && password === validPassword) {
         alert('Login successful!');
         // You can redirect to another page here
-        window.location.href = '/dashboard';
+        window.location.href = '/dashboard/dashboard';
         localStorage.setItem('nationality', 'national');
     } else {
         alert('Invalid credentials, please try again.');

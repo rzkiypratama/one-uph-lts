@@ -23,7 +23,7 @@ input, select {
   padding-left: 10px !important;
 }
 
-label::after {
+.form-label::after {
   content: "*";
   color: #ff5351;
 }

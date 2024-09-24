@@ -46,6 +46,8 @@ Route::get('/review', function () {
     return view('review');
 });
 
-Route::get('/international', function () {
-    return view('international');
+// dashboard
+
+Route::get('/dashboard/dashboard', function () {
+    return view('dashboard/dashboard');
 });
