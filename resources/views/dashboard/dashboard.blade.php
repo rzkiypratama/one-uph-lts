@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}" />
-    <title>Dashboard</title>
+<x-head title="Dashboard">
+    <x-slot name="inlineCSS">
     <style>
         .vertical-dividers {
             border-left: 2px solid #333;
@@ -49,7 +45,8 @@
             width: 80% !important;
         }
     </style>
-</head>
+    </x-slot>
+</x-head>
 
 <body class="container mt-3">
     <div class="d-flex justify-content-between align-items-center pt-3 mb-5">
