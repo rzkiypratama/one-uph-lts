@@ -12,6 +12,7 @@ Make sure you have the following installed:
 
 - PHP (>=8.1)
 - Composer
+- Sqlite
 - Git
 - Visual Studio Code
 
