@@ -55,3 +55,27 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/intakeyear', function () {
     return view('dashboard/intakeyear');
 });
+
+Route::get('/dashboard/personalinformations', function () {
+    return view('dashboard/personalinformations');
+});
+
+Route::get('/dashboard/familybackground', function () {
+    return view('dashboard/familybackground');
+});
+
+Route::get('/dashboard/educationbackground', function () {
+    return view('dashboard/educationbackground');
+});
+
+Route::get('/dashboard/entryoption', function () {
+    return view('dashboard/entryoption');
+});
+
+Route::get('/dashboard/reviewpayment', function () {
+    return view('dashboard/reviewpayment');
+});
+
+Route::get('/dashboard/applicationstatus', function () {
+    return view('dashboard/applicationstatus');
+});
