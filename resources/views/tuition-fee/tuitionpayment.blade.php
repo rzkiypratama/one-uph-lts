@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<title>Tuition Fee Payment</title>
-		<style>
-			.card-body {
-				height: 418px;
-				padding-left: 2rem;
-				padding-right: 2rem;
-			}
+	<x-head title="Tuition Payments">
+		<x-slot name="inlineCSS">
+			<style>
+				.card-body {
+					height: 418px;
+					padding-left: 2rem;
+					padding-right: 2rem;
+				}
 
-			.card-header .tabs-header {
-				padding-left: 2rem;
-				padding-right: 2rem;
-			}
-		</style>
-	</head>
+				.card-header .tabs-header {
+					padding-left: 2rem;
+					padding-right: 2rem;
+				}
+			</style>
+		</x-slot>
+	</x-head>
 
 	<body class="container mt-3">
 		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
