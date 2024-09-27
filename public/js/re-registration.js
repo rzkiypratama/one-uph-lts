@@ -46,7 +46,7 @@ $(document).ready(function () {
             previousTab.show();
             updateButtons();
         } else {
-            window.location.href = "/tuition-fee/tuitionpayment.html";
+            window.location.href = "/tuition-fee/tuitionpayment";
         }
     });
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
             updateButtons();
         } else {
             alert("Form submitted!");
-            window.location.href = "/tuition-fee/administration-documents.html";
+            window.location.href = "/tuition-fee/administration-documents";
         }
     });
 

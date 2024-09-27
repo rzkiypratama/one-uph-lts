@@ -79,3 +79,19 @@ Route::get('/dashboard/reviewpayment', function () {
 Route::get('/dashboard/applicationstatus', function () {
     return view('dashboard/applicationstatus');
 });
+
+Route::get('/tuition-fee/administration-documents', function () {
+    return view('tuition-fee/administration-documents');
+});
+
+Route::get('/tuition-fee', function () {
+    return view('tuition-fee/dashboard');
+});
+
+Route::get('/tuition-fee/re-registration', function () {
+    return view('tuition-fee/re-registration');
+});
+
+Route::get('/tuition-fee/tuitionpayment', function () {
+    return view('tuition-fee/tuitionpayment');
+});
