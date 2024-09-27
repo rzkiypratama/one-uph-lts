@@ -16,5 +16,5 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     this.reset();
 
     // Redirect to the next page
-    window.location.href = "/dashboard/personalinformations.html";
+    window.location.href = "/dashboard/personalinformations";
 });

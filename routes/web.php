@@ -60,8 +60,8 @@ Route::get('/dashboard/personalinformations', function () {
     return view('dashboard/personalinformations');
 });
 
-Route::get('/dashboard/familybackground', function () {
-    return view('dashboard/familybackground');
+Route::get('/dashboard/required-document', function () {
+    return view('dashboard/required-document');
 });
 
 Route::get('/dashboard/educationbackground', function () {
