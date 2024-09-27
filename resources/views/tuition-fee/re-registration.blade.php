@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 	<x-head title="Re Registration">
 		<x-slot name="inlineCSS">
 			<style>
@@ -396,7 +395,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="/js/re-registration.js"></script>
+		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
 	</body>
 
 </html>

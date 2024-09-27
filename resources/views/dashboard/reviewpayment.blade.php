@@ -389,7 +389,7 @@
 				window.location.href = "/dashboard/required-document";
 			});
 		</script>
-		<script src="/js/reviewpayment.js"></script>
+		<script type="text/javascript" src="{{ asset('js/reviewpayment.js') }}"></script>
 	</body>
 
 </html>
