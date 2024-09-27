@@ -1,12 +1,12 @@
 // Handle form submission
-document.getElementById('myForm').addEventListener('submit', function (event) {
+document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent default form submission
 
     // Gather form data
     const formData = {
-        intakeYear: document.getElementById('intakeYear').value,
-        campus: document.getElementById('campus').value,
-        studyCategory: document.getElementById('studyCategory').value,
+        intakeYear: document.getElementById("intakeYear").value,
+        campus: document.getElementById("campus").value,
+        studyCategory: document.getElementById("studyCategory").value,
     };
 
     // Log form data to console
@@ -16,5 +16,5 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     this.reset();
 
     // Redirect to the next page
-    window.location.href = '/dashboard/personalinformations';
+    window.location.href = "/dashboard/personalinformations.html";
 });

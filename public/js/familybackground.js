@@ -1,81 +1,109 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const aliveRadio = document.getElementById('aliveMother');
-    const deceasedRadio = document.getElementById('deceasedMother');
-    const deceasedInput = document.getElementById('deceasedInputHide');
+document.addEventListener("DOMContentLoaded", function () {
+    const aliveRadio = document.getElementById("aliveMother");
+    const deceasedRadio = document.getElementById("deceasedMother");
+    const deceasedInput = document.getElementById("deceasedInputHide");
 
     // Function to toggle visibility based on status
     function togglePhoneNumberVisibility() {
         if (deceasedRadio.checked) {
-            deceasedInput.classList.add('hidden');
+            deceasedInput.classList.add("hidden");
         } else {
-            deceasedInput.classList.remove('hidden');
+            deceasedInput.classList.remove("hidden");
         }
     }
 
     // Event listeners for radio buttons
-    aliveRadio.addEventListener('change', togglePhoneNumberVisibility);
-    deceasedRadio.addEventListener('change', togglePhoneNumberVisibility);
+    aliveRadio.addEventListener("change", togglePhoneNumberVisibility);
+    deceasedRadio.addEventListener("change", togglePhoneNumberVisibility);
 
     // Initialize the visibility based on the default selection
     togglePhoneNumberVisibility();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const aliveFatherRadio = document.getElementById('aliveFather');
-    const deceasedFatherRadio = document.getElementById('deceasedFather');
-    const deceasedFatherInput = document.getElementById('deceasedFatherInputHide');
+document.addEventListener("DOMContentLoaded", function () {
+    const aliveFatherRadio = document.getElementById("aliveFather");
+    const deceasedFatherRadio = document.getElementById("deceasedFather");
+    const deceasedFatherInput = document.getElementById(
+        "deceasedFatherInputHide"
+    );
 
     // Function to toggle visibility based on status
     function togglePhoneNumberVisibility() {
         if (deceasedFatherRadio.checked) {
-            deceasedFatherInput.classList.add('hidden');
+            deceasedFatherInput.classList.add("hidden");
         } else {
-            deceasedFatherInput.classList.remove('hidden');
+            deceasedFatherInput.classList.remove("hidden");
         }
     }
 
     // Event listeners for radio buttons
-    aliveFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
-    deceasedFatherRadio.addEventListener('change', togglePhoneNumberVisibility);
+    aliveFatherRadio.addEventListener("change", togglePhoneNumberVisibility);
+    deceasedFatherRadio.addEventListener("change", togglePhoneNumberVisibility);
 
     // Initialize the visibility based on the default selection
     togglePhoneNumberVisibility();
 });
 
-const tabs = ['tab1-tab', 'tab2-tab']; // Daftar ID tabs
+const tabs = ["tab1-tab", "tab2-tab"];
 let currentTabIndex = 0;
 
-const backButton = document.getElementById('backButton');
-const nextButton = document.querySelector('.danger-button');
+const backButton = document.getElementById("backButton");
+const nextButton = document.querySelector(".danger-button");
+
+// Fungsi untuk mengupdate tombol Next dan Back
+function updateButtons() {
+    // Jika di tab pertama, tombol Back membawa ke halaman sebelumnya
+    if (currentTabIndex === 0) {
+        backButton.innerText = "Back";
+    } else {
+        backButton.innerText = "Previous";
+    }
+
+    // Jika di tab terakhir, tombol Next menjadi Submit
+    if (currentTabIndex === tabs.length - 1) {
+        nextButton.innerText = "Save Data & Continue";
+    } else {
+        nextButton.innerText = "Continue";
+    }
+}
 
 // Event listener untuk tombol Back
-backButton.addEventListener('click', function () {
+backButton.addEventListener("click", function () {
     if (currentTabIndex > 0) {
         currentTabIndex--;
-        const previousTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
+        const previousTab = new bootstrap.Tab(
+            document.getElementById(tabs[currentTabIndex])
+        );
         previousTab.show();
         updateButtons();
     } else {
-        // Jika di tab pertama, kembali ke halaman sebelumnya
-        window.location.href = '/dashboard/intakeyear';
+        window.location.href = "/dashboard/intakeyear.html";
     }
 });
 
 // Event listener untuk tombol Next (Continue/Submit)
-document.getElementById('myForm').addEventListener('submit', function (event) {
+document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (currentTabIndex < tabs.length - 1) {
         currentTabIndex++;
-        const nextTab = new bootstrap.Tab(document.getElementById(tabs[currentTabIndex]));
+        const nextTab = new bootstrap.Tab(
+            document.getElementById(tabs[currentTabIndex])
+        );
         nextTab.show();
         updateButtons();
     } else {
-        // jika perlu alert bisa digunakan
-        alert('Form submitted!');
-        // Logika submit form
-        window.location.href = '/dashboard/educationbackground';
+        alert("Form submitted!");
+        window.location.href = "/tuition-fee/administration-documents.html";
     }
+});
+
+// Event listener untuk tab klik langsung
+tabs.forEach((tabId, index) => {
+    document.getElementById(tabId).addEventListener("click", function () {
+        currentTabIndex = index;
+        updateButtons();
+    });
 });
 
 // Initial button state
