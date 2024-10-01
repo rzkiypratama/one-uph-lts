@@ -7,11 +7,9 @@ function checkEcodeValidity() {
     );
 
     if (isValidEcode === "true") {
-        // Show "Verify Application" button and hide "Proceed to Payment"
-        verifyApplicationBtn.style.display = "block";
-        proceedToPaymentBtn.style.display = "none";
+        // verifyApplicationBtn.style.display = "block";
+        proceedToPaymentBtn.style.display = "block";
     } else {
-        // Show "Proceed to Payment" button and hide "Verify Application"
         verifyApplicationBtn.style.display = "none";
         proceedToPaymentBtn.style.display = "block";
     }
