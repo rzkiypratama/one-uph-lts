@@ -5,9 +5,10 @@
 		<x-slot name="inlineCSS">
 			<style>
 				.card-body {
-					height: 418px;
+					height: auto;
 					padding-left: 2rem;
 					padding-right: 2rem;
+					/* box-shadow: none !; */
 				}
 
 				.card-header .tabs-header {
@@ -22,12 +23,29 @@
 				.show {
 					display: block;
 				}
+
+				.container {
+					padding-left: 0px !important;
+					padding-right: 0px !important;
+				}
+
+				@media (min-width: 768px) {
+					.card-body {
+						height: 418px;
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+
+					.container {
+						padding: auto;
+					}
+				}
 			</style>
 		</x-slot>
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
+		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
@@ -38,9 +56,9 @@
 			</div>
 		</div>
 
-		<div class="rounded-3 card-main-bg p-5">
-			<!-- steps -->
-			<div class="d-flex mb-4 gap-2">
+		<div class="p-md-5 rounded-3 card-main-bg">
+			<!-- desktop steps -->
+			<div class="d-none d-md-flex mb-4 gap-2">
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
@@ -71,6 +89,22 @@
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/tuition-circle-normal.png" alt="step" class="step-icon" />
 					</div>
+				</div>
+			</div>
+
+			<!-- mobile steps -->
+			<div class="d-md-none px-2 pt-3">
+				<div class="upper-content d-flex align-items-center mb-3 gap-3">
+					<span class="float-end">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+						</svg>
+					</span>
+
+					<span class="text-white" onclick="window.location.href = '/tuition-fee/tuitionpayment'">
+						<p class="mobile-title">Step 2 of 3</p>
+						<p class="mobile-subtitle">Re-registration</p>
+					</span>
 				</div>
 			</div>
 
@@ -245,8 +279,8 @@
 												</div>
 											</div>
 
-											<div class="row" id="deceasedInputHide">
-												<div class="col-md-6">
+											<div id="deceasedInputHide">
+												<div class="col-md-6 mb-md-0 mb-4">
 													<label class="form-label">Mobile Phone Number</label>
 													<div class="input-group phone-input-group">
 														<!-- Select for country code -->
@@ -261,7 +295,7 @@
 														<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
 													</div>
 												</div>
-												<div class="col-md-6">
+												<div class="col-md-6 mb-md-0 mb-4">
 													<label for="parentEmail" class="form-label">Email Address</label>
 													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 												</div>
@@ -295,7 +329,7 @@
 											</div>
 										</div>
 										<div class="row" id="deceasedFatherInputHide">
-											<div class="col-md-6">
+											<div class="col-md-6 mb-md-0 mb-4">
 												<label class="form-label">Mobile Phone Number</label>
 												<div class="input-group phone-input-group">
 													<!-- Select for country code -->
@@ -321,8 +355,8 @@
 
 							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-								<div class="row">
-									<div class="row mb-4">
+								<div>
+									<div class="row mb-md-4">
 										<!-- First Name -->
 										<div class="col-md-4 mb-3">
 											<label for="familyFirstName" class="form-label">First Name</label>
@@ -341,7 +375,7 @@
 									</div>
 
 									<div class="row">
-										<div class="col-md-4">
+										<div class="col-md-4 mb-md-0 mb-3">
 											<label for="guardianReligion" class="form-label">Religion</label>
 											<select id="guardianReligion" class="form-select">
 												<option value="option1">option1</option>
@@ -374,8 +408,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="d-flex justify-content-between align-content-center mb-4">
-							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 mt-5 px-5">
+						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
+							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
@@ -395,7 +429,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
+		<script src="/js/re-registration.js"></script>
 	</body>
 
 </html>

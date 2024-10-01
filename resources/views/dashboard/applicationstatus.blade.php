@@ -8,83 +8,176 @@
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="m-0">logout</p>
+					<p class="d-md-block d-none m-0">logout</p>
 					<img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon" />
 				</span>
 				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
 			</div>
 		</div>
 
-		<div class="rounded-3 dashboard-container bg-white p-5">
+		<!-- mobile layout -->
+		<div class="d-md-none d-block mb-3 px-2">
+			<p class="text-capitalize dashboard-welcome m-0">welcome</p>
+			<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+			<span class="d-flex justify-content-between align-items-center">
+				<p class="text-uppercase dashboard-id">ID #123456</p>
+				<button type="button" class="btn btn-outline-primary dashboard-edit d-flex align-items-center gap-2 px-4"><img src="/assets/download-icon.png" alt="download-icon" /> Offering Letter</button>
+			</span>
+		</div>
+		<!-- mobile layout -->
+
+		<div class="p-md-5 rounded-3 dashboard-container bg-white p-3">
 			<div class="d-flex justify-content-between">
-				<div class="w-100 pe-4">
-					<img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
-					<p class="text-capitalize dashboard-welcome m-0 pt-2">welcome</p>
-					<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
-					<span class="d-flex justify-content-between align-items-center">
-						<p class="text-uppercase dashboard-id">ID #123456</p>
-						<button type="button" class="btn btn-outline-primary dashboard-edit d-flex align-items-center gap-2 px-4"><img src="/assets/download-icon.png" alt="download-icon" /> Offering Letter</button>
-					</span>
-
-					<hr class="full-width-hr-wrapper-form" />
-
-					<div class="row mb-4 pt-2">
-						<!-- <span class="col-md-4">
-																								<p class="text-capitalize dashboard-title m-0">study category</p>
-																								<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
-																				</span> -->
-
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">program</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+				<div class="w-100 pe-md-4">
+					<!-- desktop layout -->
+					<div class="d-none d-md-block">
+						<img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
+						<p class="text-capitalize dashboard-welcome m-0 pt-2">welcome</p>
+						<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+						<span class="d-flex justify-content-between align-items-center">
+							<p class="text-uppercase dashboard-id">ID #123456</p>
+							<button type="button" class="btn btn-outline-primary dashboard-edit d-flex align-items-center gap-2 px-4"><img src="/assets/download-icon.png" alt="download-icon" /> Offering Letter</button>
 						</span>
 
-						<span class="col-md-8">
-							<p class="text-capitalize dashboard-title m-0">Entry Option</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
-						</span>
-					</div>
+						<hr class="full-width-hr-wrapper-form" />
 
-					<div class="row">
-						<!-- <span class="col-md-4">
-																								<p class="text-capitalize dashboard-title m-0">Campus</p>
-																								<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
-																				</span>
-					-->
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">Campus</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
-						</span>
+						<div class="row mb-4 pt-2">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">program</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+							</span>
 
-						<span class="col-md-8">
-							<p class="text-capitalize dashboard-title m-0">Entry Type</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
-						</span>
-					</div>
-
-					<hr class="full-width-hr-wrapper-form" />
-
-					<p class="text-capitalize dashboard-bottom-title m-0 mb-3">application status</p>
-
-					<div class="card rounded-3 border-0 bg-white p-3 shadow-sm">
-						<div class="d-flex justify-content-between align-items-center">
-							<p class="row-title m-0">Architecture</p>
-							<p class="admitted-btn">admitted</p>
+							<span class="col-md-8">
+								<p class="text-capitalize dashboard-title m-0">Entry Option</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
+							</span>
 						</div>
 
-						<div class="d-flex justify-content-between fst-italic">
-							<p class="tabs-subtitle m-0">Undergraduate (S1)</p>
-							<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Tuition Fee</p> -->
+						<div class="row">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Campus</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+							</span>
+
+							<span class="col-md-8">
+								<p class="text-capitalize dashboard-title m-0">Entry Type</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
+							</span>
 						</div>
 
-						<div class="d-flex gap-4">
-							<p class="tabs-subtitle m-0">Form #9812739817283</p>
-							<p class="tabs-subtitle m-0">NIM #9812739817283</p>
+						<hr class="full-width-hr-wrapper-form" />
+
+						<p class="text-capitalize dashboard-bottom-title m-0 mb-3">application status</p>
+
+						<div class="card rounded-3 border-0 bg-white p-3 shadow-sm">
+							<div class="d-flex justify-content-between align-items-center">
+								<p class="row-title m-0">Architecture</p>
+								<p class="admitted-btn">admitted</p>
+							</div>
+
+							<div class="d-flex justify-content-between fst-italic">
+								<p class="tabs-subtitle m-0">Undergraduate (S1)</p>
+								<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Tuition Fee</p> -->
+							</div>
+
+							<div class="d-flex gap-4">
+								<p class="tabs-subtitle m-0">Form #9812739817283</p>
+								<p class="tabs-subtitle m-0">NIM #9812739817283</p>
+							</div>
 						</div>
 					</div>
+					<!-- desktop layout ends -->
+					<!-- mobile layout start -->
+					<div class="mobile-dashboard rounded-4 d-md-none p-4">
+						<img src="/assets/togas.png" alt="togas" class="togas-icon" />
+						<p class="title-dashboard-mobile">Hello World!</p>
+						<p class="subtitle-dashboard-mobile">This is your <strong>Student Online Application Account.</strong> You can submit a new application from here.</p>
+						<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" data-bs-toggle="modal" data-bs-target="#ecodeModal">Pay Tuition Fee</button>
+					</div>
+
+					<hr class="full-width-hr-wrapper-form d-md-none" />
+
+					<!-- mobile collapse start -->
+					<div class="d-md-none">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Student Informations</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse show collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<div class="row pt-2">
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">study category</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
+											</span>
+
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">program</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+											</span>
+
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">Entry Option</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
+											</span>
+										</div>
+
+										<div class="row">
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">Campus</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+											</span>
+
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">Campus</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+											</span>
+
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">Entry Type</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr class="full-width-hr-wrapper-form d-md-none" />
+
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Application
+										Status</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body px-0 pb-2">
+										<div class="card rounded-3 border-0 bg-white p-3 shadow-sm">
+											<div class="d-flex justify-content-between align-items-center">
+												<p class="row-title m-0">Architecture</p>
+												<p class="admitted-btn">admitted</p>
+											</div>
+
+											<div class="d-flex justify-content-between fst-italic">
+												<p class="tabs-subtitle m-0">Undergraduate (S1)</p>
+												<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Tuition Fee</p> -->
+											</div>
+
+											<div class="d-flex gap-4">
+												<p class="tabs-subtitle m-0">Form #9812739817283</p>
+												<p class="tabs-subtitle m-0">NIM #9812739817283</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- mobile collapse ends -->
+
+					<!-- mobile layout ends -->
 				</div>
 
-				<div class="dashboard-box">
+				<div class="dashboard-box d-none d-md-block">
 					<div class="card-dashboard border-0" style="background-image: url('/assets/student.jpeg'); height: 461px; width: 272px">
 						<!-- Gradient Overlay -->
 						<div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>

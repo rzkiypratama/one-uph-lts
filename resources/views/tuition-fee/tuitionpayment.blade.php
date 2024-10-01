@@ -5,7 +5,7 @@
 		<x-slot name="inlineCSS">
 			<style>
 				.card-body {
-					height: 418px;
+					height: 84vh;
 					padding-left: 2rem;
 					padding-right: 2rem;
 				}
@@ -14,12 +14,29 @@
 					padding-left: 2rem;
 					padding-right: 2rem;
 				}
+
+				.container {
+					padding-left: 0px !important;
+					padding-right: 0px !important;
+				}
+
+				@media (min-width: 768px) {
+					.card-body {
+						height: 418px;
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+
+					.container {
+						padding: auto;
+					}
+				}
 			</style>
 		</x-slot>
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
+		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
@@ -29,9 +46,9 @@
 			</div>
 		</div>
 
-		<div class="rounded-3 card-main-bg p-5">
+		<div class="p-md-5 rounded-3 card-main-bg">
 			<!-- steps -->
-			<div class="d-flex mb-4 gap-2">
+			<div class="d-none d-md-flex mb-4 gap-2">
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
@@ -63,6 +80,22 @@
 						<img src="/assets/tuition-circle-normal.png" alt="step" class="step-icon" />
 						<hr class="tuition-solid-step" />
 					</div>
+				</div>
+			</div>
+
+			<!-- mobile steps -->
+			<div class="d-md-none px-2 pt-3">
+				<div class="upper-content d-flex align-items-center mb-3 gap-3">
+					<span class="float-end">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+						</svg>
+					</span>
+
+					<span class="text-white" onclick="window.location.href = '/tuition-fee'">
+						<p class="mobile-title">Step 1 of 3</p>
+						<p class="mobile-subtitle">Review Tuition Payment</p>
+					</span>
 				</div>
 			</div>
 
@@ -166,15 +199,15 @@
 							</div>
 						</div>
 
-						<div class="d-flex justify-content-between align-content-center mb-4">
-							<button type="button" class="btn btn-outline-danger float-end rounded-0 mt-5 px-5" onclick="window.location.href = '/dashboard/entryoption';">
+						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
+							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 mt-5 px-5" onclick="window.location.href = '/tuition-fee';">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 
-							<button type="submit" class="btn btn-danger float-end rounded-0 danger-button mt-5 px-5">
+							<button type="submit" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
 								Proceed to Next Step
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />

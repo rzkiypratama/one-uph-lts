@@ -5,7 +5,7 @@
 		<x-slot name="inlineCSS">
 			<style>
 				.card-body {
-					height: 418px;
+					height: auto;
 					padding-left: 2rem;
 					padding-right: 2rem;
 				}
@@ -22,12 +22,29 @@
 				.show {
 					display: block;
 				}
+
+				.container {
+					padding-left: 0px !important;
+					padding-right: 0px !important;
+				}
+
+				@media (min-width: 768px) {
+					.card-body {
+						height: 418px;
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+
+					.container {
+						padding: auto;
+					}
+				}
 			</style>
 		</x-slot>
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
+		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
@@ -38,9 +55,9 @@
 			</div>
 		</div>
 
-		<div class="rounded-3 card-main-bg p-5">
-			<!-- steps -->
-			<div class="d-flex mb-4 gap-2">
+		<div class="p-md-5 rounded-3 card-main-bg">
+			<!-- desktop steps -->
+			<div class="d-none d-md-flex mb-4 gap-2">
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
@@ -71,6 +88,22 @@
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/tuition-circle-bold.png" alt="step" class="step-icon" />
 					</div>
+				</div>
+			</div>
+
+			<!-- mobile steps -->
+			<div class="d-md-none px-2 pt-3">
+				<div class="upper-content d-flex align-items-center mb-3 gap-3">
+					<span class="float-end">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+						</svg>
+					</span>
+
+					<span class="text-white" onclick="window.location.href = '/dashboard/intakeyear'">
+						<p class="mobile-title">Step 3 of 3</p>
+						<p class="mobile-subtitle">Administration Documents</p>
+					</span>
 				</div>
 			</div>
 
@@ -127,75 +160,87 @@
 									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
 
 									<div class="file-input-row">
-										<label for="familyGeneralDoc" class="tabs-title w-50">Copy of Family Registration Card (KK) *</label>
+										<label for="familyGeneralDoc" class="tabs-title docs-title">Copy of Family Registration Card (KK) *</label>
 										<div id="fileUploadContainerGeneralDoc" class="file-input px-2">
 											<span id="fileNameGeneralDoc" class="forgot-password">Upload File</span>
 											<img id="fileIconGeneralDoc" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="trashIconGeneralDoc" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="familyGeneralDoc" id="familyGeneralDoc" style="display: none" />
-										<p id="familyGeneralDocStatus" class="file-status">Uploaded</p>
-										<p id="familyGeneralDocStatusReview" class="file-status-valid">Validated</p>
+										<span class="d-flex gap-2">
+											<p id="familyGeneralDocStatus" class="file-status">Uploaded</p>
+											<p id="familyGeneralDocStatusReview" class="file-status-valid">Validated</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="nisnNumber" class="tabs-title w-50">A document showing your NISN Number *</label>
+										<label for="nisnNumber" class="tabs-title docs-title">A document showing your NISN Number *</label>
 										<div id="nisnNumberContainer" class="file-input px-2">
 											<span id="nisnNumberName">Upload File</span>
 											<img id="nisnNumberIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="nisnNumberTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="nisnNumber" id="nisnNumber" style="display: none" />
-										<p id="nisnNumberStatus" class="file-status">Uploaded</p>
-										<p id="nisnNumberStatusReview" class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="nisnNumberStatus" class="file-status">Uploaded</p>
+											<p id="nisnNumberStatusReview" class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterFirst" class="tabs-title w-50">Senior Academic Record Grade 10 Semester 1</label>
+										<label for="recordSemesterFirst" class="tabs-title docs-title">Senior Academic Record Grade 10 Semester 1</label>
 										<div id="recordSemesterFirstContainer" class="file-input px-2">
 											<span id="recordSemesterFirstName">Upload File</span>
 											<img id="recordSemesterFirstIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="recordSemesterFirstTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="recordSemesterFirst" id="recordSemesterFirst" style="display: none" />
-										<p id="recordSemesterFirstStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="recordSemesterFirstStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterSecond" class="tabs-title w-50">Senior Academic Record Grade 10 Semester 2</label>
+										<label for="recordSemesterSecond" class="tabs-title docs-title">Senior Academic Record Grade 10 Semester 2</label>
 										<div id="recordSemesterSecondContainer" class="file-input px-2">
 											<span id="recordSemesterSecondName">Upload File</span>
 											<img id="recordSemesterSecondIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="recordSemesterSecondTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="recordSemesterSecond" id="recordSemesterSecond" style="display: none" />
-										<p id="recordSemesterSecondStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="recordSemesterSecondStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterThird" class="tabs-title w-50">Senior Academic Record Grade 11 Semester 1</label>
+										<label for="recordSemesterThird" class="tabs-title docs-title">Senior Academic Record Grade 11 Semester 1</label>
 										<div id="recordSemesterThirdContainer" class="file-input px-2">
 											<span id="recordSemesterThirdName">Upload File</span>
 											<img id="recordSemesterThirdIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="recordSemesterThirdTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="recordSemesterThird" id="recordSemesterThird" style="display: none" />
-										<p id="recordSemesterThirdStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="recordSemesterThirdStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterForth" class="tabs-title w-50">Senior Academic Record Grade 11 Semester 2</label>
+										<label for="recordSemesterForth" class="tabs-title docs-title">Senior Academic Record Grade 11 Semester 2</label>
 										<div id="recordSemesterForthContainer" class="file-input px-2">
 											<span id="recordSemesterForthName">Upload File</span>
 											<img id="recordSemesterForthIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="recordSemesterForthTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="recordSemesterForth" id="recordSemesterForth" style="display: none" />
-										<p id="recordSemesterForthStatus" class="file-status">Uploaded</p>
-										<p class="file-status-invalid">Invalid</p>
+										<span class="d-flex gap-2">
+											<p id="recordSemesterForthStatus" class="file-status">Uploaded</p>
+											<p class="file-status-invalid">Invalid</p>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -206,75 +251,87 @@
 									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
 
 									<div class="file-input-row">
-										<label for="statementLetter" class="tabs-title w-50">Statement Letter for Student with Special Needs (if needed)</label>
+										<label for="statementLetter" class="tabs-title docs-title">Statement Letter for Student with Special Needs (if needed)</label>
 										<div id="statementLetterContainer" class="file-input px-2">
 											<span id="statementLetterName" class="forgot-password">Upload File</span>
 											<img id="statementLetterIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="statementLetterTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="statementLetter" id="statementLetter" style="display: none" />
-										<p id="statementLetterStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="statementLetterStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="handDrawing" class="tabs-title w-50">4 (Four) Hand Drawings</label>
+										<label for="handDrawing" class="tabs-title docs-title">4 (Four) Hand Drawings</label>
 										<div id="fileUploadContainer" class="file-input px-2">
 											<span id="fileName" class="forgot-password">Upload File</span>
 											<img id="fileIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="trashIcon" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="handDrawing" id="handDrawing" style="display: none" />
-										<p id="handDrawingStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="handDrawingStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="essayForm" class="tabs-title w-50">One Page Essay refer to School of Design Application Form</label>
+										<label for="essayForm" class="tabs-title docs-title">One Page Essay refer to School of Design Application Form</label>
 										<div id="essayFormContainer" class="file-input px-2">
 											<span id="essayFormName" class="forgot-password">Upload File</span>
 											<img id="essayFormIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="essayFormTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="essayForm" id="essayForm" style="display: none" />
-										<p id="essayFormStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="essayFormStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="signedLetter" class="tabs-title w-50">Statement letter signed by applicants and parent, refer to SOD Applications Form</label>
+										<label for="signedLetter" class="tabs-title docs-title">Statement letter signed by applicants and parent, refer to SOD Applications Form</label>
 										<div id="signedLetterContainer" class="file-input px-2">
 											<span id="signedLetterName" class="forgot-password">Upload File</span>
 											<img id="signedLetterIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="signedLetterTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="signedLetter" id="signedLetter" style="display: none" />
-										<p id="signedLetterStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="signedLetterStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="blindTest" class="tabs-title w-50">Color Blindness Test Certificate by Ophthalmologist or Oculist</label>
+										<label for="blindTest" class="tabs-title docs-title">Color Blindness Test Certificate by Ophthalmologist or Oculist</label>
 										<div id="blindTestContainer" class="file-input px-2">
 											<span id="blindTestName" class="forgot-password">Upload File</span>
 											<img id="blindTestIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="blindTestTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="blindTest" id="blindTest" style="display: none" />
-										<p id="blindTestStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="blindTestStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="artsCrafts" class="tabs-title w-50">Arts & Crafts Portfolio</label>
+										<label for="artsCrafts" class="tabs-title docs-title">Arts & Crafts Portfolio</label>
 										<div id="artsCraftsContainer" class="file-input px-2">
 											<span id="artsCraftsName">Upload File</span>
 											<img id="artsCraftsIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="artsCraftsTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="artsCrafts" id="artsCrafts" style="display: none" />
-										<p id="artsCraftsStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="artsCraftsStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 								</div>
 							</div>
@@ -285,68 +342,78 @@
 									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
 
 									<div class="file-input-row">
-										<label for="formTataTertib" class="tabs-title w-50">Form Tata Tertib</label>
+										<label for="formTataTertib" class="tabs-title docs-title">Form Tata Tertib</label>
 										<div id="formTataTertibContainer" class="file-input px-2">
 											<span id="formTataTertibName" class="forgot-password">Upload File</span>
 											<img id="formTataTertibIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="formTataTertibTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="formTataTertib" id="formTataTertib" style="display: none" />
-										<p id="formTataTertibStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="formTataTertibStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="akteKelahiran" class="tabs-title w-50">Scan Akte Kelahiran Berwarna</label>
+										<label for="akteKelahiran" class="tabs-title docs-title">Scan Akte Kelahiran Berwarna</label>
 										<div id="akteKelahiranContainer" class="file-input px-2">
 											<span id="akteKelahiranName" class="forgot-password">Upload File</span>
 											<img id="akteKelahiranIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="akteKelahiranTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="akteKelahiran" id="akteKelahiran" style="display: none" />
-										<p id="akteKelahiranStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="akteKelahiranStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="ijazah" class="tabs-title w-50">Scan Ijazah SMA/ Penyetaraan Ijazah/ Scan Ijazah Diploma/Ijazah Paket C(Bewarna)</label>
+										<label for="ijazah" class="tabs-title docs-title">Scan Ijazah SMA/ Penyetaraan Ijazah/ Scan Ijazah Diploma/Ijazah Paket C(Bewarna)</label>
 										<div id="ijazahContainer" class="file-input px-2">
 											<span id="ijazahName" class="forgot-password">Upload File</span>
 											<img id="ijazahIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="ijazahTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="ijazah" id="ijazah" style="display: none" />
-										<p id="ijazahStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="ijazahStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="ktp" class="tabs-title w-50">Scan KTP Bewarna</label>
+										<label for="ktp" class="tabs-title docs-title">Scan KTP Bewarna</label>
 										<div id="ktpContainer" class="file-input px-2">
 											<span id="ktpName" class="forgot-password">Upload File</span>
 											<img id="ktpIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="ktpTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="ktp" id="ktp" style="display: none" />
-										<p id="ktpStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="ktpStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 
 									<div class="file-input-row">
-										<label for="photograph" class="tabs-title w-50">Photograph (blue background)</label>
+										<label for="photograph" class="tabs-title docs-title">Photograph (blue background)</label>
 										<div id="photographContainer" class="file-input px-2">
 											<span id="photographName" class="forgot-password">Upload File</span>
 											<img id="photographIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="photographTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
 										</div>
 										<input type="file" name="photograph" id="photograph" style="display: none" />
-										<p id="photographStatus" class="file-status">Uploaded</p>
-										<p class="file-status-review">On Review</p>
+										<span class="d-flex gap-2">
+											<p id="photographStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="d-flex justify-content-between align-content-center mb-4">
+						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
 							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 mt-5 px-5">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
@@ -354,7 +421,7 @@
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 danger-button mt-5 px-5">
+							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
 								Save Data & Continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />

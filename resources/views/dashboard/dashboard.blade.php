@@ -41,88 +41,177 @@
 					margin-top: 20px;
 				}
 
-				.modal-content {
-					width: 80% !important;
-				}
+				/* .modal-content {
+								width: 80% !important;
+						} */
 			</style>
 		</x-slot>
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
+		<div class="d-flex justify-content-between align-items-center mb-md-5 mb-3 pt-3">
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="m-0">logout</p>
-					<img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon" />
+					<p class="d-md-block d-none m-0">dashboard</p>
+					<img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon d-block d-md-none" />
 				</span>
 				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
 			</div>
 		</div>
 
-		<div class="rounded-3 dashboard-container bg-white p-5">
+		<!-- mobile layout -->
+		<div class="d-md-none d-block mb-3 px-2">
+			<p class="text-capitalize dashboard-welcome m-0">welcome</p>
+			<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+			<span class="d-flex justify-content-between align-items-center">
+				<p class="text-uppercase dashboard-id">ID #123456</p>
+				<button type="button" class="btn btn-outline-primary dashboard-edit">edit profile</button>
+			</span>
+		</div>
+		<!-- mobile layout -->
+
+		<div class="p-md-5 rounded-3 dashboard-container bg-white p-3">
 			<div class="d-flex justify-content-between align-items-center">
-				<div class="w-100 pe-4">
-					<img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
-					<p class="text-capitalize dashboard-welcome m-0 pt-2">welcome</p>
-					<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
-					<span class="d-flex justify-content-between align-items-end">
-						<p class="text-uppercase dashboard-id">ID #123456</p>
-						<button type="button" class="btn btn-outline-primary dashboard-edit px-4">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-								<path
-									d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
-							</svg>
-							edit profile
-						</button>
-					</span>
-
-					<hr class="full-width-hr-wrapper-form" />
-
-					<div class="row mb-4 pt-2">
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">study category</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
+				<div class="w-100 pe-md-4">
+					<!-- desktop layout -->
+					<div class="d-none d-md-block">
+						<img src="/assets/idcard.png" alt="badge-id" class="badge-icon" />
+						<p class="text-capitalize dashboard-welcome m-0 pt-2">welcome</p>
+						<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
+						<span class="d-flex justify-content-between align-items-end">
+							<p class="text-uppercase dashboard-id">ID #123456</p>
+							<button type="button" class="btn btn-outline-primary dashboard-edit px-4">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+									<path
+										d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+								</svg>
+								edit profile
+							</button>
 						</span>
+						<hr class="full-width-hr-wrapper-form" />
 
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">program</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
-						</span>
+						<div class="row mb-4 pt-2">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">study category</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
+							</span>
 
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">Entry Option</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
-						</span>
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">program</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+							</span>
+
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Entry Option</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
+							</span>
+						</div>
+
+						<div class="row">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Campus</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+							</span>
+
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Campus</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+							</span>
+
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Entry Type</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
+							</span>
+						</div>
+						<hr class="full-width-hr-wrapper-form" />
+
+						<p class="text-capitalize dashboard-bottom-title m-0">application status</p>
+						<div class="d-grid mt-2 gap-2">
+							<p class="badge fw-medium m-0">Your current application status is <span class="fw-semibold">Registered</span></p>
+							<p class="badge fw-medium m-0">Your next step is <span class="fw-semibold">Buy a Registration Form</span></p>
+						</div>
 					</div>
 
-					<div class="row">
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">Campus</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
-						</span>
-
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">Campus</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
-						</span>
-
-						<span class="col-md-4">
-							<p class="text-capitalize dashboard-title m-0">Entry Type</p>
-							<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
-						</span>
+					<!-- mobile layout start -->
+					<div class="mobile-dashboard rounded-4 d-md-none p-4">
+						<img src="/assets/togas.png" alt="togas" class="togas-icon" />
+						<p class="title-dashboard-mobile">Hello World!</p>
+						<p class="subtitle-dashboard-mobile">This is your <strong>Student Online Application Account.</strong> You can submit a new application from here.</p>
+						<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" data-bs-toggle="modal" data-bs-target="#ecodeModal">buy new form</button>
 					</div>
 
-					<hr class="full-width-hr-wrapper-form" />
+					<hr class="full-width-hr-wrapper-form d-md-none" />
 
-					<p class="text-capitalize dashboard-bottom-title m-0">application status</p>
-					<div class="d-grid mt-2 gap-2">
-						<p class="badge fw-medium m-0">Your current application status is <span class="fw-semibold">Registered</span></p>
-						<p class="badge fw-medium m-0">Your next step is <span class="fw-semibold">Buy a Registration Form</span></p>
+					<!-- mobile collapse start -->
+					<div class="d-md-none">
+						<div class="accordion" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Student Informations</button>
+								</h2>
+								<div id="collapseOne" class="accordion-collapse show collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body">
+										<div class="row mb-4 pt-2">
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">study category</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
+											</span>
+
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">program</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+											</span>
+
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">Entry Option</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
+											</span>
+										</div>
+
+										<div class="row">
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">Campus</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+											</span>
+
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">Campus</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+											</span>
+
+											<span class="col-md-4">
+												<p class="text-capitalize dashboard-title m-0">Entry Type</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr class="full-width-hr-wrapper-form d-md-none" />
+
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Application
+										Status</button>
+								</h2>
+								<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+									<div class="accordion-body px-0 pb-2">
+										<div class="d-grid mt-2 gap-2">
+											<p class="badge fw-medium m-0">Your current application status is <span class="fw-semibold">Registered</span></p>
+											<p class="badge fw-medium m-0">Your next step is <span class="fw-semibold">Buy a Registration Form</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					<!-- mobile collapse ends -->
+
+					<!-- mobile layout ends -->
 				</div>
 
-				<div class="dashboard-box">
+				<div class="dashboard-box d-none d-md-block">
 					<div class="card-dashboard border-0" style="background-image: url('/assets/student.jpeg'); height: 461px; width: 272px">
 						<!-- Gradient Overlay -->
 						<div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
@@ -142,9 +231,9 @@
 		<div class="modal fade" id="ecodeModal" tabindex="-1" aria-labelledby="ecodeModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content">
-					<div class="modal-body d-flex justify-content-between p-5">
+					<div class="modal-body d-flex flex-column flex-md-row justify-content-between p-5">
 						<!-- Left Side Content -->
-						<div class="w-50 mb-3 pe-3 text-center">
+						<div class="code-content pe-md-3 mb-3 text-center">
 							<h5 class="review-modal-title">I have an E-code</h5>
 							<p class="review-modal-subtitle m-0">Please enter your E-code</p>
 							<input type="text" class="form-control e-code-input my-3 text-center" id="ecodeInput" placeholder="--- --- ---" maxlength="15" />
@@ -159,7 +248,7 @@
 						</div>
 
 						<!-- Right Side Content -->
-						<div class="w-50 d-flex flex-column justify-content-between mb-3 ps-3 text-center">
+						<div class="code-content ps-md-3 d-flex flex-column justify-content-between mb-3 text-center">
 							<div>
 								<h5 class="review-modal-title">I don’t have an E-code</h5>
 								<p class="review-modal-subtitle m-0">Proceed with your admission process</p>
@@ -181,7 +270,7 @@
 						<img src="/assets/succes-admitted.png" alt="check-icon" class="mb-1" />
 						<h5 class="success-modal-title mb-1">You have been Admitted!</h5>
 						<p class="review-modal-subtitle mb-4">Congratulation! You have been automatically admitted. Proceed to payment to complete your application.</p>
-						<button type="button" class="btn btn-danger danger-button rounded-0 border-0 px-5 py-2" data-bs-toggle="modal" data-bs-target="#firstPaymentModal">Proceed to Payment</button>
+						<button type="button" class="btn btn-danger danger-button rounded-0 border-0 px-5 py-2" onclick="window.location.href = '/dashboard/intakeyear'">Proceed to Payment</button>
 					</div>
 				</div>
 			</div>

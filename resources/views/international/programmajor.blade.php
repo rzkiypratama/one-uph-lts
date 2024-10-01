@@ -13,7 +13,7 @@
 				<div class="d-flex justify-content-between box-item">
 					<div class="d-flex flex-column">
 						<div class="left-content pb-3">
-							<p class="text-uppercase">step 5 of 8</p>
+							<p class="text-uppercase">step 6 of 9</p>
 							<h3>In which Faculty do you intend to study?</h3>
 							<p class="children">Choose a program major</p>
 							<hr class="solid" />
@@ -22,17 +22,17 @@
 
 						<div class="divider-item"></div>
 
-						<span class="d-flex align-items-md-center cursor-pointer gap-2 pt-1" role="button" id="backToNationality">
+						<span class="d-flex align-items-md-center cursor-pointer gap-2 pt-1" role="button" id="backToFieldStudy">
 							<img src="/assets/left-arrow.png" alt="arrow-left" />
 							<p class="back-button">back to College Selection</p>
 						</span>
 					</div>
 
-					<div class="campus-grid card-box fade-in-right">
-						<a href="/program">
+					<div class="campus-grid card-box">
+						<a href="/international/program">
 							<div class="card-nationality col border-0" style="background-image: url('/assets/law-img.png'); height: 198px; width: 272px">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122); color: #fff" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -42,10 +42,10 @@
 							</div>
 						</a>
 
-						<a href="/program">
-							<div class="card-nationality col border-0" style="background-image: url('/assets/design-img.png'); height: 198px; width: 272px">
+						<a href="/international/program">
+							<div class="card-nationality col border-0" style="background-image: url('/assets/nurse.png'); height: 198px; width: 272px">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122); color: #fff" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -55,23 +55,23 @@
 							</div>
 						</a>
 
-						<a href="/program">
-							<div class="card-nationality col border-0" style="background-image: url('/assets/sospol-img.png'); height: 198px; width: 272px">
+						<a href="/international/program">
+							<div class="card-nationality col border-0" style="background-image: url('/assets/healthscience.png'); height: 198px; width: 272px">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122); color: #fff" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
 									<!-- <img src="/assets/health-icons.png" alt="icon" class="icon" /> -->
-									<h3 class="title" style="color: #fff !important">Social Politic</h3>
+									<h3 class="title" style="color: #fff !important">Social & Political Sciences</h3>
 								</div>
 							</div>
 						</a>
 
-						<a href="/program">
-							<div class="card-nationality col border-0" style="background-image: url('/assets/music-img.png'); height: 198px; width: 272px">
+						<a href="/international/program">
+							<div class="card-nationality col border-0" style="background-image: url('/assets/art.png'); height: 198px; width: 272px">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122); color: #fff" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -94,8 +94,8 @@
 						</svg>
 					</span>
 
-					<span class="text-white" onclick="window.location.href = '/fieldstudy'">
-						<p class="mobile-title">Step 5 of 8</p>
+					<span class="text-white" onclick="window.location.href = '/international/fieldstudy'">
+						<p class="mobile-title">Step 6 of 9</p>
 						<p class="mobile-subtitle">Program Major</p>
 					</span>
 				</div>
@@ -109,11 +109,11 @@
 					</div>
 
 					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-scroll">
-						<div class="campus-grid card-box fade-in-bottom">
-							<a href="/program">
+						<div class="campus-grid card-box">
+							<a href="/international/program">
 								<div class="card-nationality col border-0" style="background-image: url('/assets/law-img.png'); height: 100px; width: auto">
 									<!-- Gradient Overlay -->
-									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 									<!-- Title -->
 									<div class="title-container">
@@ -123,10 +123,10 @@
 								</div>
 							</a>
 
-							<a href="/program">
-								<div class="card-nationality col border-0" style="background-image: url('/assets/design-img.png'); height: 100px; width: auto">
+							<a href="/international/program">
+								<div class="card-nationality col border-0" style="background-image: url('/assets/nurse.png'); height: 100px; width: auto">
 									<!-- Gradient Overlay -->
-									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 									<!-- Title -->
 									<div class="title-container">
@@ -136,10 +136,10 @@
 								</div>
 							</a>
 
-							<a href="/program">
-								<div class="card-nationality col border-0" style="background-image: url('/assets/sospol-img.png'); height: 100px; width: auto">
+							<a href="/international/program">
+								<div class="card-nationality col border-0" style="background-image: url('/assets/healthscience.png'); height: 100px; width: auto">
 									<!-- Gradient Overlay -->
-									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 									<!-- Title -->
 									<div class="title-container">
@@ -149,10 +149,10 @@
 								</div>
 							</a>
 
-							<a href="/program">
-								<div class="card-nationality col border-0" style="background-image: url('/assets/music-img.png'); height: 100px; width: auto">
+							<a href="/international/program">
+								<div class="card-nationality col border-0" style="background-image: url('/assets/art.png'); height: 100px; width: auto">
 									<!-- Gradient Overlay -->
-									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+									<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 									<!-- Title -->
 									<div class="title-container">
@@ -171,9 +171,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 		</script>
 		<script>
-			document.getElementById("backToNationality").addEventListener("click", function(event) {
+			document.getElementById("backToFieldStudy").addEventListener("click", function(event) {
 				event.preventDefault();
-				window.location.href = "/fieldstudy";
+				window.location.href = "/international/fieldstudy";
 			});
 		</script>
 	</body>

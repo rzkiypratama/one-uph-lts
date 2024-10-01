@@ -12,7 +12,7 @@
 			<div class="card card-container d-none d-md-block p-5">
 				<div class="d-flex justify-content-between box-item">
 					<div class="left-content">
-						<p class="text-uppercase">step 6 of 8</p>
+						<p class="text-uppercase">step 7 of 9</p>
 						<h3>In which specific Program do you intend to apply?</h3>
 						<p class="children">Choose a program</p>
 						<hr class="solid" />
@@ -22,10 +22,10 @@
 						</span>
 					</div>
 
-					<div class="campus-grid card-box fade-in-right">
+					<div class="campus-grid card-box">
 						<div class="card-nationality border-0" style="background-image: url('/assets/design-img.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -36,7 +36,7 @@
 
 						<div class="card-nationality border-0" style="background-image: url('/assets/productdesign.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -47,7 +47,7 @@
 
 						<div class="card-nationality border-0" style="background-image: url('/assets/digitalart.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -58,7 +58,7 @@
 
 						<div class="card-nationality border-0" style="background-image: url('/assets/interiordesign-img.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -69,7 +69,7 @@
 
 						<div class="card-nationality border-0" style="background-image: url('/assets/movie.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -80,7 +80,7 @@
 
 						<div class="card-nationality border-0" style="background-image: url('/assets/Architectures.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
-							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+							<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 							<!-- Title -->
 							<div class="title-container">
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 
-				<span class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button" id="backToNationality" onclick="window.location.href = '/programmajor'">
+				<span class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button" id="backToNationality" onclick="window.location.href = '/international/programmajor'">
 					<img src="/assets/left-arrow.png" alt="arrow-left" />
 					<p class="back-button p-0">back to Faculty Selection</p>
 				</span>
@@ -107,8 +107,8 @@
 						</svg>
 					</span>
 
-					<span class="text-white" onclick="window.location.href = '/programmajor'">
-						<p class="mobile-title">Step 6 of 8</p>
+					<span class="text-white" onclick="window.location.href = '/international/programmajor'">
+						<p class="mobile-title">Step 7 of 9</p>
 						<p class="mobile-subtitle">Program</p>
 					</span>
 				</div>
@@ -123,11 +123,10 @@
 					</div>
 
 					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-scroll">
-						<div class="campus-grid card-box fade-in-bottom">
-							<div class="card-nationality border-0" style="background-image: url('/assets/faculties-program/design/Graphic\ Design.png'); height: 80px; width: auto" data-bs-toggle="modal"
-								data-bs-target="#modal">
+						<div class="campus-grid card-box">
+							<div class="card-nationality border-0" style="background-image: url('/assets/design-img.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -138,7 +137,7 @@
 
 							<div class="card-nationality border-0" style="background-image: url('/assets/productdesign.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -147,9 +146,9 @@
 								</div>
 							</div>
 
-							<div class="card-nationality border-0" style="background-image: url('/assets/digitalart.jpeg'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
+							<div class="card-nationality border-0" style="background-image: url('/assets/digitalart.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -160,7 +159,7 @@
 
 							<div class="card-nationality border-0" style="background-image: url('/assets/interiordesign-img.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(30deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -171,7 +170,7 @@
 
 							<div class="card-nationality border-0" style="background-image: url('/assets/movie.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -182,7 +181,7 @@
 
 							<div class="card-nationality border-0" style="background-image: url('/assets/Architectures.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #407bff, #f1f1f122)" \></div>
 
 								<!-- Title -->
 								<div class="title-container">
@@ -198,7 +197,7 @@
 		</div>
 
 		<!-- MODAL -->
-		<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" data-bs-backdrop="static">
+		<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-xl">
 				<div class="modal-content">
 					<!-- Custom close button (top left) -->
@@ -258,13 +257,13 @@
 												back
 											</button>
 											<button type="button" class="btn select-program-btn rounded-0 d-none d-md-block px-5 text-white">
-												<a href="/personalinformation" class="a-program">select this program
+												<a href="/international/personalinformation" class="a-program">select this program
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 														<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" stroke="#FFF" />
 													</svg></a>
 											</button>
 											<button type="button" class="btn select-program-btn rounded-0 w-100 d-md-none px-5 text-white">
-												<a href="/personalinformation" class="a-program">select this program
+												<a href="/international/personalinformation" class="a-program">select this program
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 														<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" stroke="#FFF" />
 													</svg></a>
@@ -280,14 +279,6 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-		</script>
-		<script>
-			const myModal = document.getElementById("myModal");
-			const myInput = document.getElementById("myInput");
-
-			myModal.addEventListener("shown.bs.modal", () => {
-				myInput.focus();
-			});
 		</script>
 	</body>
 

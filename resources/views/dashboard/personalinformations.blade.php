@@ -10,24 +10,24 @@
 					border: 1px solid #ccc;
 					border-radius: 5px;
 					transition: background-color 0.3s;
-					color: #CACACA;
+					color: #cacaca;
 					font-weight: 600;
 					font-size: 12px;
 				}
 
 				.radio-btn-group input[type="radio"] {
 					display: none;
-					color: #CACACA;
+					color: #cacaca;
 				}
 
 				.radio-btn-group input[type="radio"]:checked+label {
-					background-color: #719DFF;
-					border-color: #719DFF;
+					background-color: #719dff;
+					border-color: #719dff;
 					color: white;
 				}
 
 				option.select-placeholder {
-					color: #CACACA !important;
+					color: #cacaca !important;
 				}
 
 				.phone-input-group {
@@ -84,7 +84,7 @@
 				}
 
 				.card-body {
-					height: 418px;
+					height: 80vh;
 					padding-left: 2rem;
 					padding-right: 2rem;
 				}
@@ -93,12 +93,33 @@
 					padding-left: 2rem;
 					padding-right: 2rem;
 				}
+
+				.container {
+					padding-left: 0px !important;
+					padding-right: 0px !important;
+				}
+
+				#myTabs {
+					display: flex;
+				}
+
+				@media (min-width: 768px) {
+					.card-body {
+						height: 418px;
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+
+					.container {
+						padding: auto;
+					}
+				}
 			</style>
 		</x-slot>
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
+		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
 			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 			<div class="d-flex align-items-center gap-3">
 				<span class="logout-button d-flex align-items-center gap-2">
@@ -109,9 +130,9 @@
 			</div>
 		</div>
 
-		<div class="rounded-3 card-main-bg p-5">
-			<!-- steps -->
-			<div class="d-flex mb-4 gap-2">
+		<div class="p-md-5 rounded-3 card-main-bg">
+			<!-- desktop steps -->
+			<div class="d-none d-md-flex mb-4 gap-2">
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
@@ -178,6 +199,22 @@
 				</div>
 			</div>
 
+			<!-- mobile steps -->
+			<div class="d-md-none px-2 pt-3">
+				<div class="upper-content d-flex align-items-center mb-3 gap-3">
+					<span class="float-end">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+						</svg>
+					</span>
+
+					<span class="text-white" onclick="window.location.href = '/dashboard/intakeyear'">
+						<p class="mobile-title">Step 2 of 6</p>
+						<p class="mobile-subtitle">Personal Information</p>
+					</span>
+				</div>
+			</div>
+
 			<!-- Tabs & Form -->
 			<div class="card border-0 shadow-sm">
 				<div class="card-header tabs-header">
@@ -228,23 +265,22 @@
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div class="row">
-									<div class="row">
-										<!-- First Name -->
-										<div class="col-md-4 mb-3">
-											<label for="firstName" class="form-label">First Name</label>
-											<input type="text" class="form-control" id="firstName" placeholder="First Name" required />
-										</div>
-										<!-- Middle Name -->
-										<div class="col-md-4 mb-3">
-											<label for="middleName" class="form-label">Middle Name</label>
-											<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
-										</div>
-										<!-- Last Name -->
-										<div class="col-md-4 mb-3">
-											<label for="lastName" class="form-label">Last Name</label>
-											<input type="text" class="form-control" id="lastName" placeholder="Last Name" />
-										</div>
+									<!-- First Name -->
+									<div class="col-md-4 mb-3">
+										<label for="firstName" class="form-label">First Name</label>
+										<input type="text" class="form-control" id="firstName" placeholder="First Name" required />
 									</div>
+									<!-- Middle Name -->
+									<div class="col-md-4 mb-3">
+										<label for="middleName" class="form-label">Middle Name</label>
+										<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
+									</div>
+									<!-- Last Name -->
+									<div class="col-md-4 mb-3">
+										<label for="lastName" class="form-label">Last Name</label>
+										<input type="text" class="form-control" id="lastName" placeholder="Last Name" />
+									</div>
+
 									<div class="row mb-3 mt-4">
 										<!-- Date of Birth -->
 										<div class="col-md-4 mb-3">
@@ -390,7 +426,7 @@
 
 							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-								<div class="row mb-3">
+								<div>
 									<div class="row mb-4">
 										<div class="col-md-4">
 											<label class="form-label">Phone Number</label>
@@ -457,15 +493,15 @@
 								</div>
 							</div>
 						</div>
-						<div class="d-flex justify-content-between align-content-center mb-4">
-							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 mt-5 px-5">
+						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
+							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5 px-4">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 danger-button mt-5 px-5">
+							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
 								Continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />

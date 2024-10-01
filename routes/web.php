@@ -46,7 +46,7 @@ Route::get('/review', function () {
     return view('review');
 });
 
-// dashboard
+// dashboard route
 
 Route::get('/dashboard', function () {
     return view('dashboard/dashboard');
@@ -80,6 +80,8 @@ Route::get('/dashboard/applicationstatus', function () {
     return view('dashboard/applicationstatus');
 });
 
+// tuition fee route
+
 Route::get('/tuition-fee/administration-documents', function () {
     return view('tuition-fee/administration-documents');
 });
@@ -94,4 +96,42 @@ Route::get('/tuition-fee/re-registration', function () {
 
 Route::get('/tuition-fee/tuitionpayment', function () {
     return view('tuition-fee/tuitionpayment');
+});
+
+// international route
+
+Route::get('/international', function () {
+    return view('international/bipa');
+});
+
+Route::get('/international/studylevel', function () {
+    return view('international/studylevel');
+});
+
+Route::get('/international/studylevel', function () {
+    return view('international/studylevel');
+});
+
+Route::get('/international/campus', function () {
+    return view('international/campus');
+});
+
+Route::get('/international/fieldstudy', function () {
+    return view('international/fieldstudy');
+});
+
+Route::get('/international/programmajor', function () {
+    return view('international/programmajor');
+});
+
+Route::get('/international/program', function () {
+    return view('international/program');
+});
+
+Route::get('/international/personalinformation', function () {
+    return view('international/personalinformation');
+});
+
+Route::get('/international/review', function () {
+    return view('international/review');
 });
