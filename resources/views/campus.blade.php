@@ -27,7 +27,7 @@
 						</span>
 					</div>
 
-					<div class="campus-grid card-box">
+					<div class="campus-grid card-box fade-in-right">
 						<a href="/fieldstudy">
 							<div class="card-nationality col border-0" style="background-image: url('/assets/lippocampus.jpeg'); height: 128px; width: 272px">
 								<!-- Gradient Overlay -->
@@ -120,7 +120,7 @@
 					</div>
 
 					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-y-scroll">
-						<div class="campus-grid card-box">
+						<div class="campus-grid card-box fade-in-bottom">
 							<a href="/fieldstudy">
 								<div class="card-nationality col border-0" style="background-image: url('/assets/lippocampus.jpeg'); height: 100px; width: auto">
 									<!-- Gradient Overlay -->
