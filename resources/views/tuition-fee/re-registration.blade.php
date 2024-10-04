@@ -279,7 +279,7 @@
 												</div>
 											</div>
 
-											<div id="deceasedInputHide">
+											<div id="deceasedInputHide" class="row">
 												<div class="col-md-6 mb-md-0 mb-4">
 													<label class="form-label">Mobile Phone Number</label>
 													<div class="input-group phone-input-group">
