@@ -414,7 +414,7 @@
 
 			document.getElementById("nextStepPayment").addEventListener("click", function(event) {
 				event.preventDefault();
-				window.location.href = "/dashboard/requireddocument";
+				window.location.href = "/dashboard/required-document";
 			});
 		</script>
 		<!-- <script src="/js/reviewpayment.js"></script> -->
