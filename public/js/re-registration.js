@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const nationality = localStorage.getItem("nationality");
+    // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+    let nationality = localStorage.getItem("nationality") || "national";
+
+    // Jika belum ada di localStorage, set default nationality sebagai 'national'
+    if (!localStorage.getItem("nationality")) {
+        localStorage.setItem("nationality", "national");
+    }
+
+    // Menampilkan atau menyembunyikan form berdasarkan nationality
     const nationalForm = document.getElementById("national-form");
     const internationalForm = document.getElementById("international-form");
 
@@ -9,22 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (nationality === "international") {
         internationalForm.classList.add("show");
         nationalForm.classList.add("hidden");
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const nationality = localStorage.getItem("nationality");
-    const nationalAddress = document.getElementById("national-address");
-    const internationalAddress = document.getElementById(
-        "international-address"
-    );
-
-    if (nationality === "national") {
-        nationalAddress.classList.add("show");
-        internationalAddress.classList.add("hidden");
-    } else if (nationality === "international") {
-        internationalAddress.classList.add("show");
-        nationalAddress.classList.add("hidden");
     }
 });
 

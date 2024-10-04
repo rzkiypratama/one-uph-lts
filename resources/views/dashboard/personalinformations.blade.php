@@ -119,16 +119,7 @@
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
-			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
-			<div class="d-flex align-items-center gap-3">
-				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="m-0">dashboard</p>
-					<!-- <img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon"> -->
-				</span>
-				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
-			</div>
-		</div>
+		@include('components.notification')
 
 		<div class="p-md-5 rounded-3 card-main-bg">
 			<!-- desktop steps -->
