@@ -21,7 +21,7 @@
 
 			<!-- desktop button start -->
 			<div class="d-flex flex-column d-none d-md-flex gap-3">
-				<div class="card card-login p-1 shadow-sm" onclick="window.location.href = '/login'">
+				<div class="card card-login p-1 shadow-sm" onclick="window.location.href = '/signin'">
 					<div class="card-body">
 						<h5 class="card-title">Sign In</h5>
 						<p class="card-text fst-italic text-muted">if you already have an account</p>
@@ -41,7 +41,7 @@
 
 			<!-- mobile button start -->
 			<div class="d-flex flex-column d-md-none d-flex w-100 gap-3 text-center">
-				<div class="card card-login shadow-sm" onclick="window.location.href = '/login'">
+				<div class="card card-login shadow-sm" onclick="window.location.href = '/signin'">
 					<div class="card-body">
 						<h5 class="card-title">Sign In</h5>
 					</div>

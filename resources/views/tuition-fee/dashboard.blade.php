@@ -4,16 +4,7 @@
 	<x-head title="Tuition Fee" />
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
-			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
-			<div class="d-flex align-items-center gap-3">
-				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="d-md-block d-none m-0 m-0">logout</p>
-					<img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon" />
-				</span>
-				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
-			</div>
-		</div>
+		@include('components.notification-dashboard')
 
 		<!-- mobile layout -->
 		<div class="d-md-none d-block mb-3 px-2">

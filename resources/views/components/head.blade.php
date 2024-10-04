@@ -8,5 +8,4 @@
 
 	<!-- Inline CSS slot -->
 	{{ $inlineCSS ?? '' }}
-	<script type="text/javascript" src="{{ asset('js/notificationIcon.js') }} defer"></script>
 </head>
