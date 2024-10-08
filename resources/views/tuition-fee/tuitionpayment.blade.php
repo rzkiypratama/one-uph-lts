@@ -125,167 +125,158 @@
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div class="row address-container">
-									<div class="col-md-5 address-column">
-										<div class="col-md-12 mb-4">
-											<label for="installmentTuition" class="form-label">Payment Type</label>
-											<select id="installmentTuition" class="form-select">
-												<option value="" selected hidden>Installment</option>
+									<div class="d-flex justify-content-between align-items-center address-column">
+										<div class="d-flex align-items-center mb-4">
+											<label for="installmentTuition" class="form-label col-md-4 mb-0">Payment Type</label>
+											<select id="installmentTuition" class="form-select w-50 col-md-8">
+												<option value="" selected hidden>Select Installment</option>
 												<option value="1">Option 1</option>
 												<option value="2">Option 2</option>
 												<option value="Lainnya">Lainnya</option>
 											</select>
+											<button type="button" class="btn select-program-btn rounded-0 ms-3 px-4">Change</button>
 										</div>
 
-										<div class="d-flex justify-content-between">
-											<h3 class="row-title">Review your Tuition Fee</h3>
-											<p class="tuition-status">pending</p>
+										<p class="tabs-subtitle">* Please complete your full Payment before you can proceed</p>
+									</div>
+
+									<div class="installment-container">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="d-flex align-items-center gap-5">
+												<span class="col-md-6">
+													<p class="verify-title">Installment No: 1</p>
+													<p class="tuition-subtitle">Payment Due: 2024-09-13</p>
+												</span>
+												<span class="col-md-6">
+													<p class="verify-title">#ORD2024092010474497</p>
+													<p class="tuition-subtitle">2024-09-20 | 10:47:45</p>
+												</span>
+											</div>
+
+											<div class="d-flex align-items-center gap-5">
+												<p class="payment-title">IDR 291.000.000</p>
+												<span class="d-flex align-items-center gap-3">
+													<p class="file-status-unpaid">Unpaid</p>
+													<button type="button" class="btn select-program-btn rounded-0 px-4" data-bs-toggle="modal" data-bs-target="#firstPaymentTuitionModal">Pay Now</button>
+												</span>
+											</div>
 										</div>
 
-										<hr class="full-width my-3" />
+										<hr class="hr-solid" />
 
-										<div class="d-flex justify-content-between text-capitalize mb-2">
-											<p class="payment-title m-0">invoice no.</p>
-											<p class="payment-subtitle m-0">#ORD2024092010474497</p>
-										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="d-flex align-items-center gap-5">
+												<span class="col-md-6">
+													<p class="verify-title">Installment No: 2</p>
+													<p class="tuition-subtitle">Payment Due: 2024-09-13</p>
+												</span>
+												<span class="col-md-6">
+													<p class="verify-title">#ORD2024092010474497</p>
+													<p class="tuition-subtitle">2024-09-20 | 10:47:45</p>
+												</span>
+											</div>
 
-										<div class="d-flex justify-content-between text-capitalize mb-2">
-											<p class="payment-title m-0">Date</p>
-											<p class="payment-subtitle m-0">2024-09-20 | 10:47:45</p>
-										</div>
-
-										<div class="d-flex justify-content-between text-capitalize mb-2">
-											<p class="payment-title m-0">Installment No.</p>
-											<p class="payment-subtitle m-0">1</p>
-										</div>
-
-										<div class="d-flex justify-content-between text-capitalize mb-2">
-											<p class="payment-title m-0">Payment Due Date</p>
-											<p class="payment-subtitle m-0">2024-09-13</p>
+											<div class="d-flex align-items-center gap-5">
+												<p class="payment-title">IDR 291.000.000</p>
+												<span class="d-flex align-items-center gap-3">
+													<p class="file-status-paid">paid</p>
+													<button type="button" class="btn select-program-btn rounded-0 px-4 opacity-0" disabled>Pay Now</button>
+												</span>
+											</div>
 										</div>
 									</div>
 
-									<!-- Application Card -->
-									<div class="col-md-5 address-column">
-										<div class="application-bg p-3">
-											<h3 class="row-title">Tuition Fees</h3>
+									<p class="payment-title text-uppercase mt-4 text-end">Grand Total: <span class="row-title">IDR 291.000.000</span></p>
+								</div>
+							</div>
 
-											<hr class="full-width my-3" />
+							<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
+								<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 mt-5 px-5" onclick="window.location.href = '/tuition-fee';">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
+									</svg>
+									Back
+								</button>
 
-											<div class="d-flex justify-content-between text-capitalize">
-												<p class="payment-title m-0">Tuition Fee</p>
-												<p class="payment-subtitle m-0">IDR 100.000</p>
+								<button type="submit" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
+									Proceed to Next Step
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
+									</svg>
+								</button>
+							</div>
+
+							<!-- Modal -->
+							<div class="modal fade" id="firstPaymentTuitionModal" tabindex="-1" aria-labelledby="firstPaymentModal" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered modal-dialog-payment">
+									<div class="modal-content border-0">
+										<!-- Modal Body -->
+										<div class="modal-body">
+											<div>
+												<span class="d-flex justify-content-between text-uppercase payment-title-up">
+													<p>total</p>
+													<p>PAY WITHIN <span>{countdown}</span></p>
+												</span>
+												<p class="review-modal-title">IDR 120.000</p>
+												<span class="d-flex justify-content-between text-uppercase payment-title-down">
+													<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
+													<p class="text-decoration-underline payment-details">details</p>
+												</span>
+
+												<hr class="solid-fullwidth" />
+											</div>
+											<!-- Payment Option Section -->
+											<div class="mb-3">
+												<p class="row-title">Payment Option</p>
 											</div>
 
-											<div class="d-flex justify-content-between text-capitalize my-2">
-												<p class="payment-title m-0">Administration Fee</p>
-												<p class="payment-subtitle m-0">IDR 20.000</p>
-											</div>
+											<!-- Bank Options Section -->
+											<div class="payment-background">
+												<div class="d-flex flex-column gap-1 p-4">
+													<!-- Payment Method -->
+													<div class="col-md-12 mb-4">
+														<label for="paymentMethodTuition" class="form-label">Payment Method</label>
+														<select id="paymentMethodTuition" class="form-select">
+															<option value="" selected>Credit Card</option>
+															<option value="1">Option 1</option>
+															<option value="2">Option 2</option>
+															<option value="Lainnya">Lainnya</option>
+														</select>
+													</div>
 
-											<div class="d-flex justify-content-between text-capitalize">
-												<p class="payment-title m-0">Discount</p>
-												<p class="payment-subtitle m-0">-</p>
-											</div>
+													<!-- Installment Method -->
+													<div class="col-md-12 mb-4">
+														<label for="installmentMethodTuition" class="form-label">Installment</label>
+														<select id="installmentMethodTuition" class="form-select">
+															<option value="" selected>3 months installment</option>
+															<option value="1">Option 1</option>
+															<option value="2">Option 2</option>
+															<option value="Lainnya">Lainnya</option>
+														</select>
+													</div>
 
-											<hr class="full-width my-3" />
-
-											<div class="d-flex justify-content-between text-capitalize">
-												<p class="text-capitalize payment-total-title m-0">Total Fee</p>
-												<p class="text-capitalize payment-total-title m-0">IDR 120.000</p>
+													<!-- Bank -->
+													<div class="col-md-12 mb-4">
+														<label for="bankTuition" class="form-label">Bank</label>
+														<select id="bankTuition" class="form-select">
+															<option value="bca" selected>BCA</option>
+															<option value="bca">Option 1</option>
+															<option value="bca">Option 2</option>
+															<option value="Lainnya">Lainnya</option>
+														</select>
+													</div>
+												</div>
 											</div>
 										</div>
-										<button type="button" class="btn btn-danger float-end rounded-0 danger-button mt-2 px-5" data-bs-toggle="modal" data-bs-target="#firstPaymentTuitionModal">Pay Now</button>
+
+										<!-- Modal Footer -->
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#successModal" data-bs-toggle="modal" id="submitTuitionForm">Proceed to
+												Payment</button>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-
-						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
-							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 mt-5 px-5" onclick="window.location.href = '/tuition-fee';">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
-								</svg>
-								Back
-							</button>
-
-							<button type="submit" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
-								Proceed to Next Step
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
-								</svg>
-							</button>
-						</div>
-
-						<!-- Modal -->
-						<div class="modal fade" id="firstPaymentTuitionModal" tabindex="-1" aria-labelledby="firstPaymentModal" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered modal-dialog-payment">
-								<div class="modal-content border-0">
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<div>
-											<span class="d-flex justify-content-between text-uppercase payment-title-up">
-												<p>total</p>
-												<p>PAY WITHIN <span>{countdown}</span></p>
-											</span>
-											<p class="review-modal-title">IDR 120.000</p>
-											<span class="d-flex justify-content-between text-uppercase payment-title-down">
-												<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
-												<p class="text-decoration-underline payment-details">details</p>
-											</span>
-
-											<hr class="solid-fullwidth" />
-										</div>
-										<!-- Payment Option Section -->
-										<div class="mb-3">
-											<p class="row-title">Payment Option</p>
-										</div>
-
-										<!-- Bank Options Section -->
-										<div class="payment-background">
-											<div class="d-flex flex-column gap-1 p-4">
-												<!-- Payment Method -->
-												<div class="col-md-12 mb-4">
-													<label for="paymentMethodTuition" class="form-label">Payment Method</label>
-													<select id="paymentMethodTuition" class="form-select">
-														<option value="" selected>Credit Card</option>
-														<option value="1">Option 1</option>
-														<option value="2">Option 2</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
-
-												<!-- Installment Method -->
-												<div class="col-md-12 mb-4">
-													<label for="installmentMethodTuition" class="form-label">Installment</label>
-													<select id="installmentMethodTuition" class="form-select">
-														<option value="" selected>3 months installment</option>
-														<option value="1">Option 1</option>
-														<option value="2">Option 2</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
-
-												<!-- Bank -->
-												<div class="col-md-12 mb-4">
-													<label for="bankTuition" class="form-label">Bank</label>
-													<select id="bankTuition" class="form-select">
-														<option value="bca" selected>BCA</option>
-														<option value="bca">Option 1</option>
-														<option value="bca">Option 2</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<!-- Modal Footer -->
-									<div class="modal-footer">
-										<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#successModal" data-bs-toggle="modal" id="submitTuitionForm">Proceed to
-											Payment</button>
-									</div>
-								</div>
-							</div>
-						</div>
 					</form>
 
 					<!-- Modal 2 For Success Payment -->

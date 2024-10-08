@@ -922,6 +922,13 @@ input[type="radio"] {
     font-weight: medium;
 }
 
+.tuition-subtitle {
+    font-family: "Barlow", sans-serif;
+    font-style: italic;
+    color: #4a4a4a;
+    font-size: 14px;
+}
+
 .success-modal-title {
     font-family: "Barlow", sans-serif;
     font-weight: 600;
@@ -1011,6 +1018,36 @@ input[type="radio"] {
     background-color: #f8f9fa;
 }
 
+.file-status-unpaid {
+    padding: 1px 13px;
+    width: 70px;
+    background-color: #a3a3a3;
+    border-radius: 16px;
+    /* display: none; please change to none to make status dinamyc */
+    /* width: 10%; */
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.file-status-paid {
+    padding: 1px 13px;
+    width: 70px;
+    background-color: #7aa3ff;
+    border-radius: 16px;
+    /* display: none; please change to none to make status dinamyc */
+    /* width: 10%; */
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .trash-icon {
     cursor: pointer;
     display: none;
@@ -1032,6 +1069,14 @@ input[type="radio"] {
     width: auto;
 }
 
+/* tuition fee payment */
+
+.installment-container {
+    background-color: #e7eeff;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
 /* notification icon */
 /* Styling untuk card notification */
 .notification-card {
@@ -1041,7 +1086,8 @@ input[type="radio"] {
     height: 350px;
     overflow-y: scroll;
     width: 350px;
-    background-color: white;
+    background-color: #dfe9ff !important;
+    color: #264a99 !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 15px;
@@ -1070,7 +1116,7 @@ input[type="radio"] {
 .notification-card p {
     margin: 0;
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #bcd1ff !important;
 }
 
 .notification-card p:last-child {
