@@ -39,6 +39,11 @@
 					.container {
 						padding: auto;
 					}
+
+					.modal-body-checkbox {
+						height: 200px !important;
+						overflow-y: scroll;
+					}
 				}
 			</style>
 		</x-slot>
@@ -278,7 +283,7 @@
 									</div>
 
 									<!-- Modal Body -->
-									<div class="modal-body">
+									<div class="modal-body modal-body-checkbox overflow-x-scroll">
 										<p class="first-modal-p">
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
 											laboris nisi ut
