@@ -4,16 +4,7 @@
 	<x-head title="Application Status" />
 
 	<body class="container mt-3">
-		<div class="d-flex justify-content-between align-items-center mb-5 pt-3">
-			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
-			<div class="d-flex align-items-center gap-3">
-				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="d-md-block d-none m-0">logout</p>
-					<img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon" />
-				</span>
-				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
-			</div>
-		</div>
+		@include('components.notification-dashboard')
 
 		<!-- mobile layout -->
 		<div class="d-md-none d-block mb-3 px-2">
@@ -47,7 +38,12 @@
 								<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
 							</span>
 
-							<span class="col-md-8">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Program</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
+							</span>
+
+							<span class="col-md-4">
 								<p class="text-capitalize dashboard-title m-0">Entry Option</p>
 								<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
 							</span>
@@ -59,7 +55,12 @@
 								<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
 							</span>
 
-							<span class="col-md-8">
+							<span class="col-md-4">
+								<p class="text-capitalize dashboard-title m-0">Faculty</p>
+								<p class="text-capitalize dashboard-subtitle m-0">Faculty of Design</p>
+							</span>
+
+							<span class="col-md-4">
 								<p class="text-capitalize dashboard-title m-0">Entry Type</p>
 								<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
 							</span>
@@ -72,12 +73,12 @@
 						<div class="card rounded-3 border-0 bg-white p-3 shadow-sm">
 							<div class="d-flex justify-content-between align-items-center">
 								<p class="row-title m-0">Architecture</p>
-								<p class="admitted-btn">admitted</p>
+								<p class="commited-btn">commited</p>
 							</div>
 
 							<div class="d-flex justify-content-between fst-italic">
 								<p class="tabs-subtitle m-0">Undergraduate (S1)</p>
-								<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Tuition Fee</p> -->
+								<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Next Installment</p> -->
 							</div>
 
 							<div class="d-flex gap-4">
@@ -90,9 +91,9 @@
 					<!-- mobile layout start -->
 					<div class="mobile-dashboard rounded-4 d-md-none p-4">
 						<img src="/assets/togas.png" alt="togas" class="togas-icon" />
-						<p class="title-dashboard-mobile">Hello World!</p>
+						<p class="title-dashboard-mobile">Buy a Registration From</p>
 						<p class="subtitle-dashboard-mobile">This is your <strong>Student Online Application Account.</strong> You can submit a new application from here.</p>
-						<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" data-bs-toggle="modal" data-bs-target="#ecodeModal">Pay Tuition Fee</button>
+						<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" data-bs-toggle="modal" data-bs-target="#ecodeModal">Pay Next Installment</button>
 					</div>
 
 					<hr class="full-width-hr-wrapper-form d-md-none" />
@@ -106,7 +107,7 @@
 								</h2>
 								<div id="collapseOne" class="accordion-collapse show collapse" data-bs-parent="#accordionExample">
 									<div class="accordion-body">
-										<div class="row pt-2">
+										<div class="row">
 											<span class="col-md-4 mb-2">
 												<p class="text-capitalize dashboard-title m-0">study category</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
@@ -118,20 +119,18 @@
 											</span>
 
 											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">Faculty</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Faculty of Design</p>
+											</span>
+
+											<span class="col-md-4 mb-2">
+												<p class="text-capitalize dashboard-title m-0">Campus</p>
+												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
+											</span>
+
+											<span class="col-md-4 mb-2">
 												<p class="text-capitalize dashboard-title m-0">Entry Option</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
-											</span>
-										</div>
-
-										<div class="row">
-											<span class="col-md-4 mb-2">
-												<p class="text-capitalize dashboard-title m-0">Campus</p>
-												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
-											</span>
-
-											<span class="col-md-4 mb-2">
-												<p class="text-capitalize dashboard-title m-0">Campus</p>
-												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
 											</span>
 
 											<span class="col-md-4">
@@ -154,12 +153,12 @@
 										<div class="card rounded-3 border-0 bg-white p-3 shadow-sm">
 											<div class="d-flex justify-content-between align-items-center">
 												<p class="row-title m-0">Architecture</p>
-												<p class="admitted-btn">admitted</p>
+												<p class="commited-btn">commited</p>
 											</div>
 
 											<div class="d-flex justify-content-between fst-italic">
 												<p class="tabs-subtitle m-0">Undergraduate (S1)</p>
-												<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Tuition Fee</p> -->
+												<!-- <p class="tabs-subtitle m-0">Student Admited, Please Pay Next Installment</p> -->
 											</div>
 
 											<div class="d-flex gap-4">
@@ -186,7 +185,7 @@
 						<div class="title-container w-100">
 							<img src="/assets/toga copy.png" alt="icon" class="icon-form" />
 							<h3 class="title-card-dashboard" style="color: #112369 !important; font-weight: 300 !important">Complete Tuition Fee Payment</h3>
-							<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0">Pay Tuition Fee</button>
+							<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0">Pay Next Installment</button>
 						</div>
 					</div>
 				</div>

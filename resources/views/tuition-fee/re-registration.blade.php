@@ -45,16 +45,7 @@
 	</x-head>
 
 	<body class="container mt-3">
-		<div class="d-none d-md-flex justify-content-between align-items-center mb-5 pt-3">
-			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
-			<div class="d-flex align-items-center gap-3">
-				<span class="logout-button d-flex align-items-center gap-2">
-					<p class="m-0">dashboard</p>
-					<!-- <img src="/assets/signout-icon.png" alt="signout icon" class="logout-icon"> -->
-				</span>
-				<img src="/assets/bells.png" alt="notification icon" class="notification-icon" />
-			</div>
-		</div>
+		@include('components.notification')
 
 		<div class="p-md-5 rounded-3 card-main-bg">
 			<!-- desktop steps -->
@@ -161,7 +152,7 @@
 								<div id="international-address" class="form-section hidden">
 									<div class="address-container">
 										<!-- Overseas Address Column -->
-										<div class="col-md-5 address-column">
+										<div class="row col-md-6 address-column">
 											<div class="mb-3">
 												<label for="overseasAddress" class="form-label">Overseas Address</label>
 												<input type="text" class="form-control" id="overseasAddress" placeholder="Enter overseas address" />
@@ -189,12 +180,12 @@
 										</div>
 
 										<!-- Vertical Divider -->
-										<div class="col-md-1 vertical-divider">
-											<hr class="vertical-hr" />
-										</div>
+										<!-- <div class="col-md-1 vertical-divider">
+																						<hr class="vertical-hr" />
+																				</div> -->
 
 										<!-- Indonesian Address Column -->
-										<div class="col-md-5 address-column">
+										<div class="row col-md-6 address-column">
 											<div class="mb-3">
 												<label for="indonesianAddress" class="form-label">Indonesian Address</label>
 												<input type="text" class="form-control" id="indonesianAddress" placeholder="Enter Indonesian address" />
@@ -255,7 +246,7 @@
 									<!-- Mother Information -->
 									<div class="col-md-6 address-column">
 										<h3 class="row-title">Mother Information</h3>
-										<div class="row mb-4">
+										<div class="row mb-3">
 											<div class="col-md-6">
 												<label for="motherFirstName" class="form-label">First Name</label>
 												<input type="text" class="form-control" id="motherFirstName" placeholder="Your Mother’s first name?" />
@@ -267,7 +258,7 @@
 										</div>
 										<div class="row">
 											<div class="row">
-												<div class="col-md-12 mb-4">
+												<div class="col-md-12 mb-3">
 													<label class="form-label">Status</label>
 													<div class="radio-btn-group d-flex gap-1">
 														<input type="radio" id="aliveMother" name="motherStatus" value="alive" checked />
@@ -280,7 +271,7 @@
 											</div>
 
 											<div id="deceasedInputHide" class="row">
-												<div class="col-md-6 mb-md-0 mb-4">
+												<div class="col-md-6 mb-3">
 													<label class="form-label">Mobile Phone Number</label>
 													<div class="input-group phone-input-group">
 														<!-- Select for country code -->
@@ -295,7 +286,7 @@
 														<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
 													</div>
 												</div>
-												<div class="col-md-6 mb-md-0 mb-4">
+												<div class="col-md-6 mb-3">
 													<label for="parentEmail" class="form-label">Email Address</label>
 													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 												</div>
@@ -306,7 +297,7 @@
 									<!-- Father Information -->
 									<div class="col-md-6 address-column">
 										<h3 class="row-title">Father Information</h3>
-										<div class="row mb-4">
+										<div class="row mb-3">
 											<div class="col-md-6">
 												<label for="fatherFirstName" class="form-label">First Name</label>
 												<input type="text" class="form-control" id="fatherFirstName" placeholder="Your Father’s first name?" />
@@ -317,7 +308,7 @@
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-md-12 mb-4">
+											<div class="col-md-12 mb-3">
 												<label class="form-label">Status</label>
 												<div class="radio-btn-group d-flex gap-1">
 													<input type="radio" id="aliveFather" name="fatherStatus" value="alive" checked />
@@ -329,7 +320,7 @@
 											</div>
 										</div>
 										<div class="row" id="deceasedFatherInputHide">
-											<div class="col-md-6 mb-md-0 mb-4">
+											<div class="col-md-6 mb-3">
 												<label class="form-label">Mobile Phone Number</label>
 												<div class="input-group phone-input-group">
 													<!-- Select for country code -->
@@ -417,7 +408,7 @@
 							</button>
 							<!-- Submit Button -->
 							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 danger-button mt-5 px-5">
-								Save Data & Continue
+								save & continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
 								</svg>
@@ -429,7 +420,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="/js/re-registration.js"></script>
+		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
 	</body>
 
 </html>

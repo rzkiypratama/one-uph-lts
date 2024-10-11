@@ -32,12 +32,12 @@ function updateButtons() {
     if (currentTabIndex === 0) {
         backButton.innerText = "Back";
     } else {
-        backButton.innerText = "Previous";
+        backButton.innerText = "Back";
     }
 
     // Jika di tab terakhir, tombol Next menjadi Submit
     if (currentTabIndex === tabs.length - 1) {
-        nextButton.innerText = "Save Data & Continue";
+        nextButton.innerText = "Save & Continue";
     } else {
         nextButton.innerText = "Continue";
     }
@@ -69,7 +69,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         nextTab.show();
         updateButtons();
     } else {
-        alert("Form submitted!");
+        // alert("Form submitted!");
         window.location.href = "/tuition-fee/administration-documents";
     }
 });

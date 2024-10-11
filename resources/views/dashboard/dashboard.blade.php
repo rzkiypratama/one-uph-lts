@@ -127,7 +127,7 @@
 					<!-- mobile layout start -->
 					<div class="mobile-dashboard rounded-4 d-md-none p-4">
 						<img src="/assets/togas.png" alt="togas" class="togas-icon" />
-						<p class="title-dashboard-mobile">Hello World!</p>
+						<p class="title-dashboard-mobile">Buy a Registration From</p>
 						<p class="subtitle-dashboard-mobile">This is your <strong>Student Online Application Account.</strong> You can submit a new application from here.</p>
 						<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" data-bs-toggle="modal" data-bs-target="#ecodeModal">buy new form</button>
 					</div>
@@ -143,35 +143,33 @@
 								</h2>
 								<div id="collapseOne" class="accordion-collapse show collapse" data-bs-parent="#accordionExample">
 									<div class="accordion-body">
-										<div class="row mb-4 pt-2">
+										<div class="row">
 											<span class="col-md-4">
 												<p class="text-capitalize dashboard-title m-0">study category</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Undergraduate (S1)</p>
 											</span>
 
-											<span class="col-md-4">
+											<span class="col-md-4 mt-2">
 												<p class="text-capitalize dashboard-title m-0">program</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Architecture</p>
 											</span>
 
-											<span class="col-md-4">
+											<span class="col-md-4 mt-2">
 												<p class="text-capitalize dashboard-title m-0">Entry Option</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Regular Application</p>
 											</span>
-										</div>
 
-										<div class="row">
-											<span class="col-md-4">
+											<span class="col-md-4 mt-2">
 												<p class="text-capitalize dashboard-title m-0">Campus</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
 											</span>
 
-											<span class="col-md-4">
+											<span class="col-md-4 mt-2">
 												<p class="text-capitalize dashboard-title m-0">Campus</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Lippo Village Campus</p>
 											</span>
 
-											<span class="col-md-4">
+											<span class="col-md-4 mt-2">
 												<p class="text-capitalize dashboard-title m-0">Entry Type</p>
 												<p class="text-capitalize dashboard-subtitle m-0">Direct Admission</p>
 											</span>

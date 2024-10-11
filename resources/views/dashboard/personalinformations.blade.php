@@ -344,7 +344,7 @@
 													<label for="singleIntl">Single</label>
 
 													<input type="radio" id="marriedIntl" name="maritalStatusIntl" value="married" />
-													<label for="married">Married</label>
+													<label for="marriedIntl">Married</label>
 												</div>
 											</div>
 											<!-- Religion -->
