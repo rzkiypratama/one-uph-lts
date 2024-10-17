@@ -6,8 +6,8 @@
 			<style>
 				.card-body {
 					height: 84vh;
-					padding-left: 2rem;
-					padding-right: 2rem;
+					/* padding-left: 2rem;
+					padding-right: 2rem; */
 				}
 
 				.card-header .tabs-header {
@@ -121,8 +121,8 @@
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div class="row address-container">
-									<div class="d-flex justify-content-between align-items-center address-column">
-										<div class="d-flex align-items-center mb-4">
+									<div class="d-md-flex justify-content-between align-items-center address-column mb-3">
+										<div class="d-flex align-items-center mb-md-4 mb-2">
 											<label for="installmentTuition" class="form-label col-md-4 mb-0">Payment Type</label>
 											<select id="installmentTuition" class="form-select w-50 col-md-8">
 												<option value="" selected hidden>Select Method</option>
@@ -182,7 +182,7 @@
 									</div>
 
 									<div class="installment-container installment-wrapper hidden" id="cash-method">
-										<div class="d-flex align-items-center justify-content-between">
+										<div class="d-flex align-items-center justify-content-between d-none d-md-block">
 											<div class="d-flex align-items-center gap-5">
 												<span class="col-md-6">
 													<p class="verify-title">Cash No: 1</p>
@@ -201,6 +201,33 @@
 													<button type="button" class="btn select-program-btn rounded-0 px-4 opacity-0" disabled>Pay Now</button>
 												</span>
 											</div>
+										</div>
+
+										<div class="d-md-none">
+											<div class="d-flex align-items-center justify-content-between mb-3 gap-5">
+												<span class="col-md-6">
+													<p class="verify-title">Cash No: 100</p>
+													<p class="tuition-subtitle">Payment Due: 2024-09-13</p>
+												</span>
+												<span class="col-md-6">
+													<p class="verify-title">#ORD2024092010474497</p>
+													<p class="tuition-subtitle">2024-09-20 | 10:47:45</p>
+												</span>
+											</div>
+
+											<div class="d-flex align-items-center justify-content-between mb-1 flex-row-reverse gap-5">
+												<p class="payment-title">IDR 291.000.000</p>
+
+												<span class="d-flex align-items-center gap-3">
+													<p class="file-status-paid">paid</p>
+													<button type="button" class="btn select-program-btn rounded-0 d-none d-md-block px-4 opacity-0" disabled>Pay Now</button>
+												</span>
+											</div>
+
+											<!-- button pay mobile -->
+											<span class="d-flex align-items-center float-end d-md-none mt-2 gap-3">
+												<button type="button" class="btn select-program-btn rounded-0 opacity-1 px-4">Pay Now</button>
+											</span>
 										</div>
 
 										<!-- <hr class="hr-solid" /> -->

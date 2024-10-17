@@ -1153,7 +1153,7 @@ input[type="radio"] {
 }
 
 .grand-total {
-    width: 79.5%;
+    /* width: 79.5%; */
 }
 
 /* scrollbar */
@@ -1171,6 +1171,10 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+    .grand-total {
+        width: 79.5%;
+    }
+
     .file-input {
         display: flex;
         justify-content: space-between;
