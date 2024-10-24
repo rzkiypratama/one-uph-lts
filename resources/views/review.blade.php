@@ -3,13 +3,14 @@
 
 	<x-head title="Review Your Form" />
 
-	<body class="container">
-		<!-- header -->
-		<img src="/assets/uph-logo.png" alt="logo" class="uphlogo position-absolute d-none d-md-block pt-5" />
+	<body class="container mt-3">
+		<div class="d-flex justify-content-between align-items-center mb-md-5 px-3 pt-3">
+			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
+		</div>
 
-		<!-- please create hidden input and get their values on the localstorage -->
+		<!-- please create hidden input here to store value from card selection -->
 
-		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center vh-100 homepage-container px-2 py-4">
+		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center homepage-container px-2 py-4">
 			<!-- desktop view start -->
 			<div class="card card-container d-none d-md-block p-5">
 				<div class="d-flex justify-content-between box-item">

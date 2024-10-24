@@ -246,6 +246,18 @@
 								</div>
 							</button>
 						</li>
+						<!-- Tab 4 -->
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="true">
+								<div class="d-flex">
+									<img src="/assets/personalinformation.png" alt="icon1" class="tab-icon" />
+									<span class="d-flex flex-column text-start">
+										<p class="tabs-title text-capitalize m-0">Job Information</p>
+										<p class="tabs-subtitle m-0">your work information</p>
+									</span>
+								</div>
+							</button>
+						</li>
 					</ul>
 				</div>
 
@@ -257,7 +269,7 @@
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div class="row">
 									<!-- First Name -->
-									<div class="col-md-4 mb-3">
+									<div class="col-md-4 mb-md-4">
 										<label for="firstName" class="form-label">First Name</label>
 										<input type="text" class="form-control" id="firstName" placeholder="First Name" required />
 									</div>
@@ -271,21 +283,8 @@
 										<label for="lastName" class="form-label">Last Name</label>
 										<input type="text" class="form-control" id="lastName" placeholder="Last Name" />
 									</div>
-
-									<div class="row mb-3 mt-4">
-										<!-- Date of Birth -->
-										<div class="col-md-4 mb-3">
-											<label for="dob" class="form-label">Date of Birth</label>
-											<input type="date" class="form-control" id="dob" />
-										</div>
-										<!-- School Name -->
-										<div class="col-md-4 mb-3">
-											<label for="schoolName" class="form-label">City of Birth</label>
-											<input type="text" class="form-control" id="schoolName" placeholder="City of Birth" />
-										</div>
-									</div>
 									<!-- Gender -->
-									<div class="col-md-12">
+									<div class="col-md-4 mb-md-4">
 										<label class="form-label">Select Gender</label>
 										<div class="radio-btn-group">
 											<input type="radio" id="male" name="gender" value="Male" checked />
@@ -294,6 +293,39 @@
 											<input type="radio" id="female" name="gender" value="Female" />
 											<label for="female">Female</label>
 										</div>
+									</div>
+									<!-- Date of Birth -->
+									<div class="col-md-4 mb-3">
+										<label for="dob" class="form-label">Date of Birth</label>
+										<input type="date" class="form-control" id="dob" />
+									</div>
+									<!-- School Name -->
+									<div class="col-md-4 mb-3">
+										<label for="schoolName" class="form-label">City of Birth</label>
+										<input type="text" class="form-control" id="schoolName" placeholder="City of Birth" />
+									</div>
+
+									<!-- if user choose S2 show this field bellow -->
+									<!-- Alumni Option -->
+									<div class="col-md-4 mb-3">
+										<label class="form-label">Are You an Alumni?</label>
+										<div class="radio-btn-group">
+											<input type="radio" id="alumni" name="alumniOption" value="Alumni" checked />
+											<label for="alumni">Yes, I am</label>
+
+											<input type="radio" id="notAlumni" name="alumniOption" value="notAlumni" />
+											<label for="notAlumni">No, I'm Not</label>
+										</div>
+									</div>
+									<!-- NIM -->
+									<div class="col-md-4 mb-3">
+										<label for="nim" class="form-label">NIM</label>
+										<input type="text" class="form-control" id="nim" />
+									</div>
+									<!-- Document -->
+									<div class="col-md-4 mb-3">
+										<label for="alumniDocument" class="form-label">Alumni Document</label>
+										<input type="file" class="form-control" placeholder="City of Birth" />
 									</div>
 								</div>
 							</div>
@@ -479,6 +511,94 @@
 												<option value="option3">option3</option>
 												<option value="Lainnya">Lainnya</option>
 											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Tab Content 4 Only appear if user choose S2 -->
+							<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+								<div>
+									<div class="row mb-4">
+										<!-- first row -->
+										<div class="col-md-3 mb-md-4">
+											<label for="companyName" class="form-label">Company Name</label>
+											<input type="companyName" class="form-control" id="companyName" placeholder="Enter your company name" />
+										</div>
+										<div class="col-md-3">
+											<label for="departmentDivision" class="form-label">Department Division</label>
+											<input type="departmentDivision" class="form-control" id="departmentDivision" placeholder="Your Department or Division" />
+										</div>
+										<div class="col-md-3">
+											<label for="position" class="form-label">Posiition</label>
+											<input type="position" class="form-control" id="position" placeholder="Enter your Posiition" />
+										</div>
+										<div class="col-md-3 mb-md-3">
+											<label for="occupation" class="form-label">Occupation</label>
+											<select id="occupation" class="form-select">
+												<option value="option1">option1</option>
+												<option value="option2">option2</option>
+												<option value="option3">option3</option>
+												<option value="Lainnya">Lainnya</option>
+											</select>
+										</div>
+
+										<!-- second row -->
+										<div class="col-md-3">
+											<label for="companyAddress" class="form-label">Company Address</label>
+											<input type="companyAddress" class="form-control" id="companyAddress" placeholder="Enter your Company address" />
+										</div>
+										<div class="col-md-3">
+											<label for="companyCountry" class="form-label">Country</label>
+											<input type="companyCountry" class="form-control" id="companyCountry" placeholder="Country Location" />
+										</div>
+										<div class="col-md-3">
+											<label class="form-label">Is this your current job?</label>
+											<div class="radio-btn-group">
+												<input type="radio" id="currentJob" name="currentJobOption" value="currentJob" checked />
+												<label for="currentJob">Yes</label>
+
+												<input type="radio" id="notcurrentJob" name="currentJobOption" value="notcurrentJob" />
+												<label for="notcurrentJob">No</label>
+											</div>
+										</div>
+										<div class="col-md-1-5">
+											<label for="startWorking" class="form-label">Start Date</label>
+											<input type="text" class="form-control" id="startWorking" placeholder="Start Working" />
+										</div>
+										<div class="col-md-1-5 mb-md-4">
+											<label for="endWorking" class="form-label">End Date</label>
+											<input type="text" class="form-control" id="endWorking" placeholder="End Working" />
+										</div>
+
+										<!-- third row -->
+										<div class="col-md-2">
+											<label for="companyProvince" class="form-label">Province or State</label>
+											<input type="companyProvince" class="form-control" id="companyProvince" placeholder="Province" />
+										</div>
+										<div class="col-md-2">
+											<label for="companyCity" class="form-label">City</label>
+											<input type="companyCity" class="form-control" id="companyCity" placeholder="City" />
+										</div>
+										<div class="col-md-2">
+											<label for="companyPostalCode" class="form-label">Postal Code</label>
+											<input type="companyPostalCode" class="form-control" id="companyPostalCode" placeholder="Postal Code" />
+										</div>
+										<div class="col-md-2">
+											<label for="district" class="form-label">District</label>
+											<input type="district" class="form-control" id="district" placeholder="District" />
+										</div>
+										<div class="col-md-2">
+											<label for="village" class="form-label">Village</label>
+											<input type="village" class="form-control" id="village" placeholder="Village" />
+										</div>
+										<div class="col-md-1">
+											<label for="rt" class="form-label">RT</label>
+											<input type="rt" class="form-control" id="email" placeholder="RT" />
+										</div>
+										<div class="col-md-1">
+											<label for="rw" class="form-label">RW</label>
+											<input type="rw" class="form-control" id="email" placeholder="RW" />
 										</div>
 									</div>
 								</div>

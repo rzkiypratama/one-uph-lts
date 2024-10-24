@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const tabs = ["tab1-tab", "tab2-tab", "tab3-tab"];
+const tabs = ["tab1-tab", "tab2-tab", "tab3-tab", "tab4-tab"];
 let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");

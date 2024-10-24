@@ -9,6 +9,11 @@
     transition: 0.3s;
 }
 
+html {
+    /* height: -webkit-fill-available; */
+    height: max-content;
+}
+
 body {
     background-image: url("/assets/bg-hero.webp");
     background-repeat: no-repeat;
@@ -284,6 +289,10 @@ h5 {
 
 .upper-content {
     height: 10%;
+}
+
+.upper-content-personalinformation {
+    height: 5%;
 }
 
 .middle-content {
@@ -1152,9 +1161,13 @@ input[type="radio"] {
     border-bottom: none;
 }
 
-.grand-total {
-    /* width: 79.5%; */
+.homepage-container {
+    height: 95vh;
 }
+
+/* .grand-total {
+  width: 79.5%;
+} */
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -1171,6 +1184,14 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+    .col-md-1-5 {
+        width: 12.49% !important;
+    }
+
+    .upper-content {
+        height: 10%;
+    }
+
     .grand-total {
         width: 79.5%;
     }
@@ -1278,6 +1299,32 @@ input[type="radio"] {
     .card-header-tabs {
         display: flex;
         flex-direction: row;
+    }
+
+    /* RADIO BUTTON */
+    .radio-btn-group label {
+        cursor: pointer;
+        padding: 10px 50px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        color: #cacaca;
+        font-weight: 600;
+        font-size: 12px;
+        width: 49%;
+        text-align: center;
+    }
+
+    .radio-btn-group input[type="radio"] {
+        display: none;
+        color: #cacaca;
+    }
+
+    .radio-btn-group input[type="radio"]:checked + label {
+        background-color: #719dff;
+        border-color: #719dff;
+        color: white;
+        text-align: center;
     }
 
     /* navbar */
@@ -1653,6 +1700,7 @@ input[type="radio"] {
     /* index.html */
     .homepage-container {
         gap: 10rem !important;
+        height: auto;
     }
 
     .graduate-logo {
@@ -1712,6 +1760,16 @@ input[type="radio"] {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px 10px;
+        height: max-content;
+    }
+
+    /* field study */
+
+    .fieldstudy-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
         gap: 10px 10px;
         height: max-content;
     }

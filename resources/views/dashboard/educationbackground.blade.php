@@ -143,6 +143,18 @@
 								</div>
 							</button>
 						</li>
+						<!-- Tab 2 only show when user choose s2 -->
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="true">
+								<div class="d-flex">
+									<img src="/assets/educational-icon.png" alt="icon1" class="tab-icon" />
+									<span class="d-flex flex-column text-start">
+										<p class="tabs-title text-capitalize m-0">University Information</p>
+										<p class="tabs-subtitle m-0">your education information</p>
+									</span>
+								</div>
+							</button>
+						</li>
 					</ul>
 				</div>
 
@@ -150,7 +162,7 @@
 					<!-- Form Start -->
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
-							<!-- Tab Content 2 -->
+							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div>
 									<div class="row col-md-12 mb-4">
@@ -185,6 +197,83 @@
 										<div class="col-md-4 mb-3">
 											<label for="finalCertificate" class="form-label">Final Ceritificate</label>
 											<input type="text" class="form-control" id="finalCertificate" placeholder="Your Final Certificate " />
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Tab Content 2 only show when user choose s2 -->
+							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+								<div id="universityInformation" class="form-section">
+									<div class="address-container d-flex gap-3">
+										<!-- Main University -->
+										<div class="col-md-6 address-column">
+											<p class="row-title">Main University</p>
+											<div class="row my-4">
+												<div class="col-md-6">
+													<label for="universityName" class="form-label">Univeristy Name</label>
+													<input type="text" class="form-control" id="universityName" placeholder="Enter Univeristy Name" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Level Of Study</label>
+													<input type="text" class="form-control" placeholder="Enter Level of Study" />
+												</div>
+											</div>
+											<div class="row my-4">
+												<div class="col-md-6">
+													<label class="form-label">Study Program</label>
+													<input type="text" class="form-control" placeholder="Enter Study Program" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Degree Title</label>
+													<input type="text" class="form-control" placeholder="Enter Degree Title" />
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<label class="form-label">CGPA</label>
+													<input type="text" class="form-control" placeholder="Enter CGPA" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Graduation Date</label>
+													<input type="text" class="form-control" placeholder="Enter Postal Code" />
+												</div>
+											</div>
+										</div>
+
+										<!-- Additional Univeristy -->
+										<div class="col-md-6 address-column">
+											<p class="row-title">Additional University</p>
+											<div class="row my-4">
+												<div class="col-md-6">
+													<label for="universityName" class="form-label">Univeristy Name</label>
+													<input type="text" class="form-control" id="universityName" placeholder="Enter Univeristy Name" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Level Of Study</label>
+													<input type="text" class="form-control" placeholder="Enter Level of Study" />
+												</div>
+											</div>
+											<div class="row my-4">
+												<div class="col-md-6">
+													<label class="form-label">Study Program</label>
+													<input type="text" class="form-control" placeholder="Enter Study Program" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Degree Title</label>
+													<input type="text" class="form-control" placeholder="Enter Degree Title" />
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6">
+													<label class="form-label">CGPA</label>
+													<input type="text" class="form-control" placeholder="Enter CGPA" />
+												</div>
+												<div class="col-md-6">
+													<label class="form-label">Graduation Date</label>
+													<input type="text" class="form-control" placeholder="Enter Postal Code" />
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
