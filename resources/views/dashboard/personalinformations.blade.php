@@ -406,7 +406,7 @@
 								<div id="national-form" class="form-section hidden">
 									<div class="row">
 										<!-- Citizenship -->
-										<div class="col-md-4 mb-5">
+										<div class="col-md-4 mb-4">
 											<label for="citizenship" class="form-label">Citizenship</label>
 											<select id="citizenship" class="form-select">
 												<option value="" selected disabled hidden class="select-placeholder">What is your citizenship?</option>
@@ -415,7 +415,7 @@
 											</select>
 										</div>
 										<!-- NIK ID Number -->
-										<div class="col-md-4 mb-5">
+										<div class="col-md-4 mb-4">
 											<label for="nikNumber" class="form-label">NIK/ID Number</label>
 											<input type="text" class="form-control" id="nikNumber" placeholder="Enter your NIK / ID Number" />
 										</div>
