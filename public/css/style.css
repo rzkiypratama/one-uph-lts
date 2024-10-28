@@ -661,12 +661,6 @@ a.forgot-password {
 
 /* personal information */
 
-.add-more-btn {
-    position: absolute;
-    top: 256px;
-    right: 38px;
-}
-
 .form-label {
     font-family: "Barlow", sans-serif;
     font-weight: 600;
@@ -910,6 +904,12 @@ option.select-placeholder {
     width: 400px;
     border: none !important;
 }
+
+/* .add-more-btn {
+  position: absolute;
+  top: 256px;
+  right: 25px;
+} */
 
 input[type="radio"] {
     accent-color: #407bff;
@@ -1202,11 +1202,11 @@ input[type="radio"] {
         width: 79.5%;
     }
 
-    .add-more-btn {
-        position: absolute;
-        top: 77px;
-        right: 38px;
-    }
+    /* .add-more-btn {
+    position: absolute;
+    top: 77px;
+    right: 38px;
+  } */
 
     .file-input {
         display: flex;
@@ -1322,7 +1322,7 @@ input[type="radio"] {
         transition: background-color 0.3s;
         color: #cacaca;
         font-weight: 600;
-        font-size: 12px;
+        font-size: 11px;
         width: 49%;
         text-align: center;
     }
