@@ -508,11 +508,7 @@
 										</div>
 									</div>
 
-									{{-- <div class="row mt-4">
-										<div class="col-md-4">
-											<label for="email" class="form-label">Email Address</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter your email address" />
-										</div>
+									<div class="row mt-4">
 										<div class="col-md-4">
 											<label for="contactRefer" class="form-label">I prefer to be contacted by:</label>
 											<select id="contactRefer" class="form-select">
@@ -522,7 +518,7 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
-									</div> --}}
+									</div>
 								</div>
 							</div>
 
