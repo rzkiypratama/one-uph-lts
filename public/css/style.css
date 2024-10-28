@@ -663,7 +663,7 @@ a.forgot-password {
 
 .add-more-btn {
     position: absolute;
-    top: 77px;
+    top: 256px;
     right: 38px;
 }
 
@@ -1200,6 +1200,12 @@ input[type="radio"] {
 
     .grand-total {
         width: 79.5%;
+    }
+
+    .add-more-btn {
+        position: absolute;
+        top: 77px;
+        right: 38px;
     }
 
     .file-input {
