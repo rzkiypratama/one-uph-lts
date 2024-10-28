@@ -371,13 +371,18 @@
 											<!-- Marital Status -->
 											<div class="col-md-4 mt-2">
 												<label class="form-label">Marital Status</label>
-												<div class="radio-btn-group">
+												<select class="form-select">
+													<option value="" selected disabled hidden class="select-placeholder">Choose your Marital Status</option>
+													<option>Single</option>
+													<option>Married</option>
+												</select>
+												<!-- <div class="radio-btn-group">
 													<input type="radio" id="singleIntl" name="maritalStatusIntl" value="single" checked />
 													<label for="singleIntl">Single</label>
 
 													<input type="radio" id="marriedIntl" name="maritalStatusIntl" value="married" />
 													<label for="marriedIntl">Married</label>
-												</div>
+												</div> -->
 											</div>
 											<!-- Religion -->
 											<div class="col-md-4 mt-2">
@@ -405,8 +410,8 @@
 											<label for="citizenship" class="form-label">Citizenship</label>
 											<select id="citizenship" class="form-select">
 												<option value="" selected disabled hidden class="select-placeholder">What is your citizenship?</option>
-												<option value="National">National</option>
-												<option value="International">International</option>
+												<option value="national">National</option>
+												<option value="international">International</option>
 											</select>
 										</div>
 										<!-- NIK ID Number -->
@@ -435,13 +440,18 @@
 										<!-- Marital Status -->
 										<div class="col-md-4">
 											<label class="form-label">Marital Status</label>
-											<div class="radio-btn-group">
+											<select class="form-select">
+												<option value="" selected disabled hidden class="select-placeholder">Choose your Marital Status</option>
+												<option>Single</option>
+												<option>Married</option>
+											</select>
+											{{-- <div class="radio-btn-group">
 												<input type="radio" id="single" name="maritalStatus" value="Single" checked />
 												<label for="single">Single</label>
 
 												<input type="radio" id="married" name="maritalStatus" value="Married" />
 												<label for="married">Married</label>
-											</div>
+											</div> --}}
 										</div>
 									</div>
 								</div>
@@ -498,7 +508,7 @@
 										</div>
 									</div>
 
-									<div class="row mt-4">
+									{{-- <div class="row mt-4">
 										<div class="col-md-4">
 											<label for="email" class="form-label">Email Address</label>
 											<input type="email" class="form-control" id="email" placeholder="Enter your email address" />
@@ -512,7 +522,7 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
-									</div>
+									</div> --}}
 								</div>
 							</div>
 
@@ -626,6 +636,22 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
+		<script>
+			// Ambil elemen select
+			const citizenshipSelect = document.getElementById("citizenship");
+
+			// Cek apakah ada nilai nationality di localStorage
+			const savedNationality = localStorage.getItem("nationality");
+
+			// Jika ada, tetapkan nilai tersebut sebagai pilihan terpilih dan disable dropdown
+			if (savedNationality) {
+				citizenshipSelect.value = savedNationality;
+				citizenshipSelect.disabled = true; // Membuat dropdown tidak bisa diubah
+			} else {
+				// Jika tidak ada data di localStorage, tampilkan alert atau handle sesuai kebutuhan
+				alert("Nationality data not found in localStorage.");
+			}
+		</script>
 	</body>
 
 </html>
