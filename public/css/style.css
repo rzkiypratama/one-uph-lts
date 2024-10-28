@@ -661,6 +661,12 @@ a.forgot-password {
 
 /* personal information */
 
+.add-more-btn {
+    position: absolute;
+    top: 77px;
+    right: 38px;
+}
+
 .form-label {
     font-family: "Barlow", sans-serif;
     font-weight: 600;

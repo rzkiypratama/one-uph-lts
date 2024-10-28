@@ -261,7 +261,7 @@
 					</ul>
 				</div>
 
-				<div class="card-body">
+				<div class="card-body overflow-y-scroll">
 					<!-- Form Start -->
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
@@ -528,87 +528,105 @@
 
 							<!-- Tab Content 4 Only appear if user choose S2 -->
 							<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-								<div>
-									<div class="row mb-4">
-										<!-- first row -->
-										<div class="col-md-3 mb-md-4">
-											<label for="companyName" class="form-label">Company Name</label>
-											<input type="companyName" class="form-control" id="companyName" placeholder="Enter your company name" />
+								<button type="button" id="addMoreJobBtn" class="btn btn-primary add-more-btn">Add New</button>
+								<div id="jobCardsContainer">
+									<div class="job-card">
+										<div class="d-flex align-items-center absolute">
+											<h5 class="job-title row-title mb-3">Job Information #1</h5>
 										</div>
-										<div class="col-md-3">
-											<label for="departmentDivision" class="form-label">Department Division</label>
-											<input type="departmentDivision" class="form-control" id="departmentDivision" placeholder="Your Department or Division" />
-										</div>
-										<div class="col-md-3">
-											<label for="position" class="form-label">Posiition</label>
-											<input type="position" class="form-control" id="position" placeholder="Enter your Posiition" />
-										</div>
-										<div class="col-md-3 mb-md-3">
-											<label for="occupation" class="form-label">Occupation</label>
-											<select id="occupation" class="form-select">
-												<option value="option1">option1</option>
-												<option value="option2">option2</option>
-												<option value="option3">option3</option>
-												<option value="Lainnya">Lainnya</option>
-											</select>
-										</div>
-
-										<!-- second row -->
-										<div class="col-md-3">
-											<label for="companyAddress" class="form-label">Company Address</label>
-											<input type="companyAddress" class="form-control" id="companyAddress" placeholder="Enter your Company address" />
-										</div>
-										<div class="col-md-3">
-											<label for="companyCountry" class="form-label">Country</label>
-											<input type="companyCountry" class="form-control" id="companyCountry" placeholder="Country Location" />
-										</div>
-										<div class="col-md-3">
-											<label class="form-label">Is this your current job?</label>
-											<div class="radio-btn-group">
-												<input type="radio" id="currentJob" name="currentJobOption" value="currentJob" checked />
-												<label for="currentJob">Yes</label>
-
-												<input type="radio" id="notcurrentJob" name="currentJobOption" value="notcurrentJob" />
-												<label for="notcurrentJob">No</label>
+										<div class="row mb-4">
+											<!-- first row -->
+											<div class="col-md-3 mb-md-4">
+												<label for="companyName" class="form-label">Company Name</label>
+												<input type="companyName" class="form-control" name="companyName[]" placeholder="Enter your company name" />
 											</div>
-										</div>
-										<div class="col-md-1-5">
-											<label for="startWorking" class="form-label">Start Date</label>
-											<input type="text" class="form-control" id="startWorking" placeholder="Start Working" />
-										</div>
-										<div class="col-md-1-5 mb-md-4">
-											<label for="endWorking" class="form-label">End Date</label>
-											<input type="text" class="form-control" id="endWorking" placeholder="End Working" />
-										</div>
+											<div class="col-md-3">
+												<label for="departmentDivision" class="form-label">Department Division</label>
+												<input type="departmentDivision" class="form-control" name="departmentDivision[]" placeholder="Your Department or Division" />
+											</div>
+											<div class="col-md-3">
+												<label for="position" class="form-label">Posiition</label>
+												<input type="position" class="form-control" name="position[]" placeholder="Enter your Posiition" />
+											</div>
+											<div class="col-md-3 mb-md-3">
+												<label for="occupation" class="form-label">Occupation</label>
+												<select name="occupation[]" class="form-select">
+													<option value="option1">option1</option>
+													<option value="option2">option2</option>
+													<option value="option3">option3</option>
+													<option value="Lainnya">Lainnya</option>
+												</select>
+											</div>
 
-										<!-- third row -->
-										<div class="col-md-2">
-											<label for="companyProvince" class="form-label">Province or State</label>
-											<input type="companyProvince" class="form-control" id="companyProvince" placeholder="Province" />
-										</div>
-										<div class="col-md-2">
-											<label for="companyCity" class="form-label">City</label>
-											<input type="companyCity" class="form-control" id="companyCity" placeholder="City" />
-										</div>
-										<div class="col-md-2">
-											<label for="companyPostalCode" class="form-label">Postal Code</label>
-											<input type="companyPostalCode" class="form-control" id="companyPostalCode" placeholder="Postal Code" />
-										</div>
-										<div class="col-md-2">
-											<label for="district" class="form-label">District</label>
-											<input type="district" class="form-control" id="district" placeholder="District" />
-										</div>
-										<div class="col-md-2">
-											<label for="village" class="form-label">Village</label>
-											<input type="village" class="form-control" id="village" placeholder="Village" />
-										</div>
-										<div class="col-md-1">
-											<label for="rt" class="form-label">RT</label>
-											<input type="rt" class="form-control" id="email" placeholder="RT" />
-										</div>
-										<div class="col-md-1">
-											<label for="rw" class="form-label">RW</label>
-											<input type="rw" class="form-control" id="email" placeholder="RW" />
+											<!-- second row -->
+											<div class="col-md-3">
+												<label for="companyAddress" class="form-label">Company Address</label>
+												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
+											</div>
+											<div class="col-md-3">
+												<label for="companyCountry" class="form-label">Country</label>
+												<select name="companyCountry[]" class="form-select">
+													<option value="" selected disabled hidden class="select-placeholder">Select country</option>
+													<option>Option 1</option>
+													<option>Option 2</option>
+												</select>
+											</div>
+											<div class="col-md-3">
+												<label class="form-label">Is this your current job?</label>
+												<div class="radio-btn-group">
+													<input type="radio" name="currentJobOption[0]" id="currentJob1" value="currentJob" checked />
+													<label for="currentJob1">Yes</label>
+
+													<input type="radio" name="currentJobOption[0]" id="notCurrentJob1" value="notcurrentJob" />
+													<label for="notCurrentJob1">No</label>
+												</div>
+											</div>
+											<div class="col-md-1-5">
+												<label for="startWorking" class="form-label">Start Date</label>
+												<input type="date" class="form-control" name="startWorking[]" placeholder="Start Working" />
+											</div>
+											<div class="col-md-1-5 mb-md-4">
+												<label for="endWorking" class="form-label">End Date</label>
+												<input type="date" class="form-control" name="endWorking[]" placeholder="End Working" />
+											</div>
+
+											<!-- third row -->
+											<div class="col-md-2">
+												<label for="companyProvince" class="form-label">Province or State</label>
+												<select name="companyProvince[]" class="form-select">
+													<option value="" selected disabled hidden class="select-placeholder">Select Province</option>
+													<option>Option 1</option>
+													<option>Option 2</option>
+												</select>
+											</div>
+											<div class="col-md-2">
+												<label for="companyCity" class="form-label">City</label>
+												<select name="companyCity[]" class="form-select">
+													<option value="" selected disabled hidden class="select-placeholder">Select City</option>
+													<option>Option 1</option>
+													<option>Option 2</option>
+												</select>
+											</div>
+											<div class="col-md-2">
+												<label for="companyPostalCode" class="form-label">Postal Code</label>
+												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
+											</div>
+											<div class="col-md-2">
+												<label for="district" class="form-label">District</label>
+												<input type="district" class="form-control" name="district[]" placeholder="District" />
+											</div>
+											<div class="col-md-2">
+												<label for="village" class="form-label">Village</label>
+												<input type="village" class="form-control" name="village[]" placeholder="Village" />
+											</div>
+											<div class="col-md-1">
+												<label for="rt" class="form-label">RT</label>
+												<input type="rt" class="form-control" name="rt[]" placeholder="RT" />
+											</div>
+											<div class="col-md-1">
+												<label for="rw" class="form-label">RW</label>
+												<input type="rw" class="form-control" name="rw[]" placeholder="RW" />
+											</div>
 										</div>
 									</div>
 								</div>
@@ -637,19 +655,66 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
 		<script>
-			// Ambil elemen select
-			const citizenshipSelect = document.getElementById("citizenship");
+			const addMoreJobBtn = document.getElementById("addMoreJobBtn");
+			const jobCardsContainer = document.getElementById("jobCardsContainer");
 
-			// Cek apakah ada nilai nationality di localStorage
-			const savedNationality = localStorage.getItem("nationality");
+			addMoreJobBtn.addEventListener("click", () => {
+				// Hitung jumlah card saat ini
+				const currentJobCount = jobCardsContainer.querySelectorAll(".job-card").length;
 
-			// Jika ada, tetapkan nilai tersebut sebagai pilihan terpilih dan disable dropdown
-			if (savedNationality) {
-				citizenshipSelect.value = savedNationality;
-				citizenshipSelect.disabled = true; // Membuat dropdown tidak bisa diubah
-			} else {
-				// Jika tidak ada data di localStorage, tampilkan alert atau handle sesuai kebutuhan
-				alert("Nationality data not found in localStorage.");
+				// Clone card pertama
+				const newJobCard = jobCardsContainer.querySelector(".job-card").cloneNode(true);
+
+				// Update judul menjadi Job #n
+				const jobTitle = newJobCard.querySelector(".job-title");
+				jobTitle.textContent = `Job Information #${currentJobCount + 1}`;
+
+				// Update name dan id untuk setiap radio button agar unik
+				const radioYes = newJobCard.querySelector('input[type="radio"][value="currentJob"]');
+				const radioNo = newJobCard.querySelector('input[type="radio"][value="notcurrentJob"]');
+
+				// Update nama dan id radio button
+				radioYes.name = `currentJobOption[${currentJobCount}]`;
+				radioYes.id = `currentJob${currentJobCount + 1}`;
+				radioNo.name = `currentJobOption[${currentJobCount}]`;
+				radioNo.id = `notCurrentJob${currentJobCount + 1}`;
+
+				// Update label `for` atribut
+				newJobCard.querySelector('label[for="currentJob1"]').setAttribute('for', `currentJob${currentJobCount + 1}`);
+				newJobCard.querySelector('label[for="notCurrentJob1"]').setAttribute('for', `notCurrentJob${currentJobCount + 1}`);
+
+				// Tambahkan tombol "Delete" hanya jika card bukan yang pertama
+				if (currentJobCount > 0) {
+					const deleteBtn = document.createElement("button");
+					deleteBtn.textContent = "Remove";
+					deleteBtn.classList.add("btn", "btn-danger", "mt-2", "mb-3");
+					deleteBtn.addEventListener("click", () => {
+						newJobCard.remove();
+						updateJobTitles();
+					});
+					newJobCard.appendChild(deleteBtn);
+				}
+
+				// Kosongkan nilai input pada card baru
+				newJobCard.querySelectorAll("input, select").forEach(input => {
+					if (input.type === "radio") {
+						input.checked = false;
+					} else {
+						input.value = "";
+					}
+				});
+
+				// Tambahkan card baru ke dalam container
+				jobCardsContainer.appendChild(newJobCard);
+			});
+
+			// Fungsi untuk memperbarui judul card
+			function updateJobTitles() {
+				const jobCards = jobCardsContainer.querySelectorAll(".job-card");
+				jobCards.forEach((card, index) => {
+					const jobTitle = card.querySelector(".job-title");
+					jobTitle.textContent = `Job Information #${index + 1}`;
+				});
 			}
 		</script>
 	</body>
