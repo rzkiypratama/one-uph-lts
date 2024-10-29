@@ -229,7 +229,7 @@
 							{{-- uncomment code bellow to use static script e-code for testing purpose, script dir is on public - js - dashboard.js --}}
 							{{-- <button type="button" id="submitEcodeBtn" class="btn btn-primary w-100 rounded-0 mt-3" disabled>Submit E-code</button>
 							 --}}
-							<button type="button" data-bs-toggle="modal" data-bs-target="#eCodeValidModal" class="btn btn-primary w-100 rounded-0 mt-3">Submit E-code</button>
+							<button type="button" id="submitEcodeBtn" class="btn btn-primary w-100 rounded-0 mt-3">Submit E-code</button>
 							<p id="successMessage" class="success-message">E-code is valid! Proceeding...</p>
 							<p id="errorMessage" class="error-message">Invalid E-code! Please try again.</p>
 						</div>
