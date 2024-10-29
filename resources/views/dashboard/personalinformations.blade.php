@@ -524,15 +524,14 @@
 
 							<!-- Tab Content 4 Only appear if user choose S2 -->
 							<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-								<button type="button" id="addMoreJobBtn" class="btn btn-primary add-more-btn">Add New</button>
 								<div id="jobCardsContainer">
-									<div class="job-card">
+									<div class="job-card card mt-2 p-3">
 										<div class="d-flex align-items-center absolute">
-											<h5 class="job-title row-title mb-3">Job Information #1</h5>
+											<h5 class="job-title row-title mb-1">Job Information #1</h5>
 										</div>
 										<div class="row mb-4">
 											<!-- first row -->
-											<div class="col-md-3 mb-md-4">
+											<div class="col-md-3 mb-md-2">
 												<label for="companyName" class="form-label">Company Name</label>
 												<input type="companyName" class="form-control" name="companyName[]" placeholder="Enter your company name" />
 											</div>
@@ -555,7 +554,7 @@
 											</div>
 
 											<!-- second row -->
-											<div class="col-md-3">
+											<div class="col-md-3 mb-md-3">
 												<label for="companyAddress" class="form-label">Company Address</label>
 												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
 											</div>
@@ -581,7 +580,7 @@
 												<label for="startWorking" class="form-label">Start Date</label>
 												<input type="date" class="form-control" name="startWorking[]" placeholder="Start Working" />
 											</div>
-											<div class="col-md-1-5 mb-md-4">
+											<div class="col-md-1-5 mb-md-2">
 												<label for="endWorking" class="form-label">End Date</label>
 												<input type="date" class="form-control" name="endWorking[]" placeholder="End Working" />
 											</div>
@@ -625,6 +624,9 @@
 											</div>
 										</div>
 									</div>
+								</div>
+								<div class="d-flex justify-content-center w-100 pt-2">
+									<button type="button" id="addMoreJobBtn" class="btn btn-secondary add-more-btn">Add Job Information +</button>
 								</div>
 							</div>
 						</div>
