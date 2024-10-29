@@ -20,7 +20,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const tabs = ["tab1-tab", "tab2-tab", "tab3-tab"];
+document.addEventListener("DOMContentLoaded", function () {
+    // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+    let nationality = localStorage.getItem("nationality") || "national";
+
+    // Menampilkan atau menyembunyikan address berdasarkan nationality
+    const nationalAddress = document.getElementById("national-address");
+    const internationalAddress = document.getElementById(
+        "international-address"
+    );
+
+    if (nationality === "national") {
+        nationalAddress.classList.add("show");
+        internationalAddress.classList.add("hidden");
+    } else if (nationality === "international") {
+        internationalAddress.classList.add("show");
+        nationalAddress.classList.add("hidden");
+    }
+});
+
+// Ambil elemen tab yang terlihat di dalam #myTab
+const tabs = Array.from(document.querySelectorAll("#myTab button"))
+    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter hanya tab yang terlihat
+    .map((tab) => tab.id);
+
 let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");
@@ -37,7 +60,7 @@ function updateButtons() {
 
     // Jika di tab terakhir, tombol Next menjadi Submit
     if (currentTabIndex === tabs.length - 1) {
-        nextButton.innerText = "Save & Continue";
+        nextButton.innerText = "Save Data & Continue";
     } else {
         nextButton.innerText = "Continue";
     }
@@ -69,12 +92,12 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         nextTab.show();
         updateButtons();
     } else {
-        // alert("Form submitted!");
+        // Arahkan ke halaman selanjutnya setelah form disubmit
         window.location.href = "/tuition-fee/administration-documents";
     }
 });
 
-// Event listener untuk tab klik langsung
+// Event listener untuk klik tab secara langsung
 tabs.forEach((tabId, index) => {
     document.getElementById(tabId).addEventListener("click", function () {
         currentTabIndex = index;

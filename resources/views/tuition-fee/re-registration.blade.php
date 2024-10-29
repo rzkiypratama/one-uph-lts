@@ -270,25 +270,27 @@
 												</div>
 											</div>
 
-											<div id="deceasedInputHide" class="row">
-												<div class="col-md-6 mb-3">
-													<label class="form-label">Mobile Phone Number</label>
-													<div class="input-group phone-input-group">
-														<!-- Select for country code -->
-														<select class="form-select" id="countryCode">
-															<option value="+62">+62</option>
-															<option value="+1">+1</option>
-															<option value="+44">+44</option>
-															<option value="+91">+91</option>
-															<!-- Add more country codes as needed -->
-														</select>
-														<!-- Input for whatsapp number -->
-														<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
+											<div id="deceasedInputHide">
+												<div class="row">
+													<div class="col-md-6 mb-3">
+														<label class="form-label">Mobile Phone Number</label>
+														<div class="input-group phone-input-group">
+															<!-- Select for country code -->
+															<select class="form-select" id="countryCode">
+																<option value="+62">+62</option>
+																<option value="+1">+1</option>
+																<option value="+44">+44</option>
+																<option value="+91">+91</option>
+																<!-- Add more country codes as needed -->
+															</select>
+															<!-- Input for whatsapp number -->
+															<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
+														</div>
 													</div>
-												</div>
-												<div class="col-md-6 mb-3">
-													<label for="parentEmail" class="form-label">Email Address</label>
-													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+													<div class="col-md-6 mb-3">
+														<label for="parentEmail" class="form-label">Email Address</label>
+														<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+													</div>
 												</div>
 											</div>
 										</div>
@@ -319,25 +321,27 @@
 												</div>
 											</div>
 										</div>
-										<div class="row" id="deceasedFatherInputHide">
-											<div class="col-md-6 mb-3">
-												<label class="form-label">Mobile Phone Number</label>
-												<div class="input-group phone-input-group">
-													<!-- Select for country code -->
-													<select class="form-select" id="countryCode">
-														<option value="+62">+62</option>
-														<option value="+1">+1</option>
-														<option value="+44">+44</option>
-														<option value="+91">+91</option>
-														<!-- Add more country codes as needed -->
-													</select>
-													<!-- Input for whatsapp number -->
-													<input type="tel" class="form-control" id="fatherMobileNumber" placeholder="Phone Number" />
+										<div id="deceasedFatherInputHide">
+											<div class="row">
+												<div class="col-md-6 mb-3">
+													<label class="form-label">Mobile Phone Number</label>
+													<div class="input-group phone-input-group">
+														<!-- Select for country code -->
+														<select class="form-select" id="countryCode">
+															<option value="+62">+62</option>
+															<option value="+1">+1</option>
+															<option value="+44">+44</option>
+															<option value="+91">+91</option>
+															<!-- Add more country codes as needed -->
+														</select>
+														<!-- Input for whatsapp number -->
+														<input type="tel" class="form-control" id="fatherMobileNumber" placeholder="Phone Number" />
+													</div>
 												</div>
-											</div>
-											<div class="col-md-6">
-												<label for="parentEmail" class="form-label">Email Address</label>
-												<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+												<div class="col-md-6">
+													<label for="parentEmail" class="form-label">Email Address</label>
+													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+												</div>
 											</div>
 										</div>
 									</div>
@@ -346,54 +350,52 @@
 
 							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-								<div>
-									<div class="row mb-md-4">
-										<!-- First Name -->
-										<div class="col-md-4 mb-3">
-											<label for="familyFirstName" class="form-label">First Name</label>
-											<input type="text" class="form-control" id="famiyFirstName" placeholder="First Name" />
-										</div>
-										<!-- Middle Name -->
-										<div class="col-md-4 mb-3">
-											<label for="middleName" class="form-label">Middle Name</label>
-											<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
-										</div>
-										<!-- Family Relationship-->
-										<div class="col-md-4 mb-3">
-											<label for="familyRelationship" class="form-label">Family Relationship</label>
-											<input type="text" class="form-control" id="familyRelationship" placeholder="Family Relationship" />
-										</div>
+								<div class="row mb-md-4">
+									<!-- First Name -->
+									<div class="col-md-4 mb-3">
+										<label for="familyFirstName" class="form-label">First Name</label>
+										<input type="text" class="form-control" id="famiyFirstName" placeholder="First Name" />
 									</div>
+									<!-- Middle Name -->
+									<div class="col-md-4 mb-3">
+										<label for="middleName" class="form-label">Middle Name</label>
+										<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
+									</div>
+									<!-- Family Relationship-->
+									<div class="col-md-4 mb-3">
+										<label for="familyRelationship" class="form-label">Family Relationship</label>
+										<input type="text" class="form-control" id="familyRelationship" placeholder="Family Relationship" />
+									</div>
+								</div>
 
-									<div class="row">
-										<div class="col-md-4 mb-md-0 mb-3">
-											<label for="guardianReligion" class="form-label">Religion</label>
-											<select id="guardianReligion" class="form-select">
-												<option value="option1">option1</option>
-												<option value="option2">option2</option>
-												<option value="option3">option3</option>
-												<option value="Lainnya">Lainnya</option>
+								<div class="row">
+									<div class="col-md-4 mb-md-0 mb-3">
+										<label for="guardianReligion" class="form-label">Religion</label>
+										<select id="guardianReligion" class="form-select">
+											<option value="option1">option1</option>
+											<option value="option2">option2</option>
+											<option value="option3">option3</option>
+											<option value="Lainnya">Lainnya</option>
+										</select>
+									</div>
+									<!-- email address -->
+									<div class="col-md-4 mb-3">
+										<label for="guardianEmail" class="form-label">Email Address</label>
+										<input type="text" class="form-control" id="guardianEmail" placeholder="Your Guardian email address" />
+									</div>
+									<div class="col-md-4">
+										<label class="form-label">Mobile Phone Number</label>
+										<div class="input-group phone-input-group">
+											<!-- Select for country code -->
+											<select class="form-select" id="countryCode">
+												<option value="+62">+62</option>
+												<option value="+1">+1</option>
+												<option value="+44">+44</option>
+												<option value="+91">+91</option>
+												<!-- Add more country codes as needed -->
 											</select>
-										</div>
-										<!-- email address -->
-										<div class="col-md-4 mb-3">
-											<label for="guardianEmail" class="form-label">Email Address</label>
-											<input type="text" class="form-control" id="guardianEmail" placeholder="Your Guardian email address" />
-										</div>
-										<div class="col-md-4">
-											<label class="form-label">Mobile Phone Number</label>
-											<div class="input-group phone-input-group">
-												<!-- Select for country code -->
-												<select class="form-select" id="countryCode">
-													<option value="+62">+62</option>
-													<option value="+1">+1</option>
-													<option value="+44">+44</option>
-													<option value="+91">+91</option>
-													<!-- Add more country codes as needed -->
-												</select>
-												<!-- Input for homePhone number -->
-												<input type="tel" class="form-control" id="guardianPhoneNumber" placeholder="Your Guardian phone number" />
-											</div>
+											<!-- Input for homePhone number -->
+											<input type="tel" class="form-control" id="guardianPhoneNumber" placeholder="Your Guardian phone number" />
 										</div>
 									</div>
 								</div>
@@ -419,6 +421,42 @@
 			</div>
 		</div>
 
+		<script>
+			const motherStatusAlive = document.getElementById("aliveMother");
+			const fatherStatusAlive = document.getElementById("aliveFather");
+			const deceasedMotherFields = document.getElementById("deceasedInputHide");
+			const deceasedFatherFields = document.getElementById("deceasedFatherInputHide");
+
+			const tab3 = document.getElementById("tab3-tab");
+			// const tab3Content = document.getElementById("tab3");
+
+			// Fungsi untuk menyembunyikan/memperlihatkan field berdasarkan status orang tua
+			function toggleParentFields() {
+				// Cek status mother dan father
+				const isMotherAlive = motherStatusAlive.checked;
+				const isFatherAlive = fatherStatusAlive.checked;
+
+				// Toggle fields phone dan email berdasarkan status
+				deceasedMotherFields.style.display = isMotherAlive ? "block" : "none";
+				deceasedFatherFields.style.display = isFatherAlive ? "block" : "none";
+
+				// Sembunyikan tab 3 jika keduanya "alive"
+				const hideTab3 = isMotherAlive && isFatherAlive;
+				tab3.style.display = hideTab3 ? "none" : "block";
+				// tab3Content.style.display = hideTab3 ? "none" : "block";
+			}
+
+			// Event listener untuk perubahan status mother
+			motherStatusAlive.addEventListener("change", toggleParentFields);
+			document.getElementById("deceasedMother").addEventListener("change", toggleParentFields);
+
+			// Event listener untuk perubahan status father
+			fatherStatusAlive.addEventListener("change", toggleParentFields);
+			document.getElementById("deceasedFather").addEventListener("change", toggleParentFields);
+
+			// Inisialisasi pertama kali
+			toggleParentFields();
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
 	</body>
