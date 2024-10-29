@@ -9,6 +9,7 @@
 					margin-right: -6rem;
 					overflow-y: scroll;
 					height: 435px;
+					width: 681px;
 				}
 			}
 		</style>
