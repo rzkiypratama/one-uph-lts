@@ -28,7 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const tabs = ["tab1-tab", "tab2-tab", "tab3-tab", "tab4-tab"];
+const tabs = Array.from(document.querySelectorAll("#myTab button"))
+    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter tab yang terlihat
+    .map((tab) => tab.id); // Ambil id dari setiap tab yang terlihat
+
 let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");
