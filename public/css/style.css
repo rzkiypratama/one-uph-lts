@@ -177,6 +177,14 @@ h5 {
     margin: 0;
 }
 
+.dashboard-history {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #112369;
+    margin: 0;
+}
+
 .dashboard-bottom-title {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -214,8 +222,18 @@ h5 {
     transition: 0.2s ease-in;
 }
 
-.dashboard-button:hover {
-    transform: scale(1, 1.1);
+.dashboard-button:hover,
+.changeapplication-button {
+    transform: scale(1, 1.05);
+}
+
+.changeapplication-button {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    transition: 0.2s ease-in;
+    color: #ff8b8b;
 }
 
 .vertical-divider {
@@ -1190,6 +1208,10 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+    .dashboard-box {
+        margin-right: -8rem;
+    }
+
     .col-md-1-5 {
         width: 12.49% !important;
     }
@@ -1202,11 +1224,28 @@ input[type="radio"] {
         width: 79.5%;
     }
 
-    /* .add-more-btn {
-    position: absolute;
-    top: 77px;
-    right: 38px;
-  } */
+    /* dot status */
+
+    .dot-status-commited {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #11c9a8;
+    }
+
+    .dot-status-pending {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ffc10e;
+    }
+
+    .dot-status-failed {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ec1c24;
+    }
 
     .file-input {
         display: flex;
@@ -1356,6 +1395,7 @@ input[type="radio"] {
         margin-left: -0.75rem;
         margin-right: -0.75rem;
         height: auto;
+        width: 95%;
     }
 
     .code-content {
@@ -1386,13 +1426,21 @@ input[type="radio"] {
         font-family: "Work Sans", sans-serif;
         font-weight: 500;
         color: #3c3c3c;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 0.75px;
     }
 
     .dashboard-username {
         font-family: "Montserrat", sans-serif;
         font-size: 36px;
+        font-weight: 600;
+        color: #112369;
+        margin: 0;
+    }
+
+    .dashboard-history-title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
         font-weight: 600;
         color: #112369;
         margin: 0;
@@ -1523,6 +1571,14 @@ input[type="radio"] {
     .full-width-hr-wrapper-form {
         margin-left: -3rem;
         margin-right: -1.5rem;
+        color: #6f96ec;
+        opacity: 1;
+    }
+
+    .full-width-hr-underline {
+        margin-left: -3rem;
+        margin-right: -1.5rem;
+        color: #6f96ec;
     }
 
     hr.solid-step {
@@ -2018,6 +2074,17 @@ input[type="radio"] {
     .nav-item {
         padding-right: 15px !important;
     }
+
+    /* status history */
+    .history-container {
+        height: 280px;
+        overflow-x: hidden;
+    }
+}
+
+/* custom width */
+.w-45 {
+    width: 45%;
 }
 
 .fade-in-right {
