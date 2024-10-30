@@ -266,7 +266,7 @@
 						<!-- Title -->
 						<div class="title-container w-100">
 							<h3 class="title-card-dashboard mb-2" style="color: #112369 !important; font-weight: 400 !important">Application Change</h3>
-							<p class="subtitle-dashboard-mobile">Fill this form to make changes to your application form</p>
+							<p class="subtitle-dashboard-mobile mb-3">Fill this form to make changes to your application form</p>
 
 							<div>
 								<label for="purpose" class="form-label">Purpose</label>
