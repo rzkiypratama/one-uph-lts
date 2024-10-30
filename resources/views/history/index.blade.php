@@ -270,7 +270,7 @@
 
 							<div>
 								<label for="purpose" class="form-label">Purpose</label>
-								<select class="form-select">
+								<select class="form-select mb-2">
 									<option value="option1">option1</option>
 									<option value="option2">option2</option>
 									<option value="option3">option3</option>
@@ -278,7 +278,7 @@
 								</select>
 
 								<label for="purpose" class="form-label">Intake Year</label>
-								<select class="form-select">
+								<select class="form-select mb-2">
 									<option value="option1">option1</option>
 									<option value="option2">option2</option>
 									<option value="option3">option3</option>
