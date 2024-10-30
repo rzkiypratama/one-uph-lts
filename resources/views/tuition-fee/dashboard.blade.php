@@ -70,7 +70,10 @@
 
 					<hr class="full-width-hr-wrapper-form d-none d-md-block" />
 
-					<p class="text-capitalize dashboard-bottom-title d-none d-md-block m-0 mb-3">application status</p>
+					<div class="d-flex align-content-center justify-content-between">
+						<p class="text-capitalize dashboard-bottom-title d-none d-md-block m-0 mb-3">application status</p>
+						<p class="dashboard-history pe-auto"><a href="#" class="pe-auto">Status History | Change Major or Level</a></p>
+					</div>
 
 					<div class="card rounded-3 d-none d-md-block border-0 bg-white p-3 shadow-sm">
 						<div class="d-flex justify-content-between align-items-center">
@@ -187,6 +190,8 @@
 							<h3 class="title-card-dashboard" style="color: #112369 !important; font-weight: 300 !important">Complete Tuition Fee Payment</h3>
 							<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-4 border-0" onclick="window.location.href = '/tuition-fee/tuitionpayment'">Pay Tuition
 								Fee</button>
+							<button type="button" class="text-capitalize btn btn-light w-100 changeapplication-button mt-1 border-0" onclick="window.location.href = '/history'">Change
+								Application</button>
 						</div>
 					</div>
 				</div>
