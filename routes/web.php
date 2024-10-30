@@ -135,3 +135,9 @@ Route::get('/international/personalinformation', function () {
 Route::get('/international/review', function () {
     return view('international/review');
 });
+
+// status history
+
+Route::get('/history', function () {
+    return view('history/index');
+});
