@@ -555,18 +555,6 @@
 											</div>
 
 											<!-- second row -->
-											<div class="col-md-3 mb-md-3">
-												<label for="companyAddress" class="form-label">Company Address</label>
-												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
-											</div>
-											<div class="col-md-3">
-												<label for="companyCountry" class="form-label">Country</label>
-												<select name="companyCountry[]" class="form-select">
-													<option value="" selected disabled hidden class="select-placeholder">Select country</option>
-													<option>Option 1</option>
-													<option>Option 2</option>
-												</select>
-											</div>
 											<div class="col-md-3">
 												<label class="form-label">Is this your current job?</label>
 												<div class="radio-btn-group">
@@ -585,8 +573,33 @@
 												<label for="endWorking" class="form-label">End Date</label>
 												<input type="date" class="form-control" name="endWorking[]" placeholder="End Working" />
 											</div>
+											<div class="col-md-3 mb-md-3">
+												<label for="companyAddress" class="form-label">Company Address</label>
+												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
+											</div>
+											<div class="col-md-3">
+												<label for="companyPostalCode" class="form-label">Postal Code</label>
+												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
+											</div>
 
 											<!-- third row -->
+											<div class="col-md-2">
+												<label for="companyCountry" class="form-label">Country</label>
+												<input type="text" class="form-select" id="companyCountry" onfocus="toggleDropdown('companyCountryDropdown')" oninput="filterOptions('companyCountry', 'companyCountryDropdown')"
+													placeholder="Search or select..." />
+												<div id="companyCountryDropdown" class="dropdown-content col-md-2">
+													<div onclick="selectOption('Option 1', 'companyCountry')">Option 1</div>
+													<div onclick="selectOption('Option 2', 'companyCountry')">Option 2</div>
+													<div onclick="selectOption('Option 3', 'companyCountry')">Option 3</div>
+													<div onclick="selectOption('Lainnya', 'companyCountry')">Lainnya</div>
+												</div>
+												{{-- <label for="companyCountry" class="form-label">Country</label>
+												<select name="companyCountry[]" class="form-select">
+													<option value="" selected disabled hidden class="select-placeholder">Select country</option>
+													<option>Option 1</option>
+													<option>Option 2</option>
+												</select> --}}
+											</div>
 											<div class="col-md-2">
 												<label for="companyProvince" class="form-label">Province or State</label>
 												<select name="companyProvince[]" class="form-select">
@@ -604,10 +617,6 @@
 												</select>
 											</div>
 											<div class="col-md-2">
-												<label for="companyPostalCode" class="form-label">Postal Code</label>
-												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
-											</div>
-											<div class="col-md-2">
 												<label for="district" class="form-label">District</label>
 												<input type="district" class="form-control" name="district[]" placeholder="District" />
 											</div>
@@ -623,6 +632,7 @@
 												<label for="rw" class="form-label">RW</label>
 												<input type="rw" class="form-control" name="rw[]" placeholder="RW" />
 											</div>
+
 										</div>
 									</div>
 								</div>
@@ -653,6 +663,7 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/autocompleted.js') }}"></script>
 		<script>
 			// Mendapatkan elemen radio button dan elemen field alumni
 			const alumniRadio = document.getElementById("alumni");
