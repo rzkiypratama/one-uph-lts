@@ -531,8 +531,8 @@
 											<h5 class="job-title row-title mb-1">Job Information #1</h5>
 										</div>
 										<div class="row mb-4">
-											<!-- first row -->
-											<div class="col-md-3 mb-md-2">
+											{{-- first row --}}
+											<div class="col-md-3 mb-md-3">
 												<label for="companyName" class="form-label">Company Name</label>
 												<input type="companyName" class="form-control" name="companyName[]" placeholder="Enter your company name" />
 											</div>
@@ -554,7 +554,7 @@
 												</select>
 											</div>
 
-											<!-- second row -->
+											{{-- second row --}}
 											<div class="col-md-3">
 												<label class="form-label">Is this your current job?</label>
 												<div class="radio-btn-group">
@@ -565,25 +565,22 @@
 													<label for="notCurrentJob1">No</label>
 												</div>
 											</div>
-											<div class="col-md-1-5">
+											<div class="col-md-3">
 												<label for="startWorking" class="form-label">Start Date</label>
 												<input type="date" class="form-control" name="startWorking[]" placeholder="Start Working" />
 											</div>
-											<div class="col-md-1-5 mb-md-2">
+											<div class="col-md-3 mb-md-3">
 												<label for="endWorking" class="form-label">End Date</label>
 												<input type="date" class="form-control" name="endWorking[]" placeholder="End Working" />
 											</div>
+											<div class="col-md-3"></div>
+
+											{{-- third row --}}
 											<div class="col-md-3 mb-md-3">
 												<label for="companyAddress" class="form-label">Company Address</label>
 												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
 											</div>
 											<div class="col-md-3">
-												<label for="companyPostalCode" class="form-label">Postal Code</label>
-												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
-											</div>
-
-											<!-- third row -->
-											<div class="col-md-2">
 												<label for="companyCountry" class="form-label">Country</label>
 												<input type="text" class="form-select" id="companyCountry" onfocus="toggleDropdown('companyCountryDropdown')" oninput="filterOptions('companyCountry', 'companyCountryDropdown')"
 													placeholder="Search or select..." />
@@ -593,14 +590,8 @@
 													<div onclick="selectOption('Option 3', 'companyCountry')">Option 3</div>
 													<div onclick="selectOption('Lainnya', 'companyCountry')">Lainnya</div>
 												</div>
-												{{-- <label for="companyCountry" class="form-label">Country</label>
-												<select name="companyCountry[]" class="form-select">
-													<option value="" selected disabled hidden class="select-placeholder">Select country</option>
-													<option>Option 1</option>
-													<option>Option 2</option>
-												</select> --}}
 											</div>
-											<div class="col-md-2">
+											<div class="col-md-3">
 												<label for="companyProvince" class="form-label">Province or State</label>
 												<select name="companyProvince[]" class="form-select">
 													<option value="" selected disabled hidden class="select-placeholder">Select Province</option>
@@ -608,7 +599,7 @@
 													<option>Option 2</option>
 												</select>
 											</div>
-											<div class="col-md-2">
+											<div class="col-md-3">
 												<label for="companyCity" class="form-label">City</label>
 												<select name="companyCity[]" class="form-select">
 													<option value="" selected disabled hidden class="select-placeholder">Select City</option>
@@ -616,13 +607,19 @@
 													<option>Option 2</option>
 												</select>
 											</div>
-											<div class="col-md-2">
+
+											{{-- forth row --}}
+											<div class="col-md-3">
 												<label for="district" class="form-label">District</label>
 												<input type="district" class="form-control" name="district[]" placeholder="District" />
 											</div>
-											<div class="col-md-2">
+											<div class="col-md-3">
 												<label for="village" class="form-label">Village</label>
 												<input type="village" class="form-control" name="village[]" placeholder="Village" />
+											</div>
+											<div class="col-md-3">
+												<label for="companyPostalCode" class="form-label">Postal Code</label>
+												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
 											</div>
 											<div class="col-md-1">
 												<label for="rt" class="form-label">RT</label>
