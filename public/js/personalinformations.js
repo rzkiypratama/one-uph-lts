@@ -135,6 +135,24 @@ addMoreJobBtn.addEventListener("click", () => {
         .querySelector('label[for="notCurrentJob1"]')
         .setAttribute("for", `notCurrentJob${currentJobCount + 1}`);
 
+    // Update ID dropdown dan input country agar unik
+    const countryInput = newJobCard.querySelector("#companyCountry");
+    const countryDropdown = newJobCard.querySelector("#companyCountryDropdown");
+    const uniqueIdSuffix = `_${currentJobCount + 1}`; // ID suffix based on card count
+
+    // Update IDs
+    countryInput.id = `companyCountry${uniqueIdSuffix}`;
+    countryInput.setAttribute(
+        "onfocus",
+        `toggleDropdown('companyCountryDropdown${uniqueIdSuffix}')`
+    );
+    countryInput.setAttribute(
+        "oninput",
+        `filterOptions('companyCountry${uniqueIdSuffix}', 'companyCountryDropdown${uniqueIdSuffix}')`
+    );
+
+    countryDropdown.id = `companyCountryDropdown${uniqueIdSuffix}`;
+
     // Tambahkan tombol "Delete" hanya jika card bukan yang pertama
     if (currentJobCount > 0) {
         const deleteBtn = document.createElement("button");
@@ -150,7 +168,7 @@ addMoreJobBtn.addEventListener("click", () => {
     // Kosongkan nilai input pada card baru
     newJobCard.querySelectorAll("input, select").forEach((input) => {
         if (input.type === "radio") {
-            input.checked = true;
+            input.checked = false;
         } else {
             input.value = "";
         }
