@@ -310,20 +310,21 @@
 									<div class="col-md-4 mb-3">
 										<label class="form-label">Are You an Alumni?</label>
 										<div class="radio-btn-group">
-											<input type="radio" id="alumni" name="alumniOption" value="Alumni" checked />
+											<input type="radio" id="alumni" name="alumniOption" value="Alumni" />
 											<label for="alumni">Yes, I am</label>
 
-											<input type="radio" id="notAlumni" name="alumniOption" value="notAlumni" />
+											<input type="radio" id="notAlumni" name="alumniOption" value="notAlumni" checked />
 											<label for="notAlumni">No, I'm Not</label>
 										</div>
 									</div>
+
 									<!-- NIM -->
-									<div class="col-md-4 mb-3">
+									<div class="col-md-4 mb-3" id="alumniNimField" style="display: none">
 										<label for="nim" class="form-label">NIM</label>
 										<input type="text" class="form-control" id="nim" />
 									</div>
 									<!-- Document -->
-									<div class="col-md-4 mb-3">
+									<div class="col-md-4 mb-3" id="alumniDocField" style="display: none">
 										<label for="alumniDocument" class="form-label">Alumni Document</label>
 										<input type="file" class="form-control" placeholder="City of Birth" />
 									</div>
@@ -653,67 +654,29 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
 		<script>
-			const addMoreJobBtn = document.getElementById("addMoreJobBtn");
-			const jobCardsContainer = document.getElementById("jobCardsContainer");
+			// Mendapatkan elemen radio button dan elemen field alumni
+			const alumniRadio = document.getElementById("alumni");
+			const notAlumniRadio = document.getElementById("notAlumni");
+			const alumniNimFields = document.getElementById("alumniNimField");
+			const alumniDocFields = document.getElementById("alumniDocField");
 
-			addMoreJobBtn.addEventListener("click", () => {
-				// Hitung jumlah card saat ini
-				const currentJobCount = jobCardsContainer.querySelectorAll(".job-card").length;
-
-				// Clone card pertama
-				const newJobCard = jobCardsContainer.querySelector(".job-card").cloneNode(true);
-
-				// Update judul menjadi Job #n
-				const jobTitle = newJobCard.querySelector(".job-title");
-				jobTitle.textContent = `Job Information #${currentJobCount + 1}`;
-
-				// Update name dan id untuk setiap radio button agar unik
-				const radioYes = newJobCard.querySelector('input[type="radio"][value="currentJob"]');
-				const radioNo = newJobCard.querySelector('input[type="radio"][value="notcurrentJob"]');
-
-				// Update nama dan id radio button
-				radioYes.name = `currentJobOption[${currentJobCount}]`;
-				radioYes.id = `currentJob${currentJobCount + 1}`;
-				radioNo.name = `currentJobOption[${currentJobCount}]`;
-				radioNo.id = `notCurrentJob${currentJobCount + 1}`;
-
-				// Update label `for` atribut
-				newJobCard.querySelector('label[for="currentJob1"]').setAttribute('for', `currentJob${currentJobCount + 1}`);
-				newJobCard.querySelector('label[for="notCurrentJob1"]').setAttribute('for', `notCurrentJob${currentJobCount + 1}`);
-
-				// Tambahkan tombol "Delete" hanya jika card bukan yang pertama
-				if (currentJobCount > 0) {
-					const deleteBtn = document.createElement("button");
-					deleteBtn.textContent = "Remove";
-					deleteBtn.classList.add("btn", "btn-danger", "mt-2", "mb-3");
-					deleteBtn.addEventListener("click", () => {
-						newJobCard.remove();
-						updateJobTitles();
-					});
-					newJobCard.appendChild(deleteBtn);
+			// Fungsi untuk mengatur visibilitas field alumni
+			function toggleAlumniFields() {
+				if (alumniRadio.checked) {
+					alumniNimFields.style.display = "block";
+					alumniDocFields.style.display = "block";
+				} else {
+					alumniNimFields.style.display = "none";
+					alumniDocFields.style.display = "none";
 				}
-
-				// Kosongkan nilai input pada card baru
-				newJobCard.querySelectorAll("input, select").forEach(input => {
-					if (input.type === "radio") {
-						input.checked = false;
-					} else {
-						input.value = "";
-					}
-				});
-
-				// Tambahkan card baru ke dalam container
-				jobCardsContainer.appendChild(newJobCard);
-			});
-
-			// Fungsi untuk memperbarui judul card
-			function updateJobTitles() {
-				const jobCards = jobCardsContainer.querySelectorAll(".job-card");
-				jobCards.forEach((card, index) => {
-					const jobTitle = card.querySelector(".job-title");
-					jobTitle.textContent = `Job Information #${index + 1}`;
-				});
 			}
+
+			// Menjalankan fungsi saat halaman dimuat pertama kali
+			toggleAlumniFields();
+
+			// Menambahkan event listener pada radio button
+			alumniRadio.addEventListener("change", toggleAlumniFields);
+			notAlumniRadio.addEventListener("change", toggleAlumniFields);
 		</script>
 	</body>
 
