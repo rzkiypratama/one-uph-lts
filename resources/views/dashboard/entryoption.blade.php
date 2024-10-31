@@ -164,16 +164,6 @@
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div>
 									<div class="row col-md-12 mb-md-4">
-										<!-- Entry Type -->
-										<div class="col-md-4 mb-md-0 mb-3">
-											<label for="entryType" class="form-label">Entry Type</label>
-											<select id="entryType" class="form-select">
-												<option value="option1">option1</option>
-												<option value="option2">option2</option>
-												<option value="option3">option3</option>
-												<option value="Lainnya">Lainnya</option>
-											</select>
-										</div>
 										<!-- College -->
 										<div class="col-md-4 mb-md-0 mb-3">
 											<label for="collegeType" class="form-label">College</label>
@@ -193,9 +183,6 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
-									</div>
-
-									<div class="row col-md-12">
 										<div class="col-md-4 mb-md-0 mb-3">
 											<label for="programType" class="form-label">Program</label>
 											<select id="programType" class="form-select">
@@ -205,6 +192,9 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
+									</div>
+
+									<div class="row col-md-12">
 										<!-- class session -->
 										<div class="col-md-4 mb-md-0 mb-3">
 											<label for="classSession" class="form-label">Class Session</label>
@@ -225,7 +215,17 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
-										<div class="col-md-5 mt-4">
+										<!-- Entry Type -->
+										<div class="col-md-4 mb-md-0 mb-3">
+											<label for="entryType" class="form-label">Entry Type</label>
+											<select id="entryType" class="form-select">
+												<option value="option1">option1</option>
+												<option value="option2">option2</option>
+												<option value="option3">option3</option>
+												<option value="Lainnya">Lainnya</option>
+											</select>
+										</div>
+										<div class="col-md-4 mt-4">
 											<label class="form-label">Entry Option</label>
 											<div class="radio-btn-group d-flex justify-content-between gap-1">
 												<input type="radio" id="regular" name="entryOptions" value="regular" checked />
