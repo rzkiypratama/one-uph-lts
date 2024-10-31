@@ -403,7 +403,7 @@
 								</div>
 
 								<!-- form for national -->
-								<div id="national-form" class="form-section hidden">
+								<div id="national-form" class="form-section">
 									<div class="row">
 										<!-- Citizenship -->
 										<div class="col-md-4 mb-4">
