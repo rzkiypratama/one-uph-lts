@@ -64,7 +64,7 @@ backButton.addEventListener("click", function () {
         previousTab.show();
         updateButtons();
     } else {
-        window.location.href = "/dashboard/intakeyear.html";
+        window.location.href = "/dashboard/intakeyear";
     }
 });
 
@@ -81,7 +81,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         updateButtons();
     } else {
         alert("Form submitted!");
-        window.location.href = "/dashboard/educationbackground.html";
+        window.location.href = "/dashboard/educationbackground";
     }
 });
 
