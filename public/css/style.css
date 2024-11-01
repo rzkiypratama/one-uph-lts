@@ -923,6 +923,22 @@ option.select-placeholder {
     border: none !important;
 }
 
+.file-validation {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #898989;
+    font-size: 12px;
+}
+
+.file-validation-file {
+    color: #007bff;
+}
+
+.file-validation-required {
+    color: #ff5351;
+}
+
 /* .add-more-btn {
   position: absolute;
   top: 256px;
@@ -2087,8 +2103,7 @@ input[type="radio"] {
     width: 45%;
 }
 
-/* auto complete field or field with search styling */
-
+/* field with search styling */
 .dropdown-content {
     position: absolute;
     display: none;
@@ -2111,6 +2126,25 @@ input[type="radio"] {
 
 .show {
     display: block;
+}
+
+/* contact us styling */
+/* Styling untuk positioning button */
+#contactUsBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+    z-index: 1000;
+}
+/* Styling card modal */
+#contactUsCard {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    z-index: 1001;
+    display: none; /* Mulai dalam keadaan tersembunyi */
 }
 
 .fade-in-right {
