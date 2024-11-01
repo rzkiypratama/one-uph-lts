@@ -160,8 +160,10 @@
 					<!-- Form Start -->
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
-							<!-- Tab Content 2 -->
+							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<p class="file-validation pb-1">Fill study program information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div>
 									<div class="row col-md-12 mb-md-4">
 										<!-- College -->

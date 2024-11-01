@@ -148,7 +148,10 @@
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div>
-									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
 
 									<div class="file-input-row">
 										<label for="familyGeneralDoc" class="tabs-title docs-title">Copy of Family Registration Card (KK) *</label>
@@ -239,7 +242,10 @@
 							<!-- Tab Content 2 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 								<div>
-									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
 
 									<div class="file-input-row">
 										<label for="statementLetter" class="tabs-title docs-title">Statement Letter for Student with Special Needs (if needed)</label>
@@ -330,7 +336,10 @@
 							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
 								<div>
-									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
 
 									<div class="file-input-row">
 										<label for="formTataTertib" class="tabs-title docs-title">Form Tata Tertib</label>

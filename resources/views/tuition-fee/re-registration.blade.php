@@ -148,6 +148,8 @@
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<p class="file-validation pb-1">Fill address information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<!-- international role -->
 								<div id="international-address" class="form-section hidden">
 									<div class="address-container">
@@ -242,6 +244,8 @@
 
 							<!-- Tab Content 2 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+								<p class="file-validation pb-1">Fill parents information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div class="row address-container">
 									<!-- Mother Information -->
 									<div class="col-md-6 address-column">

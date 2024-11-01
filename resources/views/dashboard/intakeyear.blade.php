@@ -147,6 +147,7 @@
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<p class="file-validation pb-1">Fill Intake Year Information, <span class="file-validation-required">(*) Is Required Field</span></p>
 								<div class="row col-md-6">
 									<!-- Intake Year -->
 									<div class="col-md-6 mb-3">
@@ -171,7 +172,7 @@
 									</div>
 									<!-- Category Study -->
 									<div class="col-md-6 mb-3">
-										<label for="studyCategory" class="form-label">Category of Study*</label>
+										<label for="studyCategory" class="form-label">Category of Study</label>
 										<select id="studyCategory" class="form-select">
 											<option value="Undergraduate (S1)">Undergraduate (S1)</option>
 											<option value="Graduate">Graduate (S2 & S3)</option>

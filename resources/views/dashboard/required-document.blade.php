@@ -158,7 +158,11 @@
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div>
-									<p class="form-input-subtitle mb-3">pdf, jpg, png, jpeg with maximum size 10MB</p>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
+
 									<!-- Hand Drawings Input -->
 									<div class="file-input-row">
 										<label for="handDrawing" class="tabs-title docs-title">4 (Four) Hand Drawings</label>

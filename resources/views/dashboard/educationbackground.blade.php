@@ -164,6 +164,8 @@
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div>
 									<div class="row col-md-12 mb-4">
 										<!-- School Name -->
@@ -204,6 +206,8 @@
 
 							<!-- Tab Content 2 only show when user choose s2 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div id="universityInformation" class="form-section">
 									<div class="address-container d-flex gap-3">
 										<!-- Main University -->

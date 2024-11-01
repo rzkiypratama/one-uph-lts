@@ -267,6 +267,8 @@
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+								<p class="file-validation pb-1">Fill personal information background, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div class="row">
 									<!-- First Name -->
 									<div class="col-md-4 mb-md-4">
@@ -327,12 +329,19 @@
 									<div class="col-md-4 mb-3" id="alumniDocField" style="display: none">
 										<label for="alumniDocument" class="form-label">Alumni Document</label>
 										<input type="file" class="form-control" placeholder="City of Birth" />
+
+										<p class="file-validation pt-1">
+											Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 200KB, <span class="file-validation-required">(*) Is Required
+												Field</span>
+										</p>
 									</div>
 								</div>
 							</div>
 
 							<!-- Tab Content 2 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+								<p class="file-validation pb-1">Fill personal information background, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<!-- form for international -->
 								<div id="international-form" class="form-section hidden">
 									<div class="row">
@@ -460,6 +469,8 @@
 
 							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+								<p class="file-validation pb-1">Fill contact information, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div>
 									<div class="row mb-4">
 										<div class="col-md-4">
@@ -525,6 +536,8 @@
 
 							<!-- Tab Content 4 Only appear if user choose S2 -->
 							<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+								<p class="file-validation pb-1">Fill job information background, <span class="file-validation-required">(*) Is Required Field</span></p>
+
 								<div id="jobCardsContainer">
 									<div class="job-card card mt-2 p-3">
 										<div class="d-flex align-items-center absolute">
@@ -660,7 +673,7 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('js/autocompleted.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/fieldwithsearch.js') }}"></script>
 		<script>
 			// Mendapatkan elemen radio button dan elemen field alumni
 			const alumniRadio = document.getElementById("alumni");
