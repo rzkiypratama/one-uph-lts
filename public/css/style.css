@@ -1205,9 +1205,10 @@ input[type="radio"] {
     height: 95vh;
 }
 
-/* .grand-total {
-  width: 79.5%;
-} */
+.caution-icon {
+    width: 13.4px;
+    height: 11.6px;
+}
 
 /* scrollbar */
 ::-webkit-scrollbar {
