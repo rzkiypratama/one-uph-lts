@@ -15,7 +15,7 @@
         },
         {
             "src": "/css/(.*)",
-            "dest": "/public/css/$1"
+            "dest": "/build/css"
         },
         {
             "src": "/(.*)",
