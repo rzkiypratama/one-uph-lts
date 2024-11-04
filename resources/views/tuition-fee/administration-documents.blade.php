@@ -104,6 +104,18 @@
 					<ul class="nav nav-pills card-header-tabs" id="myTab" role="tablist">
 						<!-- Tab 1 -->
 						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
+								<div class="d-flex">
+									<img src="/assets/doc-icon.png" alt="icon1" class="tab-icon" />
+									<span class="d-flex flex-column text-start">
+										<p class="tabs-title text-capitalize m-0">Re-registration Documents</p>
+										<p class="tabs-subtitle m-0">registration required documents</p>
+									</span>
+								</div>
+							</button>
+						</li>
+						<!-- Tab 2 -->
+						<li class="nav-item" role="presentation">
 							<button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="false">
 								<div class="d-flex">
 									<img src="/assets/doc-icon.png" alt="icon1" class="tab-icon" />
@@ -114,7 +126,7 @@
 								</div>
 							</button>
 						</li>
-						<!-- Tab 2 -->
+						<!-- Tab 3 -->
 						<li class="nav-item" role="presentation">
 							<button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="true">
 								<div class="d-flex">
@@ -126,18 +138,7 @@
 								</div>
 							</button>
 						</li>
-						<!-- Tab 3 -->
-						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
-								<div class="d-flex">
-									<img src="/assets/doc-icon.png" alt="icon1" class="tab-icon" />
-									<span class="d-flex flex-column text-start">
-										<p class="tabs-title text-capitalize m-0">Registration Documents</p>
-										<p class="tabs-subtitle m-0">registration required documents</p>
-									</span>
-								</div>
-							</button>
-						</li>
+
 					</ul>
 				</div>
 
@@ -146,7 +147,86 @@
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
-							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+							<div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+								<div>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
+
+									<div class="file-input-row">
+										<label for="formTataTertib" class="tabs-title docs-title">Form Tata Tertib</label>
+										<div id="formTataTertibContainer" class="file-input px-2">
+											<span id="formTataTertibName" class="forgot-password">Upload File</span>
+											<img id="formTataTertibIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
+											<img id="formTataTertibTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
+										</div>
+										<input type="file" name="formTataTertib" id="formTataTertib" style="display: none" />
+										<span class="d-flex gap-2">
+											<p id="formTataTertibStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
+									</div>
+
+									<div class="file-input-row">
+										<label for="akteKelahiran" class="tabs-title docs-title">Scan Akte Kelahiran Berwarna</label>
+										<div id="akteKelahiranContainer" class="file-input px-2">
+											<span id="akteKelahiranName" class="forgot-password">Upload File</span>
+											<img id="akteKelahiranIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
+											<img id="akteKelahiranTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
+										</div>
+										<input type="file" name="akteKelahiran" id="akteKelahiran" style="display: none" />
+										<span class="d-flex gap-2">
+											<p id="akteKelahiranStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
+									</div>
+
+									<div class="file-input-row">
+										<label for="ijazah" class="tabs-title docs-title">Scan Ijazah SMA/ Penyetaraan Ijazah/ Scan Ijazah Diploma/Ijazah Paket C(Bewarna)</label>
+										<div id="ijazahContainer" class="file-input px-2">
+											<span id="ijazahName" class="forgot-password">Upload File</span>
+											<img id="ijazahIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
+											<img id="ijazahTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
+										</div>
+										<input type="file" name="ijazah" id="ijazah" style="display: none" />
+										<span class="d-flex gap-2">
+											<p id="ijazahStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
+									</div>
+
+									<div class="file-input-row">
+										<label for="ktp" class="tabs-title docs-title">Scan KTP Bewarna</label>
+										<div id="ktpContainer" class="file-input px-2">
+											<span id="ktpName" class="forgot-password">Upload File</span>
+											<img id="ktpIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
+											<img id="ktpTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
+										</div>
+										<input type="file" name="ktp" id="ktp" style="display: none" />
+										<span class="d-flex gap-2">
+											<p id="ktpStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
+									</div>
+
+									<div class="file-input-row">
+										<label for="photograph" class="tabs-title docs-title">Photograph (blue background)</label>
+										<div id="photographContainer" class="file-input px-2">
+											<span id="photographName" class="forgot-password">Upload File</span>
+											<img id="photographIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
+											<img id="photographTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
+										</div>
+										<input type="file" name="photograph" id="photograph" style="display: none" />
+										<span class="d-flex gap-2">
+											<p id="photographStatus" class="file-status">Uploaded</p>
+											<p class="file-status-review">On Review</p>
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- Tab Content 2 -->
+							<div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<div>
 									<p class="file-validation mb-3 pt-1">
 										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
@@ -239,7 +319,7 @@
 								</div>
 							</div>
 
-							<!-- Tab Content 2 -->
+							<!-- Tab Content 3 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 								<div>
 									<p class="file-validation mb-3 pt-1">
@@ -327,86 +407,6 @@
 										<input type="file" name="artsCrafts" id="artsCrafts" style="display: none" />
 										<span class="d-flex gap-2">
 											<p id="artsCraftsStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-								</div>
-							</div>
-
-							<!-- Tab Content 3 -->
-							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-								<div>
-									<p class="file-validation mb-3 pt-1">
-										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
-											Field</span>
-									</p>
-
-									<div class="file-input-row">
-										<label for="formTataTertib" class="tabs-title docs-title">Form Tata Tertib</label>
-										<div id="formTataTertibContainer" class="file-input px-2">
-											<span id="formTataTertibName" class="forgot-password">Upload File</span>
-											<img id="formTataTertibIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="formTataTertibTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="formTataTertib" id="formTataTertib" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="formTataTertibStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="akteKelahiran" class="tabs-title docs-title">Scan Akte Kelahiran Berwarna</label>
-										<div id="akteKelahiranContainer" class="file-input px-2">
-											<span id="akteKelahiranName" class="forgot-password">Upload File</span>
-											<img id="akteKelahiranIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="akteKelahiranTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="akteKelahiran" id="akteKelahiran" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="akteKelahiranStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="ijazah" class="tabs-title docs-title">Scan Ijazah SMA/ Penyetaraan Ijazah/ Scan Ijazah Diploma/Ijazah Paket C(Bewarna)</label>
-										<div id="ijazahContainer" class="file-input px-2">
-											<span id="ijazahName" class="forgot-password">Upload File</span>
-											<img id="ijazahIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="ijazahTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="ijazah" id="ijazah" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="ijazahStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="ktp" class="tabs-title docs-title">Scan KTP Bewarna</label>
-										<div id="ktpContainer" class="file-input px-2">
-											<span id="ktpName" class="forgot-password">Upload File</span>
-											<img id="ktpIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="ktpTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="ktp" id="ktp" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="ktpStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="photograph" class="tabs-title docs-title">Photograph (blue background)</label>
-										<div id="photographContainer" class="file-input px-2">
-											<span id="photographName" class="forgot-password">Upload File</span>
-											<img id="photographIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="photographTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="photograph" id="photograph" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="photographStatus" class="file-status">Uploaded</p>
 											<p class="file-status-review">On Review</p>
 										</span>
 									</div>
