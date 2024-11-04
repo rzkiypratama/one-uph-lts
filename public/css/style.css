@@ -1210,6 +1210,13 @@ input[type="radio"] {
     height: 11.6px;
 }
 
+#passwordSetup {
+    height: 380px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
