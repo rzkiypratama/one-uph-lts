@@ -200,6 +200,7 @@
 											<p class="payment-subtitle m-0">Regular</p>
 										</div>
 
+										{{-- please make a validation if code != input then hide this section --}}
 										<div class="d-flex justify-content-between text-capitalize">
 											<p class="payment-title m-0">E-Code</p>
 											<p class="payment-subtitle m-0">758378399</p>
