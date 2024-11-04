@@ -285,15 +285,15 @@
 												<div class="col-md-12 mb-4">
 													<label for="paymentMethodTuition" class="form-label">Payment Method</label>
 													<select id="paymentMethodTuition" class="form-select">
-														<option value="" selected>Credit Card</option>
-														<option value="1">Option 1</option>
-														<option value="2">Option 2</option>
+														<option value="bank-transfer" selected>Bank Transfer</option>
+														<option value="credit-card">Credit Card</option>
 														<option value="Lainnya">Lainnya</option>
 													</select>
 												</div>
 
+
 												<!-- Installment Method -->
-												<div class="col-md-12 mb-4">
+												<div id="ccMethod" class="col-md-12 mb-4">
 													<label for="installmentMethodTuition" class="form-label">Installment</label>
 													<select id="installmentMethodTuition" class="form-select">
 														<option value="" selected>3 months installment</option>
@@ -353,6 +353,22 @@
 
 				window.location.href = "/tuition-fee/re-registration";
 			});
+		</script>
+		<script>
+			const paymentMethod = document.getElementById("paymentMethodTuition");
+			const paymentWithCC = document.getElementById("ccMethod");
+
+			function hidePaymentCC() {
+				if (paymentMethod.value === "credit-card") {
+					paymentWithCC.style.display = "block";
+				} else {
+					paymentWithCC.style.display = "none";
+				}
+			}
+
+			hidePaymentCC();
+
+			paymentMethod.addEventListener("change", hidePaymentCC)
 		</script>
 	</body>
 
