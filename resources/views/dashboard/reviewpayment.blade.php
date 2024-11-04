@@ -230,6 +230,14 @@
 												<p class="text-capitalize payment-total-title m-0">IDR 420.000</p>
 											</div>
 										</div>
+										<div class="d-flex align-items-center justify-content-end w-100 gap-2 pt-2">
+											<label for="installmentTuition" class="form-label mb-0">Payment Type</label>
+											<select id="installmentTuition" class="form-select w-50">
+												<option value="" selected hidden>Select Method</option>
+												<option value="installment">Installment</option>
+												<option value="cash">Cash</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
