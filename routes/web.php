@@ -46,6 +46,10 @@ Route::get('/review', function () {
     return view('review');
 });
 
+Route::get('/password-setup', function () {
+    return view('/input-password');
+});
+
 // dashboard route
 
 Route::get('/dashboard', function () {
