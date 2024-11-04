@@ -158,12 +158,12 @@
 					</ul>
 				</div>
 
-				<div class="card-body">
+				<div class="card-body overflow-y-scroll">
 					<!-- Form Start -->
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
-							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+							<div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
 
 								<div>
@@ -205,81 +205,50 @@
 							</div>
 
 							<!-- Tab Content 2 only show when user choose s2 -->
-							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+							<div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
 
-								<div id="universityInformation" class="form-section">
-									<div class="address-container d-flex gap-3">
-										<!-- Main University -->
-										<div class="col-md-6 address-column">
-											<p class="row-title">Main University</p>
-											<div class="row my-4">
-												<div class="col-md-6">
-													<label for="universityName" class="form-label">Univeristy Name</label>
-													<input type="text" class="form-control" id="universityName" placeholder="Enter Univeristy Name" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Level Of Study</label>
-													<input type="text" class="form-control" placeholder="Enter Level of Study" />
-												</div>
+
+								<div id="universityCardsContainer" class="form-section">
+									<div class="col-md-12 address-column card university-card mt-2 p-3">
+										<p class="row-title university-title">University #1</p>
+										<div class="row mt-2">
+											<div class="col-md-6">
+												<label class="form-label">University Name</label>
+												<input type="text" class="form-control" id="universityName" placeholder="Enter University Name" />
 											</div>
-											<div class="row my-4">
-												<div class="col-md-6">
-													<label class="form-label">Study Program</label>
-													<input type="text" class="form-control" placeholder="Enter Study Program" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Degree Title</label>
-													<input type="text" class="form-control" placeholder="Enter Degree Title" />
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-md-6">
-													<label class="form-label">CGPA</label>
-													<input type="text" class="form-control" placeholder="Enter CGPA" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Graduation Date</label>
-													<input type="text" class="form-control" placeholder="Enter Postal Code" />
-												</div>
+											<div class="col-md-6">
+												<label class="form-label">Level Of Study</label>
+												<input type="text" class="form-control" placeholder="Enter Level of Study" />
 											</div>
 										</div>
-
-										<!-- Additional Univeristy -->
-										<div class="col-md-6 address-column">
-											<p class="row-title">Additional University</p>
-											<div class="row my-4">
-												<div class="col-md-6">
-													<label for="universityName" class="form-label">Univeristy Name</label>
-													<input type="text" class="form-control" id="universityName" placeholder="Enter Univeristy Name" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Level Of Study</label>
-													<input type="text" class="form-control" placeholder="Enter Level of Study" />
-												</div>
+										<div class="row my-3">
+											<div class="col-md-6">
+												<label class="form-label">Study Program</label>
+												<input type="text" class="form-control" placeholder="Enter Study Program" />
 											</div>
-											<div class="row my-4">
-												<div class="col-md-6">
-													<label class="form-label">Study Program</label>
-													<input type="text" class="form-control" placeholder="Enter Study Program" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Degree Title</label>
-													<input type="text" class="form-control" placeholder="Enter Degree Title" />
-												</div>
+											<div class="col-md-6">
+												<label class="form-label">Degree Title</label>
+												<input type="text" class="form-control" placeholder="Enter Degree Title" />
 											</div>
-											<div class="row">
-												<div class="col-md-6">
-													<label class="form-label">CGPA</label>
-													<input type="text" class="form-control" placeholder="Enter CGPA" />
-												</div>
-												<div class="col-md-6">
-													<label class="form-label">Graduation Date</label>
-													<input type="text" class="form-control" placeholder="Enter Postal Code" />
-												</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<label class="form-label">CGPA</label>
+												<input type="text" class="form-control" placeholder="Enter CGPA" />
+											</div>
+											<div class="col-md-6">
+												<label class="form-label">Graduation Date</label>
+												<input type="date" class="form-control" placeholder="Enter Graduation Date" />
 											</div>
 										</div>
 									</div>
+								</div>
+								<div class="d-flex justify-content-center w-100 pt-2">
+									<button class="btn btn-secondary add-more-btn mt-3" id="addMoreUniversityBtn">Add More University <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+											<path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+										</svg></button>
 								</div>
 							</div>
 						</div>
