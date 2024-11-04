@@ -6,8 +6,16 @@
     },
     "routes": [
         {
-            "src": "/build(.)",
-            "dest": "/public/(.*)"
+            "src": "/public/(..(css|js))",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/build/assets/(..(css|js))",
+            "dest": "/build/assets/$1"
+        },
+        {
+            "src": "/public/storage(..(png|jpg))",
+            "dest": "/public/storage/$1"
         },
         {
             "src": "/(.*)",
