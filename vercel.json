@@ -14,7 +14,7 @@
             "dest": "/public/js/"
         },
         {
-            "src": "/css/(.*)",
+            "src": "/style/(.*)",
             "dest": "/public/css/"
         },
         {
@@ -37,5 +37,6 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    }
+    },
+    "outputDirectory": "public"
 }
