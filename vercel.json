@@ -8,8 +8,11 @@
     },
     "routes": [
         {
-            "src": "/build/(.*)",
-            "dest": "/build/$1"
+            "src": "/assets/(.*)",
+            "dest": "/public/$1",
+            "headers": {
+                "cache-control": "public, max-age=31536000, immutable"
+            }
         },
         {
             "src": "/(.*)",
