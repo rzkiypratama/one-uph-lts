@@ -14,7 +14,7 @@
             "dest": "/public/js/"
         },
         {
-            "src": "/style/(.*)",
+            "src": "/css/(.*)",
             "dest": "/public/css/"
         },
         {
