@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<x-head title="Program" />
+	<x-head title="Program">
+		<x-slot name="inlineCSS">
+			<style>
+				.card-container {
+					overflow: scroll;
+				}
+
+				@media (min-width: 768px) {
+					.card-container {
+						overflow: visible;
+					}
+				}
+			</style>
+		</x-slot>
+	</x-head>
 
 	<body class="container mt-3">
 		<div class="d-flex justify-content-between align-items-center mb-md-5 px-3 pt-3">
@@ -10,9 +24,9 @@
 
 		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center homepage-container px-2 py-4">
 			<!-- desktop view start -->
-			<div class="card card-container d-none d-md-block p-5">
-				<div class="d-flex justify-content-between box-item">
-					<div class="left-content">
+			<div class="card card-container d-flex justify-content-between p-md-5 p-3">
+				<div class="d-md-flex justify-content-between box-item">
+					<div class="left-content mb-md-0 mb-3">
 						<p class="text-uppercase">step 6 of 8</p>
 						<h3>In which specific Program do you intend to apply?</h3>
 						<p class="children">Choose a program</p>
@@ -24,7 +38,7 @@
 					</div>
 
 					<div class="campus-grid card-box fade-in-right">
-						<div class="card-nationality border-0" style="background-image: url('/assets/design-img.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/design-img.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -35,7 +49,7 @@
 							</div>
 						</div>
 
-						<div class="card-nationality border-0" style="background-image: url('/assets/productdesign.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/productdesign.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -46,7 +60,7 @@
 							</div>
 						</div>
 
-						<div class="card-nationality border-0" style="background-image: url('/assets/digitalart.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/digitalart.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -57,7 +71,7 @@
 							</div>
 						</div>
 
-						<div class="card-nationality border-0" style="background-image: url('/assets/interiordesign-img.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/interiordesign-img.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -68,7 +82,7 @@
 							</div>
 						</div>
 
-						<div class="card-nationality border-0" style="background-image: url('/assets/movie.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/movie.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -79,7 +93,7 @@
 							</div>
 						</div>
 
-						<div class="card-nationality border-0" style="background-image: url('/assets/Architectures.png'); height: 128px; width: 298px" data-bs-toggle="modal" data-bs-target="#modal">
+						<div class="card-program border-0" style="background-image: url('/assets/Architectures.png');" data-bs-toggle="modal" data-bs-target="#modal">
 							<!-- Gradient Overlay -->
 							<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 
@@ -92,110 +106,18 @@
 					</div>
 				</div>
 
-				<span class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button" id="backToNationality" onclick="window.location.href = '/programmajor'">
-					<img src="/assets/left-arrow.png" alt="arrow-left" />
-					<p class="back-button p-0">back to Faculty Selection</p>
+				<span class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button">
+					<div class="d-none d-md-flex gap-2" onclick="window.location.href = '/programmajor'">
+						<img src="/assets/left-arrow.png" alt="arrow-left" />
+						<p class="back-button p-0">back to Faculty Selection</p>
+					</div>
+
+					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5"
+						onclick="window.location.href = '/programmajor'"><img src="/assets/arrow-back-red.png"
+							alt="arrow-left" class="arrow-left" />back to Faculty</button>
 				</span>
 			</div>
 			<!-- desktop view ends -->
-
-			<!-- mobile view start -->
-			<div class="d-flex flex-column d-md-none">
-				<div class="upper-content d-flex align-items-center gap-3">
-					<span class="float-end">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-						</svg>
-					</span>
-
-					<span class="text-white" onclick="window.location.href = '/programmajor'">
-						<p class="mobile-title">Step 6 of 8</p>
-						<p class="mobile-subtitle">Program</p>
-					</span>
-				</div>
-
-				<div class="card rounded-4 middle-content p-3">
-					<div class="left-content">
-						<h3>In which specific Program do you intend to apply?</h3>
-						<p class="children">Choose a program</p>
-						<p class="badge">Arts & Social Sciences</p>
-						<p class="badge">Design</p>
-						<hr class="solid" />
-					</div>
-
-					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-scroll">
-						<div class="campus-grid card-box fade-in-bottom">
-							<div class="card-nationality border-0" style="background-image: url('/assets/faculties-program/design/Graphic\ Design.png'); height: 80px; width: auto" data-bs-toggle="modal"
-								data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Graphic Design</h3>
-								</div>
-							</div>
-
-							<div class="card-nationality border-0" style="background-image: url('/assets/productdesign.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Product Design</h3>
-								</div>
-							</div>
-
-							<div class="card-nationality border-0" style="background-image: url('/assets/digitalart.jpeg'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Digital Arts</h3>
-								</div>
-							</div>
-
-							<div class="card-nationality border-0" style="background-image: url('/assets/interiordesign-img.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(30deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Interior Design</h3>
-								</div>
-							</div>
-
-							<div class="card-nationality border-0" style="background-image: url('/assets/movie.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Film</h3>
-								</div>
-							</div>
-
-							<div class="card-nationality border-0" style="background-image: url('/assets/Architectures.png'); height: 80px; width: auto" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Architecture</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- mobile view ends -->
 		</div>
 
 		<!-- MODAL -->

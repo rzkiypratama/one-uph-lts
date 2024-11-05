@@ -49,13 +49,15 @@
 				</div>
 
 				<span id="backToSignIn" class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button">
-					<div class="d-none d-md-block">
+					<div class="d-none d-md-flex gap-2" onclick="window.location.href = '/'">
 						<img src="/assets/left-arrow.png" alt="arrow-left" />
 						<p class="back-button p-0">back to Sign In</p>
 					</div>
 
-					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5"><img src="/assets/arrow-back-red.png"
-							alt="arrow-left" />back to Sign In</button>
+					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5" onclick="window.location.href = '/'"><img
+							src="/assets/arrow-back-red.png"
+							alt="arrow-left"
+							class="arrow-left" />back to Sign In</button>
 				</span>
 			</div>
 			<!-- desktop view ends -->
@@ -72,11 +74,6 @@
 					// Simpan nationality ke localStorage
 					localStorage.setItem("nationality", nationality);
 				});
-			});
-
-			document.getElementById("backToSignIn").addEventListener("click", function(event) {
-				event.preventDefault();
-				window.location.href = "/";
 			});
 		</script>
 	</body>

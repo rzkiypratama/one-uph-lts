@@ -152,23 +152,27 @@
 									<!-- Intake Year -->
 									<div class="col-md-6 mb-3">
 										<label for="intakeYear" class="form-label">Intake Year</label>
-										<select id="intakeYear" class="form-select">
-											<option value="2023">2023</option>
-											<option value="2024">2024</option>
-											<option value="2025">2025</option>
-											<option value="Lainnya">Lainnya</option>
-										</select>
+										<input type="text" class="form-select" id="intakeYear" onfocus="toggleDropdown('intakeYearDropdown')" oninput="filterOptions('intakeYear', 'intakeYearDropdown')"
+											placeholder="Select intake year" />
+										<div id="intakeYearDropdown" class="dropdown-content col-md-2">
+											<div onclick="selectOption('2023', 'intakeYear')">2023</div>
+											<div onclick="selectOption('2024', 'intakeYear')">2024</div>
+											<div onclick="selectOption('2025', 'intakeYear')">2025</div>
+											<div onclick="selectOption('Lainnya', 'intakeYear')">Lainnya</div>
+										</div>
 									</div>
 									<div class="col-md-6"></div>
 									<!-- Campus Name -->
 									<div class="col-md-6 mb-3">
-										<label for="campus" class="form-label">Campus</label>
-										<select id="campus" class="form-select">
-											<option value="Lippo Village Campus">Lippo Village Campus</option>
-											<option value="Surabaya Campus">Surabaya Campus</option>
-											<option value="Medan Campus">Medan Campus</option>
-											<option value="Lainnya">Lainnya</option>
-										</select>
+										<label for="campusInput" class="form-label">Campus</label>
+										<input type="text" class="form-select" id="campus" onfocus="toggleDropdown('campusDropdown')" oninput="filterOptions('campus', 'campusDropdown')"
+											placeholder="Search or select..." />
+										<div id="campusDropdown" class="dropdown-content">
+											<div onclick="selectOption('Lippo Village Campus', 'campus')">Lippo Village Campus</div>
+											<div onclick="selectOption('Surabaya Campus', 'campus')">Surabaya Campus</div>
+											<div onclick="selectOption('Medan Campus', 'campus')">Medan Campus</div>
+											<div onclick="selectOption('Lainnya', 'campus')">Lainnya</div>
+										</div>
 									</div>
 									<!-- Category Study -->
 									<div class="col-md-6 mb-3">
@@ -204,6 +208,7 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/intakeyear.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/fieldwithsearch.js') }}"></script>
 	</body>
 
 </html>
