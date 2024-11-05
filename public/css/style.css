@@ -506,6 +506,8 @@ a.forgot-password {
     letter-spacing: 0px;
 }
 
+/* cards for register */
+
 .card-nationality {
     position: relative;
     border-radius: 12px;
@@ -520,7 +522,82 @@ a.forgot-password {
     width: auto;
 }
 
-.card-nationality:hover {
+.card-studylevel {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    background-position: center;
+    height: 180px;
+    width: auto;
+}
+
+.card-campus {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    background-position: center;
+    height: 100px;
+    width: auto;
+}
+
+.card-fieldstudy {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    background-position: center;
+    height: 100px;
+    width: auto;
+}
+
+.card-programmajor {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    background-position: center;
+    height: 100px;
+    width: auto;
+}
+
+.card-program {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.05em;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    background-position: center;
+    height: 80px;
+    width: auto;
+}
+
+.card-nationality:hover,
+.card-studylevel:hover,
+.card-campus:hover,
+.card-fieldstudy:hover,
+.card-campus:hover,
+.card-program:hover {
     transform: scale(1.05);
 }
 
@@ -561,11 +638,21 @@ a.forgot-password {
     margin: 20px 0px;
 }
 
-.card-nationality .gradient-overlay:hover {
+.card-nationality .gradient-overlay:hover,
+.card-studylevel .gradient-overlay:hover,
+.card-campus .gradient-overlay:hover,
+.card-fieldstudy .gradient-overlay:hover,
+.card-programmajor .gradient-overlay:hover,
+.card-program .gradient-overlay:hover {
     background-image: linear-gradient(to top, #bcd1ff, #f1f1f122);
 }
 
-.card-nationality .title:hover {
+.card-nationality .title:hover,
+.card-studylevel .title:hover,
+.card-campus .title:hover,
+.card-fieldstudy .title:hover,
+.card-programmajor .title:hover,
+.card-program .title:hover {
     color: white;
 }
 
@@ -1147,7 +1234,8 @@ input[type="radio"] {
     border-radius: 8px;
     background-color: #d5d5d5;
     color: #ff5351;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .docs-title {
@@ -1228,6 +1316,24 @@ input[type="radio"] {
     justify-content: space-between;
 }
 
+.form-information {
+    width: 100%;
+}
+
+.card-box-review {
+    width: 100%;
+}
+
+.verify-btn {
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.arrow-left {
+    width: 14px;
+    height: 11px;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
@@ -1246,6 +1352,27 @@ input[type="radio"] {
     .card-nationality {
         height: 402px;
         width: 272px;
+    }
+
+    .card-studylevel {
+        width: 558px;
+        height: 133px;
+    }
+
+    .card-campus {
+        height: 128px;
+        width: 272px;
+    }
+
+    .card-fieldstudy,
+    .card-programmajor {
+        height: 198px;
+        width: 272px;
+    }
+
+    .card-program {
+        height: 128px;
+        width: 298px;
     }
 
     .dashboard-box {
@@ -1267,6 +1394,16 @@ input[type="radio"] {
     .w-md-25 {
         width: 25% !important;
     }
+
+    .card-box-review {
+        width: 75%;
+    }
+
+    .verify-btn {
+        width: auto;
+        padding-bottom: 0px;
+    }
+
     /* dot status */
 
     .dot-status-commited {
@@ -1757,6 +1894,11 @@ input[type="radio"] {
         width: 16px;
         height: 13px;
     }
+
+    .arrow-left {
+        width: 16px;
+        height: 13px;
+    }
     /* CARD CONTENT */
 
     .left-content {
@@ -1870,7 +2012,7 @@ input[type="radio"] {
     .campus-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 10px 10px;
         height: max-content;
     }
@@ -1880,8 +2022,8 @@ input[type="radio"] {
     .fieldstudy-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* grid-template-rows: 1fr 1fr 1fr; */
-        gap: 10px 10px;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px !important;
         height: max-content;
     }
 
