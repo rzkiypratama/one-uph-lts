@@ -1334,6 +1334,10 @@ input[type="radio"] {
     height: 11px;
 }
 
+.card-container {
+    overflow: scroll;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
@@ -1898,6 +1902,10 @@ input[type="radio"] {
     .arrow-left {
         width: 16px;
         height: 13px;
+    }
+
+    .card-container {
+        overflow: visible;
     }
     /* CARD CONTENT */
 
