@@ -516,6 +516,8 @@ a.forgot-password {
     background-size: cover;
     transition: transform 0.3s ease;
     background-position: center;
+    height: 180px;
+    width: auto;
 }
 
 .card-nationality:hover {
@@ -1139,6 +1141,15 @@ input[type="radio"] {
     width: 100%;
 }
 
+.btn-back-responsive {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #d5d5d5;
+    color: #ff5351;
+    font-weight: 600;
+}
+
 .docs-title {
     width: auto;
 }
@@ -1232,6 +1243,11 @@ input[type="radio"] {
 }
 
 @media (min-width: 768px) {
+    .card-nationality {
+        height: 402px;
+        width: 272px;
+    }
+
     .dashboard-box {
         margin-right: -8rem;
     }
@@ -1248,6 +1264,9 @@ input[type="radio"] {
         width: 79.5%;
     }
 
+    .w-md-25 {
+        width: 25% !important;
+    }
     /* dot status */
 
     .dot-status-commited {
