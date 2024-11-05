@@ -240,6 +240,15 @@
 											<label for="installmentTuition" class="form-label mb-0">Payment Method</label>
 											<select id="installmentTuition" class="form-select w-50">
 												<option value="" selected hidden>Select Method</option>
+												<option value="installment">Credit Card</option>
+												<option value="cash">Bank Transfer</option>
+											</select>
+										</div>
+
+										<div class="d-flex align-items-center justify-content-end w-100 gap-2 pt-2">
+											<label for="installmentTuition" class="form-label mb-0">Payment Type</label>
+											<select id="installmentTuition" class="form-select w-50">
+												<option value="" selected hidden>Select Method</option>
 												<option value="installment">Installment</option>
 												<option value="cash">Cash</option>
 											</select>
