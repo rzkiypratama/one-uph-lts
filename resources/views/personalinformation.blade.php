@@ -87,7 +87,7 @@
 
 									<!-- Grade -->
 									<div class="col-md-2 mb-3">
-										<label for="grade" class="form-label">Grade</label>
+										<label for="grade" class="form-label">Current Grade</label>
 										<select id="grade" class="form-select">
 											<option value="10">10</option>
 											<option value="11">11</option>
@@ -248,7 +248,7 @@
 										</div>
 										<!-- Grade -->
 										<div class="col-md-2 mb-3">
-											<label for="gradeMobile" class="form-label"> Current Grade</label>
+											<label for="gradeMobile" class="form-label">Current Grade</label>
 											<select id="gradeMobile" class="form-select">
 												<option value="10">10</option>
 												<option value="11">11</option>
