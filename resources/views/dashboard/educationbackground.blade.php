@@ -163,7 +163,7 @@
 					<form id="myForm" class="d-flex flex-column justify-content-between h-100">
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
-							<div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
 
 								<div>
@@ -205,7 +205,7 @@
 							</div>
 
 							<!-- Tab Content 2 only show when user choose s2 -->
-							<div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 								<p class="file-validation pb-1">Fill university information, <span class="file-validation-required">(*) Is Required Field</span></p>
 
 
