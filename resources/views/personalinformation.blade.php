@@ -205,6 +205,11 @@
 									</div>
 								</div>
 								<div class="row">
+									<div class="col-md-4 mb-3">
+										<label for="email" class="form-label">Email Address</label>
+										<input type="email" class="form-control" id="email" placeholder="enter your Email Address" />
+									</div>
+
 									<div class="col-md-4">
 										<label class="form-label">YPPH/Lippo Employee</label>
 										<select id="employee" class="form-select">
