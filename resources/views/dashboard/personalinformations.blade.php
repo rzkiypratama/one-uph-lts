@@ -35,12 +35,6 @@
 					align-items: center;
 				}
 
-				.phone-input-group select {
-					max-width: 60px;
-					border-radius: 0;
-					margin-right: 5px;
-				}
-
 				.phone-input-group input {
 					flex-grow: 1;
 					border-left: none;
@@ -308,6 +302,9 @@
 									</div>
 
 									<!-- if user choose S2 show this field bellow -->
+									<div class="row">
+
+									</div>
 									<!-- Alumni Option -->
 									<div class="col-md-4 mb-3">
 										<label class="form-label">Are You an Alumni?</label>
@@ -320,20 +317,25 @@
 										</div>
 									</div>
 
-									<!-- NIM -->
-									<div class="col-md-4 mb-3" id="alumniNimField" style="display: none">
-										<label for="nim" class="form-label">NIM</label>
-										<input type="text" class="form-control" id="nim" />
-									</div>
-									<!-- Document -->
-									<div class="col-md-4 mb-3" id="alumniDocField" style="display: none">
-										<label for="alumniDocument" class="form-label">Alumni Document</label>
-										<input type="file" class="form-control" placeholder="City of Birth" />
+									<div id="alumniDocField" style="display: none">
+										<div class="row">
+											<h3 class="row-title pb-3"> Upload Alumni Document</h3>
+											<!-- NIM -->
+											<div class="col-md-4 mb-3">
+												<label for="nim" class="form-label">NIM</label>
+												<input type="text" class="form-control" id="nim" />
+											</div>
+											<!-- Document -->
+											<div class="col-md-4 mb-3">
+												<label for="alumniDocument" class="form-label">Alumni Document</label>
+												<input type="file" class="form-control" placeholder="City of Birth" />
 
-										<p class="file-validation pt-1">
-											Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 200KB, <span class="file-validation-required">(*) Is Required
-												Field</span>
-										</p>
+												<p class="file-validation pt-1">
+													Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 200KB, <span class="file-validation-required">(*) Is Required
+														Field</span>
+												</p>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -455,13 +457,15 @@
 												<option>Single</option>
 												<option>Married</option>
 											</select>
-											{{-- <div class="radio-btn-group">
-												<input type="radio" id="single" name="maritalStatus" value="Single" checked />
-												<label for="single">Single</label>
-
-												<input type="radio" id="married" name="maritalStatus" value="Married" />
-												<label for="married">Married</label>
-											</div> --}}
+										</div>
+										<!-- Employee Status -->
+										<div class="col-md-4">
+											<label class="form-label">Are you YPPH employee?*</label>
+											<select class="form-select">
+												<option value="" selected disabled hidden class="select-placeholder">Choose your choice</option>
+												<option>Yes</option>
+												<option>No</option>
+											</select>
 										</div>
 									</div>
 								</div>
@@ -539,112 +543,7 @@
 								<p class="file-validation pb-1">Fill job information background, <span class="file-validation-required">(*) Is Required Field</span></p>
 
 								<div id="jobCardsContainer">
-									<div class="job-card card mt-2 p-3">
-										<div class="d-flex align-items-center absolute">
-											<h5 class="job-title row-title mb-1">Job Information #1</h5>
-										</div>
-										<div class="row mb-4">
-											{{-- first row --}}
-											<div class="col-md-3 mb-md-3">
-												<label for="companyName" class="form-label">Company Name</label>
-												<input type="companyName" class="form-control" name="companyName[]" placeholder="Enter your company name" />
-											</div>
-											<div class="col-md-3">
-												<label for="departmentDivision" class="form-label">Department Division</label>
-												<input type="departmentDivision" class="form-control" name="departmentDivision[]" placeholder="Your Department or Division" />
-											</div>
-											<div class="col-md-3">
-												<label for="position" class="form-label">Posiition</label>
-												<input type="position" class="form-control" name="position[]" placeholder="Enter your Posiition" />
-											</div>
-											<div class="col-md-3 mb-md-3">
-												<label for="occupation" class="form-label">Occupation</label>
-												<select name="occupation[]" class="form-select">
-													<option value="option1">option1</option>
-													<option value="option2">option2</option>
-													<option value="option3">option3</option>
-													<option value="Lainnya">Lainnya</option>
-												</select>
-											</div>
 
-											{{-- second row --}}
-											<div class="col-md-3">
-												<label class="form-label">Is this your current job?</label>
-												<div class="radio-btn-group">
-													<input type="radio" name="currentJobOption[0]" id="currentJob1" value="currentJob" checked />
-													<label for="currentJob1">Yes</label>
-
-													<input type="radio" name="currentJobOption[0]" id="notCurrentJob1" value="notcurrentJob" />
-													<label for="notCurrentJob1">No</label>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<label for="startWorking" class="form-label">Start Date</label>
-												<input type="date" class="form-control" name="startWorking[]" placeholder="Start Working" />
-											</div>
-											<div class="col-md-3 mb-md-3">
-												<label for="endWorking" class="form-label">End Date</label>
-												<input type="date" class="form-control" name="endWorking[]" placeholder="End Working" />
-											</div>
-											<div class="col-md-3"></div>
-
-											{{-- third row --}}
-											<div class="col-md-3 mb-md-3">
-												<label for="companyAddress" class="form-label">Company Address</label>
-												<textarea class="form-control" name="companyAddress[]" rows="1"></textarea>
-											</div>
-											<div class="col-md-3">
-												<label for="companyCountry" class="form-label">Country</label>
-												<input type="text" class="form-select" id="companyCountry" onfocus="toggleDropdown('companyCountryDropdown')" oninput="filterOptions('companyCountry', 'companyCountryDropdown')"
-													placeholder="Search or select..." />
-												<div id="companyCountryDropdown" class="dropdown-content col-md-2">
-													<div onclick="selectOption('Option 1', 'companyCountry')">Option 1</div>
-													<div onclick="selectOption('Option 2', 'companyCountry')">Option 2</div>
-													<div onclick="selectOption('Option 3', 'companyCountry')">Option 3</div>
-													<div onclick="selectOption('Lainnya', 'companyCountry')">Lainnya</div>
-												</div>
-											</div>
-											<div class="col-md-3">
-												<label for="companyProvince" class="form-label">Province or State</label>
-												<select name="companyProvince[]" class="form-select">
-													<option value="" selected disabled hidden class="select-placeholder">Select Province</option>
-													<option>Option 1</option>
-													<option>Option 2</option>
-												</select>
-											</div>
-											<div class="col-md-3">
-												<label for="companyCity" class="form-label">City</label>
-												<select name="companyCity[]" class="form-select">
-													<option value="" selected disabled hidden class="select-placeholder">Select City</option>
-													<option>Option 1</option>
-													<option>Option 2</option>
-												</select>
-											</div>
-
-											{{-- forth row --}}
-											<div class="col-md-3">
-												<label for="district" class="form-label">District</label>
-												<input type="district" class="form-control" name="district[]" placeholder="District" />
-											</div>
-											<div class="col-md-3">
-												<label for="village" class="form-label">Village</label>
-												<input type="village" class="form-control" name="village[]" placeholder="Village" />
-											</div>
-											<div class="col-md-3">
-												<label for="companyPostalCode" class="form-label">Postal Code</label>
-												<input type="companyPostalCode" class="form-control" name="companyPostalCode[]" placeholder="Postal Code" />
-											</div>
-											<div class="col-md-1">
-												<label for="rt" class="form-label">RT</label>
-												<input type="rt" class="form-control" name="rt[]" placeholder="RT" />
-											</div>
-											<div class="col-md-1">
-												<label for="rw" class="form-label">RW</label>
-												<input type="rw" class="form-control" name="rw[]" placeholder="RW" />
-											</div>
-
-										</div>
-									</div>
 								</div>
 								<div class="d-flex justify-content-center w-100 pt-2">
 									<button type="button" id="addMoreJobBtn" class="btn btn-secondary add-more-btn">Add Job Information <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -655,7 +554,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
+						<div class="d-flex justify-content-between align-content-center gap-3">
 							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5 px-4">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
@@ -675,23 +574,183 @@
 			</div>
 		</div>
 
+
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/personalinformations.js') }}"></script>
-		<script type="text/javascript" src="{{ asset('js/fieldwithsearch.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
+
+		{{-- FUNCTION TO ADD NEW CARD --}}
+
+		<script>
+			let cardCount = 1;
+
+			addJobCard(cardCount);
+
+			document.getElementById("addMoreJobBtn").addEventListener("click", function() {
+				cardCount++; // Tambah counter card untuk ID unik
+				addJobCard(cardCount);
+			});
+
+			function addJobCard(index) {
+				const jobCardsContainer = document.getElementById("jobCardsContainer");
+
+				// Membuat card baru dengan ID dinamis
+				const jobCard = document.createElement("div");
+				jobCard.className = "job-card card mt-2 p-3";
+				jobCard.id = `jobCard_${index}`; // Menambahkan ID unik untuk card
+
+				jobCard.innerHTML = `
+                <div class="d-flex align-items-center absolute">
+                                <h5 class="job-title row-title mb-1">Job Information ${index}</h5>
+                                 ${
+                                     index === 2
+                                         ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteJobCard(${index})">Delete</button>`
+                                         : ""
+                                 }
+                            </div>
+                            <div class="row mb-4">
+
+                                <div class="col-md-3 mb-md-3">
+                                    <label for="companyName_${index}" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" name="companyName" id="companyName_${index}" placeholder="Enter your company name" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="departmentDivision_${index}" class="form-label">Department Division</label>
+                                    <input type="text" class="form-control" name="departmentDivision" id="departmentDivision_${index}" placeholder="Your Department or Division" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="position_${index}" class="form-label">Posiition</label>
+                                    <input type="text" class="form-control" name="position" id='position_${index}' placeholder="Enter your Posiition" />
+                                </div>
+                                <div class="col-md-3 mb-md-3 dropdown">
+                                    <label for="occupation" class="form-label">Occupation</label>
+                                    <input type="text" class="dropdownInput form-select" id="occupation" placeholder="Search country..." autocomplete="off" readonly>
+                                    <div class="dropdownList">
+                                        <input type="text" class="searchInput" placeholder="Search country...">
+                                        <ul>
+                                            <li>Option 1</li>
+                                            <li>Option 2</li>
+                                            <li>Option 3</li>
+                                            <li>Indonesia</li>
+                                            <li>others</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="currentJob_${index}" class="form-label">Is this your current job?</label>
+                                    <div class="radio-btn-group">
+                                        <input type="radio" name="currentJobOption_${index}" id="currentJob_${index}" value="currentJob_${index}" checked />
+                                        <label for="currentJob_${index}">Yes</label>
+
+                                        <input type="radio" name="currentJobOption_${index}" id="notCurrentJob_${index}" value="notcurrentJob_${index}" />
+                                        <label for="notCurrentJob_${index}">No</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="startWorking_${index}" class="form-label">Start Date</label>
+                                    <input type="date" id="startWorking_${index}" class="form-control" name="startWorking" placeholder="Start Working" />
+                                </div>
+                                <div class="col-md-3 mb-md-3">
+                                    <label for="endWorking_${index}" class="form-label">End Date</label>
+                                    <input type="date" class="form-control" id="endWorking_${index}" name="endWorking" placeholder="End Working" />
+                                </div>
+                                <div class="col-md-3"></div>
+
+                                <div class="col-md-3 mb-md-3">
+                                    <label for="companyAddress_${index}" class="form-label">Company Address</label>
+                                    <textarea class="form-control" name="companyAddress" id="companyAddress_${index}" rows="1"></textarea>
+                                </div>
+                                <div class="col-md-3 dropdown">
+                                    <label for="companyCountry_${index}" class="form-label">Country</label>
+                                    <input type="text" class="dropdownInput form-select" id="companyCountry_${index}" placeholder="Search..." autocomplete="off" readonly>
+                                    <div class="dropdownList">
+                                        <input type="text" class="searchInput" placeholder="Select Country">
+                                        <ul>
+                                            <li>Option 1</li>
+                                            <li>Option 2</li>
+                                            <li>Option 3</li>
+                                            <li>Indonesia</li>
+                                            <li>others</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 dropdown">
+                                    <label for="companyProvince_${index}" class="form-label">Province</label>
+                                    <input type="text" class="dropdownInput form-select" id="companyProvince_${index}" placeholder="Search..." autocomplete="off" readonly>
+                                    <div class="dropdownList">
+                                        <input type="text" class="searchInput" placeholder="Select Province">
+                                        <ul>
+                                            <li>Option 1</li>
+                                            <li>Option 2</li>
+                                            <li>Option 3</li>
+                                            <li>Indonesia</li>
+                                            <li>others</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 dropdown">
+                                    <label for="companyCity_${index}" class="form-label">City</label>
+                                    <input type="text" class="dropdownInput form-select" id="companyCity_${index}" placeholder="Search..." autocomplete="off" readonly>
+                                    <div class="dropdownList">
+                                        <input type="text" class="searchInput" placeholder="Select Province">
+                                        <ul>
+                                            <li>Option 1</li>
+                                            <li>Option 2</li>
+                                            <li>Option 3</li>
+                                            <li>Indonesia</li>
+                                            <li>others</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="district_${index}" class="form-label">District</label>
+                                    <input type="district" class="form-control" id="district_${index}" name="district" placeholder="District" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="village_${index}" class="form-label">Village</label>
+                                    <input type="village" class="form-control" id="village_${index}" name="village" placeholder="Village" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="companyPostalCode_${index}" class="form-label">Postal Code</label>
+                                    <input type="text" id="companyPostalCode_${index}" class="form-control" name="companyPostalCode" placeholder="Postal Code" />
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="rt_${index}" class="form-label">RT</label>
+                                    <input type="number" id="rt_${index}" class="form-control" name="rt" placeholder="RT" />
+                                </div>
+                                <div class="col-md-1">
+                                    <label for="rw_${index}" class="form-label">RW</label>
+                                    <input type="number" id="rw_${index}" class="form-control" name="rw" placeholder="RW" />
+                                </div>
+
+                            </div>
+        `;
+
+				jobCardsContainer.appendChild(jobCard);
+			}
+
+			// Fungsi untuk menghapus card berdasarkan ID
+			function deleteJobCard(index) {
+				const jobCard = document.getElementById(`jobCard_${index}`);
+				if (jobCard) {
+					jobCard.remove();
+				}
+			}
+		</script>
+
 		<script>
 			// Mendapatkan elemen radio button dan elemen field alumni
 			const alumniRadio = document.getElementById("alumni");
 			const notAlumniRadio = document.getElementById("notAlumni");
-			const alumniNimFields = document.getElementById("alumniNimField");
 			const alumniDocFields = document.getElementById("alumniDocField");
 
 			// Fungsi untuk mengatur visibilitas field alumni
 			function toggleAlumniFields() {
 				if (alumniRadio.checked) {
-					alumniNimFields.style.display = "block";
 					alumniDocFields.style.display = "block";
 				} else {
-					alumniNimFields.style.display = "none";
 					alumniDocFields.style.display = "none";
 				}
 			}
