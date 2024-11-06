@@ -604,7 +604,7 @@
                                 <h5 class="job-title row-title mb-1">Job Information ${index}</h5>
                                  ${
                                      index === 2
-                                         ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteJobCard(${index})">Delete</button>`
+                                         ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteJobCard(${index})">Remove</button>`
                                          : ""
                                  }
                             </div>
