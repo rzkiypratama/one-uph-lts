@@ -210,39 +210,7 @@
 
 
 								<div id="universityCardsContainer" class="form-section">
-									<div class="col-md-12 address-column card university-card mt-2 p-3">
-										<p class="row-title university-title">University #1</p>
-										<div class="row mt-2">
-											<div class="col-md-6">
-												<label class="form-label">University Name</label>
-												<input type="text" class="form-control" id="universityName" placeholder="Enter University Name" />
-											</div>
-											<div class="col-md-6">
-												<label class="form-label">Level Of Study</label>
-												<input type="text" class="form-control" placeholder="Enter Level of Study" />
-											</div>
-										</div>
-										<div class="row my-3">
-											<div class="col-md-6">
-												<label class="form-label">Study Program</label>
-												<input type="text" class="form-control" placeholder="Enter Study Program" />
-											</div>
-											<div class="col-md-6">
-												<label class="form-label">Degree Title</label>
-												<input type="text" class="form-control" placeholder="Enter Degree Title" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<label class="form-label">CGPA</label>
-												<input type="text" class="form-control" placeholder="Enter CGPA" />
-											</div>
-											<div class="col-md-6">
-												<label class="form-label">Graduation Date</label>
-												<input type="date" class="form-control" placeholder="Enter Graduation Date" />
-											</div>
-										</div>
-									</div>
+									{{-- auto generate card by script bellow --}}
 								</div>
 								<div class="d-flex justify-content-center w-100 pt-2">
 									<button class="btn btn-secondary add-more-btn mt-3" id="addMoreUniversityBtn">Add More University <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -274,6 +242,73 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/educationInformation.js') }}"></script>
+		<script>
+			let universityCardCount = 1; // Mulai dari 1 agar card pertama ditampilkan sebagai default
+
+			// Tampilkan card pertama secara default
+			addUniversityCard(universityCardCount);
+
+			document.getElementById('addMoreUniversityBtn').addEventListener('click', function() {
+				universityCardCount++; // Tambah counter card untuk ID unik
+				addUniversityCard(universityCardCount);
+			});
+
+			function addUniversityCard(index) {
+				const universityCardsContainer = document.getElementById('universityCardsContainer');
+
+				// Membuat card baru dengan ID dinamis
+				const universityCard = document.createElement('div');
+				universityCard.className = 'university-card card mt-2 p-3';
+				universityCard.id = `universityCard_${index}`; // Menambahkan ID unik untuk card
+
+				universityCard.innerHTML = `
+							<div class="d-flex align-items-center">
+									<h5 class="university-title row-title mb-1">University #${index}</h5>
+									${index === 2 ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteUniversityCard(${index})">Remove</button>` : ""}
+							</div>
+							<div class="row mt-2">
+									<div class="col-md-6">
+											<label for="universityName_${index}" class="form-label">University Name</label>
+											<input type="text" class="form-control" id="universityName_${index}" name="universityName[]" placeholder="Enter University Name" />
+									</div>
+									<div class="col-md-6">
+											<label for="levelOfStudy_${index}" class="form-label">Level Of Study</label>
+											<input type="text" class="form-control" id="levelOfStudy_${index}" name="levelOfStudy[]" placeholder="Enter Level of Study" />
+									</div>
+							</div>
+							<div class="row my-3">
+									<div class="col-md-6">
+											<label for="studyProgram_${index}" class="form-label">Study Program</label>
+											<input type="text" class="form-control" id="studyProgram_${index}" name="studyProgram[]" placeholder="Enter Study Program" />
+									</div>
+									<div class="col-md-6">
+											<label for="degreeTitle_${index}" class="form-label">Degree Title</label>
+											<input type="text" class="form-control" id="degreeTitle_${index}" name="degreeTitle[]" placeholder="Enter Degree Title" />
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">
+											<label for="cgpa_${index}" class="form-label">CGPA</label>
+											<input type="text" class="form-control" id="cgpa_${index}" name="cgpa[]" placeholder="Enter CGPA" />
+									</div>
+									<div class="col-md-6">
+											<label for="graduationDate_${index}" class="form-label">Graduation Date</label>
+											<input type="date" class="form-control" id="graduationDate_${index}" name="graduationDate[]" placeholder="Enter Graduation Date" />
+									</div>
+							</div>
+					`;
+
+				universityCardsContainer.appendChild(universityCard);
+			}
+
+			// Fungsi untuk menghapus card berdasarkan ID
+			function deleteUniversityCard(index) {
+				const universityCard = document.getElementById(`universityCard_${index}`);
+				if (universityCard) {
+					universityCard.remove();
+				}
+			}
+		</script>
 
 	</body>
 
