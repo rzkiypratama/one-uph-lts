@@ -1310,7 +1310,7 @@ input[type="radio"] {
 }
 
 #passwordSetup {
-    height: 380px !important;
+    /* height: 380px !important; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1406,6 +1406,10 @@ input[type="radio"] {
     .verify-btn {
         width: auto;
         padding-bottom: 0px;
+    }
+
+    .card-body {
+        overflow-x: scroll;
     }
 
     /* dot status */
