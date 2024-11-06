@@ -152,27 +152,19 @@
 									<!-- Intake Year -->
 									<div class="col-md-6 mb-3">
 										<label for="intakeYear" class="form-label">Intake Year</label>
-										<input type="text" class="form-select" id="intakeYear" onfocus="toggleDropdown('intakeYearDropdown')" oninput="filterOptions('intakeYear', 'intakeYearDropdown')"
-											placeholder="Select intake year" />
-										<div id="intakeYearDropdown" class="dropdown-content col-md-2">
-											<div onclick="selectOption('2023', 'intakeYear')">2023</div>
-											<div onclick="selectOption('2024', 'intakeYear')">2024</div>
-											<div onclick="selectOption('2025', 'intakeYear')">2025</div>
-											<div onclick="selectOption('Lainnya', 'intakeYear')">Lainnya</div>
-										</div>
+										<select id="intakeYear" class="form-select">
+											<option value="Option 1">Option 1</option>
+											<option value="Option 2">Option 2</option>
+										</select>
 									</div>
 									<div class="col-md-6"></div>
 									<!-- Campus Name -->
 									<div class="col-md-6 mb-3">
-										<label for="campusInput" class="form-label">Campus</label>
-										<input type="text" class="form-select" id="campus" onfocus="toggleDropdown('campusDropdown')" oninput="filterOptions('campus', 'campusDropdown')"
-											placeholder="Search or select..." />
-										<div id="campusDropdown" class="dropdown-content">
-											<div onclick="selectOption('Lippo Village Campus', 'campus')">Lippo Village Campus</div>
-											<div onclick="selectOption('Surabaya Campus', 'campus')">Surabaya Campus</div>
-											<div onclick="selectOption('Medan Campus', 'campus')">Medan Campus</div>
-											<div onclick="selectOption('Lainnya', 'campus')">Lainnya</div>
-										</div>
+										<label for="campus" class="form-label">Campus</label>
+										<select id="campus" class="form-select">
+											<option value="Option 1">Option 1</option>
+											<option value="Option 2">Option 2</option>
+										</select>
 									</div>
 									<!-- Category Study -->
 									<div class="col-md-6 mb-3">
