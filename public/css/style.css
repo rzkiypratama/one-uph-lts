@@ -900,7 +900,7 @@ option.select-placeholder {
 }
 
 .phone-input-group select {
-    max-width: 60px;
+    max-width: 100px;
     border-radius: 0;
     margin-right: 5px;
 }
