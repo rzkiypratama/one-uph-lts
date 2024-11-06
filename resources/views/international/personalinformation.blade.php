@@ -4,15 +4,16 @@
 	<x-head title="Personal Information" />
 
 
-	<body class="container">
-		<!-- header -->
-		<img src="/assets/uph-logo.png" alt="logo" class="uphlogo position-absolute d-none d-md-block pt-5" />
+	<body class="container mt-3">
+		<div class="d-flex justify-content-between align-items-center mb-md-5 px-3 pt-3">
+			<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
+		</div>
 
-		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center vh-100 homepage-container px-2 py-4">
+		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center homepage-container px-2 py-4">
 			<!-- desktop view start -->
-			<div class="card card-container d-none d-md-block p-5">
-				<div class="d-flex justify-content-between box-item">
-					<div class="left-content form-information w-25">
+			<div class="card card-container d-md-block p-md-5 p-3">
+				<div class="d-md-flex justify-content-between box-item">
+					<div class="left-content form-information w-md-25">
 						<p class="text-uppercase">step 8 of 9</p>
 						<h3>Personal Information</h3>
 						<p class="children">We would like to know you more!</p>
@@ -63,13 +64,23 @@
 										<input type="date" class="form-control" id="dob" />
 									</div>
 									<!-- School Name -->
-									<div class="col-md-6 mb-3">
-										<label for="schoolName" class="form-label">School Name</label>
-										<input type="text" class="form-control" id="schoolName" placeholder="School Name" />
+									<div class="col-md-5 mb-3">
+										<label for="selectHighSchool" class="form-label">Select High School</label>
+										<input type="text" class="form-select" id="selectHighSchool"
+											onfocus="toggleDropdown('selectHighSchoolDropdown')"
+											oninput="filterOptions('selectHighSchool', 'selectHighSchoolDropdown')"
+											placeholder="Search or select..." />
+										<div id="selectHighSchoolDropdown" class="dropdown-content">
+											<div onclick="selectOption('Option 1', 'selectHighSchool')">Option 1</div>
+											<div onclick="selectOption('Option 2', 'selectHighSchool')">Option 2</div>
+											<div onclick="selectOption('Option 3', 'selectHighSchool')">Option 3</div>
+											<div onclick="selectOption('others', 'selectHighSchool')">Others</div>
+										</div>
 									</div>
+
 									<!-- Grade -->
-									<div class="col-md-2 mb-3">
-										<label for="grade" class="form-label">Grade</label>
+									<div class="col-md-3 mb-3">
+										<label for="grade" class="form-label">Current Grade</label>
 										<select id="grade" class="form-select">
 											<option value="10">10</option>
 											<option value="11">11</option>
@@ -78,156 +89,190 @@
 										</select>
 									</div>
 								</div>
+
+								<div id="additionalFields" style="display: none">
+									<div class="row">
+										<!-- hidden until user choose others -->
+										<!-- School Name -->
+										<div class="col-md-4 mb-3">
+											<label for="schoolName" class="form-label">High School Name</label>
+											<input type="text" class="form-control" id="schoolName" placeholder="School Name" />
+										</div>
+										<div class="col-md-4 mb-3">
+											<label for="highSchoolType" class="form-label">Select Highschool Type</label>
+											<select id="highSchoolType" class="form-select">
+												<option value="SMA">SMA</option>
+												<option value="SMK">SMK</option>
+											</select>
+										</div>
+										<div class="col-md-4 mb-3">
+											<label for="country" class="form-label">Country</label>
+											<input type="text" class="form-select" id="country"
+												onfocus="toggleDropdown('countryDropdown')"
+												oninput="filterOptions('country', 'countryDropdown')"
+												placeholder="Select Country" />
+											<div id="countryDropdown" class="dropdown-content">
+												<div onclick="selectOption('Option 1', 'country')">Option 1</div>
+												<div onclick="selectOption('Option 2', 'country')">Option 2</div>
+												<div onclick="selectOption('Option 3', 'country')">Option 3</div>
+												<div onclick="selectOption('others', 'country')">Others</div>
+											</div>
+										</div>
+										<div class="col-md-4 mb-3">
+											<label for="province" class="form-label">Province</label>
+											<input type="text" class="form-select" id="province"
+												onfocus="toggleDropdown('provinceDropdown')"
+												oninput="filterOptions('province', 'provinceDropdown')"
+												placeholder="Select province" />
+											<div id="provinceDropdown" class="dropdown-content">
+												<div onclick="selectOption('Option 1', 'province')">Option 1</div>
+												<div onclick="selectOption('Option 2', 'province')">Option 2</div>
+												<div onclick="selectOption('Option 3', 'province')">Option 3</div>
+												<div onclick="selectOption('others', 'province')">Others</div>
+											</div>
+										</div>
+										<div class="col-md-4 mb-3">
+											<label for="city" class="form-label">City</label>
+											<input type="text" class="form-select" id="city"
+												onfocus="toggleDropdown('cityDropdown')"
+												oninput="filterOptions('city', 'cityDropdown')"
+												placeholder="Select city" />
+											<div id="cityDropdown" class="dropdown-content">
+												<div onclick="selectOption('Option 1', 'city')">Option 1</div>
+												<div onclick="selectOption('Option 2', 'city')">Option 2</div>
+												<div onclick="selectOption('Option 3', 'city')">Option 3</div>
+												<div onclick="selectOption('others', 'city')">Others</div>
+											</div>
+										</div>
+										<!-- hidden until user choose others -->
+									</div>
+								</div>
 								<div class="row">
-									<!-- Email Address -->
-									<div class="col-md-6 mb-3">
-										<label for="email" class="form-label form-label-pwd">Email Address</label>
-										<p class="form-input-subtitle">This email will be used for your username</p>
-										<input type="email" class="form-control" id="email" placeholder="Email Address" />
+									<div class="col-md-4">
+										<label class="form-label">YPPH/Lippo Employee</label>
+										<select id="employee" class="form-select">
+											<option value="" selected disabled hidden class="select-placeholder">Select items</option>
+											<option>Option 1</option>
+											<option>Option 2</option>
+										</select>
 									</div>
-									<!-- Password -->
-									<div class="col-md-3 mb-3">
-										<label for="password" class="form-label form-label-pwd">Password</label>
-										<p class="form-input-subtitle">minimum 8 characters</p>
-										<input type="password" class="form-control" id="password" placeholder="Password" />
-									</div>
-									<!-- Repeat Password -->
-									<div class="col-md-3 mb-3">
-										<label for="repeatPassword" class="form-label form-label-pwd">Repeat Password</label>
-										<p class="form-input-subtitle">minimum 8 characters</p>
-										<input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password" />
-									</div>
+								</div>
+
+
+								<div class="d-flex justify-align-center gap-2 py-3">
+									<input type="checkbox" name="agree" id="agree" onclick="toggleSubmitButton()" />
+									<label for="agree" class="dashboard-title">I agree with <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">terms and conditions</a></label>
 								</div>
 								<!-- Submit Button -->
 								<div class="float-end my-2">
-									<button type="submit" class="btn select-program-btn rounded-2 px-5">Submit</button>
+									<button type="submit" id="submitBtn" class="btn select-program-btn rounded-2 px-5" disabled>Submit</button>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
 
-				<span class="d-flex align-items-md-center cursor-pointer gap-2 pt-4" role="button" onclick="window.location.href = '/international/programmajor'">
-					<img src="/assets/left-arrow.png" alt="arrow-left" />
-					<p class="back-button p-0">back to Admission Type</p>
+				<span class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button">
+					<div class="d-none d-md-flex gap-2" onclick="window.location.href = '/program'">
+						<img src="/assets/left-arrow.png" alt="arrow-left" />
+						<p class="back-button p-0">back to Admission Type</p>
+					</div>
+
+					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5" onclick="window.location.href = '/program'"><img
+							src="/assets/arrow-back-red.png"
+							alt="arrow-left" />back to Admission Type</button>
 				</span>
 			</div>
 			<!-- desktop view ends -->
+		</div>
 
-			<!-- mobile view start -->
-			<div class="d-flex flex-column d-md-none">
-				<div class="upper-content d-flex align-items-center gap-3">
-					<span class="float-end">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-						</svg>
-					</span>
-
-					<span class="text-white" onclick="window.location.href = '/international/program'">
-						<p class="mobile-title">Step 8 of 9</p>
-						<p class="mobile-subtitle">Personal Information</p>
-					</span>
-				</div>
-
-				<div class="card rounded-4 middle-content p-3">
-					<div class="left-content">
-						<h3>Personal Information</h3>
-						<p class="children">We would like to know you more!</p>
-						<hr class="solid" />
+		<!-- Modal -->
+		<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h5 class="modal-title" id="privacyPolicyModalLabel">Kebijakan Privasi & Syarat Dan Ketentuan</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 
-					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-scroll">
-						<div class="card card-box border-0 shadow-sm">
-							<div class="card-body w-auto">
-								<form id="personalInfoFormMobile">
-									<div class="row">
-										<!-- First Name -->
-										<div class="col-md-4 mb-3">
-											<label for="firstNameMobile" class="form-label">First Name</label>
-											<input type="text" class="form-control" id="firstNameMobile" placeholder="First Name" required />
-										</div>
-										<!-- Middle Name -->
-										<div class="col-md-4 mb-3">
-											<label for="middleNameMobile" class="form-label">Middle Name</label>
-											<input type="text" class="form-control" id="middleNameMobile" placeholder="Middle Name" />
-										</div>
-										<!-- Last Name -->
-										<div class="col-md-4 mb-3">
-											<label for="lastNameMobile" class="form-label">Last Name</label>
-											<input type="text" class="form-control" id="lastNameMobile" placeholder="Last Name" />
-										</div>
-									</div>
-									<div class="row">
-										<!-- Mobile Phone Number -->
-										<div class="col-md-4 mb-3">
-											<label for="mobilePhoneMobile" class="form-label">Mobile Phone Number</label>
-											<input type="text" class="form-control" id="mobilePhoneMobile" placeholder="Mobile Phone Number" />
-										</div>
-										<!-- Guardian Name -->
-										<div class="col-md-4 mb-3">
-											<label for="guardianNameMobile" class="form-label">Guardian Name</label>
-											<input type="text" class="form-control" id="guardianNameMobile" placeholder="Guardian Name" />
-										</div>
-										<!-- Guardian Mobile Phone Number -->
-										<div class="col-md-4 mb-3">
-											<label for="guardianPhoneMobile" class="form-label">Guardian Mobile Phone Number</label>
-											<input type="text" class="form-control" id="guardianPhoneMobile" placeholder="Guardian Mobile Phone" />
-										</div>
-									</div>
-									<div class="row">
-										<!-- Date of Birth -->
-										<div class="col-md-4 mb-3">
-											<label for="dobMobile" class="form-label">Date of Birth</label>
-											<input type="date" class="form-control" id="dobMobile" />
-										</div>
-										<!-- School Name -->
-										<div class="col-md-6 mb-3">
-											<label for="schoolNameMobile" class="form-label">School Name</label>
-											<input type="text" class="form-control" id="schoolNameMobile" placeholder="School Name" />
-										</div>
-										<!-- Grade -->
-										<div class="col-md-2 mb-3">
-											<label for="gradeMobile" class="form-label">Grade</label>
-											<select id="gradeMobile" class="form-select">
-												<option value="10">10</option>
-												<option value="11">11</option>
-												<option value="12">12</option>
-												<option value="Lainnya">Lainnya</option>
-											</select>
-										</div>
-									</div>
-									<div class="row">
-										<!-- Email Address -->
-										<div class="col-md-6 mb-3">
-											<label for="email" class="form-label form-label-pwd">Email Address</label>
-											<p class="form-input-subtitle">This email will be used for your username</p>
-											<input type="email" class="form-control" id="emailMobile" placeholder="Email Address" />
-										</div>
-										<!-- Password -->
-										<div class="col-md-3 mb-3">
-											<label for="password" class="form-label form-label-pwd">Password</label>
-											<p class="form-input-subtitle">minimum 8 characters</p>
-											<input type="password" class="form-control" id="passwordMobile" placeholder="Password" />
-										</div>
-										<!-- Repeat Password -->
-										<div class="col-md-3 mb-3">
-											<label for="repeatPassword" class="form-label form-label-pwd">Repeat Password</label>
-											<p class="form-input-subtitle">minimum 8 characters</p>
-											<input type="password" class="form-control" id="repeatPasswordMobile" placeholder="Repeat Password" />
-										</div>
-									</div>
-									<!-- Submit Button -->
-									<div class="float-end submit-btn-div my-2">
-										<button type="submit" class="btn select-program-btn rounded-2 px-5">Submit</button>
-									</div>
-								</form>
-							</div>
-						</div>
+					<!-- Modal Body -->
+					<div class="modal-body">
+						<h6><strong>KEBIJAKAN PRIVASI</strong></h6>
+						<p>
+							Kebijakan privasi ini dibuat untuk menjelaskan data apa saja yang kami kumpulkan, bagaimana kami menggunakan data tersebut, dan kepada siapa saja data tersebut kami bagikan. Informasi yang anda
+							berikan
+							kepada Universitas Pelita Harapan akan kami gunakan untuk proses pendaftaran, evaluasi serta penerimaan aplikasi anda.
+						</p>
+						<p>Untuk keterangan lebih lanjut mengenai kebijakan privasi ini, anda dapat mengirimkan email ke bma@uph.edu</p>
+
+						<h6 class="pt-3"><strong>Ruang Lingkup Kebijakan Privasi</strong></h6>
+						<p>
+							Kebijakan ini berlaku untuk informasi yang kami dapatkan melalui portal online admission yaitu one.uph.edu. Penggunaan dari portal tersebut diatur dalam syarat dan ketentuan yang merupakan satu
+							bagian yang
+							tidak dapat dipisahkan dari kebijakan privasi ini.
+						</p>
+
+						<h6 class="pt-3"><strong>Ruang Lingkup data</strong></h6>
+						<p>
+							Universitas Pelita Harapan mengumpulkan informasi, termasuk di dalamnya adalah data pribadi, mulai dari saat anda melakukan registrasi pada website online admission. Universitas Pelita Harapan
+							juga
+							mengumpulkan, menyimpan serta menggunakan berbagai macam informasi lainnya seperti IP address, operating system, unique ID of cookies, Unique ID dari perangkat komunikasi yang digunakan,
+							browser, Internet
+							Service Provider (ISP), dan lain sebagainya.
+						</p>
+
+						<h6 class="pt-3"><strong>Tujuan Penggunaan Data</strong></h6>
+						<p>Universitas Pelita Harapan menggunakan semua informasi yang dikumpulkan untuk tujuan:</p>
+						<ul>
+							<li>Kelancaran proses pendaftaran online dimana di dalamnya terdapat beberapa proses seperti pendaftaran, evaluasi, penerimaan, serta pembayaran biaya form dan biaya studi.</li>
+							<li>Berkomunikasi dengan anda melalui dan tidak terbatas pada email, SMS, dan telepon.</li>
+							<li>Memperlancar proses enrollment yang wajib dilakukan sebelum calon mahasiswa dapat melakukan perkuliahan.</li>
+						</ul>
+
+						<h6 class="pt-3"><strong>SYARAT DAN KETENTUAN</strong></h6>
+
+						<h6><strong>Pendahuluan</strong></h6>
+						<p>
+							Harap membaca dan memahami terlebih dahulu seluruh syarat dan ketentuan yang dijelaskan pada halaman ini sebelum menggunakan portal online admission dalam bentuk apapun, dimana di dalamnya
+							termasuk seluruh
+							konten dan halaman yang terdapat pada one.uph.edu. Syarat dan ketentuan ini merupakan kesepakatan antara anda dengan Universitas Pelita Harapan.
+						</p>
+
+						<h6 class="pt-3"><strong>Akun Pengguna dan Registrasi</strong></h6>
+						<p>
+							Untuk dapat menggunakan semua fitur yang ditawarkan dalam portal online admission maka anda harus melakukan pendaftaran terlebih dahulu dengan mengisi beberapa informasi pribadi seperti email
+							dan nomor
+							telepon genggam serta informasi penting lainnya.
+						</p>
+
+						<h6 class="pt-3"><strong>Program Studi</strong></h6>
+						<p>Melalui portal online admission ini Universitas Pelita Harapan menawarkan berbagai macam program studi yang dapat anda pilih baik melalui jalur reguler maupun jalur beasiswa.</p>
+
+						<h6 class="pt-3"><strong>Pembayaran</strong></h6>
+						<p>
+							Segala macam bentuk pembayaran baik itu pembayaran biaya form maupun pembayaran biaya studi wajib menggunakan metode yang sudah disediakan di dalam website online admission terkecuali apabila
+							ada
+							pemberitahuan tertulis dari Universitas Pelita Harapan.
+						</p>
+
+						<h6 class="pt-3"><strong>Refund</strong></h6>
+						<p>
+							Semua biaya yang telah dibayarkan melalui portal online admission tidak dapat dikembalikan dalam keadaan apapun kecuali terdapat pertimbangan khusus seperti yang diatur di dalam ketentuan
+							mengenai biaya
+							studi.
+						</p>
+					</div>
+
+					<!-- Modal Footer -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
-			<!-- mobile view ends -->
 		</div>
+
+		<script type="text/javascript" src="{{ asset('js/fieldwithsearch.js') }}"></script>
 
 		<script>
 			const formDesktop = document.getElementById("personalInfoForm");
@@ -238,8 +283,8 @@
 				event.preventDefault();
 
 				// Ambil nilai dari password dan repeat password
-				const password = this.querySelector("#password")?.value || this.querySelector("#passwordMobile")?.value;
-				const repeatPassword = this.querySelector("#repeatPassword")?.value || this.querySelector("#repeatPasswordMobile")?.value;
+				const password = this.querySelector("#password")?.value
+				const repeatPassword = this.querySelector("#repeatPassword")?.value
 
 				// Cek apakah password dan repeat password cocok
 				if (password !== repeatPassword) {
@@ -249,17 +294,21 @@
 
 				// Collect form data
 				const formData = {
-					firstName: this.querySelector("#firstName")?.value || this.querySelector("#firstNameMobile")?.value,
-					middleName: this.querySelector("#middleName")?.value || this.querySelector("#middleNameMobile")?.value,
-					lastName: this.querySelector("#lastName")?.value || this.querySelector("#lastNameMobile")?.value,
-					mobilePhone: this.querySelector("#mobilePhone")?.value || this.querySelector("#mobilePhoneMobile")?.value,
-					guardianName: this.querySelector("#guardianName")?.value || this.querySelector("#guardianNameMobile")?.value,
-					guardianPhone: this.querySelector("#guardianPhone")?.value || this.querySelector("#guardianPhoneMobile")?.value,
-					dob: this.querySelector("#dob")?.value || this.querySelector("#dobMobile")?.value,
-					schoolName: this.querySelector("#schoolName")?.value || this.querySelector("#schoolNameMobile")?.value,
-					grade: this.querySelector("#grade")?.value || this.querySelector("#gradeMobile")?.value,
-					email: this.querySelector("#email")?.value || this.querySelector("#emailMobile")?.value,
-					password: password,
+					firstName: this.querySelector("#firstName")?.value,
+					middleName: this.querySelector("#middleName")?.value,
+					lastName: this.querySelector("#lastName")?.value,
+					mobilePhone: this.querySelector("#mobilePhone")?.value,
+					guardianName: this.querySelector("#guardianName")?.value,
+					guardianPhone: this.querySelector("#guardianPhone")?.value,
+					dob: this.querySelector("#dob")?.value,
+					schoolName: this.querySelector("#schoolName")?.value,
+					grade: this.querySelector("#grade")?.value,
+					email: this.querySelector("#email")?.value,
+					selectHighSchool: this.querySelector("#selectHighSchool")?.value,
+					highSchoolType: this.querySelector("#highSchoolType")?.value,
+					country: this.querySelector("#country")?.value,
+					province: this.querySelector("#province")?.value,
+					city: this.querySelector("#city")?.value,
 				};
 
 				// Store form data in localStorage
@@ -268,16 +317,51 @@
 				console.log(formData);
 
 				// Redirect to the /review page
-				window.location.href = "/international/review";
+				window.location.href = "/review";
 			}
 
 			// Tambahkan event listener untuk kedua form
 			if (formDesktop) {
 				formDesktop.addEventListener("submit", handleFormSubmit);
 			}
+		</script>
 
-			if (formMobile) {
-				formMobile.addEventListener("submit", handleFormSubmit);
+		<script>
+			function selectOption(value, inputId) {
+				// Temukan elemen input berdasarkan ID dan atur nilainya
+				const input = document.getElementById(inputId);
+				if (input) {
+					input.value = value; // Set the input value to the selected option
+				}
+
+				// Periksa apakah nilai yang dipilih adalah "others"
+				const additionalFields = document.getElementById("additionalFields");
+
+				// Cek jika ada input yang memiliki nilai "others"
+				const selectHighSchoolValue = document.getElementById("selectHighSchool").value.toLowerCase();
+				const provinceValue = document.getElementById("province").value.toLowerCase();
+				const cityValue = document.getElementById("city").value.toLowerCase();
+
+				// Tampilkan atau sembunyikan additionalFields berdasarkan nilai input
+				if (selectHighSchoolValue === "others" || provinceValue === "others" || cityValue === "others" || value.toLowerCase() === "others") {
+					additionalFields.style.display = "block"; // Tampilkan row tambahan
+				} else {
+					additionalFields.style.display = "none"; // Sembunyikan row tambahan
+				}
+
+				// Sembunyikan dropdown setelah memilih opsi
+				const dropdown = document.getElementById(inputId + "Dropdown");
+				if (dropdown) {
+					dropdown.classList.remove("show");
+				}
+			}
+
+
+
+			function toggleSubmitButton() {
+				const agreeCheckbox = document.getElementById("agree");
+				const submitButton = document.getElementById("submitBtn");
+				submitButton.disabled = !agreeCheckbox.checked;
 			}
 		</script>
 
