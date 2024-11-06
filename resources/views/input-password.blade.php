@@ -11,6 +11,10 @@
 						height: 435px;
 						width: 681px;
 					}
+
+					.dashboard-history-title {
+						width: 222px;
+					}
 				}
 			</style>
 		</x-slot>
@@ -33,6 +37,10 @@
 
 					<div class="card card-box w-md-75 border-0 p-2 shadow-sm">
 						<div class="card-body">
+							<p class="dashboard-history-title">
+								Thank you for your verification!
+							</p>
+							<p class="register mb-3">Please setup password for your account</p>
 							<form id="passwordSetup">
 								<div>
 									<div class="row">
@@ -63,59 +71,6 @@
 				</div>
 			</div>
 			<!-- desktop view ends -->
-
-			<!-- mobile view start -->
-			<div class="d-flex flex-column d-md-none">
-				<div class="upper-content d-flex align-items-center gap-3">
-					<span class="float-end">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-left" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-						</svg>
-					</span>
-
-					<span class="text-white">
-						<p class="mobile-subtitle">Password Setup</p>
-					</span>
-				</div>
-
-				<div class="card rounded-4 middle-content mt-4 p-3">
-					<div class="left-content">
-						<h3>Password Setup</h3>
-						<p class="children">Set up your password</p>
-						<hr class="solid" />
-					</div>
-
-					<div class="bagian-bawah d-flex flex-column justify-content-between h-100 overflow-scroll">
-						<div class="card card-box border-0 shadow-sm">
-							<div class="card-body w-auto">
-								<form id="passwordSetupMobile">
-									<div class="row">
-										<!-- Password -->
-										<div class="col-md-6 mb-3">
-											<label for="password" class="form-label form-label-pwd">Password</label>
-											<p class="form-input-subtitle">minimum 8 characters</p>
-											<input type="passwordMobile" class="form-control" id="passwordMobile" placeholder="Password" />
-										</div>
-									</div>
-									<div class="row">
-										<!-- Repeat Password -->
-										<div class="col-md-6 mb-3">
-											<label for="repeatPasswordMobile" class="form-label form-label-pwd">Repeat Password</label>
-											<p class="form-input-subtitle">minimum 8 characters</p>
-											<input type="password" class="form-control" id="repeatPasswordMobile" placeholder="Repeat Password" />
-										</div>
-									</div>
-									<!-- Submit Button -->
-									<div class="float-end submit-btn-div my-2">
-										<button type="submit" class="btn select-program-btn rounded-2 px-5">Submit</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- mobile view ends -->
 		</div>
 
 		<!-- Modal -->
