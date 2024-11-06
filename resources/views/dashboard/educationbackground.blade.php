@@ -264,7 +264,7 @@
 				universityCard.innerHTML = `
 							<div class="d-flex align-items-center">
 									<h5 class="university-title row-title mb-1">University #${index}</h5>
-									${index === 2 ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteUniversityCard(${index})">Remove</button>` : ""}
+									${index > 1 ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteUniversityCard(${index})">Remove</button>` : ""}
 							</div>
 							<div class="row mt-2">
 									<div class="col-md-6">
