@@ -8,6 +8,17 @@
 					overflow: scroll;
 				}
 
+				#additionalFields .dropdownList {
+					display: none;
+				}
+
+				.phone-input-group select {
+					max-width: 60px;
+					border-radius: 0;
+					margin-right: 5px;
+				}
+
+
 				@media (min-width: 768px) {
 					.card-box {
 						margin-right: -6rem;
@@ -64,7 +75,18 @@
 									<!-- Mobile Phone Number -->
 									<div class="col-md-4 mb-3">
 										<label for="mobilePhone" class="form-label">Mobile Phone Number</label>
-										<input type="text" class="form-control" id="mobilePhone" placeholder="Mobile Phone Number" />
+										<div class="input-group phone-input-group">
+											<!-- Select for country code -->
+											<select class="form-select" id="countryCode">
+												<option value="+62">+62</option>
+												<option value="+1">+1</option>
+												<option value="+44">+44</option>
+												<option value="+91">+91</option>
+												<!-- Add more country codes as needed -->
+											</select>
+											<!-- Input for whatsapp number -->
+											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" />
+										</div>
 									</div>
 									<!-- Guardian Name -->
 									<div class="col-md-4 mb-3">
@@ -73,8 +95,19 @@
 									</div>
 									<!-- Guardian Mobile Phone Number -->
 									<div class="col-md-4 mb-3">
-										<label for="guardianPhone" class="form-label">Guardian Mobile Phone Number</label>
-										<input type="text" class="form-control" id="guardianPhone" placeholder="Guardian Mobile Phone" />
+										<label for="guardianPhone" class="form-label">Guardian Phone Number</label>
+										<div class="input-group phone-input-group">
+											<!-- Select for country code -->
+											<select class="form-select" id="countryCode">
+												<option value="+62">+62</option>
+												<option value="+1">+1</option>
+												<option value="+44">+44</option>
+												<option value="+91">+91</option>
+												<!-- Add more country codes as needed -->
+											</select>
+											<!-- Input for whatsapp number -->
+											<input type="tel" class="form-control" id="guardianPhone" placeholder="Phone Number" />
+										</div>
 									</div>
 								</div>
 								<div class="row">
@@ -84,17 +117,18 @@
 										<input type="date" class="form-control" id="dob" />
 									</div>
 									<!-- School Name -->
-									<div class="col-md-5 mb-3">
+									<div class="col-md-5 dropdown mb-3">
 										<label for="selectHighSchool" class="form-label">Select High School</label>
-										<input type="text" class="form-select" id="selectHighSchool"
-											onfocus="toggleDropdown('selectHighSchoolDropdown')"
-											oninput="filterOptions('selectHighSchool', 'selectHighSchoolDropdown')"
-											placeholder="Search or select..." />
-										<div id="selectHighSchoolDropdown" class="dropdown-content">
-											<div onclick="selectOption('Option 1', 'selectHighSchool')">Option 1</div>
-											<div onclick="selectOption('Option 2', 'selectHighSchool')">Option 2</div>
-											<div onclick="selectOption('Option 3', 'selectHighSchool')">Option 3</div>
-											<div onclick="selectOption('others', 'selectHighSchool')">Others</div>
+										<input type="text" class="dropdownInput form-select" id="selectHighSchool" placeholder="Select your high school" autocomplete="off" readonly>
+										<div class="dropdownList">
+											<input type="text" class="searchInput" placeholder="Search here...">
+											<ul>
+												<li>Option 1</li>
+												<li>Option 2</li>
+												<li>Option 3</li>
+												<li>Indonesia</li>
+												<li>others</li>
+											</ul>
 										</div>
 									</div>
 
@@ -110,7 +144,7 @@
 									</div>
 								</div>
 
-								<div id="additionalFields" style="display: none">
+								<div id="additionalFields" style="display: none;">
 									<div class="row">
 										<!-- hidden until user choose others -->
 										<!-- School Name -->
@@ -125,43 +159,46 @@
 												<option value="SMK">SMK</option>
 											</select>
 										</div>
-										<div class="col-md-4 mb-3">
+										<div class="col-md-4 dropdown mb-3">
 											<label for="country" class="form-label">Country</label>
-											<input type="text" class="form-select" id="country"
-												onfocus="toggleDropdown('countryDropdown')"
-												oninput="filterOptions('country', 'countryDropdown')"
-												placeholder="Select Country" />
-											<div id="countryDropdown" class="dropdown-content">
-												<div onclick="selectOption('Option 1', 'country')">Option 1</div>
-												<div onclick="selectOption('Option 2', 'country')">Option 2</div>
-												<div onclick="selectOption('Option 3', 'country')">Option 3</div>
-												<div onclick="selectOption('others', 'country')">Others</div>
+											<input type="text" class="dropdownInput form-select" id="country" placeholder="Select your country" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
 											</div>
 										</div>
-										<div class="col-md-4 mb-3">
+										<div class="col-md-4 dropdown mb-3">
 											<label for="province" class="form-label">Province</label>
-											<input type="text" class="form-select" id="province"
-												onfocus="toggleDropdown('provinceDropdown')"
-												oninput="filterOptions('province', 'provinceDropdown')"
-												placeholder="Select province" />
-											<div id="provinceDropdown" class="dropdown-content">
-												<div onclick="selectOption('Option 1', 'province')">Option 1</div>
-												<div onclick="selectOption('Option 2', 'province')">Option 2</div>
-												<div onclick="selectOption('Option 3', 'province')">Option 3</div>
-												<div onclick="selectOption('others', 'province')">Others</div>
+											<input type="text" class="dropdownInput form-select" id="province" placeholder="Select your province" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
 											</div>
 										</div>
-										<div class="col-md-4 mb-3">
+										<div class="col-md-4 dropdown mb-3">
 											<label for="city" class="form-label">City</label>
-											<input type="text" class="form-select" id="city"
-												onfocus="toggleDropdown('cityDropdown')"
-												oninput="filterOptions('city', 'cityDropdown')"
-												placeholder="Select city" />
-											<div id="cityDropdown" class="dropdown-content">
-												<div onclick="selectOption('Option 1', 'city')">Option 1</div>
-												<div onclick="selectOption('Option 2', 'city')">Option 2</div>
-												<div onclick="selectOption('Option 3', 'city')">Option 3</div>
-												<div onclick="selectOption('others', 'city')">Others</div>
+											<input type="text" class="dropdownInput form-select" id="city" placeholder="Select your city" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
 											</div>
 										</div>
 										<!-- hidden until user choose others -->
@@ -292,7 +329,8 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="{{ asset('js/fieldwithsearch.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
+
 
 		<script>
 			const formDesktop = document.getElementById("personalInfoForm");
@@ -337,7 +375,7 @@
 				console.log(formData);
 
 				// Redirect to the /review page
-				window.location.href = "/review";
+				// window.location.href = "/review";
 			}
 
 			// Tambahkan event listener untuk kedua form
@@ -347,35 +385,32 @@
 		</script>
 
 		<script>
-			function selectOption(value, inputId) {
-				// Temukan elemen input berdasarkan ID dan atur nilainya
-				const input = document.getElementById(inputId);
-				if (input) {
-					input.value = value; // Set the input value to the selected option
-				}
-
-				// Periksa apakah nilai yang dipilih adalah "others"
+			document.addEventListener("DOMContentLoaded", function() {
+				const selectHighSchool = document.getElementById("selectHighSchool");
 				const additionalFields = document.getElementById("additionalFields");
+				const dropdownListItems = document.querySelectorAll(".dropdownList ul li");
 
-				// Cek jika ada input yang memiliki nilai "others"
-				const selectHighSchoolValue = document.getElementById("selectHighSchool").value.toLowerCase();
-				const provinceValue = document.getElementById("province").value.toLowerCase();
-				const cityValue = document.getElementById("city").value.toLowerCase();
+				// Fungsi untuk mengatur visibilitas additionalFields
+				function toggleShow() {
 
-				// Tampilkan atau sembunyikan additionalFields berdasarkan nilai input
-				if (selectHighSchoolValue === "others" || provinceValue === "others" || cityValue === "others" || value.toLowerCase() === "others") {
-					additionalFields.style.display = "block"; // Tampilkan row tambahan
-				} else {
-					additionalFields.style.display = "none"; // Sembunyikan row tambahan
+					if (selectHighSchool.value.toLowerCase() === "others") {
+						additionalFields.style.display = "block";
+					} else {
+						additionalFields.style.display = "none";
+					}
 				}
 
-				// Sembunyikan dropdown setelah memilih opsi
-				const dropdown = document.getElementById(inputId + "Dropdown");
-				if (dropdown) {
-					dropdown.classList.remove("show");
-				}
-			}
+				dropdownListItems.forEach(function(item) {
+					item.addEventListener("click", function() {
+						if (item.textContent.toLowerCase() === "others") {
+							selectHighSchool.value = item.textContent;
+						}
+						toggleShow();
+					});
+				});
 
+				toggleShow();
+			});
 
 
 			function toggleSubmitButton() {
