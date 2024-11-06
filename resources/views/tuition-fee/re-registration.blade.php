@@ -34,6 +34,7 @@
 						height: 418px;
 						padding-left: 2rem;
 						padding-right: 2rem;
+						overflow: scroll
 					}
 
 					.container {
@@ -171,8 +172,8 @@
 											</div>
 											<div class="row">
 												<div class="col-md-6">
-													<label for="city" class="form-label">City</label>
-													<input type="text" class="form-control" id="city" placeholder="Enter City" />
+													<label for="" class="form-label">City</label>
+													<input type="text" class="form-control" placeholder="Enter City" />
 												</div>
 												<div class="col-md-6">
 													<label for="postalCode" class="form-label">Postal Code</label>
@@ -189,22 +190,22 @@
 										<!-- Indonesian Address Column -->
 										<div class="row col-md-6 address-column">
 											<div class="mb-3">
-												<label for="indonesianAddress" class="form-label">Indonesian Address</label>
-												<input type="text" class="form-control" id="indonesianAddress" placeholder="Enter Indonesian address" />
+												<label class="form-label">Indonesian Address</label>
+												<input type="text" class="form-control" placeholder="Enter Indonesian address" />
 												<div class="row my-4">
 													<div class="col-md-6">
 														<label for="stateProvinsi" class="form-label">Province or State</label>
-														<input type="text" class="form-control" id="stateProvinsi" placeholder="Enter Province or State" />
+														<input type="text" class="form-control" placeholder="Enter Province or State" />
 													</div>
 													<div class="col-md-6">
-														<label for="kota" class="form-label">City</label>
-														<input type="text" class="form-control" id="kota" placeholder="Enter City" />
+														<label for="city" class="form-label">City</label>
+														<input type="text" class="form-control" placeholder="Enter City" />
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-6">
 														<label for="kodePos" class="form-label">Postal Code</label>
-														<input type="text" class="form-control" id="kodePos" placeholder="Enter Postal Code" />
+														<input type="text" class="form-control" placeholder="Enter Postal Code" />
 													</div>
 												</div>
 											</div>
@@ -213,27 +214,93 @@
 								</div>
 
 								<!-- national role -->
-								<div id="national-address" class="form-section hidden">
+								<div id="national-address" class="form-section">
 									<div class="row address-container">
 										<!-- Indonesian Address Column -->
+
 										<div class="col-md-6 address-column">
+											<h3 class="row-title pb-3">Home Address</h3>
+											<div class="d-flex align-items-center mb-0 gap-2 opacity-0">
+												<label for="" class="form-label mb-0">Just divider</label>
+											</div>
 											<div class="mb-3">
 												<label for="indonesianAddress" class="form-label">Home Address</label>
 												<input type="text" class="form-control" id="indonesianAddress" placeholder="Enter Indonesian address" />
 												<div class="row my-4">
-													<div class="col-md-6">
+													<div class="col-md-4">
 														<label for="stateProvinsi" class="form-label">Province or State</label>
 														<input type="text" class="form-control" id="stateProvinsi" placeholder="Enter Province or State" />
 													</div>
-													<div class="col-md-6">
-														<label for="kota" class="form-label">City</label>
-														<input type="text" class="form-control" id="kota" placeholder="Enter City" />
+													<div class="col-md-4">
+														<label for="city" class="form-label">City</label>
+														<input type="text" class="form-control" id="city" placeholder="Enter City" />
+													</div>
+													<div class="col-md-4">
+														<label for="district" class="form-label">Distric</label>
+														<input type="text" class="form-control" id="district" placeholder="Enter Disctric" />
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-md-6">
+													<div class="col-md-4">
+														<label for="village" class="form-label">Village</label>
+														<input type="text" class="form-control" id="village" placeholder="Enter Village" />
+													</div>
+													<div class="col-md-2">
+														<label for="RT" class="form-label">RT</label>
+														<input type="text" class="form-control" id="RT" placeholder="Enter RT" />
+													</div>
+													<div class="col-md-2">
+														<label for="RW" class="form-label">RW</label>
+														<input type="text" class="form-control" id="RW" placeholder="Enter RW" />
+													</div>
+													<div class="col-md-4">
 														<label for="kodePos" class="form-label">Postal Code</label>
 														<input type="text" class="form-control" id="kodePos" placeholder="Enter Postal Code" />
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-6 address-column">
+											<h3 class="row-title pb-3">Correspondence Address</h3>
+
+											<div class="d-flex align-items-center gap-2">
+												<input type="checkbox" name="correspondence" id="checkboxId">
+												<label for="" class="form-label mb-0">Is it the same as your home address?</label>
+											</div>
+											<div class="mb-3" id="correspondenceAddressContainer">
+												<label for="correspondenceIndonesianAddress" class="form-label">Correspondence Address</label>
+												<input type="text" class="form-control" id="correspondenceIndonesianAddress" placeholder="Enter Indonesian address" />
+												<div class="row my-4">
+													<div class="col-md-4">
+														<label for="correspondenceStateProvinsi" class="form-label">Province or State</label>
+														<input type="text" class="form-control" id="correspondenceStateProvinsi" placeholder="Enter Province or State" />
+													</div>
+													<div class="col-md-4">
+														<label for="correspondenceKota" class="form-label">City</label>
+														<input type="text" class="form-control" id="correspondenceKota" placeholder="Enter City" />
+													</div>
+													<div class="col-md-4">
+														<label for="correspondenceDistrict" class="form-label">Distric</label>
+														<input type="text" class="form-control" id="correspondenceDistrict" placeholder="Enter Disctric" />
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-4">
+														<label for="correspondenceVillage" class="form-label">Village</label>
+														<input type="text" class="form-control" id="correspondenceVillage" placeholder="Enter Village" />
+													</div>
+													<div class="col-md-2">
+														<label for="correspondenceRT" class="form-label">RT</label>
+														<input type="text" class="form-control" id="correspondenceRT" placeholder="Enter RT" />
+													</div>
+													<div class="col-md-2">
+														<label for="correspondenceRW" class="form-label">RW</label>
+														<input type="text" class="form-control" id="correspondenceRW" placeholder="Enter RW" />
+													</div>
+													<div class="col-md-4">
+														<label for="correspondenceKodePos" class="form-label">Postal Code</label>
+														<input type="text" class="form-control" id="correspondenceKodePos" placeholder="Enter Postal Code" />
 													</div>
 												</div>
 											</div>
@@ -262,7 +329,7 @@
 										</div>
 										<div class="row">
 											<div class="row">
-												<div class="col-md-12 mb-3">
+												<div class="col-md-6 mb-3">
 													<label class="form-label">Status</label>
 													<div class="radio-btn-group d-flex gap-1">
 														<input type="radio" id="aliveMother" name="motherStatus" value="alive" checked />
@@ -295,6 +362,60 @@
 														<label for="parentEmail" class="form-label">Email Address</label>
 														<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 													</div>
+													<div class="col-md-4 mb-3">
+														<label class="form-label">Religion</label>
+														<select class="form-select">
+															<option value="Option 1">Option 1</option>
+															<option value="Option 2">Option 2</option>
+														</select>
+													</div>
+													<div class="col-md-4">
+														<label class="form-label">Occupation</label>
+														<input type="email" class="form-control" placeholder="Enter your Occupation" />
+													</div>
+													<div class="col-md-4 mb-3">
+														<label class="form-label">Last Education</label>
+														<select class="form-select">
+															<option value="Option 1">Option 1</option>
+															<option value="Option 2">Option 2</option>
+														</select>
+													</div>
+													<div class="mb-3">
+														<label for="" class="form-label">Home Address</label>
+														<input type="text" class="form-control" id="" placeholder="Enter address" />
+														<div class="row my-4">
+															<div class="col-md-4">
+																<label for="" class="form-label">Province or State</label>
+																<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
+															</div>
+															<div class="col-md-4">
+																<label for="" class="form-label">City</label>
+																<input type="text" class="form-control" id="" placeholder="Enter City" />
+															</div>
+															<div class="col-md-4">
+																<label for="" class="form-label">Distric</label>
+																<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-4">
+																<label for="" class="form-label">Village</label>
+																<input type="text" class="form-control" id="" placeholder="Enter Village" />
+															</div>
+															<div class="col-md-2">
+																<label for="" class="form-label">RT</label>
+																<input type="text" class="form-control" id="" placeholder="Enter RT" />
+															</div>
+															<div class="col-md-2">
+																<label for="" class="form-label">RW</label>
+																<input type="text" class="form-control" id="" placeholder="Enter RW" />
+															</div>
+															<div class="col-md-4">
+																<label for="" class="form-label">Postal Code</label>
+																<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -314,7 +435,7 @@
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-md-12 mb-3">
+											<div class="col-md-6 mb-3">
 												<label class="form-label">Status</label>
 												<div class="radio-btn-group d-flex gap-1">
 													<input type="radio" id="aliveFather" name="fatherStatus" value="alive" checked />
@@ -339,12 +460,66 @@
 															<!-- Add more country codes as needed -->
 														</select>
 														<!-- Input for whatsapp number -->
-														<input type="tel" class="form-control" id="fatherMobileNumber" placeholder="Phone Number" />
+														<input type="tel" class="form-control col-md-3" id="fatherMobileNumber" placeholder="Phone Number" />
 													</div>
 												</div>
 												<div class="col-md-6">
 													<label for="parentEmail" class="form-label">Email Address</label>
 													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+												</div>
+												<div class="col-md-4 mb-3">
+													<label class="form-label">Religion</label>
+													<select class="form-select">
+														<option value="Option 1">Option 1</option>
+														<option value="Option 2">Option 2</option>
+													</select>
+												</div>
+												<div class="col-md-4">
+													<label class="form-label">Occupation</label>
+													<input type="email" class="form-control" placeholder="Enter your Occupation" />
+												</div>
+												<div class="col-md-4 mb-3">
+													<label class="form-label">Last Education</label>
+													<select class="form-select">
+														<option value="Option 1">Option 1</option>
+														<option value="Option 2">Option 2</option>
+													</select>
+												</div>
+												<div class="mb-3">
+													<label for="" class="form-label">Home Address</label>
+													<input type="text" class="form-control" id="" placeholder="Enter address" />
+													<div class="row my-4">
+														<div class="col-md-4">
+															<label for="" class="form-label">Province or State</label>
+															<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
+														</div>
+														<div class="col-md-4">
+															<label for="" class="form-label">City</label>
+															<input type="text" class="form-control" id="" placeholder="Enter City" />
+														</div>
+														<div class="col-md-4">
+															<label for="" class="form-label">Distric</label>
+															<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-4">
+															<label for="" class="form-label">Village</label>
+															<input type="text" class="form-control" id="" placeholder="Enter Village" />
+														</div>
+														<div class="col-md-2">
+															<label for="" class="form-label">RT</label>
+															<input type="text" class="form-control" id="" placeholder="Enter RT" />
+														</div>
+														<div class="col-md-2">
+															<label for="" class="form-label">RW</label>
+															<input type="text" class="form-control" id="" placeholder="Enter RW" />
+														</div>
+														<div class="col-md-4">
+															<label for="" class="form-label">Postal Code</label>
+															<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -370,24 +545,8 @@
 										<label for="familyRelationship" class="form-label">Family Relationship</label>
 										<input type="text" class="form-control" id="familyRelationship" placeholder="Family Relationship" />
 									</div>
-								</div>
 
-								<div class="row">
-									<div class="col-md-4 mb-md-0 mb-3">
-										<label for="guardianReligion" class="form-label">Religion</label>
-										<select id="guardianReligion" class="form-select">
-											<option value="option1">option1</option>
-											<option value="option2">option2</option>
-											<option value="option3">option3</option>
-											<option value="Lainnya">Lainnya</option>
-										</select>
-									</div>
-									<!-- email address -->
-									<div class="col-md-4 mb-3">
-										<label for="guardianEmail" class="form-label">Email Address</label>
-										<input type="text" class="form-control" id="guardianEmail" placeholder="Your Guardian email address" />
-									</div>
-									<div class="col-md-4">
+									<div class="col-md-3 mb-3">
 										<label class="form-label">Mobile Phone Number</label>
 										<div class="input-group phone-input-group">
 											<!-- Select for country code -->
@@ -398,22 +557,85 @@
 												<option value="+91">+91</option>
 												<!-- Add more country codes as needed -->
 											</select>
-											<!-- Input for homePhone number -->
-											<input type="tel" class="form-control" id="guardianPhoneNumber" placeholder="Your Guardian phone number" />
+											<!-- Input for whatsapp number -->
+											<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
 										</div>
 									</div>
+									<div class="col-md-3 mb-3">
+										<label for="parentEmail" class="form-label">Email Address</label>
+										<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
+									</div>
+									<div class="col-md-2 mb-3">
+										<label class="form-label">Religion</label>
+										<select class="form-select">
+											<option value="Option 1">Option 1</option>
+											<option value="Option 2">Option 2</option>
+										</select>
+									</div>
+									<div class="col-md-2">
+										<label class="form-label">Occupation</label>
+										<input type="email" class="form-control" placeholder="Enter your Occupation" />
+									</div>
+									<div class="col-md-2 mb-3">
+										<label class="form-label">Last Education</label>
+										<select class="form-select">
+											<option value="Option 1">Option 1</option>
+											<option value="Option 2">Option 2</option>
+										</select>
+									</div>
+									<div class="mb-3">
+										<div class="row">
+											<div class="col-md-6 mb-3">
+												<label for="" class="form-label">Home Address</label>
+												<textarea class="form-control" id="" rows="1"></textarea>
+											</div>
+											<div class="col-md-2">
+												<label for="" class="form-label">Province or State</label>
+												<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
+											</div>
+											<div class="col-md-2">
+												<label for="" class="form-label">City</label>
+												<input type="text" class="form-control" id="" placeholder="Enter City" />
+											</div>
+											<div class="col-md-2">
+												<label for="" class="form-label">Distric</label>
+												<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2">
+												<label for="" class="form-label">Village</label>
+												<input type="text" class="form-control" id="" placeholder="Enter Village" />
+											</div>
+											<div class="col-md-1">
+												<label for="" class="form-label">RT</label>
+												<input type="text" class="form-control" id="" placeholder="Enter RT" />
+											</div>
+											<div class="col-md-1">
+												<label for="" class="form-label">RW</label>
+												<input type="text" class="form-control" id="" placeholder="Enter RW" />
+											</div>
+											<div class="col-md-2">
+												<label for="" class="form-label">Postal Code</label>
+												<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
+											</div>
+										</div>
+
+
+									</div>
 								</div>
+
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
-							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5">
+							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 danger-button mt-5 px-5">
+							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 danger-button px-5">
 								save & continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
@@ -460,6 +682,52 @@
 
 			// Inisialisasi pertama kali
 			toggleParentFields();
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const checkbox = document.querySelector("#checkboxId");
+				const correspondenceAddressContainer = document.querySelector("#correspondenceAddressContainer");
+
+				const homeAddressFields = {
+					address: document.querySelector("#indonesianAddress"),
+					province: document.querySelector("#stateProvinsi"),
+					city: document.querySelector("#city"),
+					district: document.querySelector("#district"),
+					village: document.querySelector("#village"),
+					rt: document.querySelector("#RT"),
+					rw: document.querySelector("#RW"),
+					postalCode: document.querySelector("#kodePos")
+				};
+
+				const correspondenceAddressFields = {
+					address: document.querySelector("#correspondenceIndonesianAddress"),
+					province: document.querySelector("#correspondenceStateProvinsi"),
+					city: document.querySelector("#correspondenceKota"),
+					district: document.querySelector("#correspondenceDistrict"),
+					village: document.querySelector("#correspondenceVillage"),
+					rt: document.querySelector("#correspondenceRT"),
+					rw: document.querySelector("#correspondenceRW"),
+					postalCode: document.querySelector("#correspondenceKodePos")
+				};
+
+				checkbox.addEventListener("change", () => {
+					if (checkbox.checked) {
+						for (const field in homeAddressFields) {
+							correspondenceAddressFields[field].value = homeAddressFields[field].value;
+						}
+
+						correspondenceAddressContainer.classList.add("opacity-0", "pointer-events-none");
+
+					} else {
+						for (const field in correspondenceAddressFields) {
+							correspondenceAddressFields[field].value = "";
+						}
+						// Tampilkan kembali field correspondence
+						correspondenceAddressContainer.classList.remove("opacity-0", "pointer-events-none");
+					}
+				});
+			});
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
