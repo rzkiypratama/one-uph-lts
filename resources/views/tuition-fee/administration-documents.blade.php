@@ -199,7 +199,7 @@
 
 									<div class="file-input-row">
 										<label for="ktp" class="tabs-title docs-title">Scan KTP Bewarna</label>
-										<div id="ktpContainer" class="file-input px-2">
+										{{-- <div id="ktpContainer" class="file-input px-2">
 											<span id="ktpName" class="forgot-password">Upload File</span>
 											<img id="ktpIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
 											<img id="ktpTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
@@ -208,6 +208,11 @@
 										<span class="d-flex gap-2">
 											<p id="ktpStatus" class="file-status">Uploaded</p>
 											<p class="file-status-review">On Review</p>
+										</span> --}}
+
+										<span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
 										</span>
 									</div>
 
