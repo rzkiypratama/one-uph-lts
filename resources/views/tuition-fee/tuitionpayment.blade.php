@@ -254,78 +254,79 @@
 							</button>
 						</div>
 
-						<!-- Modal -->
-						<div class="modal fade" id="firstPaymentTuitionModal" tabindex="-1" aria-labelledby="firstPaymentModal" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered modal-dialog-payment">
-								<div class="modal-content border-0">
-									<!-- Modal Body -->
-									<div class="modal-body">
-										<div>
-											<span class="d-flex justify-content-between text-uppercase payment-title-up">
-												<p>total</p>
-												<p>PAY WITHIN <span>{countdown}</span></p>
-											</span>
-											<p class="review-modal-title">IDR 120.000</p>
-											<span class="d-flex justify-content-between text-uppercase payment-title-down">
-												<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
-												<p class="text-decoration-underline payment-details">details</p>
-											</span>
+					</form>
 
-											<hr class="solid-fullwidth" />
-										</div>
-										<!-- Payment Option Section -->
-										<div class="mb-3">
-											<p class="row-title">Payment Option</p>
-										</div>
+					<!-- Modal -->
+					<div class="modal fade" id="firstPaymentTuitionModal" tabindex="-1" aria-labelledby="firstPaymentModal" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered modal-dialog-payment">
+							<div class="modal-content border-0">
+								<!-- Modal Body -->
+								<div class="modal-body">
+									<div>
+										<span class="d-flex justify-content-between text-uppercase payment-title-up">
+											<p>total</p>
+											<p>PAY WITHIN <span>{countdown}</span></p>
+										</span>
+										<p class="review-modal-title">IDR 120.000</p>
+										<span class="d-flex justify-content-between text-uppercase payment-title-down">
+											<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
+											<p class="text-decoration-underline payment-details">details</p>
+										</span>
 
-										<!-- Bank Options Section -->
-										<div class="payment-background">
-											<div class="d-flex flex-column gap-1 p-4">
-												<!-- Payment Method -->
-												<div class="col-md-12 mb-4">
-													<label for="paymentMethodTuition" class="form-label">Payment Method</label>
-													<select id="paymentMethodTuition" class="form-select">
-														<option value="bank-transfer" selected>Bank Transfer</option>
-														<option value="credit-card">Credit Card</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
+										<hr class="solid-fullwidth" />
+									</div>
+									<!-- Payment Option Section -->
+									<div class="mb-3">
+										<p class="row-title">Payment Option</p>
+									</div>
+
+									<!-- Bank Options Section -->
+									<div class="payment-background">
+										<div class="d-flex flex-column gap-1 p-4">
+											<!-- Payment Method -->
+											<div class="col-md-12 mb-4">
+												<label for="paymentMethodTuition" class="form-label">Payment Method</label>
+												<select id="paymentMethodTuition" class="form-select">
+													<option value="bank-transfer" selected>Bank Transfer</option>
+													<option value="credit-card">Credit Card</option>
+													<option value="Lainnya">Lainnya</option>
+												</select>
+											</div>
 
 
-												<!-- Installment Method -->
-												<div id="ccMethod" class="col-md-12 mb-4">
-													<label for="installmentMethodTuition" class="form-label">Installment</label>
-													<select id="installmentMethodTuition" class="form-select">
-														<option value="" selected>3 months installment</option>
-														<option value="1">Option 1</option>
-														<option value="2">Option 2</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
+											<!-- Installment Method -->
+											<div id="ccMethod" class="col-md-12 mb-4">
+												<label for="installmentMethodTuition" class="form-label">Payment Type</label>
+												<select id="installmentMethodTuition" class="form-select">
+													<option value="" selected>3 months installment</option>
+													<option value="1">Option 1</option>
+													<option value="2">Option 2</option>
+													<option value="Lainnya">Lainnya</option>
+												</select>
+											</div>
 
-												<!-- Bank -->
-												<div class="col-md-12 mb-4">
-													<label for="bankTuition" class="form-label">Bank</label>
-													<select id="bankTuition" class="form-select">
-														<option value="bca" selected>BCA</option>
-														<option value="bca">Option 1</option>
-														<option value="bca">Option 2</option>
-														<option value="Lainnya">Lainnya</option>
-													</select>
-												</div>
+											<!-- Bank -->
+											<div class="col-md-12 mb-4">
+												<label for="bankTuition" class="form-label">Bank</label>
+												<select id="bankTuition" class="form-select">
+													<option value="bca" selected>BCA</option>
+													<option value="bca">Option 1</option>
+													<option value="bca">Option 2</option>
+													<option value="Lainnya">Lainnya</option>
+												</select>
 											</div>
 										</div>
 									</div>
+								</div>
 
-									<!-- Modal Footer -->
-									<div class="modal-footer">
-										<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#successModal" data-bs-toggle="modal" id="submitTuitionForm">Proceed to
-											Payment</button>
-									</div>
+								<!-- Modal Footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#successModal" data-bs-toggle="modal" id="submitTuitionForm">Proceed to
+										Payment</button>
 								</div>
 							</div>
 						</div>
-					</form>
+					</div>
 
 					<!-- Modal 2 For Success Payment -->
 					<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
