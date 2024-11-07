@@ -227,33 +227,65 @@
 												<label for="indonesianAddress" class="form-label">Home Address</label>
 												<input type="text" class="form-control" id="indonesianAddress" placeholder="Enter Indonesian address" />
 												<div class="row my-4">
-													<div class="col-md-4">
+													<div class="col-md-4 dropdown mb-3">
+														<label for="stateCountry" class="form-label">Country</label>
+														<input type="text" class="dropdownInput form-select" id="stateCountry" placeholder="Select your country" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>Indonesia</li>
+																<li>others</li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-4 dropdown">
 														<label for="stateProvinsi" class="form-label">Province or State</label>
-														<input type="text" class="form-control" id="stateProvinsi" placeholder="Enter Province or State" />
+														<input type="text" class="dropdownInput form-select" id="stateProvinsi" placeholder="Select province or state" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>others</li>
+															</ul>
+														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-4 dropdown">
 														<label for="city" class="form-label">City</label>
-														<input type="text" class="form-control" id="city" placeholder="Enter City" />
-													</div>
-													<div class="col-md-4">
-														<label for="district" class="form-label">Distric</label>
-														<input type="text" class="form-control" id="district" placeholder="Enter Disctric" />
+														<input type="text" class="dropdownInput form-select" id="city" placeholder="Select your city" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>others</li>
+															</ul>
+														</div>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-md-4">
+													<div class="col-md-3">
+														<label for="district" class="form-label">Distric</label>
+														<input type="text" class="form-control" id="district" placeholder="Enter Disctric" />
+													</div>
+													<div class="col-md-2">
 														<label for="village" class="form-label">Village</label>
 														<input type="text" class="form-control" id="village" placeholder="Enter Village" />
 													</div>
 													<div class="col-md-2">
 														<label for="RT" class="form-label">RT</label>
-														<input type="text" class="form-control" id="RT" placeholder="Enter RT" />
+														<input type="text" class="form-control" id="RT" placeholder="RT" />
 													</div>
 													<div class="col-md-2">
 														<label for="RW" class="form-label">RW</label>
-														<input type="text" class="form-control" id="RW" placeholder="Enter RW" />
+														<input type="text" class="form-control" id="RW" placeholder="RW" />
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-3">
 														<label for="kodePos" class="form-label">Postal Code</label>
 														<input type="text" class="form-control" id="kodePos" placeholder="Enter Postal Code" />
 													</div>
@@ -272,21 +304,53 @@
 												<label for="correspondenceIndonesianAddress" class="form-label">Correspondence Address</label>
 												<input type="text" class="form-control" id="correspondenceIndonesianAddress" placeholder="Enter Indonesian address" />
 												<div class="row my-4">
-													<div class="col-md-4">
+													<div class="col-md-4 dropdown mb-3">
+														<label for="cocorrespondenceStateCountryuntry" class="form-label">Country</label>
+														<input type="text" class="dropdownInput form-select" id="correspondenceStateCountry" placeholder="Select your country" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>Indonesia</li>
+																<li>others</li>
+															</ul>
+														</div>
+													</div>
+													<div class="col-md-4 dropdown">
 														<label for="correspondenceStateProvinsi" class="form-label">Province or State</label>
-														<input type="text" class="form-control" id="correspondenceStateProvinsi" placeholder="Enter Province or State" />
+														<input type="text" class="dropdownInput form-select" id="correspondenceStateProvinsi" placeholder="Select province or state" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>others</li>
+															</ul>
+														</div>
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-4 dropdown">
 														<label for="correspondenceKota" class="form-label">City</label>
-														<input type="text" class="form-control" id="correspondenceKota" placeholder="Enter City" />
-													</div>
-													<div class="col-md-4">
-														<label for="correspondenceDistrict" class="form-label">Distric</label>
-														<input type="text" class="form-control" id="correspondenceDistrict" placeholder="Enter Disctric" />
+														<input type="text" class="dropdownInput form-select" id="correspondenceKota" placeholder="Select your city" autocomplete="off" readonly>
+														<div class="dropdownList">
+															<input type="text" class="searchInput" placeholder="Search here...">
+															<ul>
+																<li>Option 1</li>
+																<li>Option 2</li>
+																<li>Option 3</li>
+																<li>others</li>
+															</ul>
+														</div>
 													</div>
 												</div>
 												<div class="row">
-													<div class="col-md-4">
+													<div class="col-md-3">
+														<label for="correspondenceDistrict" class="form-label">Distric</label>
+														<input type="text" class="form-control" id="correspondenceDistrict" placeholder="Enter Disctric" />
+													</div>
+													<div class="col-md-2">
 														<label for="correspondenceVillage" class="form-label">Village</label>
 														<input type="text" class="form-control" id="correspondenceVillage" placeholder="Enter Village" />
 													</div>
@@ -298,7 +362,7 @@
 														<label for="correspondenceRW" class="form-label">RW</label>
 														<input type="text" class="form-control" id="correspondenceRW" placeholder="Enter RW" />
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-3">
 														<label for="correspondenceKodePos" class="form-label">Postal Code</label>
 														<input type="text" class="form-control" id="correspondenceKodePos" placeholder="Enter Postal Code" />
 													</div>
@@ -384,21 +448,53 @@
 														<label for="" class="form-label">Home Address</label>
 														<input type="text" class="form-control" id="" placeholder="Enter address" />
 														<div class="row my-4">
-															<div class="col-md-4">
+															<div class="col-md-4 dropdown mb-3">
+																<label for="" class="form-label">Country</label>
+																<input type="text" class="dropdownInput form-select" id="" placeholder="Select your country" autocomplete="off" readonly>
+																<div class="dropdownList">
+																	<input type="text" class="searchInput" placeholder="Search here...">
+																	<ul>
+																		<li>Option 1</li>
+																		<li>Option 2</li>
+																		<li>Option 3</li>
+																		<li>Indonesia</li>
+																		<li>others</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-md-4 dropdown">
 																<label for="" class="form-label">Province or State</label>
-																<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
+																<input type="text" class="dropdownInput form-select" id="" placeholder="Select province or state" autocomplete="off" readonly>
+																<div class="dropdownList">
+																	<input type="text" class="searchInput" placeholder="Search here...">
+																	<ul>
+																		<li>Option 1</li>
+																		<li>Option 2</li>
+																		<li>Option 3</li>
+																		<li>others</li>
+																	</ul>
+																</div>
 															</div>
-															<div class="col-md-4">
+															<div class="col-md-4 dropdown">
 																<label for="" class="form-label">City</label>
-																<input type="text" class="form-control" id="" placeholder="Enter City" />
-															</div>
-															<div class="col-md-4">
-																<label for="" class="form-label">Distric</label>
-																<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+																<input type="text" class="dropdownInput form-select" id="" placeholder="Select your city" autocomplete="off" readonly>
+																<div class="dropdownList">
+																	<input type="text" class="searchInput" placeholder="Search here...">
+																	<ul>
+																		<li>Option 1</li>
+																		<li>Option 2</li>
+																		<li>Option 3</li>
+																		<li>others</li>
+																	</ul>
+																</div>
 															</div>
 														</div>
 														<div class="row">
-															<div class="col-md-4">
+															<div class="col-md-3">
+																<label for="" class="form-label">Distric</label>
+																<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+															</div>
+															<div class="col-md-2">
 																<label for="" class="form-label">Village</label>
 																<input type="text" class="form-control" id="" placeholder="Enter Village" />
 															</div>
@@ -410,7 +506,7 @@
 																<label for="" class="form-label">RW</label>
 																<input type="text" class="form-control" id="" placeholder="Enter RW" />
 															</div>
-															<div class="col-md-4">
+															<div class="col-md-3">
 																<label for="" class="form-label">Postal Code</label>
 																<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 															</div>
@@ -489,21 +585,53 @@
 													<label for="" class="form-label">Home Address</label>
 													<input type="text" class="form-control" id="" placeholder="Enter address" />
 													<div class="row my-4">
-														<div class="col-md-4">
+														<div class="col-md-4 dropdown mb-3">
+															<label for="" class="form-label">Country</label>
+															<input type="text" class="dropdownInput form-select" id="" placeholder="Select your country" autocomplete="off" readonly>
+															<div class="dropdownList">
+																<input type="text" class="searchInput" placeholder="Search here...">
+																<ul>
+																	<li>Option 1</li>
+																	<li>Option 2</li>
+																	<li>Option 3</li>
+																	<li>Indonesia</li>
+																	<li>others</li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-4 dropdown">
 															<label for="" class="form-label">Province or State</label>
-															<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
+															<input type="text" class="dropdownInput form-select" id="" placeholder="Select province or state" autocomplete="off" readonly>
+															<div class="dropdownList">
+																<input type="text" class="searchInput" placeholder="Search here...">
+																<ul>
+																	<li>Option 1</li>
+																	<li>Option 2</li>
+																	<li>Option 3</li>
+																	<li>others</li>
+																</ul>
+															</div>
 														</div>
-														<div class="col-md-4">
+														<div class="col-md-4 dropdown">
 															<label for="" class="form-label">City</label>
-															<input type="text" class="form-control" id="" placeholder="Enter City" />
-														</div>
-														<div class="col-md-4">
-															<label for="" class="form-label">Distric</label>
-															<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+															<input type="text" class="dropdownInput form-select" id="" placeholder="Select your city" autocomplete="off" readonly>
+															<div class="dropdownList">
+																<input type="text" class="searchInput" placeholder="Search here...">
+																<ul>
+																	<li>Option 1</li>
+																	<li>Option 2</li>
+																	<li>Option 3</li>
+																	<li>others</li>
+																</ul>
+															</div>
 														</div>
 													</div>
 													<div class="row">
-														<div class="col-md-4">
+														<div class="col-md-3">
+															<label for="" class="form-label">Distric</label>
+															<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+														</div>
+														<div class="col-md-2">
 															<label for="" class="form-label">Village</label>
 															<input type="text" class="form-control" id="" placeholder="Enter Village" />
 														</div>
@@ -515,7 +643,7 @@
 															<label for="" class="form-label">RW</label>
 															<input type="text" class="form-control" id="" placeholder="Enter RW" />
 														</div>
-														<div class="col-md-4">
+														<div class="col-md-3">
 															<label for="" class="form-label">Postal Code</label>
 															<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 														</div>
@@ -691,6 +819,7 @@
 
 				const homeAddressFields = {
 					address: document.querySelector("#indonesianAddress"),
+					country: document.querySelector("#stateCountry"),
 					province: document.querySelector("#stateProvinsi"),
 					city: document.querySelector("#city"),
 					district: document.querySelector("#district"),
@@ -702,6 +831,7 @@
 
 				const correspondenceAddressFields = {
 					address: document.querySelector("#correspondenceIndonesianAddress"),
+					country: document.querySelector("#correspondenceStateCountry"),
 					province: document.querySelector("#correspondenceStateProvinsi"),
 					city: document.querySelector("#correspondenceKota"),
 					district: document.querySelector("#correspondenceDistrict"),
@@ -731,6 +861,8 @@
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/re-registration.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
+
 	</body>
 
 </html>
