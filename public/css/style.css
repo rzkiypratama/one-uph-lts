@@ -111,6 +111,14 @@ h5 {
     height: 80vh;
 }
 
+.history-main-container {
+    border-radius: 25px 25px 0px 0px !important;
+    background-color: #eff4ff !important;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    height: 80vh;
+}
+
 .icon-form {
     width: 70px;
 }
@@ -1254,6 +1262,17 @@ input[type="radio"] {
     width: 110% !important;
 }
 
+/* history */
+.status-history-subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: #407bff;
+    margin: 0;
+    cursor: pointer;
+}
+
 /* notification icon */
 /* Styling untuk card notification */
 .notification-card {
@@ -1372,6 +1391,7 @@ input[type="radio"] {
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
+    display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -1463,7 +1483,7 @@ input[type="radio"] {
         height: 10px;
         width: 10px;
         border-radius: 50%;
-        background-color: #ec1c24;
+        background-color: #989898;
     }
 
     .file-input {
@@ -1615,6 +1635,14 @@ input[type="radio"] {
         margin-right: -0.75rem;
         height: auto;
         width: 95%;
+    }
+
+    .history-main-container {
+        border-radius: 12px !important;
+        background-color: #eff4ff !important;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        height: auto;
     }
 
     .code-content {
