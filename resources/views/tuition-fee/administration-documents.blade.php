@@ -44,7 +44,7 @@
 	</x-head>
 
 	<body class="container mt-3">
-		@include('components.notification')
+		@include('components.notification-dashboard')
 
 		<div class="p-md-5 rounded-3 card-main-bg">
 			<!-- desktop steps -->
