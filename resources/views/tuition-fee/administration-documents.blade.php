@@ -52,6 +52,17 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
+						<p class="step-subtitle w-50 m-0">Re-registration Information</p>
+					</div>
+					<div class="d-flex align-items-center gap-2">
+						<img src="/assets/tuition-circle-done.png" alt="step" class="step-icon" />
+						<hr class="tuition-dashed-step" />
+					</div>
+				</div>
+
+				<div>
+					<div class="d-flex mb-3 gap-2">
+						<p class="step-title m-0">02</p>
 						<p class="step-subtitle w-25 m-0">Tuition Fee</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
@@ -60,16 +71,6 @@
 					</div>
 				</div>
 
-				<div>
-					<div class="d-flex mb-3 gap-2">
-						<p class="step-title m-0">02</p>
-						<p class="step-subtitle w-50 m-0">Re-registration Information</p>
-					</div>
-					<div class="d-flex align-items-center gap-2">
-						<img src="/assets/tuition-circle-done.png" alt="step" class="step-icon" />
-						<hr class="tuition-dashed-step" />
-					</div>
-				</div>
 
 				<div>
 					<div class="d-flex mb-3 gap-2">
@@ -104,7 +105,7 @@
 					<ul class="nav nav-pills card-header-tabs" id="myTab" role="tablist">
 						<!-- Tab 1 -->
 						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
+							<button class="nav-link active" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
 								<div class="d-flex">
 									<img src="/assets/doc-icon.png" alt="icon1" class="tab-icon" />
 									<span class="d-flex flex-column text-start">
@@ -116,7 +117,7 @@
 						</li>
 						<!-- Tab 2 -->
 						<li class="nav-item" role="presentation">
-							<button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="false">
+							<button class="nav-link" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="false">
 								<div class="d-flex">
 									<img src="/assets/doc-icon.png" alt="icon1" class="tab-icon" />
 									<span class="d-flex flex-column text-start">
