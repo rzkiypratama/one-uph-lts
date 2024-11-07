@@ -21,7 +21,7 @@
 			<p class="active">EN</p>
 		</span>
 
-		<img src="/assets/bells.png" alt="notification icon" class="notification-icon" id="notificationIcon" />
+		{{-- <img src="/assets/bells.png" alt="notification icon" class="notification-icon" id="notificationIcon" /> --}}
 
 		<!-- Notification Card -->
 		<div class="notification-card" id="notificationCard">
