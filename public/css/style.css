@@ -1360,6 +1360,10 @@ input[type="radio"] {
     gap: 4px;
 }
 
+.language-button p {
+    cursor: pointer;
+}
+
 .language-button .active {
     font-weight: 600;
     border-bottom: 2px solid #fff;
