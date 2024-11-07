@@ -185,7 +185,8 @@
 						<div class="title-container w-100">
 							<img src="/assets/toga copy.png" alt="icon" class="icon-form" />
 							<h3 class="title-card-dashboard" style="color: #112369 !important; font-weight: 300 !important">Complete Tuition Fee Payment</h3>
-							<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0">Pay Next Installment</button>
+							<button type="button" class="text-capitalize btn btn-danger w-100 dashboard-button mt-3 border-0" onclick="window.location.href='/tuition-fee/tuitionpayment' ">Pay Next
+								Installment</button>
 						</div>
 					</div>
 				</div>
