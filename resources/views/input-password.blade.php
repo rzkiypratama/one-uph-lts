@@ -63,7 +63,7 @@
 
 								<!-- Submit Button -->
 								<div class="align-self-end mt-4">
-									<button type="submit" id="submitBtn" class="btn select-program-btn rounded-2 px-5">Submit Password</button>
+									<button type="submit" class="btn select-program-btn rounded-2 px-5" data-bs-target="#successModal" data-bs-toggle="modal">Submit Password</button>
 								</div>
 							</form>
 						</div>
@@ -117,9 +117,6 @@
 				localStorage.setItem("personalInfo", JSON.stringify(formData));
 
 				console.log(formData);
-
-				// Redirect to the /review page
-				window.location.href = "/review";
 			}
 
 			// Tambahkan event listener untuk kedua form
