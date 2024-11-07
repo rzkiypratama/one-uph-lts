@@ -52,17 +52,6 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
-						<p class="step-subtitle w-50 m-0">Re-registration Information</p>
-					</div>
-					<div class="d-flex align-items-center gap-2">
-						<img src="/assets/tuition-circle-done.png" alt="step" class="step-icon" />
-						<hr class="tuition-dashed-step" />
-					</div>
-				</div>
-
-				<div>
-					<div class="d-flex mb-3 gap-2">
-						<p class="step-title m-0">02</p>
 						<p class="step-subtitle w-25 m-0">Tuition Fee</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
@@ -71,6 +60,16 @@
 					</div>
 				</div>
 
+				<div>
+					<div class="d-flex mb-3 gap-2">
+						<p class="step-title m-0">02</p>
+						<p class="step-subtitle w-50 m-0">Re-registration Information</p>
+					</div>
+					<div class="d-flex align-items-center gap-2">
+						<img src="/assets/tuition-circle-done.png" alt="step" class="step-icon" />
+						<hr class="tuition-dashed-step" />
+					</div>
+				</div>
 
 				<div>
 					<div class="d-flex mb-3 gap-2">
