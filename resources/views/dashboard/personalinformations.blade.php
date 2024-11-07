@@ -605,7 +605,7 @@
                 <div class="d-flex align-items-center absolute">
                                 <h5 class="job-title row-title mb-1">Job Information ${index}</h5>
                                  ${
-                                     index === 2
+                                     index > 1
                                          ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteJobCard(${index})">Remove</button>`
                                          : ""
                                  }
