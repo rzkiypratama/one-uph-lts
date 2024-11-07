@@ -382,7 +382,7 @@
 				console.log(formData);
 
 				// Redirect to the /review page
-				// window.location.href = "/review";
+				window.location.href = "/review";
 			}
 
 			// Tambahkan event listener untuk kedua form
