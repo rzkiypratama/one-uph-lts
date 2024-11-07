@@ -227,6 +227,17 @@
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
+
+										<div class="col-md-4 mt-4">
+											<label for="englishTest" class="form-label">English Proficency Test</label>
+											<select class="form-select">
+												<option value="" selected disabled>Which Proficiency Test do you have?</option>
+												<option value="option2">option1</option>
+												<option value="option3">option2</option>
+												<option value="Lainnya">Lainnya</option>
+											</select>
+										</div>
+
 										<div class="col-md-4 mt-4">
 											<label class="form-label">Entry Option</label>
 											<div class="radio-btn-group d-flex justify-content-between gap-1">
@@ -245,16 +256,6 @@
 												<option value="" selected disabled>Choose your schoolarship</option>
 												<option value="option1">option1</option>
 												<option value="option2">option2</option>
-												<option value="Lainnya">Lainnya</option>
-											</select>
-										</div>
-
-										<div class="col-md-4 mt-4">
-											<label for="englishTest" class="form-label">English Proficency Test</label>
-											<select class="form-select">
-												<option value="" selected disabled>Which Proficiency Test do you have?</option>
-												<option value="option2">option1</option>
-												<option value="option3">option2</option>
 												<option value="Lainnya">Lainnya</option>
 											</select>
 										</div>
