@@ -59,11 +59,13 @@
 									<div class="col-md-4 mb-3">
 										<label for="firstName" class="form-label">First Name</label>
 										<input type="text" class="form-control" id="firstName" placeholder="First Name" required />
+										<p class="file-validation pt-1 opacity-5">First name consists of only one word without spaces</p>
 									</div>
 									<!-- Middle Name -->
 									<div class="col-md-4 mb-3">
 										<label for="middleName" class="form-label">Middle Name</label>
 										<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
+										<p class="file-validation pt-1 opacity-5">If you don't have a middle name, leave this field blank</p>
 									</div>
 									<!-- Last Name -->
 									<div class="col-md-4 mb-3">
