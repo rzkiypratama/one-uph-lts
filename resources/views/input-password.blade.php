@@ -27,9 +27,9 @@
 
 		<div class="d-md-flex p-md-5 justify-content-md-center align-items-md-center homepage-container px-2 py-4">
 			<!-- desktop view start -->
-			<div class="card card-container d-none d-md-block p-5">
-				<div class="d-flex justify-content-between box-item">
-					<div class="left-content form-information w-25">
+			<div class="card card-container d-flex justify-content-between p-md-5 p-3">
+				<div class="d-md-flex justify-content-between box-item">
+					<div class="left-content form-information">
 						<h3>Your Password</h3>
 						<p class="children">Set up your password</p>
 						<hr class="solid" />
