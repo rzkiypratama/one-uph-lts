@@ -343,6 +343,12 @@ h5 {
     font-weight: 600;
 }
 
+.tax-title {
+    font-size: 12px;
+    font-family: "Work Sans", sans-serif;
+    color: #a3a3a3;
+}
+
 #backToSignIn,
 #backToAdmission {
     cursor: pointer !important;
@@ -794,7 +800,7 @@ a.forgot-password {
     border: none;
     border-bottom: 2px solid #d3d3d3;
     border-radius: 0;
-    padding-left: 0;
+    padding-left: 5;
     padding-right: 0;
     font-family: "Work Sans", sans-serif;
     font-size: 14px;
