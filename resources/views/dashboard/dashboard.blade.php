@@ -117,7 +117,11 @@
 						</div>
 						<hr class="full-width-hr-wrapper-form" />
 
-						<p class="text-capitalize dashboard-bottom-title m-0">application status</p>
+						<div class="d-flex align-content-center justify-content-between">
+							<p class="text-capitalize dashboard-bottom-title d-none d-md-block m-0 mb-3">application status</p>
+							<p class="dashboard-history pe-auto"><a href="/history" class="pe-auto">Status History | Change Major or Level</a></p>
+						</div>
+
 						<div class="d-grid mt-2 gap-2">
 							<p class="badge fw-medium m-0">Your current application status is <span class="fw-semibold">Registered</span></p>
 							<p class="badge fw-medium m-0">Your next step is <span class="fw-semibold">Buy a Registration Form</span></p>

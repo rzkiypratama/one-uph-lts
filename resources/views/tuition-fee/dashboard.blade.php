@@ -72,7 +72,7 @@
 
 					<div class="d-flex align-content-center justify-content-between">
 						<p class="text-capitalize dashboard-bottom-title d-none d-md-block m-0 mb-3">application status</p>
-						<p class="dashboard-history pe-auto"><a href="#" class="pe-auto">Status History | Change Major or Level</a></p>
+						<p class="dashboard-history pe-auto"><a href="/history" class="pe-auto">Status History | Change Major or Level</a></p>
 					</div>
 
 					<div class="card rounded-3 d-none d-md-block border-0 bg-white p-3 shadow-sm">
