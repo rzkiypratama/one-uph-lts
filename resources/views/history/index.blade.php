@@ -19,12 +19,21 @@
 
 		<div class="p-md-5 rounded-3 history-main-container bg-white p-3">
 			<div class="d-flex justify-content-between">
-				<div class="w-100 pe-md-4">
+				<div class="w-100">
 					<!-- desktop layout -->
 					<div class="d-none d-md-block">
-						<div class="mb-4">
-							<h3 class="dashboard-history-title">Status History</h3>
-							<p class="text-capitalize subtitle-dashboard-mobile m-0 pt-2">Showing all your application history</p>
+						<div class="d-flex justify-content-between mb-4">
+							<div>
+								<h3 class="dashboard-history-title">Status History</h3>
+								<p class="text-capitalize subtitle-dashboard-mobile m-0 pt-2">Showing all your application history</p>
+							</div>
+
+							<button type="button" class="text-capitalize btn btn-danger dashboard-button border-0" style="width: 200px; height: 44px;" data-bs-toggle="modal" data-bs-target="#changeMajor">change
+								applicaition</button>
+
+							{{-- <button type="button" class="text-capitalize btn btn-danger dashboard-button border-0" style="width: 200px; height: 44px;" data-bs-toggle="modal" data-bs-target="#ecodeModal">buy new
+								form</button> --}}
+
 						</div>
 
 						<div class="row text-uppercase">
@@ -64,7 +73,6 @@
 								<span class="col-md-2 mb-2">
 									<p class="text-capitalize dashboard-title m-0">music</p>
 									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" data-bs-target="#changeMajor" data-bs-toggle="modal">Change Program</button>
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -101,7 +109,7 @@
 								<span class="col-md-2 mb-2">
 									<p class="text-capitalize dashboard-title m-0">music</p>
 									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>Change Program</button>
+
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -138,7 +146,7 @@
 								<span class="col-md-2 mb-2">
 									<p class="text-capitalize dashboard-title m-0">music</p>
 									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>Change Program</button>
+
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -174,7 +182,6 @@
 								<span class="col-md-2 mb-2">
 									<p class="text-capitalize dashboard-title m-0">music</p>
 									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0">Change Program</button>
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -287,39 +294,57 @@
 			{{-- modal 1 --}}
 			<div class="modal fade" id="changeMajor" tabindex="-1" aria-labelledby="changeMajor" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered modal-sm">
-					<div class="modal-content">
+					<div class="modal-content p-1">
 						{{-- <!-- Modal Body --> --}}
 						<div class="modal-body">
 							<div class="d-flex flex-column justify-content-center align-content-center align-items-center text-center">
 								<p class="review-modal-title testing m-0">Application Change</p>
-								<p class="review-modal-subtitle m-0">
+								<p class="review-modal-subtitle m-0 py-3">
 									Fill this form to make changes to your application form
 								</p>
 							</div>
 							<div>
-								<label for="purpose" class="form-label">Program</label>
-								<select class="form-select mb-3">
-									<option value="option1">option1</option>
-									<option value="option2">option2</option>
-									<option value="option3">option3</option>
-									<option value="Lainnya">Lainnya</option>
-								</select>
-
 								<label for="purpose" class="form-label">Intake Year</label>
 								<select class="form-select mb-3">
-									<option value="option1">option1</option>
+									<option value="" selected disabled>Select Intake Year</option>
 									<option value="option2">option2</option>
 									<option value="option3">option3</option>
 									<option value="Lainnya">Lainnya</option>
 								</select>
 
 								<label for="purpose" class="form-label">Level of Study</label>
-								<select class="form-select">
-									<option value="option1">option1</option>
+								<select class="form-select mb-3">
+									<option value="" selected disabled>Select Level Of Study</option>
 									<option value="option2">option2</option>
 									<option value="option3">option3</option>
 									<option value="Lainnya">Lainnya</option>
 								</select>
+
+								<label for="purpose" class="form-label">Cluster</label>
+								<select class="form-select mb-3">
+									<option value="" selected disabled>Select Cluster</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="Lainnya">Lainnya</option>
+								</select>
+
+								<label for="purpose" class="form-label">Faculty</label>
+								<select class="form-select mb-3">
+									<option value="" selected disabled>Select Faculty</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="Lainnya">Lainnya</option>
+								</select>
+
+								<label for="purpose" class="form-label">Program</label>
+								<select class="form-select mb-3">
+									<option value="" selected disabled>Select Program</option>
+									<option value="option2">option2</option>
+									<option value="option3">option3</option>
+									<option value="Lainnya">Lainnya</option>
+								</select>
+
+
 							</div>
 						</div>
 
@@ -336,34 +361,40 @@
 			<!-- Modal 2 -->
 			<div class="modal fade" id="confirmation" tabindex="-1" aria-labelledby="confirmation" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
+					<div class="modal-content p-3">
 						<!-- Modal Body -->
 						<div class="modal-body">
 							<div class="d-flex flex-column justify-content-center align-content-center align-items-center text-center">
 								<img src="/assets/admission-icon.png" alt="admission icon" class="admisison-icon mb-3" />
 								<p class="review-modal-title testing m-0">Application Change Confirmation</p>
-								<p class="review-modal-subtitle m-0">
+								<p class="review-modal-subtitle m-0 py-3">
 									By changing your application, your current active application will be automatically put on hold and you will be directed to repurchase a new application form. Your tuition payment will be
 									transferred and
 									allocated to your new application form.
 								</p>
 							</div>
 							<hr class="solid-modal" />
-							<div class="row px-3">
-								<span class="col-md-6 payment-title"> Purpose </span>
-								<span class="col-md-6 payment-subtitle"> Change Major </span>
-
+							<div class="row p-3">
 								<span class="col-md-6 payment-title"> Intake Year </span>
-								<span class="col-md-6 payment-subtitle"> Different Intake Year </span>
+								<span class="col-md-6 payment-subtitle pb-1"> 2025/2026 </span>
 
 								<span class="col-md-6 payment-title"> Level of Study </span>
-								<span class="col-md-6 payment-subtitle"> Different Level of Study </span>
+								<span class="col-md-6 payment-subtitle pb-1"> Sarjana (S1) </span>
+
+								<span class="col-md-6 payment-title"> Cluster </span>
+								<span class="col-md-6 payment-subtitle pb-1"> Business & Technology </span>
+
+								<span class="col-md-6 payment-title"> Cluster </span>
+								<span class="col-md-6 payment-subtitle pb-1"> Economics & Business </span>
+
+								<span class="col-md-6 payment-title"> Program </span>
+								<span class="col-md-6 payment-subtitle"> Accounting </span>
 							</div>
 						</div>
 
 						<!-- Modal Footer -->
 						<div class="modal-footer">
-							<p class="review-modal-subtitle w-100 m-0 pb-2 text-center">Do you want to proceed with this change?</p>
+							<p class="review-modal-subtitle w-100 font-weight-bold m-0 pb-3 pt-2 text-center">Do you want to proceed with this change?</p>
 							<span class="d-flex justify-content-between w-100 text-center">
 								<button type="button" class="btn btn-outline-danger rounded-0 w-45" data-bs-dismiss="modal">No</button>
 								<button type="button" class="btn btn-danger rounded-0 w-45" data-bs-toggle="modal" data-bs-target="#successChangeModal">Yes!</button>
@@ -376,11 +407,11 @@
 			<!-- Modal 3 For Success Change Application -->
 			<div class="modal fade" id="successChangeModal" tabindex="-1" aria-labelledby="successChangeModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered modal-dialog-verify p-4">
-					<div class="modal-content">
+					<div class="modal-content p-2">
 						<!-- Modal Body -->
 						<div class="modal-body text-center">
 							<img src="/assets/check.png" alt="check icon" class="check-icon" />
-							<p class="success-modal-title m2-3">Change Request Success</p>
+							<p class="success-modal-title py-3">Change Request Success</p>
 							<p class="review-modal-subtitle mb-3">Your current application has been put on hold. Proceed to the next step to complete your new application.</p>
 							<button type="button" id="nextStepPayment" class="btn btn-danger rounded-0 w-100 danger-button border-0 px-5" data-bs-toggle="modal" data-bs-target="#ecodeModal">Proceed to Next
 								Step</button>
