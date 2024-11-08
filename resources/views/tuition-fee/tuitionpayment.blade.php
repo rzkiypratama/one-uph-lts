@@ -291,6 +291,9 @@
 													<option value="credit-card">Credit Card</option>
 													<option value="Lainnya">Lainnya</option>
 												</select>
+
+												<p id="adminFeeCredit" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> 5%</p>
+												<p id="adminFeeCash" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> IDR 20.000</p>
 											</div>
 
 
@@ -358,12 +361,18 @@
 		<script>
 			const paymentMethod = document.getElementById("paymentMethodTuition");
 			const paymentWithCC = document.getElementById("ccMethod");
+			const adminCredit = document.getElementById("adminFeeCredit");
+			const adminCash = document.getElementById("adminFeeCash");
 
 			function hidePaymentCC() {
 				if (paymentMethod.value === "credit-card") {
 					paymentWithCC.style.display = "block";
+					adminCredit.style.display = "block";
+					adminCash.style.display = "none";
 				} else {
 					paymentWithCC.style.display = "none";
+					adminCredit.style.display = "none";
+					adminCash.style.display = "block";
 				}
 			}
 

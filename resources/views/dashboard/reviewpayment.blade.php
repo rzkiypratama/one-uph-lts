@@ -240,23 +240,6 @@
 												<p class="text-capitalize payment-total-title m-0">IDR 420.000</p>
 											</div>
 										</div>
-										<div class="d-flex align-items-center justify-content-end w-100 gap-2 pt-2">
-											<label for="installmentTuition" class="form-label mb-0">Payment Method</label>
-											<select id="installmentTuition" class="form-select w-50">
-												<option value="" selected hidden>Select Method</option>
-												<option value="installment">Credit Card</option>
-												<option value="cash">Bank Transfer</option>
-											</select>
-										</div>
-
-										<div class="d-flex align-items-center justify-content-end w-100 gap-2 pt-2">
-											<label for="installmentTuition" class="form-label mb-0">Payment Type</label>
-											<select id="installmentTuition" class="form-select w-50">
-												<option value="" selected hidden>Select Method</option>
-												<option value="installment">Installment</option>
-												<option value="cash">Cash</option>
-											</select>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -321,6 +304,9 @@
 													<option value="credit-card">Credit Card</option>
 													<option value="Lainnya">Lainnya</option>
 												</select>
+
+												<p id="adminFeeCredit" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> 5%</p>
+												<p id="adminFeeCash" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> IDR 20.000</p>
 											</div>
 
 
@@ -336,7 +322,7 @@
 											</div>
 
 											<!-- Bank -->
-											{{-- <div class="col-md-12 mb-4">
+											<div class="col-md-12 mb-4">
 												<label for="bankTuition" class="form-label">Bank</label>
 												<select id="bankTuition" class="form-select">
 													<option value="bca" selected>BCA</option>
@@ -344,7 +330,7 @@
 													<option value="bca">Option 2</option>
 													<option value="Lainnya">Lainnya</option>
 												</select>
-											</div> --}}
+											</div>
 										</div>
 									</div>
 								</div>
@@ -593,12 +579,18 @@
 		<script>
 			const paymentMethod = document.getElementById("paymentMethod");
 			const paymentWithCC = document.getElementById("ccMethod");
+			const adminCredit = document.getElementById("adminFeeCredit");
+			const adminCash = document.getElementById("adminFeeCash");
 
 			function hidePaymentCC() {
 				if (paymentMethod.value === "credit-card") {
 					paymentWithCC.style.display = "block";
+					adminCredit.style.display = "block";
+					adminCash.style.display = "none";
 				} else {
 					paymentWithCC.style.display = "none";
+					adminCredit.style.display = "none";
+					adminCash.style.display = "block";
 				}
 			}
 
