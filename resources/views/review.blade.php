@@ -80,10 +80,10 @@
 
 						<hr class="solid-review d-md-none" />
 
-						<div class="d-flex justify-content-between flex-column flex-md-column-reverse">
+						<div class="d-flex justify-content-between flex-column flex-md-row-reverse">
 							<!-- Tombol Verify -->
 							<div class="verify-btn">
-								<button type="button" class="btn select-program-btn rounded-0 w-100 px-5" data-bs-toggle="modal" data-bs-target="#successModal">
+								<button type="button" class="btn select-program-btn rounded-0 w-100 px-5" data-bs-toggle="modal" data-bs-target="#emailVerify">
 									Verify
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 										<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
@@ -109,7 +109,7 @@
 			<!-- desktop view ends -->
 		</div>
 		<!-- Modal -->
-		<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+		<div class="modal fade" id="" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content text-center">
 					<div class="modal-body modal-body-review">
@@ -120,6 +120,36 @@
 						<a href="/signin">
 							<button type="button" class="btn btn-primary w-50 rounded-0">Sign In</button>
 						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Email Verification -->
+		<div class="modal fade" id="emailVerify" tabindex="-1" aria-labelledby="emailVerifyLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content text-center">
+					<div class="modal-body modal-body-review">
+						<img src="/assets/mail.png" class="img-fluid mb-3" alt="Success Image" />
+						<!-- Replace with your image path -->
+						<div>
+							<p class="fs-4 review-modal-title mb-2">Confirm your Email</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-4">Confirm your email address to complete</p>
+						</div>
+
+						<div class="mb-3">
+							<p class="fs-4 review-modal-title mb-2">Hi, [First Name] [Middle Name] [Last Name]</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-1">Please confirm your email address to activate your account</p>
+							<p class="review-modal-subtitle"><strong>Open your email in </strong><span class="email-verify">[Email Address]</span></p>
+						</div>
+
+						<p class="register pb-3">Didn’t receive any Activation Email from us?</p>
+
+						<div class="d-flex justify-content-center gap-5">
+							<button type="button" class="btn btn-outline-danger rounded-0 w-25" data-bs-dismiss="modal">Back</button>
+							<button type="button" class="btn btn-danger rounded-0 w-45">Resend Activation Email</button>
+						</div>
+
 					</div>
 				</div>
 			</div>

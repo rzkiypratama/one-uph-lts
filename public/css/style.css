@@ -349,6 +349,14 @@ h5 {
     color: #a3a3a3;
 }
 
+.email-verify {
+    text-decoration: underline;
+    color: #7aa3ff;
+    font-size: 12px;
+    font-family: "Work Sans", sans-serif;
+    cursor: pointer;
+}
+
 #backToSignIn,
 #backToAdmission {
     cursor: pointer !important;
@@ -2356,6 +2364,14 @@ input[type="radio"] {
 /* custom width */
 .w-45 {
     width: 45%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-25 {
+    width: 25%;
 }
 
 /* field with search styling */
