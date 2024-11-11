@@ -30,7 +30,7 @@
 					</div>
 
 					<!-- Email Address Input -->
-					<form id="loginForm">
+					<form>
 						<div class="d-flex flex-column jus justify-content-between" style=" height: 280px">
 
 							<div class="d-flex flex-column mb-3 gap-3">
@@ -149,8 +149,6 @@
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 		</script>
-		<!-- Simple Login Logic -->
-		<script type="text/javascript" src="{{ asset('js/login.js') }}"></script>
 		<!-- Include Bootstrap Icons for eye and eye-slash -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
 	</body>
