@@ -2362,8 +2362,21 @@ input[type="radio"] {
 }
 
 /* custom width */
+
+.w-55 {
+    width: 55%;
+}
+
 .w-45 {
     width: 45%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-35 {
+    width: 35%;
 }
 
 .w-30 {

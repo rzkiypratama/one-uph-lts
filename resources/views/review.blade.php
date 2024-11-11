@@ -125,29 +125,53 @@
 			</div>
 		</div>
 
-		<!-- Modal Email Verification -->
+		{{-- <!-- Modal Email Verification Success--> --}}
 		<div class="modal fade" id="emailVerify" tabindex="-1" aria-labelledby="emailVerifyLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content text-center">
 					<div class="modal-body modal-body-review">
 						<img src="/assets/mail.png" class="img-fluid mb-3" alt="Success Image" />
 						<!-- Replace with your image path -->
 						<div>
-							<p class="fs-4 review-modal-title mb-2">Confirm your Email</p>
-							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-4">Confirm your email address to complete</p>
+							<p class="fs-4 review-modal-title">Confirm your Email</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-3">Confirm your email address to complete</p>
 						</div>
 
 						<div class="mb-3">
-							<p class="fs-4 review-modal-title mb-2">Hi, [First Name] [Middle Name] [Last Name]</p>
+							<p class="tabs-title mb-2">Hi, [First Name] [Middle Name] [Last Name]</p>
 							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-1">Please confirm your email address to activate your account</p>
 							<p class="review-modal-subtitle"><strong>Open your email in </strong><span class="email-verify">[Email Address]</span></p>
 						</div>
 
 						<p class="register pb-3">Didn’t receive any Activation Email from us?</p>
 
-						<div class="d-flex justify-content-center gap-5">
-							<button type="button" class="btn btn-outline-danger rounded-0 w-25" data-bs-dismiss="modal">Back</button>
-							<button type="button" class="btn btn-danger rounded-0 w-45">Resend Activation Email</button>
+						<div class="d-flex justify-content-center gap-3">
+							<button type="button" class="btn btn-outline-danger rounded-0 w-35" data-bs-dismiss="modal">Back</button>
+							<button type="button" class="btn btn-danger rounded-0 w-75">Resend Activation Email</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{-- <!-- Modal Email Verification Failed --> --}}
+		<div class="modal fade" id="emailVerifyFailed" tabindex="-1" aria-labelledby="emailVerifyLabelFailed" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content text-center">
+					<div class="modal-body modal-body-review">
+						<img src="/assets/verify-failed.png" class="img-fluid mb-3" alt="Success Image" />
+						<!-- Replace with your image path -->
+						<div>
+							<p class="fs-4 review-modal-title mb-2">Verification Link Invalid</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-4">Your verification link registration is invalid or already used</p>
+						</div>
+
+						<p class="register pb-3">Try to resend the link?</p>
+
+						<div class="d-flex justify-content-between gap-3">
+							<button type="button" class="btn btn-outline-danger rounded-0 w-35" data-bs-dismiss="modal">Back</button>
+							<button type="button" class="btn btn-danger rounded-0 w-75">Resend Activation Email</button>
 						</div>
 
 					</div>
