@@ -31,7 +31,7 @@
 
 					<!-- Email Address Input -->
 					<form id="loginForm">
-						<div class="d-flex flex-column jus justify-content-between" style=" height: 260px">
+						<div class="d-flex flex-column jus justify-content-between" style=" height: 280px">
 
 							<div class="d-flex flex-column mb-3 gap-3">
 								<p class="login-card-subtitle">Submit your email to reset password</p>
