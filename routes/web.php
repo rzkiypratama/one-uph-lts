@@ -14,6 +14,10 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
+});
+
 Route::get('/nationality', function () {
     return view('nationality');
 });

@@ -63,6 +63,21 @@ h5 {
     height: 3rem;
 }
 
+.login-card-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #112369;
+    letter-spacing: 0.75px;
+}
+
+.login-card-subtitle {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    color: #112369;
+    font-size: 16px;
+}
+
 /* header */
 .logout-icon {
     width: 22.5px;
