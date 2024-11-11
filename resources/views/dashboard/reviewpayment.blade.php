@@ -240,20 +240,60 @@
 												<p class="text-capitalize payment-total-title m-0">IDR 420.000</p>
 											</div>
 										</div>
+
+										<div>
+											<div class="d-flex flex-column gap-1 py-4">
+												<!-- Payment Method -->
+												<div class="col-md-12">
+													<label for="paymentMethod" class="form-label">Payment Method</label>
+													<select id="paymentMethod" class="form-select">
+														<option value="bank-transfer" selected>Bank Transfer</option>
+														<option value="credit-card">Credit Card</option>
+														<option value="Lainnya">Lainnya</option>
+													</select>
+
+													<p id="adminFeeCredit" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> 5%</p>
+													<p id="adminFeeCash" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> IDR 20.000</p>
+												</div>
+
+
+												<!-- Installment Method -->
+												<div id="ccMethod" class="col-md-12 mb-4">
+													<label for="installmentMethod" class="form-label">Payment Type</label>
+													<select id="installmentMethod" class="form-select">
+														<option value="" selected>3 months installment</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="Lainnya">Lainnya</option>
+													</select>
+												</div>
+
+												{{-- <!-- Bank --> --}}
+												<div class="col-md-12 mb-4">
+													<label for="bankTuition" class="form-label">Bank</label>
+													<select id="bankTuition" class="form-select">
+														<option value="bca" selected>BCA</option>
+														<option value="bca">Option 1</option>
+														<option value="bca">Option 2</option>
+														<option value="Lainnya">Lainnya</option>
+													</select>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="d-flex justify-content-between align-content-center gap-3">
-							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 px-md-5 mt-2 px-4" onclick="window.location.href = '/dashboard/entryoption';">
+							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 px-md-5 px-4" onclick="window.location.href = '/dashboard/entryoption';">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button Without E-code-->
-							<button id="proceedToPaymentBtn" type="submit" class="btn btn-danger float-end rounded-0 px-md-5 danger-button" data-bs-toggle="modal" data-bs-target="#firstPaymentModal">
+							<button id="proceedToPaymentBtn" type="submit" class="btn btn-danger float-end rounded-0 px-md-5 danger-button" data-bs-toggle="modal" data-bs-target="#confirmationModal">
 								Proceed to Payment
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
