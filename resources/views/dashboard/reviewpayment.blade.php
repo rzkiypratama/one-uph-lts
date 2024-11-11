@@ -228,6 +228,12 @@
 												<p class="payment-subtitle m-0">IDR 20.000</p>
 											</div>
 
+											<div class="d-flex justify-content-between text-capitalize mb-2">
+												<p class="payment-title m-0">Discount</p>
+												<p id="adminFeeCredit" class="payment-subtitle m-0">5%</p>
+												<p id="adminFeeCash" class="payment-subtitle m-0">IDR 20.000</p>
+											</div>
+
 											<div class="d-flex justify-content-between text-capitalize">
 												<p class="payment-title m-0">Discount</p>
 												<p class="payment-subtitle m-0">-</p>
@@ -242,25 +248,23 @@
 										</div>
 
 										<div>
-											<div class="d-flex flex-column gap-1 py-4">
+											<div class="d-flex flex-column align-items-end gap-1 py-4">
+
 												<!-- Payment Method -->
-												<div class="col-md-12">
-													<label for="paymentMethod" class="form-label">Payment Method</label>
-													<select id="paymentMethod" class="form-select">
+												<div class="d-flex align-items-center mb-1">
+													<label for="paymentMethod" class="form-label" style="width: 120px; margin-bottom: 0;">Payment Method</label>
+													<select id="paymentMethod" class="form-select" style="width: 200px;">
 														<option value="bank-transfer" selected>Bank Transfer</option>
 														<option value="credit-card">Credit Card</option>
 														<option value="Lainnya">Lainnya</option>
 													</select>
-
-													<p id="adminFeeCredit" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> 5%</p>
-													<p id="adminFeeCash" class="float-end tax-title pt-1"><span class="text-uppercase fw-bold">admin fee:</span> IDR 20.000</p>
 												</div>
 
 
 												<!-- Installment Method -->
-												<div id="ccMethod" class="col-md-12 mb-4">
-													<label for="installmentMethod" class="form-label">Payment Type</label>
-													<select id="installmentMethod" class="form-select">
+												<div id="ccMethod" class="align-items-center mb-1">
+													<label for="installmentMethod" class="form-label" style="width: 120px; margin-bottom: 0;">Payment Type</label>
+													<select id="installmentMethod" class="form-select" style="width: 200px;">
 														<option value="" selected>3 months installment</option>
 														<option value="1">Option 1</option>
 														<option value="2">Option 2</option>
@@ -269,20 +273,22 @@
 												</div>
 
 												{{-- <!-- Bank --> --}}
-												<div class="col-md-12 mb-4">
-													<label for="bankTuition" class="form-label">Bank</label>
-													<select id="bankTuition" class="form-select">
+												<div class="d-flex align-items-center mb-3">
+													<label for="bankTuition" class="form-label" style="width: 120px; margin-bottom: 0;">Bank</label>
+													<select id="bankTuition" class="form-select col-md-3" style="width: 200px;">
 														<option value="bca" selected>BCA</option>
 														<option value="bca">Option 1</option>
 														<option value="bca">Option 2</option>
 														<option value="Lainnya">Lainnya</option>
 													</select>
 												</div>
+
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+
 						</div>
 
 						<div class="d-flex justify-content-between align-content-center gap-3">
@@ -299,13 +305,6 @@
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
 								</svg>
 							</button>
-
-							<!-- Submit button when user use e-code -->
-							<!-- <button id="verifyApplicationBtn" type="submit" class="btn btn-danger align-items-center float-end rounded-0 px-md-5 danger-button mt-5" onclick="window.location.href='/dashboard/applicationstatus'">
-																Verify Application<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-																		<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
-																</svg>
-														</button> -->
 						</div>
 					</form>
 
@@ -453,153 +452,6 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Modal -->
-					{{-- <div class="modal fade" id="firstPaymentModal" tabindex="-1" aria-labelledby="firstPaymentModal" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-dialog-payment">
-							<div class="modal-content border-0">
-								<!-- Modal Body -->
-								<div class="modal-body">
-									<div>
-										<span class="d-flex justify-content-between text-uppercase payment-title-up">
-											<p>total</p>
-											<p>PAY WITHIN <span>{countdown}</span></p>
-										</span>
-										<p class="review-modal-title">IDR 420.000</p>
-										<span class="d-flex justify-content-between text-uppercase payment-title-down">
-											<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
-											<p class="text-decoration-underline payment-details">details</p>
-										</span>
-
-										<hr class="solid-fullwidth" />
-									</div>
-									<!-- Virtual Account Section -->
-									<div class="mb-3">
-										<p class="row-title">Virtual Account</p>
-									</div>
-
-									<!-- Bank Options Section -->
-									<div class="payment-background">
-										<div class="d-flex flex-column gap-1 p-4">
-											<!-- Bank BCA -->
-											<label class="bank-option d-flex justify-content-between align-items-center rounded-3 border p-3" for="bankBca">
-												<span class="d-flex align-items-center gap-3">
-													<img src="/assets/bca.png" alt="bca" class="payment-icon" />
-													<p class="payment-banks">BCA</p>
-												</span>
-												<input type="radio" id="bankBca" name="bankOptions" class="" />
-											</label>
-
-											<!-- Bank Mandiri -->
-											<label class="bank-option d-flex justify-content-between align-items-center rounded-3 border p-3" for="bankMandiri">
-												<span class="d-flex align-items-center gap-3">
-													<img src="/assets/bni.png" alt="bca" class="payment-icon" />
-													<p class="payment-banks">Mandiri</p>
-												</span>
-												<input type="radio" id="bankMandiri" name="bankOptions" class="" />
-											</label>
-
-											<!-- Bank Permata -->
-											<label class="bank-option d-flex justify-content-between align-items-center rounded-3 border p-3" for="bankPermata">
-												<span class="d-flex align-items-center gap-3">
-													<img src="/assets/permata.png" alt="bca" class="payment-icon" />
-													<p class="payment-banks">Permata Bank</p>
-												</span>
-												<input type="radio" id="bankPermata" name="bankOptions" class="" />
-											</label>
-
-											<!-- Others Bank -->
-											<label class="bank-option d-flex justify-content-between align-items-center rounded-3 border p-3" for="otherBanks">
-												<span>
-													<p class="payment-banks">Others Bank</p>
-												</span>
-												<input type="radio" id="otherBanks" name="bankOptions" class="" />
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<!-- Modal Footer -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#confirmationModal" data-bs-toggle="modal" id="submitFirstModal">
-										Proceed to Payment
-									</button>
-								</div>
-							</div>
-						</div>
-					</div> --}}
-
-					<!-- Modal 2 -->
-					{{-- <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-dialog-verify">
-							<div class="modal-content">
-								<!-- Modal Body -->
-								<div class="modal-body">
-									<div>
-										<span class="d-flex justify-content-between text-uppercase payment-title-up">
-											<p>total</p>
-											<p>PAY WITHIN <span>{countdown}</span></p>
-										</span>
-										<p class="review-modal-title">IDR 420.000</p>
-										<span class="d-flex justify-content-between text-uppercase payment-title-down">
-											<p class="review-modal-subtitle fst-italic">Order ID #9182739127391287</p>
-											<p class="text-decoration-underline payment-details">details</p>
-										</span>
-
-										<hr class="solid-fullwidth" />
-									</div>
-									<!-- Virtual Account Section -->
-									<div class="mb-3">
-										<p class="row-title">Virtual Account</p>
-									</div>
-
-									<!-- Bank Options Section -->
-									<div class="payment-background">
-										<div class="d-flex flex-column gap-1 p-4">
-											<div class="pe-3">
-												<span class="d-flex justify-content-between align-items-center mb-3">
-													<p class="row-title">Bank BCA</p>
-													<img src="/assets/bca-icons.png" alt="bank icon" class="verify-icon" />
-												</span>
-												<p class="verify-subtitle">Complete payment from BCA to the virtual account number below</p>
-
-												<p class="verify-title my-3">Virtual Account Number</p>
-												<span class="d-flex justify-content-between align-items-center payment-subtitle">
-													<p>8188 288 1816 8993</p>
-													<p>Copy number</p>
-												</span>
-
-												<hr class="solid-fullwidth" />
-												<button type="button" class="btn btn-primary rounded-0 payment-title mb-3 border-0 text-white">How to Pay</button>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Modal Footer -->
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary rounded-0 w-100 dashboard-button border-0 px-5" data-bs-target="#successModal" data-bs-toggle="modal" id="submitFirstModal">Verify
-										Payment</button>
-								</div>
-							</div>
-						</div>
-					</div> --}}
-
-					<!-- Modal 3 For Success Payment -->
-					{{-- <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered modal-dialog-verify p-4">
-							<div class="modal-content">
-								<!-- Modal Body -->
-								<div class="modal-body text-center">
-									<img src="/assets/check.png" alt="check icon" class="check-icon" />
-									<p class="success-modal-title m2-3">Payment Success</p>
-									<p class="review-modal-subtitle mb-3">Congratulation! You have finished the payment. Proceed to the next step to complete your application.</p>
-									<button type="button" id="nextStepPayment" class="btn btn-danger rounded-0 w-100 dashboard-button border-0 px-5">Next Step</button>
-								</div>
-							</div>
-						</div>
-					</div> --}}
-
 				</div>
 			</div>
 		</div>
@@ -624,7 +476,7 @@
 
 			function hidePaymentCC() {
 				if (paymentMethod.value === "credit-card") {
-					paymentWithCC.style.display = "block";
+					paymentWithCC.style.display = "flex";
 					adminCredit.style.display = "block";
 					adminCash.style.display = "none";
 				} else {
