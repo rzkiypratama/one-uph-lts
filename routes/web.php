@@ -149,3 +149,8 @@ Route::get('/international/review', function () {
 Route::get('/history', function () {
     return view('history/index');
 });
+
+// details
+Route::get('/details', function () {
+    return view('details/index');
+});
