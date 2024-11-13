@@ -362,6 +362,7 @@ h5 {
     font-size: 12px;
     font-family: "Work Sans", sans-serif;
     color: #a3a3a3;
+    letter-spacing: 0.75px;
 }
 
 .email-verify {
@@ -511,6 +512,20 @@ a.forgot-password {
     color: #a3a3a3;
     font-size: 14px;
 }
+
+.detail-title {
+    font-family: "Barlow", sans-serif;
+    color: #4a4a4a;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.detail-subtitle {
+    font-family: "Work Sans", sans-serif;
+    color: #4a4a4a;
+    font-size: 14px;
+}
+
 .register-link {
     text-decoration: underline;
     color: #a3a3a3;
@@ -1109,6 +1124,14 @@ input[type="radio"] {
     font-weight: medium;
 }
 
+.details-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #112369;
+    font-size: 14px;
+}
+
 .tuition-subtitle {
     font-family: "Barlow", sans-serif;
     font-style: italic;
@@ -1147,8 +1170,20 @@ input[type="radio"] {
     font-size: 12px;
 }
 
+.file-status-details {
+    padding: 5px 10px;
+    background-color: #fdc99a;
+    border-radius: 8px;
+    /* width: 10%; */
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #545454;
+    font-size: 12px;
+    text-align: center;
+}
+
 .file-status {
-    padding: 3px 10px;
+    padding: 5px 10px;
     background-color: #fdc99a;
     border-radius: 8px;
     display: none; /* please change to none to make status dinamyc */
@@ -1158,10 +1193,11 @@ input[type="radio"] {
     color: #545454;
     font-size: 12px;
     text-align: center;
+    width: 85px;
 }
 
 .file-status-review {
-    padding: 3px 10px;
+    padding: 5px 10px;
     background-color: #fff3b7;
     border-radius: 8px;
     /* display: none; please change to none to make status dinamyc */
@@ -1171,10 +1207,11 @@ input[type="radio"] {
     color: #545454;
     font-size: 12px;
     text-align: center;
+    width: 85px;
 }
 
 .file-status-invalid {
-    padding: 3px 10px;
+    padding: 5px 10px;
     background-color: #ff5f5f;
     border-radius: 8px;
     /* display: none; please change to none to make status dinamyc */
@@ -1184,10 +1221,11 @@ input[type="radio"] {
     color: #fff;
     font-size: 12px;
     text-align: center;
+    width: 85px;
 }
 
 .file-status-valid {
-    padding: 3px 10px;
+    padding: 5px 10px;
     background-color: #adff9f;
     border-radius: 8px;
     /* display: none; please change to none to make status dinamyc */
@@ -1197,6 +1235,7 @@ input[type="radio"] {
     color: #545454;
     font-size: 12px;
     text-align: center;
+    width: 85px;
 }
 
 .file-input {
@@ -1379,7 +1418,7 @@ input[type="radio"] {
 
 .arrow-left {
     width: 14px;
-    height: 11px;
+    height: 25px;
 }
 
 .card-container {
@@ -1417,6 +1456,20 @@ input[type="radio"] {
     border-bottom: 2px solid #fff;
 }
 
+hr.full-width {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #bcd1ff;
+    width: 100%;
+}
+
+hr.full-width-detail {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c2c2c2;
+    width: 100%;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
@@ -1430,6 +1483,19 @@ input[type="radio"] {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* details page */
+.details-tab-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #112369;
+    font-size: 14px;
+}
+
+.details-tab-icon {
+    height: 20px;
+    width: 20px;
 }
 
 @media (min-width: 768px) {
@@ -1830,13 +1896,6 @@ input[type="radio"] {
 
     .a-program {
         color: #fff;
-    }
-
-    hr.full-width {
-        margin: 0;
-        padding: 0;
-        border: 1px solid #bcd1ff;
-        width: 100%;
     }
 
     .full-width-hr-wrapper {
