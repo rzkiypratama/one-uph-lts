@@ -5,9 +5,10 @@
 		<x-slot name="inlineCSS">
 			<style>
 				.card-body {
-					height: 83vh;
+					height: 86vh;
 					padding-left: 2rem;
 					padding-right: 2rem;
+					overflow: scroll
 				}
 
 				.card-header .tabs-header {
@@ -39,8 +40,8 @@
 		@include('components.notification')
 
 		<div class="p-md-5 rounded-3 card-main-bg">
-			<div class="d-none d-md-block">
-				<div class="d-flex justify-content-between mb-1">
+			<div class="d-block">
+				<div class="d-flex justify-content-between px-md-0 mb-1 px-2">
 					<div>
 						<h3 class="dashboard-history-title">Status History</h3>
 						<p class="text-capitalize subtitle-dashboard-mobile m-0 pt-2">Showing all your application history</p>
@@ -153,7 +154,7 @@
 								</div>
 
 								<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-									<div class="d-flex justify-content-between">
+									<div class="d-md-flex justify-content-between">
 										<div class="row col-md-4">
 
 											<p class="tabs-title">Personal Background 1</p>
@@ -1073,6 +1074,7 @@
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1084,8 +1086,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1097,8 +1099,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1108,9 +1110,10 @@
 													<span id="ktpName" class="forgot-password">Upload File</span>
 													<img src="/assets/trash-icon.png" alt="delete" class="delete" />
 												</div>
-												<p class="file-status-details">Uploaded</p>
 												<span class="d-flex gap-2">
+													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 
 												{{-- <span class="d-flex align-items-center gap-2">
@@ -1127,7 +1130,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													<p class="file-status-review">On Review</p>
+													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1159,6 +1163,7 @@
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1170,8 +1175,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1183,8 +1188,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1194,9 +1199,10 @@
 													<span id="ktpName" class="forgot-password">Upload File</span>
 													<img src="/assets/trash-icon.png" alt="delete" class="delete" />
 												</div>
-												<p class="file-status-details">Uploaded</p>
 												<span class="d-flex gap-2">
+													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 
 												{{-- <span class="d-flex align-items-center gap-2">
@@ -1213,7 +1219,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													<p class="file-status-review">On Review</p>
+													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1225,7 +1232,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													<p class="file-status-review">On Review</p>
+													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1257,6 +1265,7 @@
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1268,8 +1277,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1281,8 +1290,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													{{-- <p class="file-status-review">On Review</p> --}}
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
@@ -1292,9 +1301,10 @@
 													<span id="ktpName" class="forgot-password">Upload File</span>
 													<img src="/assets/trash-icon.png" alt="delete" class="delete" />
 												</div>
-												<p class="file-status-details">Uploaded</p>
 												<span class="d-flex gap-2">
+													<p class="file-status-details">Uploaded</p>
 													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 
 												{{-- <span class="d-flex align-items-center gap-2">
@@ -1311,7 +1321,9 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													<p class="file-status-review">On Review</p>
+													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
+
 												</span>
 											</div>
 
@@ -1323,7 +1335,8 @@
 												</div>
 												<span class="d-flex gap-2">
 													<p class="file-status-details">Uploaded</p>
-													<p class="file-status-review">On Review</p>
+													<p class="file-status-valid">Validated</p>
+													{{-- <p class="file-status-review">On Review</p> --}}
 												</span>
 											</div>
 
