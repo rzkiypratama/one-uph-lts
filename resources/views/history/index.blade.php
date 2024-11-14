@@ -67,7 +67,9 @@
 						<div class="d-none d-md-block history-container">
 							<div class="row">
 								<span class="col-md-2 mb-2">
-									<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -103,7 +105,9 @@
 
 							<div class="row">
 								<span class="col-md-2 mb-2">
-									<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -140,7 +144,9 @@
 
 							<div class="row">
 								<span class="col-md-2 mb-2">
-									<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
 								</span>
 
 								<span class="col-md-2 mb-2">
@@ -176,7 +182,9 @@
 
 							<div class="row">
 								<span class="col-md-2 mb-2">
-									<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
 								</span>
 
 								<span class="col-md-2 mb-2">
