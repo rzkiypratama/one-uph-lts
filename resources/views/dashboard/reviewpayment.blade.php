@@ -158,7 +158,7 @@
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
 
 								<div class="row address-container">
-									{{-- <p class="file-validation pb-1">Please review your application data before is submitted</p> --}}
+									<p class="file-validation pb-1">Please review your application data before is submitted</p>
 
 									<div class="col-md-5 address-column">
 										<h3 class="row-title">Review your Application</h3>
