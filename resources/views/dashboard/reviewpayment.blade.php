@@ -229,7 +229,7 @@
 											</div>
 
 											<div class="d-flex justify-content-between text-capitalize mb-2">
-												<p class="payment-title m-0">Discount</p>
+												<p class="payment-title m-0">Admin Fee</p>
 												<p id="adminFeeCredit" class="payment-subtitle m-0">5%</p>
 												<p id="adminFeeCash" class="payment-subtitle m-0">IDR 20.000</p>
 											</div>
@@ -361,7 +361,7 @@
 											</div>
 
 											<!-- Bank -->
-											<div class="col-md-12 mb-4">
+											{{-- <div class="col-md-12 mb-4">
 												<label for="bankTuition" class="form-label">Bank</label>
 												<select id="bankTuition" class="form-select">
 													<option value="bca" selected>BCA</option>
@@ -369,7 +369,7 @@
 													<option value="bca">Option 2</option>
 													<option value="Lainnya">Lainnya</option>
 												</select>
-											</div>
+											</div> --}}
 										</div>
 									</div>
 								</div>
