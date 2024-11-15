@@ -156,9 +156,10 @@
 						<div class="tab-content" id="myTabContent">
 							<!-- Tab Content 1 -->
 							<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-								<p class="file-validation pb-1">Please review your application data before is submitted</p>
 
 								<div class="row address-container">
+									{{-- <p class="file-validation pb-1">Please review your application data before is submitted</p> --}}
+
 									<div class="col-md-5 address-column">
 										<h3 class="row-title">Review your Application</h3>
 
@@ -273,7 +274,7 @@
 												</div>
 
 												{{-- <!-- Bank --> --}}
-												<div class="d-flex align-items-center mb-3">
+												{{-- <div class="d-flex align-items-center mb-3">
 													<label for="bankTuition" class="form-label" style="width: 120px; margin-bottom: 0;">Bank</label>
 													<select id="bankTuition" class="form-select col-md-3" style="width: 200px;">
 														<option value="bca" selected>BCA</option>
@@ -281,7 +282,7 @@
 														<option value="bca">Option 2</option>
 														<option value="Lainnya">Lainnya</option>
 													</select>
-												</div>
+												</div> --}}
 
 											</div>
 										</div>
