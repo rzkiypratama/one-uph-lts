@@ -13,7 +13,7 @@
 				}
 
 				.phone-input-group select {
-					max-width: 60px;
+					max-width: 100px;
 					border-radius: 0;
 					margin-right: 5px;
 				}
@@ -87,7 +87,7 @@
 												<!-- Add more country codes as needed -->
 											</select>
 											<!-- Input for whatsapp number -->
-											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" />
+											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" required />
 										</div>
 									</div>
 									<!-- Guardian Name -->
@@ -108,7 +108,7 @@
 												<!-- Add more country codes as needed -->
 											</select>
 											<!-- Input for whatsapp number -->
-											<input type="tel" class="form-control" id="guardianPhone" placeholder="Phone Number" />
+											<input type="tel" class="form-control" id="guardianPhone" placeholder="Phone Number" required />
 										</div>
 									</div>
 								</div>
