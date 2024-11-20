@@ -13,7 +13,7 @@
 				}
 
 				.phone-input-group select {
-					max-width: 100px;
+					max-width: 100%;
 					border-radius: 0;
 					margin-right: 5px;
 				}
@@ -75,12 +75,12 @@
 								</div>
 								<div class="row">
 									<!-- Mobile Phone Number -->
-									<div class="col-md-4 mb-3">
+									<div class="col-md-8 mb-3">
 										<label for="mobilePhone" class="form-label">Mobile Phone Number</label>
 										<div class="input-group phone-input-group">
 											<!-- Select for country code -->
 											<select class="form-select" id="countryCode">
-												<option value="+62">+62</option>
+												<option value="+62">+62 Indonesia</option>
 												<option value="+1">+1</option>
 												<option value="+44">+44</option>
 												<option value="+91">+91</option>
@@ -90,18 +90,23 @@
 											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" required />
 										</div>
 									</div>
+
+
+								</div>
+								<div class="row">
 									<!-- Guardian Name -->
 									<div class="col-md-4 mb-3">
 										<label for="guardianName" class="form-label">Guardian Name</label>
 										<input type="text" class="form-control" id="guardianName" placeholder="Guardian Name" />
 									</div>
+
 									<!-- Guardian Mobile Phone Number -->
-									<div class="col-md-4 mb-3">
+									<div class="col-md-8 mb-3">
 										<label for="guardianPhone" class="form-label">Guardian Phone Number</label>
 										<div class="input-group phone-input-group">
 											<!-- Select for country code -->
 											<select class="form-select" id="countryCode">
-												<option value="+62">+62</option>
+												<option value="+62">+62 Indonesia</option>
 												<option value="+1">+1</option>
 												<option value="+44">+44</option>
 												<option value="+91">+91</option>
