@@ -1473,7 +1473,7 @@ hr.full-width-detail {
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
-    display: none;
+    /* display: none; */
 }
 
 ::-webkit-scrollbar-track {
@@ -2182,7 +2182,9 @@ hr.full-width-detail {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px 10px;
-        height: max-content;
+        height: 414px;
+        overflow-y: scroll;
+        padding: 7px;
     }
 
     /* field study */
@@ -2192,7 +2194,9 @@ hr.full-width-detail {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px !important;
-        height: max-content;
+        height: 414px;
+        overflow-y: scroll;
+        padding: 7px;
     }
 
     /* PROGRAM.html */

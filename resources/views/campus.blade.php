@@ -100,6 +100,45 @@
 								</div>
 							</div>
 						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 
@@ -109,7 +148,8 @@
 						<p class="back-button p-0">back to Study Level</p>
 					</div>
 
-					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5" onclick="window.location.href = '/studylevel'"><img
+					<button type="button" class="d-md-none btn btn-back-responsive danger-button d-flex justify-content-center align-items-center mt-5 gap-2 px-5"
+						onclick="window.location.href = '/studylevel'"><img
 							src="/assets/arrow-back-red.png"
 							alt="arrow-left" class="arrow-left" />back to Study Level</button>
 				</span>
