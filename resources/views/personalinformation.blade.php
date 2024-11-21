@@ -94,12 +94,19 @@
 
 								</div>
 								<div class="row">
-									<!-- Guardian Name -->
-									<div class="col-md-4 mb-3">
-										<label for="guardianName" class="form-label">Guardian Name</label>
-										<input type="text" class="form-control" id="guardianName" placeholder="Guardian Name" />
+									<!-- Guardian First Name -->
+									<div class="col-md-6 mb-3">
+										<label for="guardianName" class="form-label">Guardian First Name</label>
+										<input type="text" class="form-control" id="guardianName" placeholder="First Name" />
 									</div>
 
+									<!-- Guardian Last Name -->
+									<div class="col-md-6 mb-3">
+										<label for="guardianName" class="form-label">Guardian Last Name</label>
+										<input type="text" class="form-control" id="guardianName" placeholder="Last Name" />
+									</div>
+								</div>
+								<div class="row">
 									<!-- Guardian Mobile Phone Number -->
 									<div class="col-md-8 mb-3">
 										<label for="guardianPhone" class="form-label">Guardian Phone Number</label>
