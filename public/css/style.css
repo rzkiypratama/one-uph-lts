@@ -1871,6 +1871,10 @@ hr.full-width-detail {
 
     .card-box {
         margin-right: -6rem;
+        height: 425px;
+        overflow-y: scroll;
+        padding: 7px;
+        scroll-behavior: smooth;
     }
 
     .card-main-bg {
@@ -2182,9 +2186,6 @@ hr.full-width-detail {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px 10px;
-        height: 414px;
-        overflow-y: scroll;
-        padding: 7px;
     }
 
     /* field study */
@@ -2194,9 +2195,6 @@ hr.full-width-detail {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px !important;
-        height: 414px;
-        overflow-y: scroll;
-        padding: 7px;
     }
 
     /* PROGRAM.html */

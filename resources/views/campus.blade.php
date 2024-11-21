@@ -139,6 +139,71 @@
 								</div>
 							</div>
 						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
+
+						<a href="/fieldstudy">
+							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
+
+								<!-- Title -->
+								<div class="title-container">
+									<!-- <img src="icon-url.png" alt="icon" class="icon"/> -->
+									<h3 class="title" style="color: #333333">Plaza Semanggi EEC Campus</h3>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 
