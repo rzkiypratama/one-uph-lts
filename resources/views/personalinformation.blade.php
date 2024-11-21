@@ -13,7 +13,7 @@
 				}
 
 				.phone-input-group select {
-					max-width: 100%;
+					max-width: 150px;
 					border-radius: 0;
 					margin-right: 5px;
 				}
