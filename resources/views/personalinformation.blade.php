@@ -378,7 +378,7 @@
 							<div class="row">
 								<div class="col-md-4 mb-3">
 									<p class="form-label-review">Mobile Phone Number</p>
-									<p class="form-control-review">+123456789</p>
+									<p class="form-control-review">+62 (Indonesia) 81234567890</p>
 								</div>
 								<div class="col-md-4 mb-3">
 									<p class="form-label-review">School</p>
@@ -408,7 +408,7 @@
 							<div class="row">
 								<div class="col-md-4 mb-3">
 									<p class="form-label-review">Guardian Phone Number</p>
-									<p class="form-control-review">Phone Number</p>
+									<p class="form-control-review">+62 (Indonesia) 81234567890</p>
 								</div>
 								<div class="col-md-4 mb-3">
 									<p class="form-label-review">Nationality</p>
@@ -419,6 +419,7 @@
 									<p class="form-control-review">Music</p>
 								</div>
 							</div>
+							{{-- fifth row --}}
 							<div class="row">
 								<div class="col-md-4 mb-3">
 									<p class="form-label-review">Date of Birth</p>
