@@ -63,6 +63,13 @@ h5 {
     height: 3rem;
 }
 
+.preview-modal-title {
+    font-family: "Montserrat", sans-serif;
+    color: #112369;
+    font-weight: 600;
+    font-size: 32px;
+}
+
 .login-card-title {
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
