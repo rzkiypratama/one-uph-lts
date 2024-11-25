@@ -58,7 +58,7 @@
 									<!-- First Name -->
 									<div class="col-md-4 mb-3">
 										<label for="firstName" class="form-label">First Name</label>
-										<input type="text" class="form-control" id="firstName" placeholder="First Name" required />
+										<input type="text" class="form-control" id="firstName" placeholder="First Name" />
 										<p class="file-validation pt-1 opacity-5">First name consists of only one word without spaces</p>
 									</div>
 									<!-- Middle Name -->
@@ -87,7 +87,7 @@
 												<!-- Add more country codes as needed -->
 											</select>
 											<!-- Input for whatsapp number -->
-											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" required />
+											<input type="tel" class="form-control" id="mobilePhone" placeholder="Phone Number" />
 										</div>
 									</div>
 
@@ -120,7 +120,7 @@
 												<!-- Add more country codes as needed -->
 											</select>
 											<!-- Input for whatsapp number -->
-											<input type="tel" class="form-control" id="guardianPhone" placeholder="Phone Number" required />
+											<input type="tel" class="form-control" id="guardianPhone" placeholder="Phone Number" />
 										</div>
 									</div>
 								</div>
@@ -241,7 +241,7 @@
 								</div>
 								<!-- Submit Button -->
 								<div class="float-end my-2">
-									<button type="submit" id="submitBtn" class="btn select-program-btn rounded-2 px-5" disabled>Submit</button>
+									<button type="button" id="reviewBtn" class="btn select-program-btn rounded-2 px-5" disabled data-bs-toggle="modal" data-bs-target="#reviewModal">Submit</button>
 								</div>
 							</form>
 						</div>
@@ -262,7 +262,7 @@
 			<!-- desktop view ends -->
 		</div>
 
-		<!-- Modal -->
+		<!-- Modal Terms & Conditions -->
 		<div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
@@ -348,20 +348,180 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
+		{{-- Modal Review Form --}}
+		<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModal" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content border-0">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h5 class="modal-title preview-modal-title" id="privacyPolicyModalLabel">Review Information</h5>
+					</div>
 
+					<div class="modal-body">
+						<div>
+							{{-- first row --}}
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Full Name</p>
+									<p class="form-control-review">John Doe</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Email Address</p>
+									<p class="form-control-review">john.doe@gmail.com</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Campus Location</p>
+									<p class="form-control-review">Lippo Village Campus</p>
+								</div>
+							</div>
+							{{-- second row --}}
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Mobile Phone Number</p>
+									<p class="form-control-review">+123456789</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">School</p>
+									<p class="form-control-review">New York School</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">College</p>
+									<p class="form-control-review">NArts & Social Sciences</p>
+								</div>
+							</div>
+							{{-- third row --}}
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Guardian Name</p>
+									<p class="form-control-review">Guardian Name</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Current Grade</p>
+									<p class="form-control-review">12</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Faculty</p>
+									<p class="form-control-review">Faculty</p>
+								</div>
+							</div>
+							{{-- forth row --}}
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Guardian Phone Number</p>
+									<p class="form-control-review">Phone Number</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Nationality</p>
+									<p class="form-control-review">Indonesian</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Program</p>
+									<p class="form-control-review">Music</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Date of Birth</p>
+									<p class="form-control-review">25 December 1995</p>
+								</div>
+								<div class="col-md-4 mb-3">
+									<p class="form-label-review">Study Level</p>
+									<p class="form-control-review">Undergraduate</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<div class="modal-footer d-flex flex-column-reverse flex-md-row justify-content-between">
+						<button type="button" class="btn back-button d-flex justify-content-center align-items-center gap-2" data-bs-dismiss="modal" aria-label="Close"><img
+								src="/assets/arrow-back-red.png"
+								alt="arrow-left" />Edit your Personal Data</button>
+
+						<button type="button" id="submitBtn" class="btn select-program-btn rounded-2 px-5">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{-- <!-- Modal Email Verification Confirmation--> --}}
+		<div class="modal fade" id="emailVerify" tabindex="-1" aria-labelledby="emailVerifyLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content text-center">
+					<div class="modal-body modal-body-review">
+						<img src="/assets/mail.png" class="img-fluid mb-3" alt="Success Image" />
+						<!-- Replace with your image path -->
+						<div>
+							<p class="fs-4 review-modal-title">Confirm your Email</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-3">Confirm your email address to complete</p>
+						</div>
+
+						<div class="mb-3">
+							<p class="tabs-title mb-2">Hi, [First Name] [Middle Name] [Last Name]</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-1">Please confirm your email address to activate your account</p>
+							<p class="review-modal-subtitle"><strong>Open your email in </strong><span class="email-verify">[Email Address]</span></p>
+						</div>
+
+						<p class="register pb-3">Didn’t receive any Activation Email from us?</p>
+
+						<div class="d-flex justify-content-center gap-3">
+							<button type="button" class="btn btn-outline-danger rounded-0 w-35" data-bs-dismiss="modal">Back</button>
+							<button type="button" class="btn btn-danger rounded-0 w-75">Resend Activation Email</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{-- <!-- Modal Email Verification Failed --> --}}
+		<div class="modal fade" id="emailVerifyFailed" tabindex="-1" aria-labelledby="emailVerifyLabelFailed" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content text-center">
+					<div class="modal-body modal-body-review">
+						<img src="/assets/verify-failed.png" class="img-fluid mb-3" alt="Success Image" />
+						<!-- Replace with your image path -->
+						<div>
+							<p class="fs-4 review-modal-title mb-2">Verification Link Invalid</p>
+							<p class="review-modal-subtitle d-flex flex-column align-items-center mb-4">Your verification link registration is invalid or already used</p>
+						</div>
+
+						<p class="register pb-3">Try to resend the link?</p>
+
+						<div class="d-flex justify-content-between gap-3">
+							<button type="button" class="btn btn-outline-danger rounded-0 w-35" data-bs-dismiss="modal">Back</button>
+							<button type="button" class="btn btn-danger rounded-0 w-75">Resend Activation Email</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{-- tambahkan script ini untuk menghapus backdrop modal --}}
 		<script>
+			document.addEventListener("hidden.bs.modal", function(event) {
+				const backdrop = document.querySelector(".modal-backdrop");
+				if (backdrop) {
+					backdrop.remove(); // delete backdrop secara manual
+				}
+				document.body.classList.remove("modal-open");
+			});
+		</script>
+
+		{{-- script untuk submit --}}
+		<script>
+			// Ambil elemen-elemen yang dibutuhkan
 			const formDesktop = document.getElementById("personalInfoForm");
-			const formMobile = document.getElementById("personalInfoFormMobile");
+			const submitBtn = document.getElementById("submitBtn");
+			const reviewBtn = document.getElementById("reviewBtn");
 
 			// Fungsi untuk menangani submit form
 			function handleFormSubmit(event) {
 				event.preventDefault();
 
 				// Ambil nilai dari password dan repeat password
-				const password = this.querySelector("#password")?.value
-				const repeatPassword = this.querySelector("#repeatPassword")?.value
+				const password = formDesktop.querySelector("#password")?.value;
+				const repeatPassword = formDesktop.querySelector("#repeatPassword")?.value;
 
 				// Cek apakah password dan repeat password cocok
 				if (password !== repeatPassword) {
@@ -371,38 +531,72 @@
 
 				// Collect form data
 				const formData = {
-					firstName: this.querySelector("#firstName")?.value,
-					middleName: this.querySelector("#middleName")?.value,
-					lastName: this.querySelector("#lastName")?.value,
-					mobilePhone: this.querySelector("#mobilePhone")?.value,
-					guardianName: this.querySelector("#guardianName")?.value,
-					guardianPhone: this.querySelector("#guardianPhone")?.value,
-					dob: this.querySelector("#dob")?.value,
-					schoolName: this.querySelector("#schoolName")?.value,
-					grade: this.querySelector("#grade")?.value,
-					email: this.querySelector("#email")?.value,
-					selectHighSchool: this.querySelector("#selectHighSchool")?.value,
-					highSchoolType: this.querySelector("#highSchoolType")?.value,
-					country: this.querySelector("#country")?.value,
-					province: this.querySelector("#province")?.value,
-					city: this.querySelector("#city")?.value,
+					firstName: formDesktop.querySelector("#firstName")?.value,
+					middleName: formDesktop.querySelector("#middleName")?.value,
+					lastName: formDesktop.querySelector("#lastName")?.value,
+					mobilePhone: formDesktop.querySelector("#mobilePhone")?.value,
+					guardianName: formDesktop.querySelector("#guardianName")?.value,
+					guardianPhone: formDesktop.querySelector("#guardianPhone")?.value,
+					dob: formDesktop.querySelector("#dob")?.value,
+					schoolName: formDesktop.querySelector("#schoolName")?.value,
+					grade: formDesktop.querySelector("#grade")?.value,
+					email: formDesktop.querySelector("#email")?.value,
+					selectHighSchool: formDesktop.querySelector("#selectHighSchool")?.value,
+					highSchoolType: formDesktop.querySelector("#highSchoolType")?.value,
+					country: formDesktop.querySelector("#country")?.value,
+					province: formDesktop.querySelector("#province")?.value,
+					city: formDesktop.querySelector("#city")?.value,
 				};
 
-				// Store form data in localStorage
-				localStorage.setItem("personalInfo", JSON.stringify(formData));
+				console.log("Form submitted:", formData);
 
-				console.log(formData);
+				// start contoh menampilkan modal email verification setelah submit
+				// bisa disesuaikan dengan cara apa saja untuk menampilkan modal emailVerify setelah user submit review form
+				if (reviewBtn) {
+					reviewBtn.focus();
+				}
 
-				// Redirect to the /review page
-				window.location.href = "/review";
+				// Tutup modal review
+				const reviewModalElement = document.getElementById("reviewModal");
+				const reviewModal = bootstrap.Modal.getInstance(reviewModalElement);
+				if (reviewModal) {
+					reviewModal.hide();
+				}
+
+				// Tampilkan modal emailVerify
+				const emailVerifyModal = new bootstrap.Modal(document.getElementById("emailVerify"));
+				emailVerifyModal.show();
+				// end contoh menampilkan modal email verification setelah submit
 			}
 
-			// Tambahkan event listener untuk kedua form
-			if (formDesktop) {
-				formDesktop.addEventListener("submit", handleFormSubmit);
+			// Fungsi untuk menampilkan modal (Bootstrap)
+			function showModal(event) {
+				event.preventDefault();
+
+				// Gunakan Bootstrap API untuk menampilkan modal
+				const modalElement = new bootstrap.Modal(document.getElementById("reviewModal"));
+				modalElement.show();
+			}
+
+			// event listener untuk tombol reviewBtn
+			if (reviewBtn) {
+				reviewBtn.addEventListener("click", showModal);
+			}
+
+			// event listener untuk tombol submitBtn di dalam modal
+			if (submitBtn) {
+				submitBtn.addEventListener("click", function(event) {
+					event.preventDefault();
+
+					// Validasi form dan submit
+					if (formDesktop) {
+						handleFormSubmit(event);
+					}
+				});
 			}
 		</script>
 
+		{{-- script untuk checkbox dan hide/show school information untuk option Others --}}
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				const selectHighSchool = document.getElementById("selectHighSchool");
@@ -434,10 +628,12 @@
 
 			function toggleSubmitButton() {
 				const agreeCheckbox = document.getElementById("agree");
-				const submitButton = document.getElementById("submitBtn");
+				const submitButton = document.getElementById("reviewBtn");
 				submitButton.disabled = !agreeCheckbox.checked;
 			}
 		</script>
+
+		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
 		</script>
