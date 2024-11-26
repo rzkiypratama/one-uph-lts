@@ -21,6 +21,9 @@
 			<p class="active">EN</p>
 		</span>
 
+		<img src="/assets/signout-icon.png" alt="logout icon" class="logout-icon" onclick="window.location.href='/'" />
+
+
 		{{-- <img src="/assets/bells.png" alt="notification icon" class="notification-icon" id="notificationIcon" /> --}}
 
 		<!-- Notification Card -->
