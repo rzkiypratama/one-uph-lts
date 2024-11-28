@@ -250,7 +250,7 @@
 															<option value="Option 2">Option 2</option>
 														</select>
 													</div>
-													{{-- <div class="mb-3">
+													<div class="mb-3">
 														<label for="" class="form-label">Home Address</label>
 														<input type="text" class="form-control" id="" placeholder="Enter address" />
 														<div class="row my-4">
@@ -317,7 +317,7 @@
 																<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 															</div>
 														</div>
-													</div> --}}
+													</div>
 												</div>
 											</div>
 										</div>
@@ -387,7 +387,7 @@
 														<option value="Option 2">Option 2</option>
 													</select>
 												</div>
-												{{-- <div class="mb-3">
+												<div class="mb-3">
 													<label for="" class="form-label">Home Address</label>
 													<input type="text" class="form-control" id="" placeholder="Enter address" />
 													<div class="row my-4">
@@ -454,7 +454,7 @@
 															<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 														</div>
 													</div>
-												</div> --}}
+												</div>
 											</div>
 										</div>
 									</div>
