@@ -1,52 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const aliveRadio = document.getElementById("aliveMother");
-    const deceasedRadio = document.getElementById("deceasedMother");
-    const deceasedInput = document.getElementById("deceasedInputHide");
+    // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+    let nationality = localStorage.getItem("nationality") || "national";
 
-    // Function to toggle visibility based on status
-    function togglePhoneNumberVisibility() {
-        if (deceasedRadio.checked) {
-            deceasedInput.classList.add("hidden");
-        } else {
-            deceasedInput.classList.remove("hidden");
-        }
+    // Jika belum ada di localStorage, set default nationality sebagai 'national'
+    if (!localStorage.getItem("nationality")) {
+        localStorage.setItem("nationality", "national");
     }
 
-    // Event listeners for radio buttons
-    aliveRadio.addEventListener("change", togglePhoneNumberVisibility);
-    deceasedRadio.addEventListener("change", togglePhoneNumberVisibility);
+    // Menampilkan atau menyembunyikan form berdasarkan nationality
+    const nationalForm = document.getElementById("national-form");
+    const internationalForm = document.getElementById("international-form");
 
-    // Initialize the visibility based on the default selection
-    togglePhoneNumberVisibility();
+    if (nationality === "national") {
+        nationalForm.classList.add("show");
+        internationalForm.classList.add("hidden");
+    } else if (nationality === "international") {
+        internationalForm.classList.add("show");
+        nationalForm.classList.add("hidden");
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const aliveFatherRadio = document.getElementById("aliveFather");
-    const deceasedFatherRadio = document.getElementById("deceasedFather");
-    const deceasedFatherInput = document.getElementById(
-        "deceasedFatherInputHide"
+    // Ambil nationality dari localStorage, jika tidak ada set default 'national'
+    let nationality = localStorage.getItem("nationality") || "national";
+
+    // Menampilkan atau menyembunyikan address berdasarkan nationality
+    const nationalAddress = document.getElementById("national-address");
+    const internationalAddress = document.getElementById(
+        "international-address"
     );
 
-    // Function to toggle visibility based on status
-    function togglePhoneNumberVisibility() {
-        if (deceasedFatherRadio.checked) {
-            deceasedFatherInput.classList.add("hidden");
-        } else {
-            deceasedFatherInput.classList.remove("hidden");
-        }
+    if (nationality === "national") {
+        nationalAddress.classList.add("show");
+        internationalAddress.classList.add("hidden");
+    } else if (nationality === "international") {
+        internationalAddress.classList.add("show");
+        nationalAddress.classList.add("hidden");
     }
-
-    // Event listeners for radio buttons
-    aliveFatherRadio.addEventListener("change", togglePhoneNumberVisibility);
-    deceasedFatherRadio.addEventListener("change", togglePhoneNumberVisibility);
-
-    // Initialize the visibility based on the default selection
-    togglePhoneNumberVisibility();
 });
 
+// Ambil elemen tab yang terlihat di dalam #myTab
 const tabs = Array.from(document.querySelectorAll("#myTab button"))
-    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter tab yang terlihat
-    .map((tab) => tab.id); // Ambil id dari setiap tab yang terlihat
+    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter hanya tab yang terlihat
+    .map((tab) => tab.id);
 
 let currentTabIndex = 0;
 
@@ -64,7 +60,7 @@ function updateButtons() {
 
     // Jika di tab terakhir, tombol Next menjadi Submit
     if (currentTabIndex === tabs.length - 1) {
-        nextButton.innerText = "Save & Continue";
+        nextButton.innerText = "Save Data & Continue";
     } else {
         nextButton.innerText = "Continue";
     }
@@ -80,7 +76,7 @@ backButton.addEventListener("click", function () {
         previousTab.show();
         updateButtons();
     } else {
-        window.location.href = "/dashboard/intakeyear";
+        window.location.href = "/dashboard/personalinformations";
     }
 });
 
@@ -96,12 +92,12 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         nextTab.show();
         updateButtons();
     } else {
-        alert("Form submitted!");
-        window.location.href = "/tuition-fee/administration-documents";
+        // Arahkan ke halaman selanjutnya setelah form disubmit
+        window.location.href = "/dashboard/educationbackground";
     }
 });
 
-// Event listener untuk tab klik langsung
+// Event listener untuk klik tab secara langsung
 tabs.forEach((tabId, index) => {
     document.getElementById(tabId).addEventListener("click", function () {
         currentTabIndex = index;
