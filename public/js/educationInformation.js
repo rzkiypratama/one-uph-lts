@@ -34,7 +34,7 @@ backButton.addEventListener("click", function () {
         previousTab.show();
         updateButtons();
     } else {
-        window.location.href = "/dashboard/personalinformations";
+        window.location.href = "/dashboard/familybackground";
     }
 });
 

@@ -81,7 +81,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
         updateButtons();
     } else {
         alert("Form submitted!");
-        window.location.href = "/dashboard/educationbackground";
+        window.location.href = "/dashboard/familybackground";
     }
 });
 
