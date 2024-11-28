@@ -1932,21 +1932,21 @@ hr.full-width-detail {
         margin: 0;
         padding: 0;
         border: 1px solid #bcd1ff;
-        width: 11rem;
+        width: 9rem;
     }
 
     hr.dashed-step {
         margin: 0;
         padding: 0;
         border: 1px dashed #407bff;
-        width: 11rem;
+        width: 9rem;
     }
 
     hr.done-step {
         margin: 0;
         padding: 0;
         border: 1px solid #407bff;
-        width: 11rem;
+        width: 9rem;
     }
 
     .tuition-status {
