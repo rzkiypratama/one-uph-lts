@@ -232,7 +232,7 @@
 														<label for="parentEmail" class="form-label">Email Address</label>
 														<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 													</div>
-													<div class="col-md-4 mb-3">
+													{{-- <div class="col-md-4 mb-3">
 														<label class="form-label">Religion</label>
 														<select class="form-select">
 															<option value="Option 1">Option 1</option>
@@ -317,7 +317,7 @@
 																<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 															</div>
 														</div>
-													</div>
+													</div> --}}
 												</div>
 											</div>
 										</div>
@@ -369,7 +369,7 @@
 													<label for="parentEmail" class="form-label">Email Address</label>
 													<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 												</div>
-												<div class="col-md-4 mb-3">
+												{{-- <div class="col-md-4 mb-3">
 													<label class="form-label">Religion</label>
 													<select class="form-select">
 														<option value="Option 1">Option 1</option>
@@ -386,8 +386,8 @@
 														<option value="Option 1">Option 1</option>
 														<option value="Option 2">Option 2</option>
 													</select>
-												</div>
-												<div class="mb-3">
+												</div> --}}
+												{{-- <div class="mb-3">
 													<label for="" class="form-label">Home Address</label>
 													<input type="text" class="form-control" id="" placeholder="Enter address" />
 													<div class="row my-4">
@@ -454,7 +454,7 @@
 															<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 														</div>
 													</div>
-												</div>
+												</div> --}}
 											</div>
 										</div>
 									</div>
