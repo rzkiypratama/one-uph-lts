@@ -44,7 +44,7 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">01</p>
-						<p class="step-subtitle w-25 m-0">Intake Year</p>
+						<p class="step-subtitle w-30 m-0">Intake Year</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-bold.png" alt="step" class="step-icon" />
@@ -55,7 +55,7 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">02</p>
-						<p class="step-subtitle w-25 m-0">Personal Information</p>
+						<p class="step-subtitle w-30 m-0">Personal Information</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-normal.png" alt="step" class="step-icon" />
@@ -66,7 +66,7 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">03</p>
-						<p class="step-subtitle w-25 m-0">Education Information</p>
+						<p class="step-subtitle w-30 m-0">Family Background</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-normal.png" alt="step" class="step-icon" />
@@ -77,7 +77,7 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">04</p>
-						<p class="step-subtitle w-25 m-0">Entry Option</p>
+						<p class="step-subtitle w-30 m-0">Education Information</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-normal.png" alt="step" class="step-icon" />
@@ -88,7 +88,7 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">05</p>
-						<p class="step-subtitle w-25 m-0">Review & Payment</p>
+						<p class="step-subtitle w-30 m-0">Entry Option</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-normal.png" alt="step" class="step-icon" />
@@ -99,6 +99,17 @@
 				<div>
 					<div class="d-flex mb-3 gap-2">
 						<p class="step-title m-0">06</p>
+						<p class="step-subtitle w-30 m-0">Review & Payment</p>
+					</div>
+					<div class="d-flex align-items-center gap-2">
+						<img src="/assets/circle-normal.png" alt="step" class="step-icon" />
+						<hr class="solid-step" />
+					</div>
+				</div>
+
+				<div>
+					<div class="d-flex mb-3 gap-2">
+						<p class="step-title m-0">07</p>
 						<p class="step-subtitle w-50 m-0">Required Documents</p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
@@ -117,7 +128,7 @@
 					</span>
 
 					<span class="text-white" onclick="window.location.href = '/dashboard'">
-						<p class="mobile-title">Step 1 of 6</p>
+						<p class="mobile-title">Step 1 of 7</p>
 						<p class="mobile-subtitle">Intake Year</p>
 					</span>
 				</div>
