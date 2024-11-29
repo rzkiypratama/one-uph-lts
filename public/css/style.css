@@ -1506,6 +1506,69 @@ hr.full-width-detail {
     width: 20px;
 }
 
+/* search bar on program page */
+.search-box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid #d3d3d3;
+    margin: 0px 8px 0px 8px;
+}
+.search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #111d5e;
+    background: #fff;
+}
+.search-button {
+    text-align: center;
+    height: 34px;
+    width: 40px;
+    outline: none;
+    cursor: pointer;
+    border-left: none;
+    background: #fff;
+    font-size: 14px;
+    border: none;
+}
+
+input[type="text"].search-input {
+    padding-left: 10px;
+}
+
+.search-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: #5c5c5c;
+    font-size: 12px;
+    letter-spacing: 0.75px;
+}
+
+/* program */
+.program-grid {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+/* scroll event */
+.scroll-event {
+    display: flex;
+    justify-content: center;
+    padding: 8px 8px 0px 8px;
+    height: 32px;
+}
+
+#scrollDownButton {
+    border: none;
+    background-color: #dfe9ff;
+    border-radius: 6px;
+}
+
 @media (min-width: 768px) {
     .card-nationality {
         height: 402px;
@@ -1529,8 +1592,8 @@ hr.full-width-detail {
     }
 
     .card-program {
-        height: 128px;
-        width: 298px;
+        height: 104px;
+        width: 194px;
     }
 
     .dashboard-box {
@@ -2203,6 +2266,19 @@ hr.full-width-detail {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px !important;
+    }
+
+    /* programs grid */
+    .program-grid {
+        display: flex;
+        width: 618px;
+        flex-wrap: wrap;
+        height: 332px;
+        gap: 5px 5px;
+        flex-direction: row;
+        /* grid-template-columns: 1fr 1fr; */
+        /* flex-direction: row-reverse; */
+        /* grid-template-rows: 1fr 1fr 1fr; */
     }
 
     /* PROGRAM.html */
