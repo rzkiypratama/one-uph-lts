@@ -181,7 +181,7 @@
 									<div class="row col-md-12 mb-4">
 										<!-- School Name -->
 										<div class="col-md-4 mb-3">
-											<label for="schoolName" class="form-label">Highschool</label>
+											<label for="schoolName" class="form-label">High School</label>
 											<input type="text" class="form-control" id="schoolName" placeholder="Your high school name" required />
 										</div>
 										<!-- School City -->
