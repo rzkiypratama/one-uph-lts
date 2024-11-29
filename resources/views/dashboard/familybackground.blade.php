@@ -499,7 +499,7 @@
 										<label for="parentEmail" class="form-label">Email Address</label>
 										<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 									</div>
-									{{-- <div class="col-md-2 mb-3">
+									<div class="col-md-2 mb-3">
 										<label class="form-label">Religion</label>
 										<select class="form-select">
 											<option value="Option 1">Option 1</option>
@@ -510,13 +510,13 @@
 										<label class="form-label">Occupation</label>
 										<input type="email" class="form-control" placeholder="Enter your Occupation" />
 									</div>
-									<div class="col-md-2 mb-3">
+									{{-- <div class="col-md-2 mb-3">
 										<label class="form-label">Last Education</label>
 										<select class="form-select">
 											<option value="Option 1">Option 1</option>
 											<option value="Option 2">Option 2</option>
 										</select>
-									</div>
+									</div> --}}
 									<div class="mb-3">
 										<div class="row">
 											<div class="col-md-6 mb-3">
@@ -556,7 +556,7 @@
 										</div>
 
 
-									</div> --}}
+									</div>
 								</div>
 
 							</div>
