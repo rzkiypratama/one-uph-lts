@@ -506,7 +506,7 @@
 											</div>
 										</div>
 										<div class="col-md-4">
-											<label class="form-label">whatsapp Number</label>
+											<label class="form-label">WhatsApp Number</label>
 											<div class="input-group phone-input-group">
 												<!-- Select for country code -->
 												<select class="form-select" id="countryCode">
