@@ -40,70 +40,103 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Ambil elemen tab yang terlihat di dalam #myTab
-const tabs = Array.from(document.querySelectorAll("#myTab button"))
-    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter hanya tab yang terlihat
-    .map((tab) => tab.id);
-
+const tabs = Array.from(document.querySelectorAll("#myTab button"));
 let currentTabIndex = 0;
 
+// Ambil elemen tombol Back dan Next
 const backButton = document.getElementById("backButton");
 const nextButton = document.querySelector(".danger-button");
 
-// Fungsi untuk mengupdate tombol Next dan Back
-function updateButtons() {
-    // Jika di tab pertama, tombol Back membawa ke halaman sebelumnya
-    if (currentTabIndex === 0) {
-        backButton.innerText = "Back";
-    } else {
-        backButton.innerText = "Back";
-    }
+// Fungsi untuk mendapatkan tab yang terlihat
+function getVisibleTabs() {
+    return tabs
+        .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Filter hanya tab terlihat
+        .map((tab) => tab.id);
+}
 
-    // Jika di tab terakhir, tombol Next menjadi Submit
-    if (currentTabIndex === tabs.length - 1) {
-        nextButton.innerText = "Save Data & Continue";
-    } else {
-        nextButton.innerText = "Continue";
-    }
+// Fungsi untuk mengupdate tombol Back dan Next
+function updateButtons() {
+    const visibleTabs = getVisibleTabs();
+
+    // Update tombol Back
+    backButton.innerText = currentTabIndex === 0 ? "Back" : "Previous";
+
+    // Update tombol Next
+    nextButton.innerText =
+        currentTabIndex === visibleTabs.length - 1
+            ? "Save Data & Continue"
+            : "Continue";
 }
 
 // Event listener untuk tombol Back
 backButton.addEventListener("click", function () {
+    const visibleTabs = getVisibleTabs();
+
     if (currentTabIndex > 0) {
-        currentTabIndex--;
+        currentTabIndex--; // Pindah ke tab sebelumnya
         const previousTab = new bootstrap.Tab(
-            document.getElementById(tabs[currentTabIndex])
+            document.getElementById(visibleTabs[currentTabIndex])
         );
         previousTab.show();
         updateButtons();
     } else {
+        // Redirect jika di tab pertama
         window.location.href = "/dashboard/personalinformations";
     }
 });
 
-// Event listener untuk tombol Next (Continue/Submit)
-document.getElementById("myForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+// Event listener untuk tombol Next
+nextButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Cegah aksi default tombol jika tombol berada di form
+    const visibleTabs = getVisibleTabs();
 
-    if (currentTabIndex < tabs.length - 1) {
-        currentTabIndex++;
+    if (currentTabIndex < visibleTabs.length - 1) {
+        currentTabIndex++; // Pindah ke tab berikutnya
         const nextTab = new bootstrap.Tab(
-            document.getElementById(tabs[currentTabIndex])
+            document.getElementById(visibleTabs[currentTabIndex])
         );
         nextTab.show();
         updateButtons();
     } else {
-        // Arahkan ke halaman selanjutnya setelah form disubmit
+        // Submit form jika di tab terakhir
+        document.getElementById("myForm").submit();
         window.location.href = "/dashboard/educationbackground";
     }
 });
 
-// Event listener untuk klik tab secara langsung
-tabs.forEach((tabId, index) => {
-    document.getElementById(tabId).addEventListener("click", function () {
-        currentTabIndex = index;
-        updateButtons();
+// Event listener untuk klik langsung pada tab
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", function () {
+        const visibleTabs = getVisibleTabs();
+        const visibleIndex = visibleTabs.indexOf(tab.id);
+
+        if (visibleIndex !== -1) {
+            currentTabIndex = visibleIndex; // Update indeks tab saat ini
+            updateButtons();
+        }
     });
 });
 
-// Initial button state
+// Perubahan visibilitas tab
+function handleTabVisibilityChange() {
+    const visibleTabs = getVisibleTabs();
+
+    // Pastikan currentTabIndex tetap valid
+    if (currentTabIndex >= visibleTabs.length) {
+        currentTabIndex = visibleTabs.length - 1;
+    }
+
+    updateButtons();
+}
+
+// Observer untuk perubahan visibilitas tab
+const observer = new MutationObserver(handleTabVisibilityChange);
+tabs.forEach((tab) => {
+    observer.observe(tab, {
+        attributes: true,
+        attributeFilter: ["style", "class"],
+    });
+});
+
+// Inisialisasi awal
 updateButtons();
