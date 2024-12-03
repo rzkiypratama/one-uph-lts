@@ -40,17 +40,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Ambil elemen tab yang terlihat di dalam #myTab
-const tabs = Array.from(document.querySelectorAll("#myTab button"))
-    .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Memfilter hanya tab yang terlihat
-    .map((tab) => tab.id);
-
+const tabs = Array.from(document.querySelectorAll("#myTab button"));
 let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");
 const nextButton = document.querySelector(".danger-button");
 
+// Fungsi untuk mendapatkan daftar tab yang terlihat
+function getVisibleTabs() {
+    return tabs
+        .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Filter tab terlihat
+        .map((tab) => tab.id);
+}
+
 // Fungsi untuk mengupdate tombol Next dan Back
 function updateButtons() {
+    const visibleTabs = getVisibleTabs();
+
     // Jika di tab pertama, tombol Back membawa ke halaman sebelumnya
     if (currentTabIndex === 0) {
         backButton.innerText = "Back";
@@ -59,7 +65,7 @@ function updateButtons() {
     }
 
     // Jika di tab terakhir, tombol Next menjadi Submit
-    if (currentTabIndex === tabs.length - 1) {
+    if (currentTabIndex === visibleTabs.length - 1) {
         nextButton.innerText = "Save Data & Continue";
     } else {
         nextButton.innerText = "Continue";
@@ -68,10 +74,12 @@ function updateButtons() {
 
 // Event listener untuk tombol Back
 backButton.addEventListener("click", function () {
+    const visibleTabs = getVisibleTabs();
+
     if (currentTabIndex > 0) {
         currentTabIndex--;
         const previousTab = new bootstrap.Tab(
-            document.getElementById(tabs[currentTabIndex])
+            document.getElementById(visibleTabs[currentTabIndex])
         );
         previousTab.show();
         updateButtons();
@@ -84,10 +92,12 @@ backButton.addEventListener("click", function () {
 document.getElementById("myForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (currentTabIndex < tabs.length - 1) {
+    const visibleTabs = getVisibleTabs();
+
+    if (currentTabIndex < visibleTabs.length - 1) {
         currentTabIndex++;
         const nextTab = new bootstrap.Tab(
-            document.getElementById(tabs[currentTabIndex])
+            document.getElementById(visibleTabs[currentTabIndex])
         );
         nextTab.show();
         updateButtons();
@@ -98,11 +108,30 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 });
 
 // Event listener untuk klik tab secara langsung
-tabs.forEach((tabId, index) => {
-    document.getElementById(tabId).addEventListener("click", function () {
-        currentTabIndex = index;
-        updateButtons();
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", function () {
+        const visibleTabs = getVisibleTabs();
+        const visibleIndex = visibleTabs.indexOf(tab.id);
+
+        if (visibleIndex !== -1) {
+            currentTabIndex = visibleIndex;
+            updateButtons();
+        }
     });
+});
+
+// Event listener untuk tombol A dan B
+document.getElementById("buttonA").addEventListener("click", function () {
+    // Sembunyikan tab tertentu
+    document.getElementById("tabToHide").hidden = true;
+    currentTabIndex = Math.min(currentTabIndex, getVisibleTabs().length - 1); // Pastikan index tidak di luar batas
+    updateButtons();
+});
+
+document.getElementById("buttonB").addEventListener("click", function () {
+    // Tampilkan tab tertentu
+    document.getElementById("tabToHide").hidden = false;
+    updateButtons();
 });
 
 // Initial button state
