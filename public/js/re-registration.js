@@ -45,6 +45,7 @@ let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");
 const nextButton = document.querySelector(".danger-button");
+const statusSelect = document.getElementById("statusSelect"); // Dropdown untuk memilih status (deceased/alive)
 
 // Fungsi untuk mendapatkan daftar tab yang terlihat
 function getVisibleTabs() {
@@ -120,17 +121,18 @@ tabs.forEach((tab, index) => {
     });
 });
 
-// Event listener untuk tombol A dan B
-document.getElementById("buttonA").addEventListener("click", function () {
-    // Sembunyikan tab tertentu
-    document.getElementById("tabToHide").hidden = true;
-    currentTabIndex = Math.min(currentTabIndex, getVisibleTabs().length - 1); // Pastikan index tidak di luar batas
-    updateButtons();
-});
+// Event listener untuk dropdown (status select)
+statusSelect.addEventListener("change", function () {
+    const status = statusSelect.value; // Ambil nilai "deceased" atau "alive"
+    const hiddenTab = document.getElementById("tabToShow"); // Tab yang akan disembunyikan/diperlihatkan
 
-document.getElementById("buttonB").addEventListener("click", function () {
-    // Tampilkan tab tertentu
-    document.getElementById("tabToHide").hidden = false;
+    if (status === "deceased") {
+        hiddenTab.hidden = false; // Tampilkan tab jika "deceased"
+    } else {
+        hiddenTab.hidden = true; // Sembunyikan tab jika "alive"
+    }
+
+    currentTabIndex = Math.min(currentTabIndex, getVisibleTabs().length - 1); // Pastikan index tidak melebihi jumlah tab terlihat
     updateButtons();
 });
 
