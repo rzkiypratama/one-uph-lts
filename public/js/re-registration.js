@@ -39,37 +39,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Ambil elemen tab yang terlihat di dalam #myTab
+// Dapatkan semua tab yang ada
 const tabs = Array.from(document.querySelectorAll("#myTab button"));
 let currentTabIndex = 0;
 
+// Ambil elemen tombol Back dan Next
 const backButton = document.getElementById("backButton");
 const nextButton = document.querySelector(".danger-button");
 
-// Fungsi untuk mendapatkan daftar tab yang terlihat
+// Fungsi untuk mendapatkan tab yang terlihat
 function getVisibleTabs() {
     return tabs
-        .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Filter tab terlihat
+        .filter((tab) => !tab.hidden && tab.offsetParent !== null) // Filter hanya tab terlihat
         .map((tab) => tab.id);
 }
 
-// Fungsi untuk mengupdate tombol Next dan Back
+// Fungsi untuk mengupdate tombol Back dan Next
 function updateButtons() {
     const visibleTabs = getVisibleTabs();
 
-    // Tombol Back
-    if (currentTabIndex === 0) {
-        backButton.innerText = "Back";
-    } else {
-        backButton.innerText = "Previous";
-    }
+    // Update tombol Back
+    backButton.innerText = currentTabIndex === 0 ? "Back" : "Previous";
 
-    // Tombol Next
-    if (currentTabIndex === visibleTabs.length - 1) {
-        nextButton.innerText = "Save Data & Continue";
-    } else {
-        nextButton.innerText = "Continue";
-    }
+    // Update tombol Next
+    nextButton.innerText =
+        currentTabIndex === visibleTabs.length - 1
+            ? "Save Data & Continue"
+            : "Continue";
 }
 
 // Event listener untuk tombol Back
@@ -77,45 +73,68 @@ backButton.addEventListener("click", function () {
     const visibleTabs = getVisibleTabs();
 
     if (currentTabIndex > 0) {
-        currentTabIndex--; // Kurangi indeks tab saat ini
+        currentTabIndex--; // Pindah ke tab sebelumnya
         const previousTab = new bootstrap.Tab(
             document.getElementById(visibleTabs[currentTabIndex])
         );
         previousTab.show();
         updateButtons();
     } else {
-        // Arahkan ke halaman sebelumnya jika di tab pertama
-        window.location.href = "/tuition-fee/tuitionpayment";
+        // Redirect jika di tab pertama
+        window.location.href = "/dashboard/personalinformations";
     }
 });
 
-// Event listener untuk tombol Next (Continue/Submit)
-nextButton.addEventListener("click", function () {
+// Event listener untuk tombol Next
+nextButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Cegah aksi default tombol jika tombol berada di form
     const visibleTabs = getVisibleTabs();
 
     if (currentTabIndex < visibleTabs.length - 1) {
-        currentTabIndex++; // Tambahkan indeks tab saat ini
+        currentTabIndex++; // Pindah ke tab berikutnya
         const nextTab = new bootstrap.Tab(
             document.getElementById(visibleTabs[currentTabIndex])
         );
         nextTab.show();
         updateButtons();
     } else {
-        // Arahkan ke halaman selanjutnya jika di tab terakhir
+        // Submit form jika di tab terakhir
+        document.getElementById("myForm").submit();
         window.location.href = "/tuition-fee/administration-documents";
     }
 });
 
-// Event listener untuk klik tab secara langsung
+// Event listener untuk klik langsung pada tab
 tabs.forEach((tab, index) => {
     tab.addEventListener("click", function () {
         const visibleTabs = getVisibleTabs();
         const visibleIndex = visibleTabs.indexOf(tab.id);
 
         if (visibleIndex !== -1) {
-            currentTabIndex = visibleIndex; // Perbarui indeks tab saat ini
+            currentTabIndex = visibleIndex; // Update indeks tab saat ini
             updateButtons();
         }
+    });
+});
+
+// Perubahan visibilitas tab
+function handleTabVisibilityChange() {
+    const visibleTabs = getVisibleTabs();
+
+    // Pastikan currentTabIndex tetap valid
+    if (currentTabIndex >= visibleTabs.length) {
+        currentTabIndex = visibleTabs.length - 1;
+    }
+
+    updateButtons();
+}
+
+// Observer untuk perubahan visibilitas tab
+const observer = new MutationObserver(handleTabVisibilityChange);
+tabs.forEach((tab) => {
+    observer.observe(tab, {
+        attributes: true,
+        attributeFilter: ["style", "class"],
     });
 });
 
