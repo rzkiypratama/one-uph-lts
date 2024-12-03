@@ -81,7 +81,7 @@ backButton.addEventListener("click", function () {
         updateButtons();
     } else {
         // Redirect jika di tab pertama
-        window.location.href = "/dashboard/personalinformations";
+        window.location.href = "/tuition-fee/tuitionpayment";
     }
 });
 
