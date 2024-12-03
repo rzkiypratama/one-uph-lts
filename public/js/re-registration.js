@@ -45,7 +45,6 @@ let currentTabIndex = 0;
 
 const backButton = document.getElementById("backButton");
 const nextButton = document.querySelector(".danger-button");
-const statusSelect = document.getElementById("statusSelect"); // Dropdown untuk memilih status (deceased/alive)
 
 // Fungsi untuk mendapatkan daftar tab yang terlihat
 function getVisibleTabs() {
@@ -58,14 +57,14 @@ function getVisibleTabs() {
 function updateButtons() {
     const visibleTabs = getVisibleTabs();
 
-    // Jika di tab pertama, tombol Back membawa ke halaman sebelumnya
+    // Tombol Back
     if (currentTabIndex === 0) {
         backButton.innerText = "Back";
     } else {
-        backButton.innerText = "Back";
+        backButton.innerText = "Previous";
     }
 
-    // Jika di tab terakhir, tombol Next menjadi Submit
+    // Tombol Next
     if (currentTabIndex === visibleTabs.length - 1) {
         nextButton.innerText = "Save Data & Continue";
     } else {
@@ -78,32 +77,31 @@ backButton.addEventListener("click", function () {
     const visibleTabs = getVisibleTabs();
 
     if (currentTabIndex > 0) {
-        currentTabIndex--;
+        currentTabIndex--; // Kurangi indeks tab saat ini
         const previousTab = new bootstrap.Tab(
             document.getElementById(visibleTabs[currentTabIndex])
         );
         previousTab.show();
         updateButtons();
     } else {
+        // Arahkan ke halaman sebelumnya jika di tab pertama
         window.location.href = "/tuition-fee/tuitionpayment";
     }
 });
 
 // Event listener untuk tombol Next (Continue/Submit)
-document.getElementById("myForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
+nextButton.addEventListener("click", function () {
     const visibleTabs = getVisibleTabs();
 
     if (currentTabIndex < visibleTabs.length - 1) {
-        currentTabIndex++;
+        currentTabIndex++; // Tambahkan indeks tab saat ini
         const nextTab = new bootstrap.Tab(
             document.getElementById(visibleTabs[currentTabIndex])
         );
         nextTab.show();
         updateButtons();
     } else {
-        // Arahkan ke halaman selanjutnya setelah form disubmit
+        // Arahkan ke halaman selanjutnya jika di tab terakhir
         window.location.href = "/tuition-fee/administration-documents";
     }
 });
@@ -115,26 +113,11 @@ tabs.forEach((tab, index) => {
         const visibleIndex = visibleTabs.indexOf(tab.id);
 
         if (visibleIndex !== -1) {
-            currentTabIndex = visibleIndex;
+            currentTabIndex = visibleIndex; // Perbarui indeks tab saat ini
             updateButtons();
         }
     });
 });
 
-// Event listener untuk dropdown (status select)
-statusSelect.addEventListener("change", function () {
-    const status = statusSelect.value; // Ambil nilai "deceased" atau "alive"
-    const hiddenTab = document.getElementById("tabToShow"); // Tab yang akan disembunyikan/diperlihatkan
-
-    if (status === "deceased") {
-        hiddenTab.hidden = false; // Tampilkan tab jika "deceased"
-    } else {
-        hiddenTab.hidden = true; // Sembunyikan tab jika "alive"
-    }
-
-    currentTabIndex = Math.min(currentTabIndex, getVisibleTabs().length - 1); // Pastikan index tidak melebihi jumlah tab terlihat
-    updateButtons();
-});
-
-// Initial button state
+// Inisialisasi awal
 updateButtons();
