@@ -12,7 +12,7 @@
 			<h3 class="dashboard-username">Kevin Saputra Siahaan</h3>
 			<span class="d-flex justify-content-between align-items-center">
 				<p class="text-uppercase dashboard-id">ID #123456</p>
-				<button type="button" class="btn btn-outline-primary dashboard-edit">edit profile</button>
+				<button type="button" class="btn btn-outline-primary dashboard-edit d-flex align-items-center gap-2 px-4"><img src="/assets/download-icon.png" alt="download-icon" /> Offering Letter</button>
 			</span>
 		</div>
 		<!-- mobile layout -->
