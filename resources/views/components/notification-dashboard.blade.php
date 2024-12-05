@@ -2,7 +2,7 @@
 		<div class="d-flex gap-3">
 		<img src="/assets/uph-logo.png" alt="logo" class="uphlogo" />
 		<span class="logout-button d-flex align-items-center gap-2">
-		<p class="d-md-block d-none m-0" onclick="window.location.href = '/tuition-fee'">dashboard</p>
+		<p class="m-0" onclick="window.location.href = '/tuition-fee'">dashboard</p>
 		</span>
 		</div>
 		<div class="d-flex align-items-center gap-3">
