@@ -137,7 +137,7 @@
 					</span>
 
 					<span class="text-white" onclick="window.location.href = '/dashboard/intakeyear'">
-						<p class="mobile-title">Step 6 of 6</p>
+						<p class="mobile-title">Step 7 of 7</p>
 						<p class="mobile-subtitle">Required Documents</p>
 					</span>
 				</div>
@@ -171,6 +171,30 @@
 								</div>
 							</button>
 						</li>
+						<!-- Tab 3 -->
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="true">
+								<div class="d-flex">
+									<img src="/assets/entry-icon.png" alt="icon1" class="tab-icon" />
+									<span class="d-flex flex-column text-start">
+										<p class="tabs-title text-capitalize m-0">Scholarship Documents</p>
+										<p class="tabs-subtitle m-0">program required documents</p>
+									</span>
+								</div>
+							</button>
+						</li>
+						<!-- Tab 4 -->
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="tab4-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="true">
+								<div class="d-flex">
+									<img src="/assets/entry-icon.png" alt="icon1" class="tab-icon" />
+									<span class="d-flex flex-column text-start">
+										<p class="tabs-title text-capitalize m-0">Student Group Documents</p>
+										<p class="tabs-subtitle m-0">program required documents</p>
+									</span>
+								</div>
+							</button>
+						</li>
 					</ul>
 				</div>
 
@@ -187,87 +211,159 @@
 									</p>
 
 									<div class="file-input-row">
-										<label for="familyGeneralDoc" class="tabs-title docs-title">Copy of Family Registration Card (KK) *</label>
-										<div id="fileUploadContainerGeneralDoc" class="file-input px-2">
-											<span id="fileNameGeneralDoc" class="forgot-password">Upload File</span>
-											<img id="fileIconGeneralDoc" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="trashIconGeneralDoc" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="familyGeneralDoc" id="familyGeneralDoc" style="display: none" />
+										<label for="familyGeneralDoc" class="tabs-title docs-title">Document:</label>
+										<input type="file" class="custom-file-input" id="familyGeneralDoc">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
 										<span class="d-flex gap-2">
-											<p id="familyGeneralDocStatus" class="file-status">Uploaded</p>
-											<p id="familyGeneralDocStatusReview" class="file-status-valid">Validated</p>
+											<p id="familyGeneralDocStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 
 									<div class="file-input-row">
-										<label for="nisnNumber" class="tabs-title docs-title">A document showing your NISN Number *</label>
-										<div id="nisnNumberContainer" class="file-input px-2">
-											<span id="nisnNumberName">Upload File</span>
-											<img id="nisnNumberIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="nisnNumberTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="nisnNumber" id="nisnNumber" style="display: none" />
+										<label for="nisnNumber" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input" id="nisnNumber">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
 										<span class="d-flex gap-2">
-											<p id="nisnNumberStatus" class="file-status">Uploaded</p>
-											<p id="nisnNumberStatusReview" class="file-status-review">On Review</p>
+											<p id="nisnNumberStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											<p class="reference-doc">reference documents</p>
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterFirst" class="tabs-title docs-title">Senior Academic Record Grade 10 Semester 1</label>
-										<div id="recordSemesterFirstContainer" class="file-input px-2">
-											<span id="recordSemesterFirstName">Upload File</span>
-											<img id="recordSemesterFirstIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="recordSemesterFirstTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="recordSemesterFirst" id="recordSemesterFirst" style="display: none" />
+										<label for="recordSemesterFirst" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input" id="recordSemesterFirst">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
 										<span class="d-flex gap-2">
-											<p id="recordSemesterFirstStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
+											<p id="recordSemesterFirstStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterSecond" class="tabs-title docs-title">Senior Academic Record Grade 10 Semester 2</label>
-										<div id="recordSemesterSecondContainer" class="file-input px-2">
-											<span id="recordSemesterSecondName">Upload File</span>
-											<img id="recordSemesterSecondIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="recordSemesterSecondTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="recordSemesterSecond" id="recordSemesterSecond" style="display: none" />
+										<label for="recordSemesterSecond" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
 										<span class="d-flex gap-2">
-											<p id="recordSemesterSecondStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
+											<p id="recordSemesterSecondStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterThird" class="tabs-title docs-title">Senior Academic Record Grade 11 Semester 1</label>
-										<div id="recordSemesterThirdContainer" class="file-input px-2">
-											<span id="recordSemesterThirdName">Upload File</span>
-											<img id="recordSemesterThirdIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="recordSemesterThirdTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="recordSemesterThird" id="recordSemesterThird" style="display: none" />
+										<label for="recordSemesterThird" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
 										<span class="d-flex gap-2">
-											<p id="recordSemesterThirdStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
+											<p id="recordSemesterThirdStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p id="recordSemesterThirdStatus" class="file-status-review">On Review</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 
 									<div class="file-input-row">
-										<label for="recordSemesterForth" class="tabs-title docs-title">Senior Academic Record Grade 11 Semester 2</label>
-										<div id="recordSemesterForthContainer" class="file-input px-2">
-											<span id="recordSemesterForthName">Upload File</span>
-											<img id="recordSemesterForthIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="recordSemesterForthTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="recordSemesterForth" id="recordSemesterForth" style="display: none" />
+										<label for="recordSemesterForth" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
 										<span class="d-flex gap-2">
-											<p id="recordSemesterForthStatus" class="file-status">Uploaded</p>
-											<p class="file-status-invalid">Invalid</p>
+											<p id="recordSemesterForthStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 								</div>
 							</div>
@@ -281,107 +377,523 @@
 									</p>
 
 									<div class="file-input-row">
-										<label for="statementLetter" class="tabs-title docs-title">Statement Letter for Student with Special Needs (if needed)</label>
-										<div id="statementLetterContainer" class="file-input px-2">
-											<span id="statementLetterName" class="forgot-password">Upload File</span>
-											<img id="statementLetterIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="statementLetterTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="statementLetter" id="statementLetter" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="statementLetterStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="handDrawing" class="tabs-title docs-title">4 (Four) Hand Drawings</label>
-										<div id="fileUploadContainer" class="file-input px-2">
-											<span id="fileName" class="forgot-password">Upload File</span>
-											<img id="fileIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="trashIcon" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="handDrawing" id="handDrawing" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="handDrawingStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="essayForm" class="tabs-title docs-title">One Page Essay refer to School of Design Application Form</label>
-										<div id="essayFormContainer" class="file-input px-2">
-											<span id="essayFormName" class="forgot-password">Upload File</span>
-											<img id="essayFormIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="essayFormTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="essayForm" id="essayForm" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="essayFormStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="signedLetter" class="tabs-title docs-title">Statement letter signed by applicants and parent, refer to SOD Applications Form</label>
-										<div id="signedLetterContainer" class="file-input px-2">
-											<span id="signedLetterName" class="forgot-password">Upload File</span>
-											<img id="signedLetterIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="signedLetterTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="signedLetter" id="signedLetter" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="signedLetterStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="blindTest" class="tabs-title docs-title">Color Blindness Test Certificate by Ophthalmologist or Oculist</label>
-										<div id="blindTestContainer" class="file-input px-2">
-											<span id="blindTestName" class="forgot-password">Upload File</span>
-											<img id="blindTestIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="blindTestTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="blindTest" id="blindTest" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="blindTestStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
-										</span>
-									</div>
-
-									<div class="file-input-row">
-										<label for="artsCrafts" class="tabs-title docs-title">Arts & Crafts Portfolio</label>
-										{{-- <div id="artsCraftsContainer" class="file-input px-2">
-										<span id="artsCraftsName">Upload File</span>
-											<img id="artsCraftsIcon" src="/assets/file-icon.png" alt="file icon" class="file-icon" />
-											<img id="artsCraftsTrash" src="/assets/trash-icon.png" alt="delete" class="trash-icon" />
-										</div>
-										<input type="file" name="artsCrafts" id="artsCrafts" style="display: none" />
-										<span class="d-flex gap-2">
-											<p id="artsCraftsStatus" class="file-status">Uploaded</p>
-											<p class="file-status-review">On Review</p>
+										<label for="statementLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
 										</span> --}}
 
-										{{-- rejected file notes --}}
-										<span class="d-flex align-items-center gap-2">
+										<span class="d-flex gap-2">
+											<p id="statementLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
 											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
 											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="handDrawing" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="handDrawingStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
 										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="essayForm" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="essayFormStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="signedLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="signedLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="blindTest" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="blindTestStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="artsCrafts" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="artsCraftsStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+								</div>
+							</div>
+
+							<!-- Tab Content 3 -->
+							<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+								<div>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
+
+									<div class="file-input-row">
+										<label for="statementLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="statementLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="handDrawing" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="handDrawingStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="essayForm" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="essayFormStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="signedLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="signedLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="blindTest" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="blindTestStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="artsCrafts" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="artsCraftsStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+								</div>
+							</div>
+
+							<!-- Tab Content 4 -->
+							<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+								<div>
+									<p class="file-validation mb-3 pt-1">
+										Upload your document, Allowed file type : <span class="file-validation-file">jpg,jpeg,png</span> and max file size is 10MB, <span class="file-validation-required">(*) Is Required
+											Field</span>
+									</p>
+
+									<div class="file-input-row">
+										<label for="statementLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="statementLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="handDrawing" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="handDrawingStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="essayForm" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="essayFormStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="signedLetter" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="signedLetterStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="blindTest" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="blindTestStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
+									</div>
+
+									<div class="file-input-row">
+										<label for="artsCrafts" class="tabs-title docs-title">Document: </label>
+										<input type="file" class="custom-file-input">
+										{{-- when document is valid --}}
+										{{-- <span class="doc-is-valid">
+											<p><i class="fa-solid fa-check" style="color: #ffffff; padding-right: 5px;"></i> Document is Valid</p>
+										</span> --}}
+										{{-- when document is not valid --}}
+										{{-- <span class="doc-is-not-valid">
+											<p><i class="fa-solid fa-x fa-lg" style="color: #ffffff; padding-right: 5px;"></i> Document is not Valid</p>
+										</span> --}}
+
+										<span class="d-flex gap-2">
+											<p id="artsCraftsStatus" class="file-status">Preview</p>
+											{{-- beri status sesuai kondisi file --}}
+											{{-- <p class="file-status-valid">Validated</p> --}}
+											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											{{-- <p class="file-status-review">On Review</p> --}}
+											{{-- <p class="reference-doc">reference documents</p> --}}
+										</span>
+										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+										{{-- <span class="d-flex align-items-center gap-2">
+											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+											<p class="file-validation">note: your image is blur. please retake the image.</p>
+										</span> --}}
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
-							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 px-md-5 mt-5" onclick="window.location.href = '/dashboard/reviewpayment'">
+							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5 px-4">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="button" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5" data-bs-target="#requiredDocumentModal" data-bs-toggle="modal">
-								Save & Continue
+							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
+								Continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
 								</svg>
@@ -405,52 +917,43 @@
 			</div>
 		</div>
 
+		<script type="text/javascript" src="{{ asset('js/required_doc.js') }}"></script>
+
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
-			function handleFileUpload(inputId, fileNameId, containerId, trashIconId, statusId, fileIconId) {
+			function handleFileUpload(inputId, statusId) {
 				const inputFile = document.getElementById(inputId);
-				const fileNameDisplay = document.getElementById(fileNameId);
-				const trashIcon = document.getElementById(trashIconId);
-				const fileIcon = document.getElementById(fileIconId);
-				const fileInputContainer = document.getElementById(containerId);
 				const statusDisplay = document.getElementById(statusId);
 
-				fileInputContainer.addEventListener("click", function() {
-					inputFile.click();
-				});
+				// Sembunyikan status di awal
+				statusDisplay.style.display = "none";
 
+				// Event listener untuk file input
 				inputFile.addEventListener("change", function() {
-					const file = this.files[0];
-					if (file) {
-						fileNameDisplay.textContent = file.name;
-						trashIcon.style.display = "block";
-						fileIcon.style.display = "none";
-						statusDisplay.style.display = "block";
-					}
-				});
+					if (this.files.length > 0) {
+						const file = this.files[0];
 
-				trashIcon.addEventListener("click", function(event) {
-					event.stopPropagation();
-					inputFile.value = "";
-					fileNameDisplay.textContent = "Upload File";
-					trashIcon.style.display = "none";
-					fileIcon.style.display = "block";
-					statusDisplay.style.display = "none";
+						// Buat URL sementara untuk file yang diunggah
+						const fileURL = URL.createObjectURL(file);
+
+						// Tampilkan status "Preview" sebagai tautan
+						statusDisplay.style.display = "block";
+						statusDisplay.innerHTML = `<a href="${fileURL}" target="_blank" class="file-link">Preview</a>`;
+					} else {
+						// Sembunyikan status jika tidak ada file yang dipilih
+						statusDisplay.style.display = "none";
+					}
 				});
 			}
 
-			handleFileUpload("familyGeneralDoc", "fileNameGeneralDoc", "fileUploadContainerGeneralDoc", "trashIconGeneralDoc", "familyGeneralDocStatus", "fileIconGeneralDoc");
-			handleFileUpload("nisnNumber", "nisnNumberName", "nisnNumberContainer", "nisnNumberTrash", "nisnNumberStatus", "nisnNumberIcon");
-			handleFileUpload("recordSemesterFirst", "recordSemesterFirstName", "recordSemesterFirstContainer", "recordSemesterFirstTrash", "recordSemesterFirstStatus", "recordSemesterFirstIcon");
-			handleFileUpload("recordSemesterSecond", "recordSemesterSecondName", "recordSemesterSecondContainer", "recordSemesterSecondTrash", "recordSemesterSecondStatus", "recordSemesterSecondIcon");
-			handleFileUpload("recordSemesterThird", "recordSemesterThirdName", "recordSemesterThirdContainer", "recordSemesterThirdTrash", "recordSemesterThirdStatus", "recordSemesterThirdIcon");
-			handleFileUpload("recordSemesterForth", "recordSemesterForthName", "recordSemesterForthContainer", "recordSemesterForthTrash", "recordSemesterForthStatus", "recordSemesterForthIcon");
-			handleFileUpload("handDrawing", "fileName", "fileUploadContainer", "trashIcon", "handDrawingStatus", "fileIcon");
-			handleFileUpload("artsCrafts", "artsCraftsName", "artsCraftsContainer", "artsCraftsTrash", "artsCraftsStatus", "artsCraftsIcon");
-			handleFileUpload("statementLetter", "statementLetterName", "statementLetterContainer", "statementLetterTrash", "statementLetterStatus", "statementLetterIcon");
-			handleFileUpload("essayForm", "essayFormName", "essayFormContainer", "essayFormTrash", "essayFormStatus", "essayFormIcon");
-			handleFileUpload("signedLetter", "signedLetterName", "signedLetterContainer", "signedLetterTrash", "signedLetterStatus", "signedLetterIcon");
-			handleFileUpload("blindTest", "blindTestName", "blindTestContainer", "blindTestTrash", "blindTestStatus", "blindTestIcon");
+
+			// Panggil fungsi untuk setiap elemen input file
+			handleFileUpload("familyGeneralDoc", "familyGeneralDocStatus");
+			handleFileUpload("nisnNumber", "nisnNumberStatus");
+			handleFileUpload("recordSemesterFirst", "recordSemesterFirstStatus");
+			handleFileUpload("recordSemesterSecond", "recordSemesterSecondStatus");
+			handleFileUpload("recordSemesterThird", "recordSemesterThirdStatus");
+			handleFileUpload("recordSemesterForth", "recordSemesterForthStatus");
 		</script>
 	</body>
 
