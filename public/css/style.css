@@ -960,7 +960,7 @@ option.select-placeholder {
 }
 
 .phone-input-group select {
-    max-width: 100px;
+    max-width: 130px;
     border-radius: 0;
     margin-right: 5px;
 }
