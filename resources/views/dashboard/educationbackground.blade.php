@@ -184,6 +184,15 @@
 											<label for="schoolName" class="form-label">High School</label>
 											<input type="text" class="form-control" id="schoolName" placeholder="Your high school name" required />
 										</div>
+										{{-- high school stream --}}
+										<div class="col-md-4 mb-3">
+											<label class="form-label">High School Stream</label>
+											<select class="form-select">
+												<option value="option1">Social</option>
+												<option value="option2">Science</option>
+												<option value="option3">Others</option>
+											</select>
+										</div>
 										<!-- School City -->
 										<div class="col-md-4 mb-md-3">
 											<label for="schoolCity" class="form-label">City</label>
