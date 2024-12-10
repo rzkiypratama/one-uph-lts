@@ -450,7 +450,7 @@
 														<label for="" class="form-label">Home Address</label>
 														<input type="text" class="form-control" id="" placeholder="Enter address" />
 														<div class="row my-4">
-															<div class="col-md-4 dropdown mb-3">
+															{{-- <div class="col-md-4 dropdown mb-3">
 																<label for="" class="form-label">Country</label>
 																<input type="text" class="dropdownInput form-select" id="" placeholder="Select your country" autocomplete="off" readonly>
 																<div class="dropdownList">
@@ -463,7 +463,7 @@
 																		<li>others</li>
 																	</ul>
 																</div>
-															</div>
+															</div> --}}
 															<div class="col-md-4 dropdown">
 																<label for="" class="form-label">Province or State</label>
 																<input type="text" class="dropdownInput form-select" id="" placeholder="Select province or state" autocomplete="off" readonly>
@@ -490,13 +490,13 @@
 																	</ul>
 																</div>
 															</div>
-														</div>
-														<div class="row">
-															<div class="col-md-3">
+															<div class="col-md-4">
 																<label for="" class="form-label">Distric</label>
 																<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
 															</div>
-															<div class="col-md-2">
+														</div>
+														<div class="row">
+															<div class="col-md-4">
 																<label for="" class="form-label">Village</label>
 																<input type="text" class="form-control" id="" placeholder="Enter Village" />
 															</div>
@@ -508,7 +508,7 @@
 																<label for="" class="form-label">RW</label>
 																<input type="text" class="form-control" id="" placeholder="Enter RW" />
 															</div>
-															<div class="col-md-3">
+															<div class="col-md-4">
 																<label for="" class="form-label">Postal Code</label>
 																<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 															</div>
@@ -587,7 +587,7 @@
 													<label for="" class="form-label">Home Address</label>
 													<input type="text" class="form-control" id="" placeholder="Enter address" />
 													<div class="row my-4">
-														<div class="col-md-4 dropdown mb-3">
+														{{-- <div class="col-md-4 dropdown mb-3">
 															<label for="" class="form-label">Country</label>
 															<input type="text" class="dropdownInput form-select" id="" placeholder="Select your country" autocomplete="off" readonly>
 															<div class="dropdownList">
@@ -600,7 +600,7 @@
 																	<li>others</li>
 																</ul>
 															</div>
-														</div>
+														</div> --}}
 														<div class="col-md-4 dropdown">
 															<label for="" class="form-label">Province or State</label>
 															<input type="text" class="dropdownInput form-select" id="" placeholder="Select province or state" autocomplete="off" readonly>
@@ -627,13 +627,13 @@
 																</ul>
 															</div>
 														</div>
-													</div>
-													<div class="row">
-														<div class="col-md-3">
+														<div class="col-md-4">
 															<label for="" class="form-label">Distric</label>
 															<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
 														</div>
-														<div class="col-md-2">
+													</div>
+													<div class="row">
+														<div class="col-md-4">
 															<label for="" class="form-label">Village</label>
 															<input type="text" class="form-control" id="" placeholder="Enter Village" />
 														</div>
@@ -645,7 +645,7 @@
 															<label for="" class="form-label">RW</label>
 															<input type="text" class="form-control" id="" placeholder="Enter RW" />
 														</div>
-														<div class="col-md-3">
+														<div class="col-md-4">
 															<label for="" class="form-label">Postal Code</label>
 															<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
 														</div>
@@ -667,8 +667,8 @@
 									</div>
 									<!-- Middle Name -->
 									<div class="col-md-4 mb-3">
-										<label for="middleName" class="form-label">Middle Name</label>
-										<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
+										<label for="lastNameGuardian" class="form-label">Last Name</label>
+										<input type="text" class="form-control" placeholder="Middle Name" />
 									</div>
 									<!-- Family Relationship-->
 									<div class="col-md-4 mb-3">

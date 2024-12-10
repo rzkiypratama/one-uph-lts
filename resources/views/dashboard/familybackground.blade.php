@@ -464,98 +464,39 @@
 							<!-- Tab Content 2 -->
 							<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
 								<div class="row mb-md-4">
-									<!-- First Name -->
-									<div class="col-md-4 mb-3">
-										<label for="familyFirstName" class="form-label">First Name</label>
-										<input type="text" class="form-control" id="famiyFirstName" placeholder="First Name" />
-									</div>
-									<!-- Middle Name -->
-									<div class="col-md-4 mb-3">
-										<label for="middleName" class="form-label">Middle Name</label>
-										<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
-									</div>
-									<!-- Family Relationship-->
-									<div class="col-md-4 mb-3">
-										<label for="familyRelationship" class="form-label">Family Relationship</label>
-										<input type="text" class="form-control" id="familyRelationship" placeholder="Family Relationship" />
-									</div>
-
-									<div class="col-md-3 mb-3">
-										<label class="form-label">Mobile Phone Number</label>
-										<div class="input-group phone-input-group">
-											<!-- Select for country code -->
-											<select class="form-select" id="countryCode">
-												<option value="+62">+62</option>
-												<option value="+1">+1</option>
-												<option value="+44">+44</option>
-												<option value="+91">+91</option>
-												<!-- Add more country codes as needed -->
-											</select>
-											<!-- Input for whatsapp number -->
-											<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
+									<div class="row">
+										<!-- First Name -->
+										<div class="col-md-4 mb-3">
+											<label for="familyFirstName" class="form-label">First Name</label>
+											<input type="text" class="form-control" id="famiyFirstName" placeholder="First Name" />
+										</div>
+										<!-- Middle Name -->
+										<div class="col-md-4 mb-3">
+											<label for="middleName" class="form-label">Last Name</label>
+											<input type="text" class="form-control" id="middleName" placeholder="Middle Name" />
 										</div>
 									</div>
-									<div class="col-md-3 mb-3">
-										<label for="parentEmail" class="form-label">Email Address</label>
-										<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
-									</div>
-									<div class="col-md-2 mb-3">
-										<label class="form-label">Religion</label>
-										<select class="form-select">
-											<option value="Option 1">Option 1</option>
-											<option value="Option 2">Option 2</option>
-										</select>
-									</div>
-									<div class="col-md-2">
-										<label class="form-label">Occupation</label>
-										<input type="email" class="form-control" placeholder="Enter your Occupation" />
-									</div>
-									{{-- <div class="col-md-2 mb-3">
-										<label class="form-label">Last Education</label>
-										<select class="form-select">
-											<option value="Option 1">Option 1</option>
-											<option value="Option 2">Option 2</option>
-										</select>
-									</div> --}}
-									<div class="mb-3">
-										<div class="row">
-											<div class="col-md-6 mb-3">
-												<label for="" class="form-label">Home Address</label>
-												<textarea class="form-control" id="" rows="1"></textarea>
-											</div>
-											<div class="col-md-2">
-												<label for="" class="form-label">Province or State</label>
-												<input type="text" class="form-control" id="" placeholder="Enter Province or State" />
-											</div>
-											<div class="col-md-2">
-												<label for="" class="form-label">City</label>
-												<input type="text" class="form-control" id="" placeholder="Enter City" />
-											</div>
-											<div class="col-md-2">
-												<label for="" class="form-label">Distric</label>
-												<input type="text" class="form-control" id="" placeholder="Enter Disctric" />
+
+									<div class="row">
+										<div class="col-md-4 mb-3">
+											<label class="form-label">Mobile Phone Number</label>
+											<div class="input-group phone-input-group">
+												<!-- Select for country code -->
+												<select class="form-select" id="countryCode">
+													<option value="+62">+62</option>
+													<option value="+1">+1</option>
+													<option value="+44">+44</option>
+													<option value="+91">+91</option>
+													<!-- Add more country codes as needed -->
+												</select>
+												<!-- Input for whatsapp number -->
+												<input type="tel" class="form-control" id="motherMobileNumber" placeholder="Phone Number" />
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-md-2">
-												<label for="" class="form-label">Village</label>
-												<input type="text" class="form-control" id="" placeholder="Enter Village" />
-											</div>
-											<div class="col-md-1">
-												<label for="" class="form-label">RT</label>
-												<input type="text" class="form-control" id="" placeholder="Enter RT" />
-											</div>
-											<div class="col-md-1">
-												<label for="" class="form-label">RW</label>
-												<input type="text" class="form-control" id="" placeholder="Enter RW" />
-											</div>
-											<div class="col-md-2">
-												<label for="" class="form-label">Postal Code</label>
-												<input type="text" class="form-control" id="" placeholder="Enter Postal Code" />
-											</div>
+										<div class="col-md-4 mb-3">
+											<label for="parentEmail" class="form-label">Email Address</label>
+											<input type="email" class="form-control" id="parentEmail" placeholder="Enter your email address" />
 										</div>
-
-
 									</div>
 								</div>
 
