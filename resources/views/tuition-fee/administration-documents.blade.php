@@ -639,55 +639,39 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script>
-			function handleFileUpload(inputId, fileNameId, containerId, trashIconId, statusId, fileIconId) {
+			function handleFileUpload(inputId, statusId) {
 				const inputFile = document.getElementById(inputId);
-				const fileNameDisplay = document.getElementById(fileNameId);
-				const trashIcon = document.getElementById(trashIconId);
-				const fileIcon = document.getElementById(fileIconId);
-				const fileInputContainer = document.getElementById(containerId);
 				const statusDisplay = document.getElementById(statusId);
 
-				fileInputContainer.addEventListener("click", function() {
-					inputFile.click();
-				});
+				// Sembunyikan status di awal
+				statusDisplay.style.display = "none";
 
+				// Event listener untuk file input
 				inputFile.addEventListener("change", function() {
-					const file = this.files[0];
-					if (file) {
-						fileNameDisplay.textContent = file.name;
-						trashIcon.style.display = "block";
-						fileIcon.style.display = "none";
-						statusDisplay.style.display = "block";
-					}
-				});
+					if (this.files.length > 0) {
+						const file = this.files[0];
 
-				trashIcon.addEventListener("click", function(event) {
-					event.stopPropagation();
-					inputFile.value = "";
-					fileNameDisplay.textContent = "Upload File";
-					trashIcon.style.display = "none";
-					fileIcon.style.display = "block";
-					statusDisplay.style.display = "none";
+						// Buat URL sementara untuk file yang diunggah
+						const fileURL = URL.createObjectURL(file);
+
+						// Tampilkan status "Preview" sebagai tautan
+						statusDisplay.style.display = "block";
+						statusDisplay.innerHTML = `<a href="${fileURL}" target="_blank" class="file-link">Preview</a>`;
+					} else {
+						// Sembunyikan status jika tidak ada file yang dipilih
+						statusDisplay.style.display = "none";
+					}
 				});
 			}
 
-			handleFileUpload("familyGeneralDoc", "fileNameGeneralDoc", "fileUploadContainerGeneralDoc", "trashIconGeneralDoc", "familyGeneralDocStatus", "fileIconGeneralDoc");
-			handleFileUpload("nisnNumber", "nisnNumberName", "nisnNumberContainer", "nisnNumberTrash", "nisnNumberStatus", "nisnNumberIcon");
-			handleFileUpload("recordSemesterFirst", "recordSemesterFirstName", "recordSemesterFirstContainer", "recordSemesterFirstTrash", "recordSemesterFirstStatus", "recordSemesterFirstIcon");
-			handleFileUpload("recordSemesterSecond", "recordSemesterSecondName", "recordSemesterSecondContainer", "recordSemesterSecondTrash", "recordSemesterSecondStatus", "recordSemesterSecondIcon");
-			handleFileUpload("recordSemesterThird", "recordSemesterThirdName", "recordSemesterThirdContainer", "recordSemesterThirdTrash", "recordSemesterThirdStatus", "recordSemesterThirdIcon");
-			handleFileUpload("recordSemesterForth", "recordSemesterForthName", "recordSemesterForthContainer", "recordSemesterForthTrash", "recordSemesterForthStatus", "recordSemesterForthIcon");
-			handleFileUpload("handDrawing", "fileName", "fileUploadContainer", "trashIcon", "handDrawingStatus", "fileIcon");
-			handleFileUpload("artsCrafts", "artsCraftsName", "artsCraftsContainer", "artsCraftsTrash", "artsCraftsStatus", "artsCraftsIcon");
-			handleFileUpload("statementLetter", "statementLetterName", "statementLetterContainer", "statementLetterTrash", "statementLetterStatus", "statementLetterIcon");
-			handleFileUpload("essayForm", "essayFormName", "essayFormContainer", "essayFormTrash", "essayFormStatus", "essayFormIcon");
-			handleFileUpload("signedLetter", "signedLetterName", "signedLetterContainer", "signedLetterTrash", "signedLetterStatus", "signedLetterIcon");
-			handleFileUpload("blindTest", "blindTestName", "blindTestContainer", "blindTestTrash", "blindTestStatus", "blindTestIcon");
-			handleFileUpload("formTataTertib", "formTataTertibName", "formTataTertibContainer", "formTataTertibTrash", "formTataTertibStatus", "formTataTertibIcon");
-			handleFileUpload("akteKelahiran", "akteKelahiranName", "akteKelahiranContainer", "akteKelahiranTrash", "akteKelahiranStatus", "akteKelahiranIcon");
-			handleFileUpload("ijazah", "ijazahName", "ijazahContainer", "ijazahTrash", "ijazahStatus", "ijazahIcon");
-			handleFileUpload("ktp", "ktpName", "ktpContainer", "ktpTrash", "ktpStatus", "ktpIcon");
-			handleFileUpload("photograph", "photographName", "photographContainer", "photographTrash", "photographStatus", "photographIcon");
+
+			// Panggil fungsi untuk setiap elemen input file
+			handleFileUpload("familyGeneralDoc", "familyGeneralDocStatus");
+			handleFileUpload("nisnNumber", "nisnNumberStatus");
+			handleFileUpload("recordSemesterFirst", "recordSemesterFirstStatus");
+			handleFileUpload("recordSemesterSecond", "recordSemesterSecondStatus");
+			handleFileUpload("recordSemesterThird", "recordSemesterThirdStatus");
+			handleFileUpload("recordSemesterForth", "recordSemesterForthStatus");
 		</script>
 
 		<script>
