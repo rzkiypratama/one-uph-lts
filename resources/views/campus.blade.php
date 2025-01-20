@@ -230,17 +230,17 @@
 							<!-- Replace with your image path -->
 							<div>
 								<p class="fs-4 review-modal-title">Select Intake Year</p>
-								<p class="review-modal-subtitle d-flex flex-column align-items-center pt-2">Which Intake Year would you like to enroll?</p>
+								<p class="review-modal-subtitle d-flex flex-column align-items-center intake-year pt-2">Which Intake Year would you like to enroll?</p>
 							</div>
 
-							<div class="px-4 py-3">
+							<div class="intake-year-option">
 								<select class="form-select">
 									<option value="Option 1">Option 1</option>
 									<option value="Option 2">Option 2</option>
 								</select>
 							</div>
 
-							<div class="d-flex justify-content-center mt-2 gap-3">
+							<div class="d-flex justify-content-center intake-year-button mt-2 gap-3">
 								<button type="button" class="btn btn-danger rounded-0 w-75">Continue</button>
 							</div>
 

@@ -1647,7 +1647,19 @@ input[type="text"].search-input {
 
 /* intake year option on register */
 .modal-body-review-intakeyear {
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 2rem 0rem;
+}
+
+.intake-year {
+    padding: 0rem 0rem;
+}
+
+.intake-year-option {
+    padding: 0.8rem 2rem;
+}
+
+.intake-year-button {
+    padding: 0rem 1rem;
 }
 
 @media (min-width: 768px) {
@@ -2626,7 +2638,19 @@ input[type="text"].search-input {
     }
 
     .modal-body-review-intakeyear {
-        padding: 2rem;
+        padding: 2rem 5rem 2rem 5rem;
+    }
+
+    .intake-year {
+        padding: 0rem 5rem;
+    }
+
+    .intake-year-option {
+        padding: 0.8rem 2rem;
+    }
+
+    .intake-year-button {
+        padding: 0rem 2rem;
     }
 }
 
