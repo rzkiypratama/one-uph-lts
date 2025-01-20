@@ -36,7 +36,7 @@
 					</div>
 
 					<div class="campus-grid card-box fade-in-right">
-						<a href="/fieldstudy">
+						<a data-bs-toggle="modal" data-bs-target="#intakeYearOption">
 							<div class="card-campus col border-0" style="background-image: url('/assets/lippocampus.jpeg');">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
@@ -49,7 +49,7 @@
 							</div>
 						</a>
 
-						<a href="/fieldstudy">
+						<a data-bs-toggle="modal" data-bs-target="#intakeYearOption">
 							<div class="card-campus col border-0" style="background-image: url('/assets/surabayacampus.jpeg');">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(60deg, #bcd1ff, #f1f1f122)" \></div>
@@ -220,6 +220,35 @@
 				</span>
 			</div>
 			<!-- desktop view ends -->
+
+			{{-- modal intake year start --}}
+			<div class="modal fade" id="intakeYearOption" tabindex="-1" aria-labelledby="intakeYearOptionLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content text-center">
+						<div class="modal-body modal-body-review-intakeyear">
+							<img src="/assets/dates.png" class="img-fluid mb-3" alt="Success Image" />
+							<!-- Replace with your image path -->
+							<div>
+								<p class="fs-4 review-modal-title">Select Intake Year</p>
+								<p class="review-modal-subtitle d-flex flex-column align-items-center pt-2">Which Intake Year would you like to enroll?</p>
+							</div>
+
+							<div class="px-4 py-3">
+								<select class="form-select">
+									<option value="Option 1">Option 1</option>
+									<option value="Option 2">Option 2</option>
+								</select>
+							</div>
+
+							<div class="d-flex justify-content-center mt-2 gap-3">
+								<button type="button" class="btn btn-danger rounded-0 w-75">Continue</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			{{-- modal intake year end --}}
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">

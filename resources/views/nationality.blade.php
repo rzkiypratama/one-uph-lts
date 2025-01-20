@@ -46,6 +46,7 @@
 							</div>
 						</a>
 					</div>
+					
 				</div>
 
 				<span id="backToSignIn" class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button">

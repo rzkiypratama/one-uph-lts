@@ -135,11 +135,12 @@ h5 {
 }
 
 .history-main-container {
-    border-radius: 25px 25px 0px 0px !important;
+    /* border-radius: 25px 25px 0px 0px !important; */
     background-color: #eff4ff !important;
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     height: 80vh;
+    overflow-y: scroll;
 }
 
 .icon-form {
@@ -1561,6 +1562,7 @@ input[type="text"].search-input {
     justify-content: center;
     padding: 8px 8px 0px 8px;
     height: 32px;
+    cursor: pointer;
 }
 
 #scrollDownButton {
@@ -1573,7 +1575,7 @@ input[type="text"].search-input {
 .custom-file-input {
     color: transparent;
     font-size: 12px;
-    width: 135px;
+    width: 100%;
 }
 .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
@@ -1592,6 +1594,8 @@ input[type="text"].search-input {
     font-weight: 400;
     border-radius: 8px;
     border: 1px dashed #ddd;
+    width: 100%;
+    text-align: center;
 }
 
 .custom-file-input:active::before {
@@ -1634,6 +1638,16 @@ input[type="text"].search-input {
     color: #ff5351;
     font-size: 12px;
     text-decoration: underline;
+}
+
+/* table container */
+.table-container {
+    width: 1222px;
+}
+
+/* intake year option on register */
+.modal-body-review-intakeyear {
+    padding: 2rem 5rem 2rem 5rem;
 }
 
 @media (min-width: 768px) {
@@ -2585,6 +2599,34 @@ input[type="text"].search-input {
     .history-container {
         height: 280px;
         overflow-x: hidden;
+    }
+
+    /*custom inpu file*/
+    .custom-file-input {
+        color: transparent;
+        font-size: 12px;
+        width: 135px;
+    }
+
+    .custom-file-input::before {
+        content: "Upload File";
+        color: #a3a3a3;
+        display: inline-block;
+        background: #fff;
+        padding: 2px 22px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        font-weight: 400;
+        border-radius: 8px;
+        border: 1px dashed #ddd;
+        width: 135px;
+        text-align: left;
+    }
+
+    .modal-body-review-intakeyear {
+        padding: 2rem;
     }
 }
 

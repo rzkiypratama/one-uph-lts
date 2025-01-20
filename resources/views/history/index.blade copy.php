@@ -10,7 +10,7 @@
 			<div class="d-flex justify-content-between">
 				<div class="w-100">
 					<!-- desktop layout -->
-					<div class="d-flex flex-column justify-content-between">
+					<div>
 						<div class="d-flex justify-content-between mb-4">
 							<div>
 								<h3 class="dashboard-history-title">Status History</h3>
@@ -25,191 +25,189 @@
 
 						</div>
 
-						<div class="table-container">
-							<div class="row text-uppercase table-header">
-								<span class="col-2">
-									<p class="dashboard-title m-0">form id</p>
-								</span>
+						<div class="row text-uppercase">
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">form id</p>
+							</span>
 
-								<span class="col-2">
-									<p class="dashboard-title m-0">program major</p>
-								</span>
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">program major</p>
+							</span>
 
-								<span class="col-2">
-									<p class="dashboard-title m-0">entry option</p>
-								</span>
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">entry option</p>
+							</span>
 
-								<span class="col-2">
-									<p class="dashboard-title m-0">status</p>
-								</span>
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">status</p>
+							</span>
 
-								<span class="col-2">
-									<p class="dashboard-title m-0">re-active</p>
-								</span>
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">re-active</p>
+							</span>
 
-								<span class="col-2">
-									<p class="dashboard-title m-0">note</p>
-								</span>
-							</div>
-
-							<hr class="full-width-hr-wrapper-form" />
-
-							<div class="history-container">
-								<div class="row">
-									<span class="col-2 mb-2">
-										<a href="/details">
-											<p class="text-capitalize dashboard-title m-0">#24411111113</p>
-										</a>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">music</p>
-										<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">regular</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Committed</p>
-
-									</span>
-
-									<span class="col-2 mb-2">
-										<div class="d-flex gap-2">
-											<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
-											<div class="dot-status-commited mt-1"></div>
-											<p class="text-capitalize dashboard-title m-0">active</p>
-										</div>
-										<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" data-bs-target="#confirmReactive" data-bs-toggle="modal">Deactive Form</button>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
-									</span>
-
-								</div>
-
-								<hr class="full-width-hr-underline d-none d-md-block" />
-
-								<div class="row">
-									<span class="col-2 mb-2">
-										<a href="/details">
-											<p class="text-capitalize dashboard-title m-0">#24411111113</p>
-										</a>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">music</p>
-										<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">regular</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Committed</p>
-
-									</span>
-
-									<span class="col-2 mb-2">
-										<div class="d-flex gap-2">
-											<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
-											<div class="dot-status-pending mt-1"></div>
-											<p class="text-capitalize dashboard-title m-0">inactive</p>
-										</div>
-										<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" data-bs-target="#userHasActiveForm" data-bs-toggle="modal">re-activate Form</button>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
-									</span>
-
-								</div>
-
-								<hr class="full-width-hr-underline d-none d-md-block" />
-
-								<div class="row">
-									<span class="col-2 mb-2">
-										<a href="/details">
-											<p class="text-capitalize dashboard-title m-0">#24411111113</p>
-										</a>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">music</p>
-										<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">regular</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Committed</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<div class="d-flex gap-2">
-											<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
-											<div class="dot-status-failed mt-1"></div>
-											<p class="text-capitalize dashboard-title m-0">discontinue</p>
-										</div>
-										<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>re-active Form</button>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">canceled by admin</p>
-									</span>
-
-								</div>
-
-								<hr class="full-width-hr-underline d-none d-md-block" />
-
-								<div class="row">
-									<span class="col-2 mb-2">
-										<a href="/details">
-											<p class="text-capitalize dashboard-title m-0">#24411111113</p>
-										</a>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">music</p>
-										<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">regular</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Committed</p>
-									</span>
-
-									<span class="col-2 mb-2">
-										<div class="d-flex gap-2">
-											<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
-											<div class="dot-status-commited mt-1"></div>
-											<p class="text-capitalize dashboard-title m-0">active</p>
-										</div>
-										<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>Deactive Form</button>
-									</span>
-
-									<span class="col-2 mb-2">
-										<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
-									</span>
-
-								</div>
-
-								<hr class="full-width-hr-underline d-none d-md-block" />
-							</div>
-
-							<hr class="full-width-hr-wrapper-form" />
+							<span class="col-md-2">
+								<p class="dashboard-title m-0">note</p>
+							</span>
 						</div>
+
+						<hr class="full-width-hr-wrapper-form d-none d-md-block" />
+
+						<div class="history-container">
+							<div class="row">
+								<span class="col-md-2 mb-2">
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">music</p>
+									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">regular</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Committed</p>
+
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<div class="d-flex gap-2">
+										<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
+										<div class="dot-status-commited mt-1"></div>
+										<p class="text-capitalize dashboard-title m-0">active</p>
+									</div>
+									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" data-bs-target="#confirmReactive" data-bs-toggle="modal">Deactive Form</button>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
+								</span>
+
+							</div>
+
+							<hr class="full-width-hr-underline d-none d-md-block" />
+
+							<div class="row">
+								<span class="col-md-2 mb-2">
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">music</p>
+									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
+
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">regular</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Committed</p>
+
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<div class="d-flex gap-2">
+										<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
+										<div class="dot-status-pending mt-1"></div>
+										<p class="text-capitalize dashboard-title m-0">inactive</p>
+									</div>
+									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" data-bs-target="#userHasActiveForm" data-bs-toggle="modal">re-activate Form</button>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
+								</span>
+
+							</div>
+
+							<hr class="full-width-hr-underline d-none d-md-block" />
+
+							<div class="row">
+								<span class="col-md-2 mb-2">
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">music</p>
+									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
+
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">regular</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Committed</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<div class="d-flex gap-2">
+										<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
+										<div class="dot-status-failed mt-1"></div>
+										<p class="text-capitalize dashboard-title m-0">discontinue</p>
+									</div>
+									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>re-active Form</button>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">canceled by admin</p>
+								</span>
+
+							</div>
+
+							<hr class="full-width-hr-underline d-none d-md-block" />
+
+							<div class="row">
+								<span class="col-md-2 mb-2">
+									<a href="/details">
+										<p class="text-capitalize dashboard-title m-0">#24411111113</p>
+									</a>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">music</p>
+									<p class="text-capitalize dashboard-subtitle m-0">Level: Sarjana (S1)</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">regular</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Committed</p>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<div class="d-flex gap-2">
+										<!-- change class to change dot color, re: dot-status-pending for pending status, dot-status-failed for discontinue status -->
+										<div class="dot-status-commited mt-1"></div>
+										<p class="text-capitalize dashboard-title m-0">active</p>
+									</div>
+									<button type="button" class="btn btn-link status-history-subtitle text-capitalize p-0" disabled>Deactive Form</button>
+								</span>
+
+								<span class="col-md-2 mb-2">
+									<p class="text-capitalize dashboard-title m-0">Pending Other...</p>
+								</span>
+
+							</div>
+
+							<hr class="full-width-hr-underline d-none d-md-block" />
+						</div>
+
+						<hr class="full-width-hr-wrapper-form d-none d-md-block" />
 
 						<div class="d-flex justify-content-between">
 							<button type="button" class="btn link back-review-btn" data-bs-dismiss="modal" onclick="window.location.href = '/tuition-fee'">

@@ -10,7 +10,7 @@
 
 		<div class="d-flex p-md-5 justify-content-md-center align-items-md-center homepage-container px-2 py-4">
 			<!-- desktop view start -->
-			<div class="card card-container card card-container d-flex justify-content-between p-md-5 p-3">
+			<div class="card card-container d-flex justify-content-between p-md-5 p-3">
 				<div class="d-md-flex justify-content-between box-item">
 					<div class="d-flex flex-column justify-content-between">
 						<div class="left-content">
