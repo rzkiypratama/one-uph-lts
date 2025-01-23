@@ -180,9 +180,19 @@
 								<div>
 									<div class="row col-md-12 mb-4">
 										<!-- School Name -->
-										<div class="col-md-4 mb-3">
-											<label for="schoolName" class="form-label">High School</label>
-											<input type="text" class="form-control" id="schoolName" placeholder="Your high school name" required />
+										<div class="col-md-4 dropdown mb-3">
+											<label for="selectHighSchool" class="form-label">High School</label>
+											<input type="text" class="dropdownInput form-select" id="selectHighSchool" placeholder="Select your high school" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
+											</div>
 										</div>
 										{{-- high school stream --}}
 										<div class="col-md-4 mb-3">
@@ -222,6 +232,70 @@
 										</div>
 									</div>
 								</div>
+
+								<div id="other_school" class="mt-3" style="display: none;">
+									<div class="row">
+										<!-- hidden until user choose others -->
+										<h3 class="row-title mb-3">Others High School</h3>
+
+										<!-- School Name -->
+										<div class="col-md-4 mb-3">
+											<label for="schoolName" class="form-label">High School Name</label>
+											<input type="text" class="form-control" id="schoolName" placeholder="School Name" />
+										</div>
+										<div class="col-md-4 mb-3">
+											<label for="highSchoolType" class="form-label">Select Highschool Type</label>
+											<select id="highSchoolType" class="form-select">
+												<option value="SMA">SMA</option>
+												<option value="SMK">SMK</option>
+											</select>
+										</div>
+										<div class="col-md-4 dropdown mb-3">
+											<label for="country" class="form-label">Country</label>
+											<input type="text" class="dropdownInput form-select" id="country" placeholder="Select your country" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-4 dropdown mb-3">
+											<label for="province" class="form-label">Province</label>
+											<input type="text" class="dropdownInput form-select" id="province" placeholder="Select your province" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-4 dropdown mb-3">
+											<label for="city" class="form-label">City</label>
+											<input type="text" class="dropdownInput form-select" id="city" placeholder="Select your city" autocomplete="off" readonly>
+											<div class="dropdownList">
+												<input type="text" class="searchInput" placeholder="Search here...">
+												<ul>
+													<li>Option 1</li>
+													<li>Option 2</li>
+													<li>Option 3</li>
+													<li>Indonesia</li>
+													<li>others</li>
+												</ul>
+											</div>
+										</div>
+										<!-- hidden until user choose others -->
+									</div>
+								</div>
+
 							</div>
 
 							<!-- Tab Content 2 only show when user choose s2 -->
@@ -240,15 +314,16 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
-							<button type="button" id="backButton" class="btn btn-outline-danger float-end rounded-0 px-md-5 mt-5 px-4">
+							<button type="button" id="backButton" class="btn btn-outline-danger rounded-0 px-md-5 float-end mt-5 px-4">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="submit" id="submitBtn" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5">
+							<button type="submit" id="submitBtn" class="btn btn-danger rounded-0 px-md-5 danger-button float-end mt-5">
 								Continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
@@ -259,6 +334,36 @@
 				</div>
 			</div>
 		</div>
+
+		<script type="text/javascript" src="{{ asset('js/listsearch.js') }}"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const selectHighSchool = document.getElementById("selectHighSchool");
+				const additionalFields = document.getElementById("other_school");
+				const dropdownListItems = document.querySelectorAll(".dropdownList ul li");
+
+				// Fungsi untuk mengatur visibilitas additionalFields
+				function toggleShow() {
+
+					if (selectHighSchool.value.toLowerCase() === "others") {
+						additionalFields.style.display = "block";
+					} else {
+						additionalFields.style.display = "none";
+					}
+				}
+
+				dropdownListItems.forEach(function(item) {
+					item.addEventListener("click", function() {
+						if (item.textContent.toLowerCase() === "others") {
+							selectHighSchool.value = item.textContent;
+						}
+						toggleShow();
+					});
+				});
+
+				toggleShow();
+			});
+		</script>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/educationInformation.js') }}"></script>
@@ -287,34 +392,40 @@
 									${index > 1 ? `<button type="button" class="btn btn-danger btn-sm ms-auto" onclick="deleteUniversityCard(${index})">Remove</button>` : ""}
 							</div>
 							<div class="row mt-2">
+								<div class="col-md-6">
+											<label for="universityName_${index}" class="form-label">University</label>
+											<input type="text" class="form-control" id="universityName_${index}" name="universityName[]" placeholder="Enter University Name" />
+									</div>
 									<div class="col-md-6">
 											<label for="universityName_${index}" class="form-label">University Name</label>
 											<input type="text" class="form-control" id="universityName_${index}" name="universityName[]" placeholder="Enter University Name" />
 									</div>
-									<div class="col-md-6">
-											<label for="levelOfStudy_${index}" class="form-label">Level Of Study</label>
-											<input type="text" class="form-control" id="levelOfStudy_${index}" name="levelOfStudy[]" placeholder="Enter Level of Study" />
 									</div>
-							</div>
-							<div class="row my-3">
+									<div class="row my-3">
+										<div class="col-md-6">
+												<label for="levelOfStudy_${index}" class="form-label">Level Of Study</label>
+												<input type="text" class="form-control" id="levelOfStudy_${index}" name="levelOfStudy[]" placeholder="Enter Level of Study" />
+										</div>
 									<div class="col-md-6">
 											<label for="studyProgram_${index}" class="form-label">Study Program</label>
 											<input type="text" class="form-control" id="studyProgram_${index}" name="studyProgram[]" placeholder="Enter Study Program" />
 									</div>
-									<div class="col-md-6">
-											<label for="degreeTitle_${index}" class="form-label">Degree Title</label>
-											<input type="text" class="form-control" id="degreeTitle_${index}" name="degreeTitle[]" placeholder="Enter Degree Title" />
 									</div>
-							</div>
-							<div class="row">
+									<div class="row">
+										<div class="col-md-6">
+												<label for="degreeTitle_${index}" class="form-label">Degree Title</label>
+												<input type="text" class="form-control" id="degreeTitle_${index}" name="degreeTitle[]" placeholder="Enter Degree Title" />
+										</div>
 									<div class="col-md-6">
 											<label for="cgpa_${index}" class="form-label">CGPA</label>
 											<input type="text" class="form-control" id="cgpa_${index}" name="cgpa[]" placeholder="Enter CGPA" />
 									</div>
-									<div class="col-md-6">
-											<label for="graduationDate_${index}" class="form-label">Graduation Date</label>
-											<input type="date" class="form-control" id="graduationDate_${index}" name="graduationDate[]" placeholder="Enter Graduation Date" />
-									</div>
+									<div class="row mt-3">
+										<div class="col-md-6">
+												<label for="graduationDate_${index}" class="form-label">Graduation Date</label>
+												<input type="date" class="form-control" id="graduationDate_${index}" name="graduationDate[]" placeholder="Enter Graduation Date" />
+										</div>
+										</div>
 							</div>
 					`;
 
