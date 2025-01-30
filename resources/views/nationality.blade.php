@@ -21,7 +21,7 @@
 
 					<div class="d-flex flex-column flex-md-row card-box gap-3">
 						<a href="/studylevel" class="nationality" data-nationality="National">
-							<div class="card-nationality fade-in-right border-0" style="background-image: url('/assets/student.jpeg');">
+							<div class="card-nationality national fade-in-right border-0">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
 
@@ -34,7 +34,7 @@
 						</a>
 
 						<a href="/international" class="nationality" data-nationality="International">
-							<div class="card-nationality fade-in-right border-0" style="background-image: url('/assets/international-student.png');">
+							<div class="card-nationality international fade-in-right border-0">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(to top, #bcd1ff, #f1f1f122)" \></div>
 
@@ -46,7 +46,7 @@
 							</div>
 						</a>
 					</div>
-					
+
 				</div>
 
 				<span id="backToSignIn" class="d-flex align-items-md-center btn-sign cursor-pointer gap-2" role="button">

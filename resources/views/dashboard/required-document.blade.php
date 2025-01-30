@@ -117,9 +117,12 @@
 				</div>
 
 				<div>
-					<div class="d-flex mb-3 gap-2">
+					<div class="d-flex mb-3 gap-2 align-items-start">
 						<p class="step-title m-0">07</p>
-						<p class="step-subtitle w-50 m-0">Required Documents</p>
+						<span class="d-flex gap-3 align-items-end">
+							<p class="step-subtitle w-50 m-0">Required Documents</p>
+							<img src="/assets/caution-icon.png" alt="caution-icon" style="height: 16.75px; width: 18.73px; ">
+						</span>
 					</div>
 					<div class="d-flex align-items-center gap-2">
 						<img src="/assets/circle-bold.png" alt="step" class="step-icon" />

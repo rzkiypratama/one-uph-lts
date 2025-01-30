@@ -583,6 +583,14 @@ a.forgot-password {
     width: auto;
 }
 
+div.national {
+    background-image: url("/assets/student-mobile.png") !important;
+}
+
+div.international {
+    background-image: url("/assets/international-student-mobile.png") !important;
+}
+
 .card-studylevel {
     position: relative;
     border-radius: 12px;
@@ -734,6 +742,7 @@ a.forgot-password {
     background-color: #dfe9ff;
     color: #407bff;
     font-weight: 400 !important;
+    width: 100%;
 }
 
 /* program mobile */
@@ -1668,6 +1677,14 @@ input[type="text"].search-input {
         width: 272px;
     }
 
+    div.national {
+        background-image: url("/assets/student.jpeg") !important;
+    }
+
+    div.international {
+        background-image: url("/assets/international-student.png") !important;
+    }
+
     .card-studylevel {
         width: 558px;
         height: 133px;
@@ -2088,21 +2105,21 @@ input[type="text"].search-input {
         margin: 0;
         padding: 0;
         border: 1px solid #bcd1ff;
-        width: 9rem;
+        width: 8.5rem;
     }
 
     hr.dashed-step {
         margin: 0;
         padding: 0;
         border: 1px dashed #407bff;
-        width: 9rem;
+        width: 8.5rem;
     }
 
     hr.done-step {
         margin: 0;
         padding: 0;
         border: 1px solid #407bff;
-        width: 9rem;
+        width: 8.5rem;
     }
 
     .tuition-status {
