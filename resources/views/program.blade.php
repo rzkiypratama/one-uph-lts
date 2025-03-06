@@ -51,7 +51,7 @@
 
 						<div class="program-grid card-box fade-in-right" id="programGrid">
 
-							<div class="card-program border-0" style="background-image: url('/assets/design-img.png');" data-bs-toggle="modal" data-bs-target="#modal">
+							<div class="card-programmajor border-0" style="background-image: url('/assets/design-img.png');" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
 

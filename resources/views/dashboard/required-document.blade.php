@@ -141,7 +141,10 @@
 
 					<span class="text-white" onclick="window.location.href = '/dashboard/intakeyear'">
 						<p class="mobile-title">Step 7 of 7</p>
-						<p class="mobile-subtitle">Required Documents</p>
+						<div class="d-flex gap-2 align-items-center">
+							<p class="mobile-subtitle">Required Documents</p>
+							<img src="/assets/caution-icon.png" alt="caution-icon" style="height: 16.75px; width: 18.73px; ">
+						</div>
 					</span>
 				</div>
 			</div>
@@ -228,15 +231,15 @@
 											<p id="familyGeneralDocStatus" class="file-status">Preview</p>
 											{{-- beri status sesuai kondisi file --}}
 											{{-- <p class="file-status-valid">Validated</p> --}}
-											{{-- <p class="file-status-invalid">Invalid</p> --}}
+											<p class="file-status-invalid">Need Resubmit</p>
 											{{-- <p class="file-status-review">On Review</p> --}}
 											{{-- <p class="reference-doc">reference documents</p> --}}
+											{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
+											<span class="d-flex align-items-center gap-2 validation-message">
+												<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
+												<p class="file-validation">note: your image is blur. please retake the image. please retake the image.</p>
+											</span>
 										</span>
-										{{-- jika status file validation muncul, hide input & span diatas, show span dibawah  --}}
-										{{-- <span class="d-flex align-items-center gap-2">
-											<img src="/assets/caution.png" alt="caution icon" class="caution-icon">
-											<p class="file-validation">note: your image is blur. please retake the image.</p>
-										</span> --}}
 									</div>
 
 									<div class="file-input-row">
@@ -254,7 +257,7 @@
 											<p id="nisnNumberStatus" class="file-status">Preview</p>
 											{{-- beri status sesuai kondisi file --}}
 											{{-- <p class="file-status-valid">Validated</p> --}}
-											<p class="file-status-invalid">Invalid</p>
+											<p class="file-status-invalid">Need Resubmit</p>
 											<p class="file-status-review">On Review</p>
 											<p class="reference-doc">reference documents</p>
 										</span>

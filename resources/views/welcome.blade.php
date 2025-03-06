@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<x-head title="Homepage" />
+	<x-head title="Verification Link Invalid" />
 
 	<body class="container">
 		<!-- header -->
@@ -13,48 +13,23 @@
 				<img src="/assets/uph-logo.png" alt="logo" class="uphlogo-mobile" />
 			</div>
 
-			<div class="d-flex flex-column align-items-center welcome-login">
-				<img src="/assets/graduate.png" alt="graduate" class="graduate-logo" />
-				<h3 class="header-login d-grid col-sm pt-3 text-center">Welcome to <span>ONE UPH</span></h3>
-				<p class="fst-italic">ready to apply for your future in UPH?</p>
-			</div>
-
-			<!-- desktop button start -->
-			<div class="d-flex flex-column d-none d-md-flex gap-3">
-				<div class="card card-login p-1 shadow-sm" onclick="window.location.href = '/signin'">
-					<div class="card-body">
-						<h5 class="card-title">Sign In</h5>
-						<p class="card-text fst-italic text-muted">if you already have an account</p>
-						<a> <img src="/assets/signin.png" alt="signin" class="float-end icon-login pt-4" /> </a>
+						<div class="d-flex flex-column align-items-center text-center card bg-white modal-body-review rounded-1 w-50 px-5">
+							<img src="/assets/verify-failed.png" class="img-fluid link-invalid-img" alt="Success Image" />
+							<!-- Replace with your image path -->
+							<div>
+								<p class="fs-4 review-modal-title mb-2">Verification Link Invalid</p>
+								<p class="review-modal-subtitle d-flex flex-column align-items-center mb-3">Your verification link registration is invalid or already used</p>
+							</div>
+	
+							<p class="register pb-3">Try to resend the link?</p>
+	
+							<div class="d-flex justify-content-between gap-3 align-self-stretch">
+								<button type="button" class="btn btn-outline-danger rounded-0 w-35" data-bs-dismiss="modal">Back</button>
+								<button type="button" class="btn btn-danger rounded-0 w-100">Resend Activation Email</button>
+							</div>
+	
+						</div>
 					</div>
-				</div>
-
-				<div class="card card-login p-1 shadow-sm" onclick="window.location.href = '/nationality'">
-					<div class="card-body">
-						<h5 class="card-title">Register</h5>
-						<p class="card-text fst-italic text-muted">to start your application</p>
-						<a> <img src="/assets/idcard.png" alt="signin" class="float-end icon-login pt-4" /> </a>
-					</div>
-				</div>
-			</div>
-			<!-- desktop button end -->
-
-			<!-- mobile button start -->
-			<div class="d-flex flex-column d-md-none d-flex w-100 gap-3 text-center">
-				<div class="card card-login shadow-sm" onclick="window.location.href = '/signin'">
-					<div class="card-body">
-						<h5 class="card-title">Sign In</h5>
-					</div>
-				</div>
-
-				<div class="card card-register shadow-sm" onclick="window.location.href = '/nationality'">
-					<div class="card-body">
-						<h5 class="card-title">Register</h5>
-					</div>
-				</div>
-			</div>
-			<!-- mobile button end -->
-		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

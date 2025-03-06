@@ -1233,13 +1233,12 @@ input[type="radio"] {
     background-color: #ff5f5f;
     border-radius: 8px;
     /* display: none; please change to none to make status dinamyc */
-    /* width: 10%; */
     font-family: "Barlow", sans-serif;
     font-weight: 600;
     color: #fff;
     font-size: 12px;
     text-align: center;
-    /* width: 110px; */
+    width: 110px;
 }
 
 .file-status-valid {
@@ -1669,6 +1668,21 @@ input[type="text"].search-input {
 
 .intake-year-button {
     padding: 0rem 1rem;
+}
+
+.link-invalid-img {
+    width: 80px;
+    height: 76.6px;
+}
+
+.validation-message {
+    width: 300px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+}
+
+.validation-message p {
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {

@@ -261,7 +261,7 @@
 										</div>
 
 										<!-- Schoolarship Input -->
-										<div class="col-md-4 mt-4" id="schoolarshipInput" style="display: none">
+										<div class="col-md-4" id="schoolarshipInput" style="display: none">
 											<label for="schoolarshipType" class="form-label">Schoolarship Type</label>
 											<select id="schoolarshipType" class="form-select">
 												<option value="" selected disabled>Choose your schoolarship</option>
@@ -271,18 +271,70 @@
 											</select>
 										</div>
 									</div>
+
+									{{-- english profiency option start --}}
+									<div class="row col-md-12 mt-4">
+										<div class="col-md-4">
+											<label class="form-label">I have taken English Proficiency Test</label>
+											<p class="file-validation pb-2">Shouldn’t expire before, Mar 2026</p>
+											<div class="col-md-12">
+												<div class="radio-btn-group d-flex justify-content-between gap-1">
+													<input type="radio" id="english_profiency_yes" name="english_profiency" value="yes" checked />
+													<label for="english_profiency_yes">Yes</label>
+
+													<input type="radio" id="english_profiency_no" name="english_profiency" value="no" />
+													<label for="english_profiency_no">No</label>
+												</div>
+											</div>
+										</div>
+
+										{{-- if yes, show this component bellow --}}
+										<div class="col-md-4" id="english_profiency_yes_option_dropdown">
+											<label for="englishTest" class="form-label">English Profiency Test Option</label>
+											<p class="file-validation pb-2" style="opacity: 0;">only for label separator, let this opacity 0</p>
+											<select class="form-select">
+												<option value="" selected disabled>Select Option</option>
+												<option value="option2">option1</option>
+												<option value="option3">option2</option>
+												<option value="Lainnya">Lainnya</option>
+											</select>
+										</div>
+
+										<div class="col-md-4" id="english_profiency_yes_option_score">
+											<label for="english_test_score" class="form-label">Score</label>
+											<p class="file-validation pb-2" style="opacity: 0;">only for label separator, let this opacity 0</p>
+											<input type="text" class="form-control" id="english_test_score" placeholder="Your English Test Score" />
+										</div>
+
+										{{-- if no, show this component bellow --}}
+										<div class="col-md-6" id="english_profiency_no_option">
+											<label class="form-label">Take English Test at UPH?</label>
+											<p class="file-validation pb-2">Visit this page for more information <a href="https://www.uph.edu/id/eat">https://www.uph.edu/id/eat</a></p>
+											<div class="col-md-8">
+												<div class="radio-btn-group d-flex justify-content-between gap-1">
+													<input type="radio" id="take_english_test_yes" name="take_english_test" checked />
+													<label for="take_english_test_yes">Yes</label>
+
+													<input type="radio" id="take_english_test_no" name="take_english_test" />
+													<label for="take_english_test_no">No</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									{{-- english profiency option ends --}}
+									
 								</div>
 							</div>
 						</div>
 						<div class="d-flex justify-content-between align-content-center mb-4 gap-3">
-							<button type="button" class="btn btn-outline-danger d-flex align-items-center float-end rounded-0 px-md-5 mt-5 px-4" onclick="window.location.href='/dashboard/educationbackground'">
+							<button type="button" class="btn btn-outline-danger d-flex align-items-center rounded-0 px-md-5 float-end mt-5 px-4" onclick="window.location.href='/dashboard/educationbackground'">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="#FF5351" />
 								</svg>
 								Back
 							</button>
 							<!-- Submit Button -->
-							<button type="button" class="btn btn-danger float-end rounded-0 px-md-5 danger-button mt-5" data-bs-toggle="modal" data-bs-target="#admissionModal">
+							<button type="button" class="btn btn-danger rounded-0 px-md-5 danger-button float-end mt-5" data-bs-toggle="modal" data-bs-target="#admissionModal">
 								save & continue
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
 									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" fill="#FFF" />
@@ -302,7 +354,7 @@
 										<img src="/assets/uph-logo.png" style="width: 148px" alt="Logo" class="img-fluid" />
 										<div>
 											<h3 class="modal-entry-title">Admission Statement</h3>
-											<p class="float-end review-modal-subtitle m-0">Academic Year 2004/2005</p>
+											<p class="review-modal-subtitle float-end m-0">Academic Year 2004/2005</p>
 										</div>
 									</div>
 
@@ -375,6 +427,7 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script type="text/javascript" src="{{ asset('js/entryoption.js') }}"></script>
+
 	</body>
 
 </html>
