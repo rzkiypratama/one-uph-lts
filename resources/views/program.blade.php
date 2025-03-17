@@ -51,17 +51,6 @@
 
 						<div class="program-grid card-box fade-in-right" id="programGrid">
 
-							<div class="card-programmajor border-0" style="background-image: url('/assets/design-img.png');" data-bs-toggle="modal" data-bs-target="#modal">
-								<!-- Gradient Overlay -->
-								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
-
-								<!-- Title -->
-								<div class="title-container">
-									<!-- <img src="icon-url.png" alt="icon" class="icon" /> -->
-									<h3 class="title w-100" style="color: #fff !important">Graphic Design</h3>
-								</div>
-							</div>
-
 							<div class="card-program border-0" style="background-image: url('/assets/productdesign.png');" data-bs-toggle="modal" data-bs-target="#modal">
 								<!-- Gradient Overlay -->
 								<div class="gradient-overlay" style="background-image: linear-gradient(5deg, #407bff, #f1f1f122)" \></div>
@@ -489,9 +478,9 @@
 
 									<div class="kanan w-md-75">
 										<!-- header -->
-										<span class="d-flex justify-content-between align-items-center mb-3 pt-2">
+										<span class="d-flex flex-md-row flex-column-reverse justify-content-between align-items-md-center gap-md-0 mb-3 gap-3 pt-2">
 											<h3 class="program-title m-0">Architecture</h3>
-											<p class="badge m-0">Design</p>
+											<p class="badge w-25 m-0">Design</p>
 										</span>
 										<!-- description -->
 										<p class="program-description">
